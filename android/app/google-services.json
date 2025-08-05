@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "921686682542",
+    "project_id": "pareto-lingo",
+    "storage_bucket": "pareto-lingo.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:921686682542:android:ba1826ab7d94df1375f63f",
+        "android_client_info": {
+          "package_name": "com.example.pareto_lingo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4C3sEnBaS4gTz5pOLLdQZvuEz5zsjQbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
