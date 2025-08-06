@@ -1,11 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hive/hive.dart';
+import 'package:pareto_lingo/models/flashcard_model.dart';
+import 'package:pareto_lingo/models/seed_flashcard.dart';
 import 'firebase_options.dart';
 import 'package:pareto_lingo/providers.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  Hive.registerAdapter(FlashcardAdapter());
+
+  if (Hive.isBoxOpen('flashcards')) {
+    await Hive.box('flashcards').close();
+  }
+
+  // Open the box with correct type
+  await Hive.openBox<Flashcard>('flashcards');
+  await seedFlashcards();
+
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(ProviderScope(child: const MyApp()));
 }
