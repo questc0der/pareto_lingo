@@ -5,6 +5,7 @@ import 'package:pareto_lingo/auth/login.dart';
 import 'package:pareto_lingo/home.dart';
 import 'dart:async';
 import 'package:flutter/foundation.dart';
+import 'package:pareto_lingo/screen/flashcard.dart';
 
 import './models/user_dao.dart';
 
@@ -50,6 +51,10 @@ final routerProvider = Provider<GoRouter>((ref) {
     routes: <RouteBase>[
       GoRoute(path: '/', builder: (context, state) => const HomeState()),
       GoRoute(path: '/login', builder: (context, state) => const Login()),
+      GoRoute(
+        path: '/flashcard',
+        builder: (context, state) => FlashCardReviewScreen(),
+      ),
     ],
   );
 });
