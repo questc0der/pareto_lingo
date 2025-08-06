@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class Progress extends StatelessWidget {
   const Progress({super.key});
@@ -65,7 +66,14 @@ class Progress extends StatelessWidget {
             ),
           if (description != null) Text(description, style: TextStyle()),
           if (buttonText != null)
-            ElevatedButton(onPressed: () {}, child: Text(buttonText)),
+            ElevatedButton(
+              onPressed: () {
+                if (buttonText == "Start") {
+                  context.go('/flashcard');
+                }
+              },
+              child: Text(buttonText),
+            ),
         ],
       ),
     );
