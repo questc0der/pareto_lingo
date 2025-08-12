@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:neubrutalism_ui/neubrutalism_ui.dart';
 
 class Progress extends StatelessWidget {
   const Progress({super.key});
@@ -36,45 +37,72 @@ class Progress extends StatelessWidget {
     String? description,
     String? buttonText,
   }) {
-    return Container(
-      height: height,
-      width: width,
-      padding: EdgeInsets.all(10),
-      margin: EdgeInsets.symmetric(horizontal: 8.0),
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey),
-        borderRadius: BorderRadius.circular(24),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          if (count != null)
-            Text(
-              count,
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
-          if (mode != null)
-            Text(
-              mode,
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
-          if (title != null)
-            Text(
-              title,
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
-          if (description != null) Text(description, style: TextStyle()),
-          if (buttonText != null)
-            ElevatedButton(
-              onPressed: () {
-                if (buttonText == "Start") {
-                  context.go('/flashcard');
-                }
-              },
-              child: Text(buttonText),
-            ),
-        ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      child: NeuContainer(
+        height: height,
+        width: width,
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              if (count != null)
+                Text(
+                  count,
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Circular',
+                  ),
+                ),
+              if (mode != null)
+                Text(
+                  mode,
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Circular',
+                  ),
+                ),
+              if (title != null)
+                Text(
+                  title,
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Circular',
+                  ),
+                ),
+              if (description != null)
+                Text(description, style: TextStyle(fontFamily: 'Circular')),
+              if (buttonText != null)
+                NeuTextButton(
+                  borderRadius: BorderRadius.circular(8),
+                  buttonColor: Color(0xFF7DF9FF),
+                  buttonHeight: 40,
+                  buttonWidth: 80,
+                  onPressed: () {
+                    if (buttonText == "Start") {
+                      context.go('/flashcard');
+                    }
+                  },
+                  enableAnimation: true,
+                  text: Text(
+                    buttonText,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                      fontFamily: 'Circular',
+                    ),
+                  ),
+                ),
+            ],
+          ),
+        ),
       ),
     );
   }

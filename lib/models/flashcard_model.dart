@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:hive/hive.dart';
 
 part 'flashcard_model.g.dart';
@@ -31,34 +33,33 @@ class Flashcard extends HiveObject {
     this.repetitions = 0,
   }) : dueDate = dueDate ?? DateTime.now();
 
-  /// Update SRS data based on quality: 0=Again, 3=Hard, 4=Medium, 5=Easy
   void updateReview(int quality) {
     if (quality < 3) {
       repetitions = 0;
-      interval = 1;
+      // For "Again", set a very short interval (e.g. 1 minute)
+      interval = 0; // or some sentinel for immediate repetition
+      dueDate = DateTime.now().add(Duration(minutes: 1));
+    } else if (quality == 3) {
+      // Medium, set a short interval (e.g. 10 minutes)
+      repetitions++;
+      interval = 10; // or your chosen value in minutes
+      dueDate = DateTime.now().add(Duration(minutes: interval));
+      // adjust easeFactor similarly
     } else {
       repetitions++;
-      if (repetitions == 1) {
-        interval = 1;
-      } else if (repetitions == 2) {
-        interval = 6;
-      } else {
-        interval = (interval * (easeFactor / 100)).round();
-      }
-      // SM-2 ease factor formula
-      double ef = easeFactor / 100;
-      ef = ef + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02));
-      easeFactor = (ef * 100).round();
-      if (easeFactor < 130) easeFactor = 130;
+      // existing spaced repetition formula, but with days
+      interval = (interval * (easeFactor / 100)).round();
+      dueDate = DateTime.now().add(Duration(days: interval));
+      // adjust easeFactor similarly
     }
-    dueDate = DateTime.now().add(Duration(days: interval));
-    save(); // persist changes
+    save();
   }
 
   /// Helper: get cards due today or earlier, limited
   static List<Flashcard> dueCards(List<Flashcard> all, int limit) {
-    final today = DateTime.now();
-    final due = all.where((c) => !c.dueDate.isAfter(today));
+    final now = DateTime.now();
+    final soon = now.add(Duration(minutes: 5));
+    final due = all.where((c) => !c.dueDate.isAfter(soon));
     return due.take(limit).toList();
   }
 }

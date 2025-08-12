@@ -16,7 +16,10 @@ class HeaderCard extends StatelessWidget {
               children: [
                 CircleAvatar(radius: 20),
                 SizedBox(width: 10),
-                Text("Name", style: TextStyle(fontSize: 18)),
+                Text(
+                  "Name",
+                  style: TextStyle(fontSize: 18, fontFamily: 'Circular'),
+                ),
               ],
             ),
           ),

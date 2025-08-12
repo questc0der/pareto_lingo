@@ -1,0 +1,406 @@
+[
+  {
+    "word": "bonjour",
+    "meaning": "hello"
+  },
+  {
+    "word": "au revoir",
+    "meaning": "goodbye"
+  },
+  {
+    "word": "merci",
+    "meaning": "thank you"
+  },
+  {
+    "word": "s'il vous plaît",
+    "meaning": "please"
+  },
+  {
+    "word": "excusez-moi",
+    "meaning": "excuse me"
+  },
+  {
+    "word": "oui",
+    "meaning": "yes"
+  },
+  {
+    "word": "non",
+    "meaning": "no"
+  },
+  {
+    "word": "eau",
+    "meaning": "water"
+  },
+  {
+    "word": "pain",
+    "meaning": "bread"
+  },
+  {
+    "word": "chat",
+    "meaning": "cat"
+  },
+  {
+    "word": "chien",
+    "meaning": "dog"
+  },
+  {
+    "word": "maison",
+    "meaning": "house"
+  },
+  {
+    "word": "voiture",
+    "meaning": "car"
+  },
+  {
+    "word": "temps",
+    "meaning": "time/weather"
+  },
+  {
+    "word": "argent",
+    "meaning": "money"
+  },
+  {
+    "word": "famille",
+    "meaning": "family"
+  },
+  {
+    "word": "amour",
+    "meaning": "love"
+  },
+  {
+    "word": "travail",
+    "meaning": "work"
+  },
+  {
+    "word": "école",
+    "meaning": "school"
+  },
+  {
+    "word": "livre",
+    "meaning": "book"
+  },
+  {
+    "word": "rouge",
+    "meaning": "red"
+  },
+  {
+    "word": "bleu",
+    "meaning": "blue"
+  },
+  {
+    "word": "vert",
+    "meaning": "green"
+  },
+  {
+    "word": "blanc",
+    "meaning": "white"
+  },
+  {
+    "word": "noir",
+    "meaning": "black"
+  },
+  {
+    "word": "grand",
+    "meaning": "big/tall"
+  },
+  {
+    "word": "petit",
+    "meaning": "small"
+  },
+  {
+    "word": "beau",
+    "meaning": "beautiful"
+  },
+  {
+    "word": "bon",
+    "meaning": "good"
+  },
+  {
+    "word": "mauvais",
+    "meaning": "bad"
+  },
+  {
+    "word": "je",
+    "meaning": "I"
+  },
+  {
+    "word": "tu",
+    "meaning": "you (informal)"
+  },
+  {
+    "word": "il",
+    "meaning": "he"
+  },
+  {
+    "word": "elle",
+    "meaning": "she"
+  },
+  {
+    "word": "nous",
+    "meaning": "we"
+  },
+  {
+    "word": "vous",
+    "meaning": "you (formal/plural)"
+  },
+  {
+    "word": "ils",
+    "meaning": "they (masculine)"
+  },
+  {
+    "word": "elles",
+    "meaning": "they (feminine)"
+  },
+  {
+    "word": "avoir",
+    "meaning": "to have"
+  },
+  {
+    "word": "être",
+    "meaning": "to be"
+  },
+  {
+    "word": "faire",
+    "meaning": "to do/make"
+  },
+  {
+    "word": "aller",
+    "meaning": "to go"
+  },
+  {
+    "word": "venir",
+    "meaning": "to come"
+  },
+  {
+    "word": "voir",
+    "meaning": "to see"
+  },
+  {
+    "word": "savoir",
+    "meaning": "to know"
+  },
+  {
+    "word": "pouvoir",
+    "meaning": "to be able to"
+  },
+  {
+    "word": "vouloir",
+    "meaning": "to want"
+  },
+  {
+    "word": "devoir",
+    "meaning": "must/to owe"
+  },
+  {
+    "word": "manger",
+    "meaning": "to eat"
+  },
+  {
+    "word": "boire",
+    "meaning": "to drink"
+  },
+  {
+    "word": "parler",
+    "meaning": "to speak"
+  },
+  {
+    "word": "écouter",
+    "meaning": "to listen"
+  },
+  {
+    "word": "regarder",
+    "meaning": "to watch/look"
+  },
+  {
+    "word": "lire",
+    "meaning": "to read"
+  },
+  {
+    "word": "écrire",
+    "meaning": "to write"
+  },
+  {
+    "word": "dormir",
+    "meaning": "to sleep"
+  },
+  {
+    "word": "marcher",
+    "meaning": "to walk"
+  },
+  {
+    "word": "courir",
+    "meaning": "to run"
+  },
+  {
+    "word": "un",
+    "meaning": "one/a (masculine)"
+  },
+  {
+    "word": "une",
+    "meaning": "one/a (feminine)"
+  },
+  {
+    "word": "deux",
+    "meaning": "two"
+  },
+  {
+    "word": "trois",
+    "meaning": "three"
+  },
+  {
+    "word": "quatre",
+    "meaning": "four"
+  },
+  {
+    "word": "cinq",
+    "meaning": "five"
+  },
+  {
+    "word": "six",
+    "meaning": "six"
+  },
+  {
+    "word": "sept",
+    "meaning": "seven"
+  },
+  {
+    "word": "huit",
+    "meaning": "eight"
+  },
+  {
+    "word": "neuf",
+    "meaning": "nine"
+  },
+  {
+    "word": "dix",
+    "meaning": "ten"
+  },
+  {
+    "word": "lundi",
+    "meaning": "Monday"
+  },
+  {
+    "word": "mardi",
+    "meaning": "Tuesday"
+  },
+  {
+    "word": "mercredi",
+    "meaning": "Wednesday"
+  },
+  {
+    "word": "jeudi",
+    "meaning": "Thursday"
+  },
+  {
+    "word": "vendredi",
+    "meaning": "Friday"
+  },
+  {
+    "word": "samedi",
+    "meaning": "Saturday"
+  },
+  {
+    "word": "dimanche",
+    "meaning": "Sunday"
+  },
+  {
+    "word": "janvier",
+    "meaning": "January"
+  },
+  {
+    "word": "février",
+    "meaning": "February"
+  },
+  {
+    "word": "mars",
+    "meaning": "March"
+  },
+  {
+    "word": "avril",
+    "meaning": "April"
+  },
+  {
+    "word": "mai",
+    "meaning": "May"
+  },
+  {
+    "word": "juin",
+    "meaning": "June"
+  },
+  {
+    "word": "juillet",
+    "meaning": "July"
+  },
+  {
+    "word": "août",
+    "meaning": "August"
+  },
+  {
+    "word": "septembre",
+    "meaning": "September"
+  },
+  {
+    "word": "octobre",
+    "meaning": "October"
+  },
+  {
+    "word": "novembre",
+    "meaning": "November"
+  },
+  {
+    "word": "décembre",
+    "meaning": "December"
+  },
+  {
+    "word": "matin",
+    "meaning": "morning"
+  },
+  {
+    "word": "après-midi",
+    "meaning": "afternoon"
+  },
+  {
+    "word": "soir",
+    "meaning": "evening"
+  },
+  {
+    "word": "nuit",
+    "meaning": "night"
+  },
+  {
+    "word": "aujourd'hui",
+    "meaning": "today"
+  },
+  {
+    "word": "hier",
+    "meaning": "yesterday"
+  },
+  {
+    "word": "demain",
+    "meaning": "tomorrow"
+  },
+  {
+    "word": "maintenant",
+    "meaning": "now"
+  },
+  {
+    "word": "bientôt",
+    "meaning": "soon"
+  },
+  {
+    "word": "toujours",
+    "meaning": "always"
+  },
+  {
+    "word": "jamais",
+    "meaning": "never"
+  },
+  {
+    "word": "souvent",
+    "meaning": "often"
+  },
+  {
+    "word": "parfois",
+    "meaning": "sometimes"
+  }
+]
