@@ -88,6 +88,8 @@ class Progress extends StatelessWidget {
                   onPressed: () {
                     if (buttonText == "Start") {
                       context.go('/flashcard');
+                    } else if (buttonText == "Speak") {
+                      context.go('/speak');
                     }
                   },
                   enableAnimation: true,

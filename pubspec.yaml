@@ -42,6 +42,8 @@ dependencies:
   hive: ^2.2.3
   hive_flutter: ^1.1.0
   neubrutalism_ui: ^2.0.2
+  just_audio: ^0.10.4
+  speech_to_text: ^7.3.0
 
 dev_dependencies:
   flutter_test:
@@ -70,6 +72,8 @@ flutter:
   assets:
     - assets/
     - assets/fonts/CircularStd-Medium.otf
+    - assets/short_stories_in_french.mp3
+    - assets/alignment_output.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

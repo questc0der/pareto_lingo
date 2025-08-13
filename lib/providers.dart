@@ -6,6 +6,7 @@ import 'package:pareto_lingo/home.dart';
 import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:pareto_lingo/screen/flashcard.dart';
+import 'package:pareto_lingo/screen/speak.dart';
 
 import './models/user_dao.dart';
 
@@ -55,6 +56,7 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/flashcard',
         builder: (context, state) => FlashCardReviewScreen(),
       ),
+      GoRoute(path: '/speak', builder: (context, state) => Speak()),
     ],
   );
 });
