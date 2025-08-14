@@ -44,6 +44,7 @@ dependencies:
   neubrutalism_ui: ^2.0.2
   just_audio: ^0.10.4
   speech_to_text: ^7.3.0
+  youtube_player_flutter: ^9.1.2
 
 dev_dependencies:
   flutter_test:
