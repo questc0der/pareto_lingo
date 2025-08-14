@@ -90,6 +90,8 @@ class Progress extends StatelessWidget {
                       context.go('/flashcard');
                     } else if (buttonText == "Speak") {
                       context.go('/speak');
+                    } else if (buttonText == "Study") {
+                      context.go('/rules');
                     }
                   },
                   enableAnimation: true,
