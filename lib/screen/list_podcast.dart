@@ -4,7 +4,8 @@ import 'package:podcast_search/podcast_search.dart';
 
 class ListPodcast extends StatefulWidget {
   final String content;
-  const ListPodcast({super.key, required this.content});
+  final String image;
+  const ListPodcast({super.key, required this.content, required this.image});
 
   @override
   State<ListPodcast> createState() => _Lists();
@@ -51,25 +52,36 @@ class _Lists extends State<ListPodcast> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: FutureBuilder<List<Map<String, String>>>(
-        future: _fetchEpisodes(),
-        builder: (context, snapshot) {
-          if (snapshot.hasData &&
-              snapshot.connectionState == ConnectionState.done) {
-            return ListView.builder(
-              itemCount: snapshot.data!.length,
-              itemBuilder: (context, index) {
-                return _buildPlayerCard(
-                  snapshot.data![index]['content']!,
-                  snapshot.data![index]['title']!,
-                  index,
-                );
+      body: Column(
+        children: [
+          Image.network(
+            width: double.infinity,
+            height: MediaQuery.of(context).size.height / 2,
+            widget.image,
+          ),
+          Expanded(
+            child: FutureBuilder<List<Map<String, String>>>(
+              future: _fetchEpisodes(),
+              builder: (context, snapshot) {
+                if (snapshot.hasData &&
+                    snapshot.connectionState == ConnectionState.done) {
+                  return ListView.builder(
+                    itemCount: snapshot.data!.length,
+                    itemBuilder: (context, index) {
+                      return _buildPlayerCard(
+                        snapshot.data![index]['content']!,
+                        snapshot.data![index]['title']!,
+                        index,
+                      );
+                    },
+                  );
+                } else {
+                  return Center(child: CircularProgressIndicator());
+                }
               },
-            );
-          } else {
-            return Center(child: CircularProgressIndicator());
-          }
-        },
+            ),
+          ),
+        ],
       ),
     );
   }

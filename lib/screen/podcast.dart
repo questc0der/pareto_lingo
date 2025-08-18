@@ -17,45 +17,12 @@ class _Podcasts extends State<Podcast> {
       padding: const EdgeInsets.symmetric(vertical: 28.0, horizontal: 18.0),
       child: ListView(
         children: [
-          _buildSearchBar(),
           _popularPodcasts(),
           _beginnersPodcast(),
           _intermediatePodcast(),
           _advancedPodcast(),
         ],
       ),
-    );
-  }
-
-  Widget _buildSearchBar() {
-    return Column(
-      children: [
-        SearchAnchor(
-          builder: (BuildContext context, SearchController controller) {
-            return SearchBar(
-              controller: controller,
-              padding: WidgetStatePropertyAll<EdgeInsets>(
-                EdgeInsets.symmetric(horizontal: 16.0),
-              ),
-              onTap: () => controller.openView(),
-              onChanged: (_) => controller.openView(),
-              leading: Icon(Icons.search),
-            );
-          },
-          suggestionsBuilder:
-              (context, controller) => List<ListTile>.generate(5, (int index) {
-                final String item = 'item $index';
-                return ListTile(
-                  title: Text(item),
-                  onTap: () {
-                    setState(() {
-                      controller.closeView(item);
-                    });
-                  },
-                );
-              }),
-        ),
-      ],
     );
   }
 
@@ -66,6 +33,84 @@ class _Podcasts extends State<Podcast> {
       'france',
       country: Country.france,
       limit: 100,
+    );
+    try {
+      for (var result in results.items) {
+        if (result.feedUrl != null) {
+          podcasts.add({
+            'image': result.artworkUrl600.toString(),
+            'feedUrl': result.feedUrl!,
+          });
+        } else {
+          continue;
+        }
+      }
+    } catch (e) {
+      print(e);
+    }
+
+    return podcasts;
+  }
+
+  Future<List<Map<String, String>>> _fetchBeginnerPodcast() async {
+    var search = Search();
+    List<Map<String, String>> podcasts = [];
+    var results = await search.search(
+      'Easy French',
+      country: Country.france,
+      limit: 20,
+    );
+    try {
+      for (var result in results.items) {
+        if (result.feedUrl != null) {
+          podcasts.add({
+            'image': result.artworkUrl600.toString(),
+            'feedUrl': result.feedUrl!,
+          });
+        } else {
+          continue;
+        }
+      }
+    } catch (e) {
+      print(e);
+    }
+
+    return podcasts;
+  }
+
+  Future<List<Map<String, String>>> _fetchIntermediatePodcast() async {
+    var search = Search();
+    List<Map<String, String>> podcasts = [];
+    var results = await search.search(
+      'Intermediate French',
+      country: Country.france,
+      limit: 20,
+    );
+    try {
+      for (var result in results.items) {
+        if (result.feedUrl != null) {
+          podcasts.add({
+            'image': result.artworkUrl600.toString(),
+            'feedUrl': result.feedUrl!,
+          });
+        } else {
+          continue;
+        }
+      }
+    } catch (e) {
+      print(e);
+    }
+
+    return podcasts;
+  }
+
+  Future<List<Map<String, String>>> _fetchAdvancedPodcast() async {
+    var search = Search();
+    List<Map<String, String>> podcasts = [];
+    var results = await search.search(
+      'Advanced French',
+      country: Country.france,
+      limit: 20,
     );
     try {
       for (var result in results.items) {
@@ -120,7 +165,10 @@ class _Podcasts extends State<Podcast> {
                           onTap: () {
                             context.go(
                               '/podcast_list',
-                              extra: snapshot.data![index]['feedUrl'],
+                              extra: {
+                                'content': snapshot.data![index]['feedUrl'],
+                                'image': snapshot.data![index]['image'],
+                              },
                             );
                           },
                           child: Image.network(
@@ -138,21 +186,6 @@ class _Podcasts extends State<Podcast> {
                   return Center(child: CircularProgressIndicator());
                 }
               },
-              // child: ListView.separated(
-              //   scrollDirection: Axis.horizontal,
-              //   itemCount: 5,
-              //   itemBuilder: (context, index) {
-              //     return Container(
-              //       width: MediaQuery.of(context).size.width / 1.5,
-              //       height: MediaQuery.of(context).size.height / 2,
-              //       decoration: BoxDecoration(
-              //         color: Colors.amber,
-              //         borderRadius: BorderRadius.circular(24),
-              //       ),
-              //     );
-              //   },
-              //   separatorBuilder: (_, __) => const SizedBox(width: 10),
-              // ),
             ),
           ),
         ],
@@ -162,7 +195,7 @@ class _Podcasts extends State<Podcast> {
 
   Widget _beginnersPodcast() {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10.0),
+      padding: const EdgeInsets.symmetric(vertical: 28.0),
       child: Column(
         children: [
           Align(
@@ -179,20 +212,43 @@ class _Podcasts extends State<Podcast> {
           SizedBox(height: 10.0),
           SizedBox(
             height: MediaQuery.of(context).size.height / 3,
-            child: ListView.separated(
-              scrollDirection: Axis.horizontal,
-              itemCount: 5,
-              itemBuilder: (context, index) {
-                return Container(
-                  width: MediaQuery.of(context).size.width / 1.5,
-                  height: MediaQuery.of(context).size.height / 2,
-                  decoration: BoxDecoration(
-                    color: Colors.amber,
-                    borderRadius: BorderRadius.circular(24),
-                  ),
-                );
+            child: FutureBuilder<List<Map<String, String>>>(
+              future: _fetchBeginnerPodcast(),
+              builder: (context, snapshot) {
+                if (snapshot.hasData &&
+                    snapshot.connectionState == ConnectionState.done) {
+                  return ListView.separated(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: snapshot.data!.length,
+                    itemBuilder: (context, index) {
+                      return SizedBox(
+                        width: MediaQuery.of(context).size.width / 1.5,
+                        height: MediaQuery.of(context).size.height / 2,
+                        child: GestureDetector(
+                          onTap: () {
+                            context.go(
+                              '/podcast_list',
+                              extra: {
+                                'content': snapshot.data![index]['feedUrl'],
+                                'image': snapshot.data![index]['image'],
+                              },
+                            );
+                          },
+                          child: Image.network(
+                            snapshot.data![index]['image'] ?? "",
+                            width: double.infinity,
+                            height: double.infinity,
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                      );
+                    },
+                    separatorBuilder: (_, __) => const SizedBox(width: 10),
+                  );
+                } else {
+                  return Center(child: CircularProgressIndicator());
+                }
               },
-              separatorBuilder: (_, __) => const SizedBox(width: 10),
             ),
           ),
         ],
@@ -202,7 +258,7 @@ class _Podcasts extends State<Podcast> {
 
   Widget _intermediatePodcast() {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10.0),
+      padding: const EdgeInsets.symmetric(vertical: 28.0),
       child: Column(
         children: [
           Align(
@@ -219,20 +275,43 @@ class _Podcasts extends State<Podcast> {
           SizedBox(height: 10.0),
           SizedBox(
             height: MediaQuery.of(context).size.height / 3,
-            child: ListView.separated(
-              scrollDirection: Axis.horizontal,
-              itemCount: 5,
-              itemBuilder: (context, index) {
-                return Container(
-                  width: MediaQuery.of(context).size.width / 1.5,
-                  height: MediaQuery.of(context).size.height / 2,
-                  decoration: BoxDecoration(
-                    color: Colors.amber,
-                    borderRadius: BorderRadius.circular(24),
-                  ),
-                );
+            child: FutureBuilder<List<Map<String, String>>>(
+              future: _fetchIntermediatePodcast(),
+              builder: (context, snapshot) {
+                if (snapshot.hasData &&
+                    snapshot.connectionState == ConnectionState.done) {
+                  return ListView.separated(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: snapshot.data!.length,
+                    itemBuilder: (context, index) {
+                      return SizedBox(
+                        width: MediaQuery.of(context).size.width / 1.5,
+                        height: MediaQuery.of(context).size.height / 2,
+                        child: GestureDetector(
+                          onTap: () {
+                            context.go(
+                              '/podcast_list',
+                              extra: {
+                                'content': snapshot.data![index]['feedUrl'],
+                                'image': snapshot.data![index]['image'],
+                              },
+                            );
+                          },
+                          child: Image.network(
+                            snapshot.data![index]['image'] ?? "",
+                            width: double.infinity,
+                            height: double.infinity,
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                      );
+                    },
+                    separatorBuilder: (_, __) => const SizedBox(width: 10),
+                  );
+                } else {
+                  return Center(child: CircularProgressIndicator());
+                }
               },
-              separatorBuilder: (_, __) => const SizedBox(width: 10),
             ),
           ),
         ],
@@ -242,7 +321,7 @@ class _Podcasts extends State<Podcast> {
 
   Widget _advancedPodcast() {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10.0),
+      padding: const EdgeInsets.symmetric(vertical: 28.0),
       child: Column(
         children: [
           Align(
@@ -259,20 +338,43 @@ class _Podcasts extends State<Podcast> {
           SizedBox(height: 10.0),
           SizedBox(
             height: MediaQuery.of(context).size.height / 3,
-            child: ListView.separated(
-              scrollDirection: Axis.horizontal,
-              itemCount: 5,
-              itemBuilder: (context, index) {
-                return Container(
-                  width: MediaQuery.of(context).size.width / 1.5,
-                  height: MediaQuery.of(context).size.height / 2,
-                  decoration: BoxDecoration(
-                    color: Colors.amber,
-                    borderRadius: BorderRadius.circular(24),
-                  ),
-                );
+            child: FutureBuilder<List<Map<String, String>>>(
+              future: _fetchAdvancedPodcast(),
+              builder: (context, snapshot) {
+                if (snapshot.hasData &&
+                    snapshot.connectionState == ConnectionState.done) {
+                  return ListView.separated(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: snapshot.data!.length,
+                    itemBuilder: (context, index) {
+                      return SizedBox(
+                        width: MediaQuery.of(context).size.width / 1.5,
+                        height: MediaQuery.of(context).size.height / 2,
+                        child: GestureDetector(
+                          onTap: () {
+                            context.go(
+                              '/podcast_list',
+                              extra: {
+                                'content': snapshot.data![index]['feedUrl'],
+                                'image': snapshot.data![index]['image'],
+                              },
+                            );
+                          },
+                          child: Image.network(
+                            snapshot.data![index]['image'] ?? "",
+                            width: double.infinity,
+                            height: double.infinity,
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                      );
+                    },
+                    separatorBuilder: (_, __) => const SizedBox(width: 10),
+                  );
+                } else {
+                  return Center(child: CircularProgressIndicator());
+                }
               },
-              separatorBuilder: (_, __) => const SizedBox(width: 10),
             ),
           ),
         ],
@@ -284,13 +386,13 @@ class _Podcasts extends State<Podcast> {
     var search = Search();
 
     var results = await search.search(
-      'france',
+      'advanced French',
       country: Country.france,
       limit: 10,
     );
 
     for (var result in results.items) {
-      print('Founded podcast ${result.collectionViewUrl}');
+      print('Founded podcast ${result.trackName}');
     }
 
     // var feed = results.items[1].feedUrl;
