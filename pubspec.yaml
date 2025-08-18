@@ -45,6 +45,7 @@ dependencies:
   just_audio: ^0.10.4
   speech_to_text: ^7.3.0
   youtube_player_flutter: ^9.1.2
+  podcast_search: ^0.7.9
 
 dev_dependencies:
   flutter_test:
