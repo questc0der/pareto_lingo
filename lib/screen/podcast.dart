@@ -65,13 +65,15 @@ class _Podcasts extends State<Podcast> {
     var results = await search.search(
       'france',
       country: Country.france,
-      limit: 200,
+      limit: 100,
     );
-
     try {
       for (var result in results.items) {
         if (result.feedUrl != null) {
-          podcasts.add({'image': result.artworkUrl600.toString()});
+          podcasts.add({
+            'image': result.artworkUrl600.toString(),
+            'feedUrl': result.feedUrl!,
+          });
         } else {
           continue;
         }
@@ -116,7 +118,10 @@ class _Podcasts extends State<Podcast> {
                         height: MediaQuery.of(context).size.height / 2,
                         child: GestureDetector(
                           onTap: () {
-                            context.go('/podcast_list');
+                            context.go(
+                              '/podcast_list',
+                              extra: snapshot.data![index]['feedUrl'],
+                            );
                           },
                           child: Image.network(
                             snapshot.data![index]['image'] ?? "",
