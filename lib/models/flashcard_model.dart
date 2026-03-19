@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:hive/hive.dart';
 
 part 'flashcard_model.g.dart';

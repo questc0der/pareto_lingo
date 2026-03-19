@@ -33,6 +33,8 @@ class UserDao extends ChangeNotifier {
     } catch (e) {
       return e.toString();
     }
+
+    return null;
   }
 
   Future<String?> login(String email, String password) async {
@@ -49,6 +51,8 @@ class UserDao extends ChangeNotifier {
     } catch (e) {
       return e.toString();
     }
+
+    return null;
   }
 
   void logout() async {

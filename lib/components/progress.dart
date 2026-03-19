@@ -1,28 +1,66 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:pareto_lingo/core/content/learning_language.dart';
+import 'package:pareto_lingo/features/auth/presentation/providers/auth_providers.dart';
+import 'package:pareto_lingo/features/flashcard/presentation/providers/flashcard_providers.dart';
+import 'package:pareto_lingo/features/learning/presentation/providers/learning_bootstrap_providers.dart';
 import 'package:neubrutalism_ui/neubrutalism_ui.dart';
 
-class Progress extends StatelessWidget {
+class Progress extends ConsumerWidget {
   const Progress({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final flashcardStatsAsync = ref.watch(flashcardStatsProvider);
+    final languageCode = ref
+        .watch(userLearningLanguageProvider)
+        .maybeWhen(
+          data: (code) => code,
+          orElse: () => supportedLearningLanguages.first.code,
+        );
+    final selectedLanguage = languageOptionByCode(languageCode);
+    final bootstrapContentAsync = ref.watch(
+      learningBootstrapContentProvider(languageCode),
+    );
+
+    final topWordsCount = bootstrapContentAsync.maybeWhen(
+      data: (content) => content.topWords.length,
+      orElse: () => 1000,
+    );
+
+    final readingSnippet = bootstrapContentAsync.maybeWhen(
+      data: (content) => content.readingText,
+      orElse: () => selectedLanguage.readingText,
+    );
+
+    final lectureTopic = bootstrapContentAsync.maybeWhen(
+      data:
+          (content) =>
+              content.lectureTopics.isNotEmpty
+                  ? content.lectureTopics.first
+                  : 'Daily lecture',
+      orElse: () => selectedLanguage.lectureTopics.first,
+    );
+
     return ListView(
       padding: EdgeInsets.all(6),
       children: [
         Row(
           children: [
-            Expanded(child: _buildStudiedCard(context)),
+            Expanded(child: _buildStudiedCard(context, flashcardStatsAsync)),
             SizedBox(width: 7),
-            Expanded(child: _buildRemainingCard(context)),
+            Expanded(child: _buildRemainingCard(context, flashcardStatsAsync)),
           ],
         ),
         SizedBox(height: 16),
-        _flashCardSection(context),
+        _flashCardSection(context, selectedLanguage.name, topWordsCount),
         SizedBox(height: 16),
         _speakingSection(context),
         SizedBox(height: 16),
-        _rulesSection(context),
+        _rulesSection(context, lectureTopic),
+        SizedBox(height: 16),
+        _readingSection(context, readingSnippet),
       ],
     );
   }
@@ -87,11 +125,11 @@ class Progress extends StatelessWidget {
                   buttonWidth: 80,
                   onPressed: () {
                     if (buttonText == "Start") {
-                      context.go('/flashcard');
+                      context.push('/flashcard');
                     } else if (buttonText == "Speak") {
-                      context.go('/speak');
+                      context.push('/speak');
                     } else if (buttonText == "Study") {
-                      context.go('/rules');
+                      context.push('/rules');
                     }
                   },
                   enableAnimation: true,
@@ -111,31 +149,51 @@ class Progress extends StatelessWidget {
     );
   }
 
-  Widget _buildStudiedCard(BuildContext context) {
+  Widget _buildStudiedCard(
+    BuildContext context,
+    AsyncValue<FlashcardStats> statsAsync,
+  ) {
+    final studied = statsAsync.maybeWhen(
+      data: (stats) => stats.studied,
+      orElse: () => 0,
+    );
+
     return _buildCard(
       context,
-      count: "0",
+      count: '$studied',
       mode: "Studied",
       height: MediaQuery.of(context).size.width / 2.5,
     );
   }
 
-  Widget _buildRemainingCard(BuildContext context) {
+  Widget _buildRemainingCard(
+    BuildContext context,
+    AsyncValue<FlashcardStats> statsAsync,
+  ) {
+    final remaining = statsAsync.maybeWhen(
+      data: (stats) => stats.remaining,
+      orElse: () => 0,
+    );
+
     return _buildCard(
       context,
-      count: "1000",
+      count: '$remaining',
       mode: "Remaining",
       height: MediaQuery.of(context).size.width / 2.5,
     );
   }
 
-  Widget _flashCardSection(BuildContext context) {
+  Widget _flashCardSection(
+    BuildContext context,
+    String languageName,
+    int topWordsCount,
+  ) {
     return _buildCard(
       context,
       title: "Flashcards",
       buttonText: "Start",
       description:
-          "This is the description for the 100 commonly used french words",
+          "Learn the top $topWordsCount most used $languageName words — just 10 words a day, or customize your own pace.",
       height: MediaQuery.of(context).size.height / 5,
     );
   }
@@ -146,18 +204,32 @@ class Progress extends StatelessWidget {
       mode: "Speaking",
       buttonText: "Speak",
       description:
-          "This is the description for the 100 commonly used french words",
+          "Practice speaking by repeating after the narrator. Tap to play or pause the audio anytime.",
       height: MediaQuery.of(context).size.height / 5,
     );
   }
 
-  Widget _rulesSection(BuildContext context) {
+  Widget _rulesSection(BuildContext context, String lectureTopic) {
     return _buildCard(
       context,
       mode: "Grammar Rules",
       buttonText: "Study",
       description:
-          "This is the description for the 100 commonly used french words",
+          "Master grammar through clear lessons. Next lecture: $lectureTopic.",
+      height: MediaQuery.of(context).size.height / 5,
+    );
+  }
+
+  Widget _readingSection(BuildContext context, String readingText) {
+    final condensedText =
+        readingText.length > 130
+            ? '${readingText.substring(0, 130)}...'
+            : readingText;
+
+    return _buildCard(
+      context,
+      mode: "Daily Reading",
+      description: condensedText,
       height: MediaQuery.of(context).size.height / 5,
     );
   }

@@ -1,146 +1,95 @@
 import 'dart:convert';
+
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:neubrutalism_ui/neubrutalism_ui.dart';
+import 'package:pareto_lingo/core/content/learning_language.dart';
+import 'package:pareto_lingo/features/auth/presentation/providers/auth_providers.dart';
+import 'package:pareto_lingo/features/video/presentation/providers/video_providers.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class GrammarRules extends StatefulWidget {
+class GrammarRules extends ConsumerWidget {
   const GrammarRules({super.key});
 
   @override
-  State<GrammarRules> createState() => _PlaylistState();
-}
+  Widget build(BuildContext context, WidgetRef ref) {
+    final grammarVideosAsync = ref.watch(grammarVideosProvider);
 
-class VideoItem {
-  final String videoId;
-  final String title;
-  final String thumbnailUrl;
-
-  VideoItem({
-    required this.videoId,
-    required this.title,
-    required this.thumbnailUrl,
-  });
-
-  factory VideoItem.fromJson(Map<String, dynamic> json) {
-    final snippet = json['snippet'] ?? {};
-    final resourceId = snippet['resourceId'] ?? {};
-    return VideoItem(
-      videoId: resourceId['videoId'] ?? '',
-      title: snippet['title'] ?? '',
-      thumbnailUrl: snippet['thumbnails']?['medium']?['url'] ?? '',
-    );
-  }
-}
-
-class _PlaylistState extends State<GrammarRules> {
-  final String apiKey = 'AIzaSyDjBSUPKjC3e8-NDe4L9CrEoQovVIZC1fo';
-  final String playlistId = 'PLV1-QgpUU7N2TVWS6gEVMqEfAFjAl-DV6';
-
-  Future<List<VideoItem>> fetchPlaylistVideos() async {
-    final String url =
-        'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=$playlistId&maxResults=50&key=$apiKey';
-
-    final response = await http.get(Uri.parse(url));
-
-    if (response.statusCode == 200) {
-      final data = json.decode(response.body);
-      final videos = data['items'] as List<dynamic>;
-      return videos
-          .map((item) => VideoItem.fromJson(item))
-          .where((v) => v.videoId.isNotEmpty)
-          .toList();
-    } else {
-      throw Exception('Failed to load videos: ${response.statusCode}');
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Playlist Videos")),
-      body: FutureBuilder<List<VideoItem>>(
-        future: fetchPlaylistVideos(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
-          } else if (snapshot.hasError) {
-            return Center(child: Text('Error: ${snapshot.error}'));
-          } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-            return const Center(child: Text('No videos found.'));
+      appBar: AppBar(title: const Text('Grammar Rules')),
+      body: grammarVideosAsync.when(
+        loading: () => const Center(child: CircularProgressIndicator()),
+        error:
+            (_, __) => const Center(
+              child: Text('Unable to load grammar videos right now.'),
+            ),
+        data: (videos) {
+          if (videos.isEmpty) {
+            return const Center(child: Text('No grammar videos found.'));
           }
 
-          final videos = snapshot.data!;
-          return Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ListView.builder(
-              itemCount: videos.length,
-              itemBuilder: (context, index) {
-                final video = videos[index];
-                return GestureDetector(
-                  onTap: () {
-                    if (video.videoId.isNotEmpty) {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder:
-                              (_) => VideoPlayerPage(
-                                videoId: video.videoId,
-                                allVideos: videos,
-                              ),
-                        ),
-                      );
-                    } else {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Invalid video id')),
-                      );
-                    }
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: NeuCard(
-                      cardColor: Colors.white,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          // fixed height so layout is stable
-                          SizedBox(
-                            height: 200,
-                            child:
-                                video.thumbnailUrl.isNotEmpty
-                                    ? Image.network(
-                                      video.thumbnailUrl,
-                                      fit: BoxFit.cover,
-                                      width: double.infinity,
-                                      errorBuilder:
-                                          (ctx, err, st) => const Center(
-                                            child: Icon(Icons.broken_image),
-                                          ),
-                                    )
-                                    : const Center(
-                                      child: Icon(Icons.broken_image),
-                                    ),
+          return ListView.builder(
+            padding: const EdgeInsets.all(8),
+            itemCount: videos.length,
+            itemBuilder: (context, index) {
+              final video = videos[index];
+
+              return GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder:
+                          (_) => GrammarVideoPlayerPage(
+                            initialIndex: index,
+                            allVideos: videos,
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              video.title,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              textAlign: TextAlign.center,
-                              style: const TextStyle(
-                                fontFamily: 'Circular',
-                                fontSize: 16,
-                              ),
+                    ),
+                  );
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: NeuCard(
+                    cardColor: Colors.white,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        SizedBox(
+                          height: 200,
+                          child:
+                              video.thumbnailUrl.isNotEmpty
+                                  ? Image.network(
+                                    video.thumbnailUrl,
+                                    fit: BoxFit.cover,
+                                    width: double.infinity,
+                                    errorBuilder:
+                                        (_, __, ___) => const Center(
+                                          child: Icon(Icons.broken_image),
+                                        ),
+                                  )
+                                  : const Center(
+                                    child: Icon(Icons.broken_image),
+                                  ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8),
+                          child: Text(
+                            video.title,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              fontFamily: 'Circular',
+                              fontSize: 16,
                             ),
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
-                );
-              },
-            ),
+                ),
+              );
+            },
           );
         },
       ),
@@ -148,40 +97,110 @@ class _PlaylistState extends State<GrammarRules> {
   }
 }
 
-class VideoPlayerPage extends StatefulWidget {
+class GrammarVideoItem {
   final String videoId;
-  final List<VideoItem> allVideos;
-  const VideoPlayerPage({
-    super.key,
+  final String title;
+  final String thumbnailUrl;
+
+  const GrammarVideoItem({
     required this.videoId,
+    required this.title,
+    required this.thumbnailUrl,
+  });
+}
+
+final grammarVideosProvider = FutureProvider<List<GrammarVideoItem>>((
+  ref,
+) async {
+  final apiKey = ref.read(youtubeApiKeyProvider);
+  if (apiKey.isEmpty) {
+    throw Exception('Missing YOUTUBE_API_KEY.');
+  }
+
+  final languageCode = await ref.read(userLearningLanguageProvider.future);
+  final selectedLanguage = languageOptionByCode(languageCode);
+  final query = Uri.encodeQueryComponent(
+    '${selectedLanguage.name} grammar rules for beginners',
+  );
+
+  final url = Uri.parse(
+    'https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&'
+    'relevanceLanguage=${selectedLanguage.code}&maxResults=30&q=$query&key=$apiKey',
+  );
+
+  final response = await ref.read(httpClientProvider).get(url);
+  if (response.statusCode != 200) {
+    throw Exception('Failed to fetch grammar videos.');
+  }
+
+  final data = json.decode(response.body) as Map<String, dynamic>;
+  final items = data['items'] as List<dynamic>? ?? const [];
+
+  return items
+      .map((item) => item as Map<String, dynamic>)
+      .map((item) {
+        final id =
+            (item['id'] as Map<String, dynamic>? ?? {})['videoId']
+                ?.toString() ??
+            '';
+        final snippet = item['snippet'] as Map<String, dynamic>? ?? {};
+        final title = snippet['title']?.toString() ?? '';
+        final thumb =
+            ((snippet['thumbnails'] as Map<String, dynamic>? ?? {})['high']
+                        as Map<String, dynamic>? ??
+                    {})['url']
+                ?.toString() ??
+            '';
+
+        return GrammarVideoItem(videoId: id, title: title, thumbnailUrl: thumb);
+      })
+      .where((item) => item.videoId.isNotEmpty)
+      .toList(growable: false);
+});
+
+class GrammarVideoPlayerPage extends StatefulWidget {
+  final int initialIndex;
+  final List<GrammarVideoItem> allVideos;
+
+  const GrammarVideoPlayerPage({
+    super.key,
+    required this.initialIndex,
     required this.allVideos,
   });
 
   @override
-  State<VideoPlayerPage> createState() => _VideoPlayerPageState();
+  State<GrammarVideoPlayerPage> createState() => _GrammarVideoPlayerPageState();
 }
 
-class _VideoPlayerPageState extends State<VideoPlayerPage> {
+class _GrammarVideoPlayerPageState extends State<GrammarVideoPlayerPage> {
   late YoutubePlayerController _controller;
+  late int _currentIndex;
+
   @override
   void initState() {
     super.initState();
+    _currentIndex = widget.initialIndex;
     _controller = YoutubePlayerController(
-      initialVideoId: widget.videoId,
+      initialVideoId: widget.allVideos[_currentIndex].videoId,
       flags: const YoutubePlayerFlags(autoPlay: true, enableCaption: true),
     );
   }
 
   @override
   void dispose() {
-    // _controller.clo();
+    _controller.dispose();
     super.dispose();
+  }
+
+  void _playAt(int index) {
+    setState(() {
+      _currentIndex = index;
+      _controller.load(widget.allVideos[index].videoId);
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    final otherVideos =
-        widget.allVideos.where((v) => v.videoId != widget.videoId).toList();
     return YoutubePlayerBuilder(
       player: YoutubePlayer(
         controller: _controller,
@@ -189,37 +208,34 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
       ),
       builder: (context, player) {
         return Scaffold(
-          appBar: AppBar(title: const Text('Video')),
+          appBar: AppBar(title: const Text('Grammar Video')),
           body: Column(
             children: [
               player,
               Expanded(
                 child: ListView.builder(
-                  itemCount: otherVideos.length,
+                  itemCount: widget.allVideos.length,
                   itemBuilder: (context, index) {
-                    final video = otherVideos[index];
+                    final video = widget.allVideos[index];
+                    final isCurrent = index == _currentIndex;
+
                     return Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(8),
                       child: NeuCard(
-                        cardColor: Colors.white,
+                        cardColor:
+                            isCurrent ? const Color(0xFFE8F7FF) : Colors.white,
                         child: ListTile(
-                          leading: Image.network(video.thumbnailUrl),
+                          leading:
+                              video.thumbnailUrl.isNotEmpty
+                                  ? Image.network(video.thumbnailUrl)
+                                  : const Icon(Icons.play_circle),
                           title: Text(
                             video.title,
-                            style: TextStyle(fontFamily: 'Circular'),
+                            style: const TextStyle(fontFamily: 'Circular'),
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
                           ),
-                          onTap: () {
-                            Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                builder:
-                                    (_) => VideoPlayerPage(
-                                      videoId: video.videoId,
-                                      allVideos: widget.allVideos,
-                                    ),
-                              ),
-                            );
-                          },
+                          onTap: () => _playAt(index),
                         ),
                       ),
                     );
