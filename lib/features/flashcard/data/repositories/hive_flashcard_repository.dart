@@ -29,10 +29,14 @@ class HiveFlashcardRepository implements FlashcardRepository {
           id: key.toString(),
           word: card.word,
           meaning: card.meaning,
+          exampleSentence: card.exampleSentence,
           interval: card.interval,
           repetitions: card.repetitions,
           easeFactorPermille: card.easeFactor,
           dueDate: card.dueDate,
+          stability: card.stability,
+          difficulty: card.difficulty,
+          lapses: card.lapses,
         ),
       );
 
@@ -54,6 +58,9 @@ class HiveFlashcardRepository implements FlashcardRepository {
     card.repetitions = schedule.repetitions;
     card.easeFactor = schedule.easeFactorPermille;
     card.dueDate = schedule.dueDate;
+    card.stability = schedule.stability;
+    card.difficulty = schedule.difficulty;
+    card.lapses = schedule.lapses;
 
     await card.save();
   }

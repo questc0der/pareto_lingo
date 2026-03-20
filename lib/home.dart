@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pareto_lingo/features/podcast/presentation/screens/podcast_screen.dart';
-import 'package:neubrutalism_ui/neubrutalism_ui.dart';
 import 'package:pareto_lingo/components/header_card.dart';
 import 'package:pareto_lingo/components/progress.dart';
 import 'package:pareto_lingo/features/auth/presentation/providers/auth_providers.dart';
@@ -17,7 +16,17 @@ class HomeState extends ConsumerStatefulWidget {
 }
 
 class Home extends ConsumerState<HomeState> {
-  int currentPageIndex = 1;
+  int currentPageIndex = 0;
+
+  static const _labels = ['Home', 'Podcast', 'Video', 'Settings'];
+
+  static const _icons = [
+    Icons.home_rounded,
+    Icons.podcasts_rounded,
+    Icons.video_library_rounded,
+    Icons.settings_rounded,
+  ];
+
   @override
   Widget build(BuildContext context) {
     final languageCode = ref
@@ -27,7 +36,16 @@ class Home extends ConsumerState<HomeState> {
           orElse: () => ref.watch(selectedLearningLanguageProvider),
         );
 
+    // Trigger the prewarm so cards are ready before the user taps Start.
+    // The value (List<FlashcardItem>) is read by FlashcardReviewScreen directly.
     ref.watch(flashcardPrewarmProvider(languageCode));
+
+    final pages = <Widget>[
+      const _HomeTab(),
+      const PodcastScreen(),
+      const ShortVideoFeed(),
+      const SettingsScreen(),
+    ];
 
     return PopScope(
       canPop: currentPageIndex == 0,
@@ -39,88 +57,64 @@ class Home extends ConsumerState<HomeState> {
         }
       },
       child: Scaffold(
+        body: SafeArea(
+          child: AnimatedSwitcher(
+            duration: const Duration(milliseconds: 260),
+            switchInCurve: Curves.easeOutCubic,
+            switchOutCurve: Curves.easeInCubic,
+            child: KeyedSubtree(
+              key: ValueKey<int>(currentPageIndex),
+              child: pages[currentPageIndex],
+            ),
+          ),
+        ),
         bottomNavigationBar: _buildBottomNavigationBar(),
-        body:
-            <Widget>[
-              Column(children: [HeaderCard(), Expanded(child: Progress())]),
-              PodcastScreen(),
-              ShortVideoFeed(),
-              const SettingsScreen(),
-            ][currentPageIndex],
       ),
     );
   }
 
   Widget _buildBottomNavigationBar() {
-    return NavigationBar(
-      destinations: <Widget>[
-        NavigationDestination(
-          icon: NeuIconButton(
-            onPressed:
-                () => setState(() {
-                  currentPageIndex = 0;
-                }),
-            buttonWidth: MediaQuery.of(context).size.width / 7,
-            buttonHeight: MediaQuery.of(context).size.height / 20,
-            borderRadius: BorderRadius.circular(8),
-            buttonColor: Colors.white,
-            enableAnimation: true,
-            icon: Icon(Icons.home),
+    final theme = Theme.of(context);
+
+    return NavigationBarTheme(
+      data: NavigationBarThemeData(
+        indicatorColor: theme.colorScheme.primaryContainer,
+        backgroundColor: theme.colorScheme.surface,
+        labelTextStyle: WidgetStateProperty.resolveWith((states) {
+          final isSelected = states.contains(WidgetState.selected);
+          return theme.textTheme.labelMedium?.copyWith(
+                fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
+              ) ??
+              TextStyle(
+                fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
+              );
+        }),
+      ),
+      child: NavigationBar(
+        selectedIndex: currentPageIndex,
+        onDestinationSelected: (int index) {
+          setState(() {
+            currentPageIndex = index;
+          });
+        },
+        destinations: List.generate(
+          _labels.length,
+          (index) => NavigationDestination(
+            icon: Icon(_icons[index]),
+            selectedIcon: Icon(_icons[index], fill: 1),
+            label: _labels[index],
           ),
-          label: "Home",
         ),
-        NavigationDestination(
-          icon: NeuIconButton(
-            onPressed:
-                () => setState(() {
-                  currentPageIndex = 1;
-                }),
-            buttonWidth: MediaQuery.of(context).size.width / 7,
-            buttonHeight: MediaQuery.of(context).size.height / 20,
-            borderRadius: BorderRadius.circular(8),
-            buttonColor: Colors.white,
-            enableAnimation: true,
-            icon: Icon(Icons.podcasts),
-          ),
-          label: "Podcast",
-        ),
-        NavigationDestination(
-          icon: NeuIconButton(
-            onPressed:
-                () => setState(() {
-                  currentPageIndex = 2;
-                }),
-            buttonWidth: MediaQuery.of(context).size.width / 7,
-            buttonHeight: MediaQuery.of(context).size.height / 20,
-            borderRadius: BorderRadius.circular(8),
-            buttonColor: Colors.white,
-            enableAnimation: true,
-            icon: Icon(Icons.video_library_rounded),
-          ),
-          label: "Video",
-        ),
-        NavigationDestination(
-          icon: NeuIconButton(
-            onPressed:
-                () => setState(() {
-                  currentPageIndex = 3;
-                }),
-            buttonWidth: MediaQuery.of(context).size.width / 7,
-            buttonHeight: MediaQuery.of(context).size.height / 20,
-            borderRadius: BorderRadius.circular(8),
-            buttonColor: Colors.white,
-            enableAnimation: true,
-            icon: Icon(Icons.settings),
-          ),
-          label: "Setting",
-        ),
-      ],
-      selectedIndex: currentPageIndex,
-      onDestinationSelected: (int index) {
-        setState(() {
-          currentPageIndex = index;
-        });
-      },
+      ),
     );
+  }
+}
+
+class _HomeTab extends StatelessWidget {
+  const _HomeTab();
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(children: const [HeaderCard(), Expanded(child: Progress())]);
   }
 }

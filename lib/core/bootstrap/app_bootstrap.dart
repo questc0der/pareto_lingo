@@ -9,7 +9,9 @@ class AppBootstrap {
 
   static Future<void> initialize() async {
     await Hive.initFlutter();
-    Hive.registerAdapter(FlashcardAdapter());
+    if (!Hive.isAdapterRegistered(0)) {
+      Hive.registerAdapter(FlashcardAdapter());
+    }
 
     if (Hive.isBoxOpen('flashcards')) {
       await Hive.box('flashcards').close();

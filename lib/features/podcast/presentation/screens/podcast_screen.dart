@@ -17,14 +17,35 @@ class PodcastScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 28, horizontal: 18),
-      child: ListView.builder(
-        itemCount: _categories.length,
-        itemBuilder: (context, index) {
-          final category = _categories[index];
-          return _PodcastSection(category: category);
-        },
+    final theme = Theme.of(context);
+
+    return RefreshIndicator(
+      onRefresh: () async {
+        for (final category in _categories) {
+          ref.invalidate(podcastCatalogProvider(category));
+        }
+      },
+      child: ListView(
+        padding: const EdgeInsets.fromLTRB(16, 20, 16, 28),
+        children: [
+          Text(
+            'Podcasts',
+            style: theme.textTheme.headlineSmall?.copyWith(
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+          const SizedBox(height: 6),
+          Text(
+            'Handpicked episodes by level. Tap a card to open the full episode list.',
+            style: theme.textTheme.bodyMedium?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
+          ),
+          const SizedBox(height: 16),
+          ..._categories.map((category) {
+            return _PodcastSection(category: category);
+          }),
+        ],
       ),
     );
   }
@@ -37,39 +58,55 @@ class _PodcastSection extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final theme = Theme.of(context);
     final podcastsAsync = ref.watch(podcastCatalogProvider(category));
 
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 28),
+      padding: const EdgeInsets.only(bottom: 22),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            category.title,
-            style: const TextStyle(
-              fontFamily: 'Circular',
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-            ),
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  category.title,
+                  style: theme.textTheme.titleLarge?.copyWith(
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+              Chip(
+                label: const Text('Updated'),
+                visualDensity: VisualDensity.compact,
+                backgroundColor: theme.colorScheme.surfaceContainerHighest,
+              ),
+            ],
           ),
           const SizedBox(height: 10),
           SizedBox(
-            height: MediaQuery.of(context).size.height / 3,
+            height: 235,
             child: podcastsAsync.when(
               data: (podcasts) {
                 if (podcasts.isEmpty) {
-                  return const Center(child: Text('No podcast found.'));
+                  return Center(
+                    child: Text(
+                      'No podcasts found for this category.',
+                      style: theme.textTheme.bodyMedium,
+                    ),
+                  );
                 }
 
                 return ListView.separated(
                   scrollDirection: Axis.horizontal,
                   itemCount: podcasts.length,
-                  separatorBuilder: (_, __) => const SizedBox(width: 10),
+                  separatorBuilder: (_, __) => const SizedBox(width: 12),
                   itemBuilder: (context, index) {
                     final item = podcasts[index];
                     return SizedBox(
-                      width: MediaQuery.of(context).size.width / 1.5,
-                      child: GestureDetector(
+                      width: 190,
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(16),
                         onTap: () {
                           context.go(
                             '/podcast_list',
@@ -79,18 +116,74 @@ class _PodcastSection extends ConsumerWidget {
                             ),
                           );
                         },
-                        child: Image.network(
-                          item.imageUrl,
-                          width: double.infinity,
-                          fit: BoxFit.contain,
-                          errorBuilder: (_, __, ___) {
-                            return const ColoredBox(
-                              color: Colors.black12,
-                              child: Center(
-                                child: Icon(Icons.image_not_supported),
-                              ),
-                            );
-                          },
+                        child: Ink(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            color: theme.colorScheme.surfaceContainer,
+                            border: Border.all(
+                              color: theme.colorScheme.outlineVariant,
+                            ),
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(16),
+                            child: Stack(
+                              fit: StackFit.expand,
+                              children: [
+                                Image.network(
+                                  item.imageUrl,
+                                  fit: BoxFit.cover,
+                                  errorBuilder: (_, __, ___) {
+                                    return ColoredBox(
+                                      color:
+                                          theme
+                                              .colorScheme
+                                              .surfaceContainerHighest,
+                                      child: const Center(
+                                        child: Icon(Icons.image_not_supported),
+                                      ),
+                                    );
+                                  },
+                                ),
+                                DecoratedBox(
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      begin: Alignment.bottomCenter,
+                                      end: Alignment.center,
+                                      colors: [
+                                        Colors.black.withValues(alpha: 0.58),
+                                        Colors.transparent,
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Positioned(
+                                  left: 12,
+                                  right: 12,
+                                  bottom: 12,
+                                  child: Row(
+                                    children: [
+                                      Expanded(
+                                        child: Text(
+                                          'Open episodes',
+                                          style: theme.textTheme.labelLarge
+                                              ?.copyWith(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w700,
+                                              ),
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                      ),
+                                      const Icon(
+                                        Icons.arrow_forward_rounded,
+                                        color: Colors.white,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
                       ),
                     );
@@ -98,14 +191,42 @@ class _PodcastSection extends ConsumerWidget {
                 );
               },
               error: (_, __) {
-                return const Center(
-                  child: Text(
-                    'Unable to load podcasts. Pull to refresh later.',
+                return Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Unable to load podcasts.',
+                        style: theme.textTheme.bodyMedium,
+                      ),
+                      const SizedBox(height: 8),
+                      FilledButton.tonal(
+                        onPressed: () {
+                          ref.invalidate(podcastCatalogProvider(category));
+                        },
+                        child: const Text('Retry'),
+                      ),
+                    ],
                   ),
                 );
               },
               loading: () {
-                return const Center(child: CircularProgressIndicator());
+                return ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 4,
+                  separatorBuilder: (_, __) => const SizedBox(width: 12),
+                  itemBuilder: (context, index) {
+                    return SizedBox(
+                      width: 190,
+                      child: DecoratedBox(
+                        decoration: BoxDecoration(
+                          color: theme.colorScheme.surfaceContainerHighest,
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                      ),
+                    );
+                  },
+                );
               },
             ),
           ),

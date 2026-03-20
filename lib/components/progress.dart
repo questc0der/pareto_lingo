@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -34,44 +35,83 @@ class Progress extends ConsumerWidget {
       orElse: () => selectedLanguage.readingText,
     );
 
-    final lectureTopic = bootstrapContentAsync.maybeWhen(
-      data:
-          (content) =>
-              content.lectureTopics.isNotEmpty
-                  ? content.lectureTopics.first
-                  : 'Daily lecture',
-      orElse: () => selectedLanguage.lectureTopics.first,
+    final studied = flashcardStatsAsync.maybeWhen(
+      data: (s) => s.studied,
+      orElse: () => 0,
+    );
+    final remaining = flashcardStatsAsync.maybeWhen(
+      data: (s) => s.remaining,
+      orElse: () => 0,
     );
 
     return ListView(
-      padding: EdgeInsets.all(6),
+      padding: const EdgeInsets.all(6),
       children: [
+        // ── Vocabulary progress ring ─────────────────────────────────
+        _VocabularyProgressCard(
+          studied: studied,
+          total: topWordsCount,
+          languageName: selectedLanguage.name,
+        ),
+        const SizedBox(height: 12),
+        // ── Stats row ────────────────────────────────────────────────
         Row(
           children: [
-            Expanded(child: _buildStudiedCard(context, flashcardStatsAsync)),
-            SizedBox(width: 7),
-            Expanded(child: _buildRemainingCard(context, flashcardStatsAsync)),
+            Expanded(child: _statCard(context, '$studied', 'Studied')),
+            const SizedBox(width: 7),
+            Expanded(child: _statCard(context, '$remaining', 'Remaining')),
           ],
         ),
-        SizedBox(height: 16),
+        const SizedBox(height: 16),
         _flashCardSection(context, selectedLanguage.name, topWordsCount),
-        SizedBox(height: 16),
+        const SizedBox(height: 16),
         _speakingSection(context),
-        SizedBox(height: 16),
-        _rulesSection(context, lectureTopic),
-        SizedBox(height: 16),
+        const SizedBox(height: 16),
         _readingSection(context, readingSnippet),
       ],
     );
   }
 
+  Widget _statCard(BuildContext context, String count, String label) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      child: NeuContainer(
+        height: MediaQuery.of(context).size.width / 2.5,
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                count,
+                style: const TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Circular',
+                ),
+              ),
+              Text(
+                label,
+                style: const TextStyle(
+                  fontSize: 14,
+                  fontFamily: 'Circular',
+                  color: Colors.black54,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
   Widget _buildCard(
     BuildContext context, {
-    String? count,
     String? mode,
     double? height,
-    double? width,
-    String? title,
     String? description,
     String? buttonText,
   }) {
@@ -79,63 +119,48 @@ class Progress extends ConsumerWidget {
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
       child: NeuContainer(
         height: height,
-        width: width,
         borderRadius: BorderRadius.circular(10),
         color: Colors.white,
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(12.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              if (count != null)
-                Text(
-                  count,
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'Circular',
-                  ),
-                ),
               if (mode != null)
                 Text(
                   mode,
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'Circular',
-                  ),
-                ),
-              if (title != null)
-                Text(
-                  title,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'Circular',
                   ),
                 ),
               if (description != null)
-                Text(description, style: TextStyle(fontFamily: 'Circular')),
+                Text(
+                  description,
+                  style: const TextStyle(
+                    fontFamily: 'Circular',
+                    color: Colors.black54,
+                  ),
+                ),
               if (buttonText != null)
                 NeuTextButton(
                   borderRadius: BorderRadius.circular(8),
-                  buttonColor: Color(0xFF7DF9FF),
+                  buttonColor: const Color(0xFF7DF9FF),
                   buttonHeight: 40,
                   buttonWidth: 80,
                   onPressed: () {
-                    if (buttonText == "Start") {
+                    if (buttonText == 'Start') {
                       context.push('/flashcard');
-                    } else if (buttonText == "Speak") {
+                    } else if (buttonText == 'Speak') {
                       context.push('/speak');
-                    } else if (buttonText == "Study") {
-                      context.push('/rules');
                     }
                   },
                   enableAnimation: true,
                   text: Text(
                     buttonText,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
                       fontFamily: 'Circular',
@@ -149,40 +174,6 @@ class Progress extends ConsumerWidget {
     );
   }
 
-  Widget _buildStudiedCard(
-    BuildContext context,
-    AsyncValue<FlashcardStats> statsAsync,
-  ) {
-    final studied = statsAsync.maybeWhen(
-      data: (stats) => stats.studied,
-      orElse: () => 0,
-    );
-
-    return _buildCard(
-      context,
-      count: '$studied',
-      mode: "Studied",
-      height: MediaQuery.of(context).size.width / 2.5,
-    );
-  }
-
-  Widget _buildRemainingCard(
-    BuildContext context,
-    AsyncValue<FlashcardStats> statsAsync,
-  ) {
-    final remaining = statsAsync.maybeWhen(
-      data: (stats) => stats.remaining,
-      orElse: () => 0,
-    );
-
-    return _buildCard(
-      context,
-      count: '$remaining',
-      mode: "Remaining",
-      height: MediaQuery.of(context).size.width / 2.5,
-    );
-  }
-
   Widget _flashCardSection(
     BuildContext context,
     String languageName,
@@ -190,10 +181,10 @@ class Progress extends ConsumerWidget {
   ) {
     return _buildCard(
       context,
-      title: "Flashcards",
-      buttonText: "Start",
+      mode: 'Flashcards',
+      buttonText: 'Start',
       description:
-          "Learn the top $topWordsCount most used $languageName words — just 10 words a day, or customize your own pace.",
+          'Learn the top $topWordsCount most used $languageName words — just 10 words a day, or customize your own pace.',
       height: MediaQuery.of(context).size.height / 5,
     );
   }
@@ -201,21 +192,10 @@ class Progress extends ConsumerWidget {
   Widget _speakingSection(BuildContext context) {
     return _buildCard(
       context,
-      mode: "Speaking",
-      buttonText: "Speak",
+      mode: 'Speaking',
+      buttonText: 'Speak',
       description:
-          "Practice speaking by repeating after the narrator. Tap to play or pause the audio anytime.",
-      height: MediaQuery.of(context).size.height / 5,
-    );
-  }
-
-  Widget _rulesSection(BuildContext context, String lectureTopic) {
-    return _buildCard(
-      context,
-      mode: "Grammar Rules",
-      buttonText: "Study",
-      description:
-          "Master grammar through clear lessons. Next lecture: $lectureTopic.",
+          'Practice speaking by repeating after the narrator. Tap to play or pause the audio anytime.',
       height: MediaQuery.of(context).size.height / 5,
     );
   }
@@ -228,9 +208,154 @@ class Progress extends ConsumerWidget {
 
     return _buildCard(
       context,
-      mode: "Daily Reading",
+      mode: 'Daily Reading',
       description: condensedText,
       height: MediaQuery.of(context).size.height / 5,
     );
   }
+}
+
+/// Animated circular ring showing vocabulary mastery (studied / total).
+class _VocabularyProgressCard extends StatelessWidget {
+  final int studied;
+  final int total;
+  final String languageName;
+
+  const _VocabularyProgressCard({
+    required this.studied,
+    required this.total,
+    required this.languageName,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final pct = total == 0 ? 0.0 : (studied / total).clamp(0.0, 1.0);
+    final percentLabel = '${(pct * 100).toStringAsFixed(1)}%';
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8),
+      child: NeuContainer(
+        borderRadius: BorderRadius.circular(16),
+        color: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+          child: Row(
+            children: [
+              // Ring
+              SizedBox(
+                width: 100,
+                height: 100,
+                child: TweenAnimationBuilder<double>(
+                  tween: Tween(begin: 0, end: pct),
+                  duration: const Duration(milliseconds: 900),
+                  curve: Curves.easeOut,
+                  builder: (context, value, _) {
+                    return CustomPaint(
+                      painter: _RingPainter(value),
+                      child: Center(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              percentLabel,
+                              style: const TextStyle(
+                                fontFamily: 'Circular',
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18,
+                              ),
+                            ),
+                            const Text(
+                              'done',
+                              style: TextStyle(
+                                fontFamily: 'Circular',
+                                fontSize: 11,
+                                color: Colors.black45,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+              const SizedBox(width: 20),
+              // Text info
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      '$languageName Vocabulary',
+                      style: const TextStyle(
+                        fontFamily: 'Circular',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                    ),
+                    const SizedBox(height: 6),
+                    Text(
+                      '$studied of $total core words mastered',
+                      style: const TextStyle(
+                        fontFamily: 'Circular',
+                        color: Colors.black54,
+                        fontSize: 13,
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    LinearProgressIndicator(
+                      value: pct,
+                      backgroundColor: Colors.grey.shade200,
+                      color: const Color(0xFF7DF9FF),
+                      minHeight: 6,
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _RingPainter extends CustomPainter {
+  final double progress;
+
+  const _RingPainter(this.progress);
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final center = Offset(size.width / 2, size.height / 2);
+    final radius = (size.width / 2) - 8;
+    const strokeWidth = 8.0;
+
+    // Background ring
+    canvas.drawCircle(
+      center,
+      radius,
+      Paint()
+        ..color = Colors.grey.shade200
+        ..strokeWidth = strokeWidth
+        ..style = PaintingStyle.stroke,
+    );
+
+    // Progress arc
+    canvas.drawArc(
+      Rect.fromCircle(center: center, radius: radius),
+      -pi / 2,
+      2 * pi * progress,
+      false,
+      Paint()
+        ..color = const Color(0xFF7DF9FF)
+        ..strokeWidth = strokeWidth
+        ..style = PaintingStyle.stroke
+        ..strokeCap = StrokeCap.round,
+    );
+  }
+
+  @override
+  bool shouldRepaint(_RingPainter old) => old.progress != progress;
 }

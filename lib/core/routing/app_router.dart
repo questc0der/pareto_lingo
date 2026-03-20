@@ -10,7 +10,6 @@ import 'package:pareto_lingo/features/podcast/presentation/models/podcast_route_
 import 'package:pareto_lingo/features/podcast/presentation/screens/podcast_episode_list_screen.dart';
 import 'package:pareto_lingo/home.dart';
 import 'package:pareto_lingo/screen/flashcard.dart';
-import 'package:pareto_lingo/screen/rules.dart';
 import 'package:pareto_lingo/screen/speak.dart';
 
 class GoRouterRefreshStream extends ChangeNotifier {
@@ -52,7 +51,6 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => FlashCardReviewScreen(),
       ),
       GoRoute(path: '/speak', builder: (context, state) => Speak()),
-      GoRoute(path: '/rules', builder: (context, state) => GrammarRules()),
       GoRoute(
         path: '/podcast_list',
         builder: (context, state) {
