@@ -12,10 +12,7 @@ import 'package:pareto_lingo/features/video/domain/usecases/get_video_progress.d
 import 'package:pareto_lingo/features/video/domain/usecases/save_video_progress.dart';
 
 final youtubeApiKeyProvider = Provider<String>((ref) {
-  return const String.fromEnvironment(
-    'YOUTUBE_API_KEY',
-    defaultValue: 'AIzaSyDjBSUPKjC3e8-NDe4L9CrEoQovVIZC1fo',
-  );
+  return const String.fromEnvironment('YOUTUBE_API_KEY', defaultValue: '');
 });
 
 final httpClientProvider = Provider<http.Client>((ref) {
@@ -31,10 +28,7 @@ final videoProgressBoxProvider = Provider<Box<double>>((ref) {
 final youtubeRemoteDataSourceProvider = Provider<YoutubeRemoteDataSource>((
   ref,
 ) {
-  return YoutubeRemoteDataSource(
-    ref.read(httpClientProvider),
-    ref.read(youtubeApiKeyProvider),
-  );
+  return const YoutubeRemoteDataSource();
 });
 
 final videoRepositoryProvider = Provider<VideoRepository>((ref) {

@@ -6,7 +6,7 @@ import 'package:pareto_lingo/features/learning/presentation/providers/learning_b
 import 'package:pareto_lingo/features/flashcard/data/repositories/hive_flashcard_repository.dart';
 import 'package:pareto_lingo/features/flashcard/domain/entities/flashcard_item.dart';
 import 'package:pareto_lingo/features/flashcard/domain/repositories/flashcard_repository.dart';
-import 'package:pareto_lingo/features/flashcard/domain/services/sm2_scheduler.dart';
+import 'package:pareto_lingo/features/flashcard/domain/services/fsrs_scheduler.dart';
 import 'package:pareto_lingo/features/flashcard/domain/services/srs_scheduler.dart';
 import 'package:pareto_lingo/features/flashcard/domain/usecases/get_due_flashcards.dart';
 import 'package:pareto_lingo/features/flashcard/domain/usecases/review_flashcard.dart';
@@ -86,7 +86,7 @@ final syncFlashcardDeckProvider = FutureProvider.family<void, String>((
   );
 
   final deckWords = bootstrapContent.topWords;
-  if (deckWords.isEmpty) {
+  if (deckWords.isEmpty && flashcardBox.isEmpty) {
     return;
   }
 
@@ -96,15 +96,17 @@ final syncFlashcardDeckProvider = FutureProvider.family<void, String>((
 
   final currentDeckLanguage = appSettingsBox.get('flashcard_deck_language');
 
+  await _normalizeExistingDeckMeanings(flashcardBox);
+
   if (currentDeckLanguage == null &&
       languageCode == 'fr' &&
-      flashcardBox.length >= 900) {
+      flashcardBox.length >= 100) {
     await appSettingsBox.put('flashcard_deck_language', 'fr');
     return;
   }
 
   final shouldRebuild =
-      currentDeckLanguage != languageCode || flashcardBox.length < 900;
+      currentDeckLanguage != languageCode || flashcardBox.length < 100;
 
   if (!shouldRebuild) {
     if (languageCode == 'fr') {
@@ -119,8 +121,14 @@ final syncFlashcardDeckProvider = FutureProvider.family<void, String>((
     return;
   }
 
+  // Keep existing deck if online sources are temporarily unavailable.
+  if (deckWords.isEmpty && flashcardBox.isNotEmpty) {
+    await appSettingsBox.put('flashcard_deck_language', languageCode);
+    return;
+  }
+
   if (languageCode == 'fr') {
-    if (backendDeck.length >= 900) {
+    if (backendDeck.length >= 100) {
       await _seedDeckFromPairs(
         flashcardBox,
         backendDeck
@@ -131,7 +139,7 @@ final syncFlashcardDeckProvider = FutureProvider.family<void, String>((
       await _reseedFrenchDeckFromAsset(flashcardBox);
     }
   } else {
-    if (backendDeck.length >= 900) {
+    if (backendDeck.length >= 100) {
       await _seedDeckFromPairs(
         flashcardBox,
         backendDeck
@@ -140,12 +148,16 @@ final syncFlashcardDeckProvider = FutureProvider.family<void, String>((
       );
     } else {
       await flashcardBox.clear();
-
+      // Use putAll for a large batch — much faster than sequential add()
+      final entries = <dynamic, Flashcard>{};
+      int key = 0;
       for (final word in deckWords.take(1000)) {
-        await flashcardBox.add(
-          Flashcard(word: word, meaning: 'Meaning for "$word"'),
+        entries[key++] = Flashcard(
+          word: word,
+          meaning: _fallbackMeaningForWord(word),
         );
       }
+      await flashcardBox.putAll(entries);
     }
   }
 
@@ -157,14 +169,15 @@ Future<void> _reseedFrenchDeckFromAsset(Box<Flashcard> flashcardBox) async {
   final jsonString = await rootBundle.loadString('assets/french_words.json');
   final List<dynamic> data = jsonDecode(jsonString);
 
+  final entries = <dynamic, Flashcard>{};
+  int key = 0;
   for (final item in data.take(1000)) {
-    await flashcardBox.add(
-      Flashcard(
-        word: item['word'].toString(),
-        meaning: item['meaning'].toString(),
-      ),
+    entries[key++] = Flashcard(
+      word: item['word'].toString(),
+      meaning: item['meaning'].toString(),
     );
   }
+  await flashcardBox.putAll(entries);
 }
 
 Future<void> _seedDeckFromPairs(
@@ -172,33 +185,65 @@ Future<void> _seedDeckFromPairs(
   List<({String word, String meaning})> pairs,
 ) async {
   await flashcardBox.clear();
-
+  // Batch write — significantly faster than sequential add() for 1000 records
+  final entries = <dynamic, Flashcard>{};
+  int key = 0;
   for (final pair in pairs.take(1000)) {
-    await flashcardBox.add(Flashcard(word: pair.word, meaning: pair.meaning));
+    final normalizedMeaning =
+        pair.meaning.trim().isEmpty
+            ? _fallbackMeaningForWord(pair.word)
+            : pair.meaning;
+    entries[key++] = Flashcard(word: pair.word, meaning: normalizedMeaning);
+  }
+  await flashcardBox.putAll(entries);
+}
+
+Future<void> _normalizeExistingDeckMeanings(Box<Flashcard> flashcardBox) async {
+  for (var index = 0; index < flashcardBox.length; index++) {
+    final key = flashcardBox.keyAt(index);
+    final card = flashcardBox.get(key);
+    if (card == null) continue;
+
+    final meaning = card.meaning.trim();
+    final isPlaceholder =
+        meaning.isEmpty || meaning == '—' || meaning == '-' || meaning == '...';
+
+    if (isPlaceholder) {
+      card.meaning = _fallbackMeaningForWord(card.word);
+      await card.save();
+    }
   }
 }
 
+String _fallbackMeaningForWord(String word) {
+  return 'meaning: ${word.trim()}';
+}
+
+// ── FSRS ─────────────────────────────────────────────────────────────────────
 final srsSchedulerProvider = Provider<SrsScheduler>((ref) {
-  return const Sm2Scheduler();
+  return const FsrsScheduler();
 });
 
 final getDueFlashcardsProvider = Provider<GetDueFlashcards>((ref) {
   return GetDueFlashcards(ref.read(flashcardRepositoryProvider));
 });
 
-final flashcardPrewarmProvider = FutureProvider.family<void, String>((
-  ref,
-  languageCode,
-) async {
-  await ref.watch(syncFlashcardDeckProvider(languageCode).future);
+/// Prewarms the deck (sync) then loads due cards into memory.
+/// The session screen reads from this cache — so it opens instantly.
+final flashcardPrewarmProvider =
+    FutureProvider.family<List<FlashcardItem>, String>((
+      ref,
+      languageCode,
+    ) async {
+      await ref.watch(syncFlashcardDeckProvider(languageCode).future);
 
-  final rawLimit = ref
-      .read(appSettingsBoxProvider)
-      .get('daily_flashcards_limit');
-  final dailyLimit = (int.tryParse(rawLimit ?? '10') ?? 10).clamp(5, 100);
+      final rawLimit = ref
+          .read(appSettingsBoxProvider)
+          .get('daily_flashcards_limit');
+      final dailyLimit = (int.tryParse(rawLimit ?? '10') ?? 10).clamp(5, 100);
 
-  await ref.read(getDueFlashcardsProvider)(limit: dailyLimit);
-});
+      return ref.read(getDueFlashcardsProvider)(limit: dailyLimit);
+    });
 
 final reviewFlashcardProvider = Provider<ReviewFlashcard>((ref) {
   return ReviewFlashcard(
@@ -207,6 +252,7 @@ final reviewFlashcardProvider = Provider<ReviewFlashcard>((ref) {
   );
 });
 
+// ── Session ───────────────────────────────────────────────────────────────────
 class FlashcardSessionState {
   final bool isLoading;
   final List<FlashcardItem> queue;
@@ -263,6 +309,19 @@ class FlashcardSessionController extends StateNotifier<FlashcardSessionState> {
   FlashcardSessionController(this._getDueFlashcards, this._reviewFlashcard)
     : super(const FlashcardSessionState());
 
+  /// Initialize from a pre-loaded list (no Hive scan on screen open).
+  void initializeFromPrewarmed(List<FlashcardItem> prewarmedCards) {
+    state = FlashcardSessionState(
+      isLoading: false,
+      queue: prewarmedCards,
+      sessionRepeats: const [],
+      currentIndex: 0,
+      showAnswer: false,
+      isComplete: prewarmedCards.isEmpty,
+    );
+  }
+
+  /// Fallback: load due cards fresh (used if prewarm wasn't available).
   Future<void> initialize({required int dailyLimit}) async {
     state = state.copyWith(isLoading: true, clearTransientMessage: true);
     final dueCards = await _getDueFlashcards(limit: dailyLimit);

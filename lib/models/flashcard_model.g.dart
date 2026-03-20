@@ -23,13 +23,17 @@ class FlashcardAdapter extends TypeAdapter<Flashcard> {
       easeFactor: fields[3] as int,
       dueDate: fields[4] as DateTime?,
       repetitions: fields[5] as int,
+      stability: (fields[6] as num?)?.toDouble() ?? 0.0,
+      difficulty: (fields[7] as num?)?.toDouble() ?? 5.0,
+      lapses: (fields[8] as int?) ?? 0,
+      exampleSentence: fields[9] as String?,
     );
   }
 
   @override
   void write(BinaryWriter writer, Flashcard obj) {
     writer
-      ..writeByte(6)
+      ..writeByte(10)
       ..writeByte(0)
       ..write(obj.word)
       ..writeByte(1)
@@ -41,7 +45,15 @@ class FlashcardAdapter extends TypeAdapter<Flashcard> {
       ..writeByte(4)
       ..write(obj.dueDate)
       ..writeByte(5)
-      ..write(obj.repetitions);
+      ..write(obj.repetitions)
+      ..writeByte(6)
+      ..write(obj.stability)
+      ..writeByte(7)
+      ..write(obj.difficulty)
+      ..writeByte(8)
+      ..write(obj.lapses)
+      ..writeByte(9)
+      ..write(obj.exampleSentence);
   }
 
   @override
