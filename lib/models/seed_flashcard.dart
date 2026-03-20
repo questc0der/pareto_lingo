@@ -10,9 +10,15 @@ Future<void> seedFlashcards() async {
 
   final jsonString = await rootBundle.loadString('assets/french_words.json');
   final List<dynamic> data = jsonDecode(jsonString);
+  final cards =
+      data
+          .map(
+            (item) => Flashcard(
+              word: item['word'] as String,
+              meaning: item['meaning'] as String,
+            ),
+          )
+          .toList();
 
-  for (var item in data) {
-    final card = Flashcard(word: item['word'], meaning: item['meaning']);
-    await box.add(card);
-  }
+  await box.addAll(cards);
 }
