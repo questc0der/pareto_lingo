@@ -44,6 +44,7 @@ dependencies:
   neubrutalism_ui: ^2.0.2
   just_audio: ^0.10.4
   speech_to_text: ^7.3.0
+  video_player: ^2.9.2
   youtube_player_flutter: ^9.1.2
   podcast_search: ^0.7.9
   http: ^1.4.0
