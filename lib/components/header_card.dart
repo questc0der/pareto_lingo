@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 import 'package:hive/hive.dart';
 import 'package:pareto_lingo/core/content/learning_language.dart';
 import 'package:pareto_lingo/features/auth/presentation/providers/auth_providers.dart';
@@ -71,21 +70,20 @@ class HeaderCard extends ConsumerWidget {
                 PopupMenuButton<String>(
                   icon: const Icon(Icons.more_vert),
                   onSelected: (value) async {
-                    if (value == 'logout') {
-                      await ref
-                          .read(authActionControllerProvider.notifier)
-                          .logout();
-                      if (!context.mounted) return;
-                      context.go('/login');
+                    if (value.startsWith('lang:')) {
+                      final code = value.replaceFirst('lang:', '');
+                      await setLearningLanguage(ref, code);
                     }
                   },
-                  itemBuilder:
-                      (context) => const [
+                  itemBuilder: (context) {
+                    return [
+                      for (final option in supportedLearningLanguages)
                         PopupMenuItem<String>(
-                          value: 'logout',
-                          child: Text('Logout'),
+                          value: 'lang:${option.code}',
+                          child: Text('${option.flag} ${option.name}'),
                         ),
-                      ],
+                    ];
+                  },
                 ),
               ],
             ),

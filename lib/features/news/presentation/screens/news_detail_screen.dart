@@ -122,6 +122,14 @@ class _NewsDetailScreenState extends ConsumerState<NewsDetailScreen> {
               context,
             ).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w700),
           ),
+          const SizedBox(height: 6),
+          Text(
+            _metaText(article),
+            style: TextStyle(
+              color: Theme.of(context).colorScheme.primary,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
           const SizedBox(height: 10),
           Wrap(
             spacing: 8,
@@ -287,5 +295,17 @@ class _NewsDetailScreenState extends ConsumerState<NewsDetailScreen> {
       default:
         return 'en-US';
     }
+  }
+
+  String _metaText(NewsArticle article) {
+    final source = article.source.trim().isEmpty ? 'News' : article.source;
+    final date = article.publishedAt;
+    if (date == null) return source;
+
+    final month = date.month.toString().padLeft(2, '0');
+    final day = date.day.toString().padLeft(2, '0');
+    final hour = date.hour.toString().padLeft(2, '0');
+    final minute = date.minute.toString().padLeft(2, '0');
+    return '$source • ${date.year}-$month-$day $hour:$minute';
   }
 }

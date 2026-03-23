@@ -8,6 +8,7 @@ Backend content service for language-specific flashcards.
 - Pulls top frequency words by language
 - Auto-translates to target language (`en` by default)
 - Caches translations on disk (`backend/data/cache`) to speed up future requests
+- Production middleware: `helmet`, `compression`, `express-rate-limit`, env-based CORS
 
 ## Setup
 
@@ -24,6 +25,13 @@ npm install
 cp .env.example .env
 ```
 
+Important env vars:
+
+- `NODE_ENV=production`
+- `ALLOWED_ORIGINS=https://<your-frontend-domain>` (comma-separated for multiple)
+- `REQUEST_LIMIT_PER_MINUTE=120`
+- `MAX_FLASHCARDS_PER_REQUEST=1000`
+
 3. Start server:
 
 ```bash
@@ -31,6 +39,14 @@ npm run dev
 ```
 
 Server runs on `http://localhost:8080` by default.
+
+## Render deployment
+
+1. Create a new **Web Service** from the `backend` folder.
+2. Build command: `npm install`
+3. Start command: `npm start`
+4. Set environment variables from `.env.example`.
+5. Set `ALLOWED_ORIGINS` to your deployed Flutter web domain (if web client is used).
 
 ## Flutter integration
 

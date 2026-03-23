@@ -50,6 +50,46 @@ Future<void> setDailyFlashcardLimit(WidgetRef ref, int value) async {
       .put('daily_flashcards_limit', clamped.toString());
 }
 
+Future<bool> addCustomFlashcard(
+  WidgetRef ref, {
+  required String word,
+  required String meaning,
+  String? exampleSentence,
+}) async {
+  final normalizedWord = word.trim();
+  final normalizedMeaning = meaning.trim();
+
+  if (normalizedWord.isEmpty || normalizedMeaning.isEmpty) {
+    return false;
+  }
+
+  final box = ref.read(flashcardBoxProvider);
+
+  final alreadyExists = box.values.any((card) {
+    return card.word.trim().toLowerCase() == normalizedWord.toLowerCase();
+  });
+
+  if (alreadyExists) {
+    return false;
+  }
+
+  await box.add(
+    Flashcard(
+      word: normalizedWord,
+      meaning: normalizedMeaning,
+      interval: 1,
+      repetitions: 0,
+      dueDate: DateTime.now(),
+      exampleSentence:
+          exampleSentence?.trim().isEmpty == true
+              ? null
+              : exampleSentence?.trim(),
+    ),
+  );
+
+  return true;
+}
+
 final flashcardRepositoryProvider = Provider<FlashcardRepository>((ref) {
   return HiveFlashcardRepository(ref.read(flashcardBoxProvider));
 });
@@ -95,21 +135,26 @@ final syncFlashcardDeckProvider = FutureProvider.family<void, String>((
       .fetchFlashcardDeck(languageCode: languageCode, limit: 1000);
 
   final currentDeckLanguage = appSettingsBox.get('flashcard_deck_language');
+  final hasStudyProgress = flashcardBox.values.any(
+    (card) => card.repetitions > 0,
+  );
 
   await _normalizeExistingDeckMeanings(flashcardBox);
 
   if (currentDeckLanguage == null &&
-      languageCode == 'fr' &&
-      flashcardBox.length >= 100) {
-    await appSettingsBox.put('flashcard_deck_language', 'fr');
+      flashcardBox.isNotEmpty &&
+      hasStudyProgress) {
+    await appSettingsBox.put('flashcard_deck_language', languageCode);
     return;
   }
 
+  final shouldRebuildByLanguage = currentDeckLanguage != languageCode;
+  final shouldRebuildBySize = flashcardBox.length < 100;
   final shouldRebuild =
-      currentDeckLanguage != languageCode || flashcardBox.length < 100;
+      (shouldRebuildByLanguage || shouldRebuildBySize) && !hasStudyProgress;
 
   if (!shouldRebuild) {
-    if (languageCode == 'fr') {
+    if (languageCode == 'fr' && !hasStudyProgress) {
       final hasIdenticalMeanings = flashcardBox.values.any(
         (card) => card.word.trim() == card.meaning.trim(),
       );

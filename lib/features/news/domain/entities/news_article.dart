@@ -6,6 +6,8 @@ class NewsArticle {
   final String content;
   final String thumbnailUrl;
   final String articleUrl;
+  final DateTime? publishedAt;
+  final String source;
 
   const NewsArticle({
     required this.pageId,
@@ -15,6 +17,8 @@ class NewsArticle {
     required this.content,
     required this.thumbnailUrl,
     required this.articleUrl,
+    this.publishedAt,
+    this.source = 'News',
   });
 
   NewsArticle copyWith({
@@ -22,6 +26,8 @@ class NewsArticle {
     String? content,
     String? thumbnailUrl,
     String? articleUrl,
+    DateTime? publishedAt,
+    String? source,
   }) {
     return NewsArticle(
       pageId: pageId,
@@ -31,6 +37,8 @@ class NewsArticle {
       content: content ?? this.content,
       thumbnailUrl: thumbnailUrl ?? this.thumbnailUrl,
       articleUrl: articleUrl ?? this.articleUrl,
+      publishedAt: publishedAt ?? this.publishedAt,
+      source: source ?? this.source,
     );
   }
 }

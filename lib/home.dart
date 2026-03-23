@@ -5,8 +5,8 @@ import 'package:pareto_lingo/components/header_card.dart';
 import 'package:pareto_lingo/components/progress.dart';
 import 'package:pareto_lingo/features/auth/presentation/providers/auth_providers.dart';
 import 'package:pareto_lingo/features/flashcard/presentation/providers/flashcard_providers.dart';
+import 'package:pareto_lingo/features/news/presentation/screens/news_feed_screen.dart';
 import 'package:pareto_lingo/screen/settings.dart';
-import 'package:pareto_lingo/screen/video.dart';
 
 class HomeState extends ConsumerStatefulWidget {
   const HomeState({super.key});
@@ -18,12 +18,12 @@ class HomeState extends ConsumerStatefulWidget {
 class Home extends ConsumerState<HomeState> {
   int currentPageIndex = 0;
 
-  static const _labels = ['Home', 'Podcast', 'Video', 'Settings'];
+  static const _labels = ['Home', 'Podcast', 'News', 'Settings'];
 
   static const _icons = [
     Icons.home_rounded,
     Icons.podcasts_rounded,
-    Icons.video_library_rounded,
+    Icons.newspaper_rounded,
     Icons.settings_rounded,
   ];
 
@@ -43,7 +43,7 @@ class Home extends ConsumerState<HomeState> {
     final pages = <Widget>[
       const _HomeTab(),
       const PodcastScreen(),
-      const ShortVideoFeed(),
+      const NewsFeedScreen(),
       const SettingsScreen(),
     ];
 

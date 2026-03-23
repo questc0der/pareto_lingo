@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pareto_lingo/core/content/learning_language.dart';
 import 'package:pareto_lingo/features/auth/presentation/providers/auth_providers.dart';
+import 'package:pareto_lingo/features/news/domain/entities/news_article.dart';
 import 'package:pareto_lingo/features/news/presentation/providers/news_providers.dart';
 import 'package:pareto_lingo/features/news/presentation/screens/news_detail_screen.dart';
 
@@ -130,6 +131,17 @@ class NewsFeedScreen extends ConsumerWidget {
                                   fontSize: 15,
                                 ),
                               ),
+                              const SizedBox(height: 6),
+                              Text(
+                                _metaText(article),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  color: Theme.of(context).colorScheme.primary,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 12,
+                                ),
+                              ),
                               Align(
                                 alignment: Alignment.centerRight,
                                 child: IconButton(
@@ -183,4 +195,16 @@ class _NewsImagePlaceholder extends StatelessWidget {
       child: const Icon(Icons.article_rounded),
     );
   }
+}
+
+String _metaText(NewsArticle article) {
+  final date = article.publishedAt;
+  final source = article.source.trim().isEmpty ? 'News' : article.source;
+  if (date == null) return source;
+
+  final month = date.month.toString().padLeft(2, '0');
+  final day = date.day.toString().padLeft(2, '0');
+  final hour = date.hour.toString().padLeft(2, '0');
+  final minute = date.minute.toString().padLeft(2, '0');
+  return '$source • ${date.year}-$month-$day $hour:$minute';
 }

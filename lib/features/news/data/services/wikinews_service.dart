@@ -1,7 +1,9 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:http/http.dart' as http;
 import 'package:pareto_lingo/features/news/domain/entities/news_article.dart';
+import 'package:xml/xml.dart';
 
 class WikinewsService {
   final http.Client _client;
@@ -9,44 +11,78 @@ class WikinewsService {
   WikinewsService(this._client);
 
   static const _supportedCodes = {'fr', 'es', 'de', 'en'};
+  static const _newsLocaleByLanguage = {
+    'fr': ('FR', 'fr'),
+    'es': ('ES', 'es'),
+    'de': ('DE', 'de'),
+    'en': ('US', 'en'),
+  };
 
   Future<List<NewsArticle>> fetchLatestNews({
     required String languageCode,
     int limit = 25,
   }) async {
     final safeCode = _safeLanguageCode(languageCode);
-    final uri = Uri.https('$safeCode.wikinews.org', '/w/api.php', {
-      'action': 'query',
-      'format': 'json',
-      'generator': 'recentchanges',
-      'grcnamespace': '0',
-      'grclimit': '$limit',
-      'prop': 'extracts|pageimages|info',
-      'inprop': 'url',
-      'exintro': '1',
-      'explaintext': '1',
-      'pithumbsize': '700',
-      'origin': '*',
+    final locale = _newsLocaleByLanguage[safeCode] ?? ('US', 'en');
+    final ceid = '${locale.$1}:${locale.$2}';
+
+    final uri = Uri.https('news.google.com', '/rss', {
+      'hl': '${locale.$2}-${locale.$1}',
+      'gl': locale.$1,
+      'ceid': ceid,
     });
 
-    final response = await _client.get(uri);
+    final response = await _client.get(
+      uri,
+      headers: const {
+        'User-Agent': 'pareto-lingo-news/1.0',
+        'Accept': 'application/rss+xml, application/xml;q=0.9, */*;q=0.8',
+      },
+    );
     if (response.statusCode < 200 || response.statusCode >= 300) {
       throw Exception('Unable to load news.');
     }
 
-    final root = json.decode(response.body) as Map<String, dynamic>;
-    final pages =
-        (root['query'] as Map<String, dynamic>? ?? const {})['pages']
-            as Map<String, dynamic>? ??
-        const {};
+    final xml = XmlDocument.parse(response.body);
+    final items = xml.findAllElements('item');
 
-    final articles =
-        pages.values
-            .whereType<Map<String, dynamic>>()
-            .map((page) => _fromPageMap(page, safeCode))
-            .where((item) => item.title.isNotEmpty)
-            .toList()
-          ..sort((a, b) => b.pageId.compareTo(a.pageId));
+    final articles = <NewsArticle>[];
+    for (final item in items) {
+      final title = _childText(item, 'title');
+      final link = _childText(item, 'link');
+      final pubDateRaw = _childText(item, 'pubDate');
+      final source = _childText(item, 'source');
+      final rawDescription = _childText(item, 'description');
+      final description = _cleanDescription(rawDescription);
+      final image = _extractImageUrl(item, rawDescription);
+
+      if (title.isEmpty || link.isEmpty) continue;
+
+      final publishedAt = _parsePublishedAt(pubDateRaw);
+      final article = NewsArticle(
+        pageId: _stableId(link),
+        languageCode: safeCode,
+        title: title,
+        description: description,
+        content: description,
+        thumbnailUrl: image,
+        articleUrl: link,
+        publishedAt: publishedAt,
+        source: source.isEmpty ? 'Google News' : source,
+      );
+
+      articles.add(article);
+      if (articles.length >= limit) break;
+    }
+
+    articles.sort((a, b) {
+      final ad = a.publishedAt;
+      final bd = b.publishedAt;
+      if (ad == null && bd == null) return 0;
+      if (ad == null) return 1;
+      if (bd == null) return -1;
+      return bd.compareTo(ad);
+    });
 
     return articles;
   }
@@ -56,40 +92,7 @@ class WikinewsService {
     required int pageId,
     required NewsArticle fallback,
   }) async {
-    final safeCode = _safeLanguageCode(languageCode);
-    final uri = Uri.https('$safeCode.wikinews.org', '/w/api.php', {
-      'action': 'query',
-      'format': 'json',
-      'prop': 'extracts|pageimages|info',
-      'inprop': 'url',
-      'explaintext': '1',
-      'pageids': '$pageId',
-      'pithumbsize': '900',
-      'origin': '*',
-    });
-
-    final response = await _client.get(uri);
-    if (response.statusCode < 200 || response.statusCode >= 300) {
-      return fallback;
-    }
-
-    final root = json.decode(response.body) as Map<String, dynamic>;
-    final pages =
-        (root['query'] as Map<String, dynamic>? ?? const {})['pages']
-            as Map<String, dynamic>? ??
-        const {};
-
-    final page = pages['$pageId'] as Map<String, dynamic>?;
-    if (page == null) return fallback;
-
-    final detail = _fromPageMap(page, safeCode);
-
-    return fallback.copyWith(
-      description: detail.description,
-      content: detail.content,
-      thumbnailUrl: detail.thumbnailUrl,
-      articleUrl: detail.articleUrl,
-    );
+    return fallback;
   }
 
   Future<String> translateText({
@@ -128,26 +131,79 @@ class WikinewsService {
     return translated;
   }
 
-  NewsArticle _fromPageMap(Map<String, dynamic> page, String languageCode) {
-    final extract = (page['extract']?.toString() ?? '').trim();
-    final title = (page['title']?.toString() ?? '').trim();
-    final fullUrl = (page['fullurl']?.toString() ?? '').trim();
-    final thumbnail =
-        ((page['thumbnail'] as Map<String, dynamic>?)?['source']?.toString() ??
-                '')
+  String _childText(XmlElement parent, String name) {
+    final element = parent.getElement(name);
+    return (element?.innerText ?? '').trim();
+  }
+
+  String _cleanDescription(String raw) {
+    if (raw.trim().isEmpty) return '';
+
+    var text =
+        raw
+            .replaceAll(RegExp(r'<br\s*/?>', caseSensitive: false), ' ')
+            .replaceAll(RegExp(r'<[^>]*>'), ' ')
+            .replaceAll('&nbsp;', ' ')
+            .replaceAll('&amp;', '&')
+            .replaceAll('&quot;', '"')
+            .replaceAll('&#39;', "'")
+            .replaceAll(RegExp(r'\s+'), ' ')
             .trim();
 
-    final pageId = (page['pageid'] as num?)?.toInt() ?? 0;
+    if (text.startsWith('- ')) {
+      text = text.substring(2).trim();
+    }
 
-    return NewsArticle(
-      pageId: pageId,
-      languageCode: languageCode,
-      title: title,
-      description: extract,
-      content: extract,
-      thumbnailUrl: thumbnail,
-      articleUrl: fullUrl,
-    );
+    return text;
+  }
+
+  String _extractImageUrl(XmlElement item, String rawDescription) {
+    final mediaElements = item.findAllElements('media:content');
+    final media = mediaElements.isEmpty ? null : mediaElements.first;
+    final mediaUrl = (media?.getAttribute('url') ?? '').trim();
+    if (mediaUrl.isNotEmpty) return mediaUrl;
+
+    final enclosure = item.getElement('enclosure');
+    final enclosureUrl = (enclosure?.getAttribute('url') ?? '').trim();
+    if (enclosureUrl.isNotEmpty) return enclosureUrl;
+
+    final doubleQuoteMatch = RegExp(
+      r'<img[^>]+src="([^"]+)"',
+      caseSensitive: false,
+    ).firstMatch(rawDescription);
+    if (doubleQuoteMatch != null) {
+      return (doubleQuoteMatch.group(1) ?? '').trim();
+    }
+
+    final singleQuoteMatch = RegExp(
+      r"<img[^>]+src='([^']+)'",
+      caseSensitive: false,
+    ).firstMatch(rawDescription);
+    if (singleQuoteMatch != null) {
+      return (singleQuoteMatch.group(1) ?? '').trim();
+    }
+
+    return '';
+  }
+
+  int _stableId(String input) {
+    var hash = 2166136261;
+    for (final codeUnit in input.codeUnits) {
+      hash ^= codeUnit;
+      hash *= 16777619;
+    }
+    return hash & 0x7fffffff;
+  }
+
+  DateTime? _parsePublishedAt(String value) {
+    final input = value.trim();
+    if (input.isEmpty) return null;
+
+    try {
+      return HttpDate.parse(input).toLocal();
+    } catch (_) {
+      return DateTime.tryParse(input)?.toLocal();
+    }
   }
 
   String _safeLanguageCode(String input) {

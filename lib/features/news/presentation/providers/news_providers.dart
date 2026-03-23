@@ -103,6 +103,8 @@ Map<String, dynamic> _articleToMap(NewsArticle article) {
     'content': article.content,
     'thumbnailUrl': article.thumbnailUrl,
     'articleUrl': article.articleUrl,
+    'publishedAt': article.publishedAt?.toIso8601String(),
+    'source': article.source,
   };
 }
 
@@ -115,5 +117,8 @@ NewsArticle _articleFromMap(Map<String, dynamic> map) {
     content: map['content']?.toString() ?? '',
     thumbnailUrl: map['thumbnailUrl']?.toString() ?? '',
     articleUrl: map['articleUrl']?.toString() ?? '',
+    publishedAt:
+        DateTime.tryParse(map['publishedAt']?.toString() ?? '')?.toLocal(),
+    source: map['source']?.toString() ?? 'News',
   );
 }
