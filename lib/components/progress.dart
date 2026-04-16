@@ -114,6 +114,7 @@ class Progress extends ConsumerWidget {
     double? height,
     String? description,
     String? buttonText,
+    VoidCallback? onPressed,
   }) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -150,13 +151,7 @@ class Progress extends ConsumerWidget {
                   buttonColor: const Color(0xFF7DF9FF),
                   buttonHeight: 40,
                   buttonWidth: 80,
-                  onPressed: () {
-                    if (buttonText == 'Start') {
-                      context.push('/flashcard');
-                    } else if (buttonText == 'Speak') {
-                      context.push('/speak');
-                    }
-                  },
+                  onPressed: onPressed,
                   enableAnimation: true,
                   text: Text(
                     buttonText,
@@ -182,9 +177,10 @@ class Progress extends ConsumerWidget {
     return _buildCard(
       context,
       mode: 'Flashcards',
-      buttonText: 'Start',
+      buttonText: 'Start Talking',
+      onPressed: () => context.push('/flashcard'),
       description:
-          'Learn the top $topWordsCount most used $languageName words — just 10 words a day, or customize your own pace.',
+          'Speak immediately: hear each word, repeat it, then reveal the meaning. Built from the top $topWordsCount most-used $languageName words.',
       height: MediaQuery.of(context).size.height / 5,
     );
   }
@@ -194,6 +190,7 @@ class Progress extends ConsumerWidget {
       context,
       mode: 'Speaking',
       buttonText: 'Speak',
+      onPressed: () => context.push('/speak'),
       description:
           'Practice speaking by repeating after the narrator. Tap to play or pause the audio anytime.',
       height: MediaQuery.of(context).size.height / 5,

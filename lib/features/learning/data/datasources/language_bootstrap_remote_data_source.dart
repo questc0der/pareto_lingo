@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:pareto_lingo/core/content/learning_language.dart';
 import 'package:pareto_lingo/features/learning/domain/entities/learning_bootstrap_content.dart';
@@ -14,12 +15,17 @@ class FlashcardWordMeaning {
 class LanguageBootstrapRemoteDataSource {
   final http.Client _client;
   final String _backendBaseUrl;
+  final bool _useRemoteSources;
 
-  const LanguageBootstrapRemoteDataSource(this._client, this._backendBaseUrl);
+  const LanguageBootstrapRemoteDataSource(
+    this._client,
+    this._backendBaseUrl, {
+    required bool useRemoteSources,
+  }) : _useRemoteSources = useRemoteSources;
 
   Future<LearningBootstrapContent> fetchContent(String languageCode) async {
     final option = languageOptionByCode(languageCode);
-    final words = await _fetchTopWords(option.code);
+    final words = await _fetchTopWordsResolved(option.code);
 
     return LearningBootstrapContent(
       languageCode: option.code,
@@ -30,6 +36,10 @@ class LanguageBootstrapRemoteDataSource {
   }
 
   Future<List<String>> _fetchTopWords(String languageCode) async {
+    if (!_useRemoteSources) {
+      return _offlineTopWords(languageCode);
+    }
+
     final url = Uri.parse(
       'https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/$languageCode/${languageCode}_50k.txt',
     );
@@ -64,6 +74,11 @@ class LanguageBootstrapRemoteDataSource {
   }
 
   List<String> _offlineTopWords(String languageCode) {
+    if (languageCode == 'fr') {
+      // Uses the shipped local asset to keep the app fully offline-capable.
+      return const [];
+    }
+
     final seeds = switch (languageCode) {
       'fr' => const [
         'bonjour',
@@ -127,11 +142,38 @@ class LanguageBootstrapRemoteDataSource {
     return words;
   }
 
+  Future<List<String>> _loadFrenchWordsFromAsset() async {
+    try {
+      final raw = await rootBundle.loadString('assets/french_words.json');
+      final decoded = jsonDecode(raw) as List<dynamic>;
+      return decoded
+          .map((item) => item as Map<String, dynamic>)
+          .map((item) => (item['word'] ?? '').toString().trim())
+          .where((word) => word.isNotEmpty)
+          .take(1000)
+          .toList(growable: false);
+    } catch (_) {
+      return const [
+        'bonjour',
+        'merci',
+        'maison',
+        'manger',
+        'parler',
+        'ami',
+        'famille',
+      ];
+    }
+  }
+
   Future<List<FlashcardWordMeaning>> fetchFlashcardDeck({
     required String languageCode,
     int limit = 1000,
   }) async {
-    if (_backendBaseUrl.trim().isEmpty) {
+    if (!_useRemoteSources || _backendBaseUrl.trim().isEmpty) {
+      if (languageCode == 'fr') {
+        final pairs = await _loadFrenchDeckFromAsset();
+        return pairs.take(limit).toList(growable: false);
+      }
       return const [];
     }
 
@@ -163,5 +205,54 @@ class LanguageBootstrapRemoteDataSource {
     } catch (_) {
       return const [];
     }
+  }
+
+  Future<List<String>> _offlineTopWordsWithFrenchAsset(
+    String languageCode,
+  ) async {
+    if (languageCode == 'fr') {
+      final words = await _loadFrenchWordsFromAsset();
+      if (words.isNotEmpty) {
+        return words;
+      }
+    }
+    return _offlineTopWords(languageCode);
+  }
+
+  Future<List<FlashcardWordMeaning>> _loadFrenchDeckFromAsset() async {
+    try {
+      final raw = await rootBundle.loadString('assets/french_words.json');
+      final decoded = jsonDecode(raw) as List<dynamic>;
+      return decoded
+          .map((item) => item as Map<String, dynamic>)
+          .map(
+            (item) => FlashcardWordMeaning(
+              word: (item['word'] ?? '').toString().trim(),
+              meaning: (item['meaning'] ?? '').toString().trim(),
+            ),
+          )
+          .where((entry) => entry.word.isNotEmpty && entry.meaning.isNotEmpty)
+          .take(1000)
+          .toList(growable: false);
+    } catch (_) {
+      return const [
+        FlashcardWordMeaning(word: 'bonjour', meaning: 'hello'),
+        FlashcardWordMeaning(word: 'merci', meaning: 'thank you'),
+        FlashcardWordMeaning(word: 'maison', meaning: 'house'),
+      ];
+    }
+  }
+
+  Future<List<String>> _fetchTopWordsResolved(String languageCode) async {
+    if (!_useRemoteSources) {
+      return _offlineTopWordsWithFrenchAsset(languageCode);
+    }
+
+    final remoteWords = await _fetchTopWords(languageCode);
+    if (remoteWords.isNotEmpty) {
+      return remoteWords;
+    }
+
+    return _offlineTopWordsWithFrenchAsset(languageCode);
   }
 }

@@ -119,6 +119,7 @@ final syncFlashcardDeckProvider = FutureProvider.family<void, String>((
   ref,
   languageCode,
 ) async {
+  const targetDeckSize = 1000;
   final flashcardBox = ref.read(flashcardBoxProvider);
   final appSettingsBox = ref.read(appSettingsBoxProvider);
   final bootstrapContent = await ref.read(
@@ -148,8 +149,19 @@ final syncFlashcardDeckProvider = FutureProvider.family<void, String>((
     return;
   }
 
+  // If user started with a partial local deck, enrich it when remote data appears.
+  if (backendDeck.isNotEmpty && flashcardBox.length < targetDeckSize) {
+    await _mergeMissingDeckFromPairs(
+      flashcardBox,
+      backendDeck
+          .map((entry) => (word: entry.word, meaning: entry.meaning))
+          .toList(growable: false),
+      maxSize: targetDeckSize,
+    );
+  }
+
   final shouldRebuildByLanguage = currentDeckLanguage != languageCode;
-  final shouldRebuildBySize = flashcardBox.length < 100;
+  final shouldRebuildBySize = flashcardBox.length < targetDeckSize;
   final shouldRebuild =
       (shouldRebuildByLanguage || shouldRebuildBySize) && !hasStudyProgress;
 
@@ -196,7 +208,7 @@ final syncFlashcardDeckProvider = FutureProvider.family<void, String>((
       // Use putAll for a large batch — much faster than sequential add()
       final entries = <dynamic, Flashcard>{};
       int key = 0;
-      for (final word in deckWords.take(1000)) {
+      for (final word in deckWords.take(targetDeckSize)) {
         entries[key++] = Flashcard(
           word: word,
           meaning: _fallbackMeaningForWord(word),
@@ -223,6 +235,39 @@ Future<void> _reseedFrenchDeckFromAsset(Box<Flashcard> flashcardBox) async {
     );
   }
   await flashcardBox.putAll(entries);
+}
+
+Future<void> _mergeMissingDeckFromPairs(
+  Box<Flashcard> flashcardBox,
+  List<({String word, String meaning})> pairs, {
+  required int maxSize,
+}) async {
+  if (pairs.isEmpty) return;
+
+  final existingWords =
+      flashcardBox.values.map((card) => card.word.trim().toLowerCase()).toSet();
+
+  for (final pair in pairs) {
+    if (flashcardBox.length >= maxSize) {
+      break;
+    }
+
+    final word = pair.word.trim();
+    if (word.isEmpty) continue;
+
+    final normalizedWord = word.toLowerCase();
+    if (existingWords.contains(normalizedWord)) {
+      continue;
+    }
+
+    final meaning =
+        pair.meaning.trim().isEmpty
+            ? _fallbackMeaningForWord(word)
+            : pair.meaning.trim();
+
+    await flashcardBox.add(Flashcard(word: word, meaning: meaning));
+    existingWords.add(normalizedWord);
+  }
 }
 
 Future<void> _seedDeckFromPairs(

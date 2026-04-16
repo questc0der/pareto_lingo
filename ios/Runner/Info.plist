@@ -45,5 +45,9 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Pareto Lingo uses the microphone so you can repeat words and practice speaking.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Pareto Lingo uses speech recognition to score your repeat-after-audio practice.</string>
 </dict>
 </plist>

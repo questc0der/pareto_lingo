@@ -14,10 +14,19 @@ final learningHttpClientProvider = Provider<http.Client>((ref) {
 });
 
 final backendBaseUrlProvider = Provider<String>((ref) {
-  return const String.fromEnvironment(
-    'BACKEND_BASE_URL',
-    defaultValue: 'http://10.0.2.2:8080',
+  return const String.fromEnvironment('BACKEND_BASE_URL', defaultValue: '');
+});
+
+final useRemoteContentProvider = Provider<bool>((ref) {
+  const explicit = String.fromEnvironment(
+    'USE_REMOTE_CONTENT',
+    defaultValue: '',
   );
+  if (explicit.isNotEmpty) {
+    return explicit.toLowerCase() == 'true';
+  }
+
+  return ref.read(backendBaseUrlProvider).trim().isNotEmpty;
 });
 
 final learningBootstrapCacheBoxProvider = Provider<Box<String>>((ref) {
@@ -29,6 +38,7 @@ final languageBootstrapRemoteDataSourceProvider =
       return LanguageBootstrapRemoteDataSource(
         ref.read(learningHttpClientProvider),
         ref.read(backendBaseUrlProvider),
+        useRemoteSources: ref.read(useRemoteContentProvider),
       );
     });
 

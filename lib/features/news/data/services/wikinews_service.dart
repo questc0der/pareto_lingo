@@ -92,7 +92,34 @@ class WikinewsService {
     required int pageId,
     required NewsArticle fallback,
   }) async {
-    return fallback;
+    final url = fallback.articleUrl.trim();
+    if (url.isEmpty) return fallback;
+
+    try {
+      final uri = Uri.parse(url);
+      final response = await _client
+          .get(
+            uri,
+            headers: const {
+              'User-Agent': 'pareto-lingo-news/1.0',
+              'Accept': 'text/html,application/xhtml+xml;q=0.9,*/*;q=0.8',
+            },
+          )
+          .timeout(const Duration(seconds: 10));
+
+      if (response.statusCode < 200 || response.statusCode >= 300) {
+        return fallback;
+      }
+
+      final extracted = _extractReadableTextFromHtml(response.body);
+      if (extracted.length < 180) {
+        return fallback;
+      }
+
+      return fallback.copyWith(content: extracted);
+    } catch (_) {
+      return fallback;
+    }
   }
 
   Future<String> translateText({
@@ -155,6 +182,49 @@ class WikinewsService {
     }
 
     return text;
+  }
+
+  String _extractReadableTextFromHtml(String html) {
+    var sanitized = html
+        .replaceAll(
+          RegExp(r'<script[^>]*>[\s\S]*?<\/script>', caseSensitive: false),
+          ' ',
+        )
+        .replaceAll(
+          RegExp(r'<style[^>]*>[\s\S]*?<\/style>', caseSensitive: false),
+          ' ',
+        );
+
+    final paragraphMatches = RegExp(
+      r'<p[^>]*>([\s\S]*?)<\/p>',
+      caseSensitive: false,
+    ).allMatches(sanitized);
+
+    final chunks = <String>[];
+    for (final match in paragraphMatches) {
+      final rawParagraph = (match.group(1) ?? '').trim();
+      if (rawParagraph.isEmpty) continue;
+
+      final paragraph = _cleanDescription(rawParagraph);
+      if (paragraph.length < 45) continue;
+      chunks.add(paragraph);
+      if (chunks.length >= 10) break;
+    }
+
+    if (chunks.isNotEmpty) {
+      return chunks.join('\n\n');
+    }
+
+    final metaDescMatch = RegExp(
+      r'<meta[^>]+(?:name|property)="(?:description|og:description)"[^>]+content="([^"]+)"',
+      caseSensitive: false,
+    ).firstMatch(sanitized);
+
+    if (metaDescMatch != null) {
+      return _cleanDescription(metaDescMatch.group(1) ?? '');
+    }
+
+    return '';
   }
 
   String _extractImageUrl(XmlElement item, String rawDescription) {

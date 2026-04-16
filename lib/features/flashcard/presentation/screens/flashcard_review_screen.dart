@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:speech_to_text/speech_to_text.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 import 'package:go_router/go_router.dart';
 import 'package:neubrutalism_ui/neubrutalism_ui.dart';
 import 'package:pareto_lingo/features/flashcard/presentation/providers/flashcard_providers.dart';
@@ -18,8 +20,17 @@ class FlashcardReviewScreen extends ConsumerStatefulWidget {
 class _FlashcardReviewScreenState extends ConsumerState<FlashcardReviewScreen>
     with SingleTickerProviderStateMixin {
   bool _initialized = false;
+  String _sessionLanguageCode = 'fr';
+  String? _lastAutoSpokenCardId;
+  bool _isSpeaking = false;
+  bool _speechEnabled = false;
+  bool _isListening = false;
+  String _recognizedPhrase = '';
+  int? _pronunciationScore;
   late final AnimationController _flipController;
   late final Animation<double> _flipAnimation;
+  late final FlutterTts _tts;
+  late final SpeechToText _speechToText;
 
   @override
   void initState() {
@@ -31,6 +42,24 @@ class _FlashcardReviewScreenState extends ConsumerState<FlashcardReviewScreen>
     _flipAnimation = Tween<double>(begin: 0, end: 1).animate(
       CurvedAnimation(parent: _flipController, curve: Curves.easeInOut),
     );
+
+    _tts = FlutterTts();
+    _tts.awaitSpeakCompletion(true);
+    _tts.setCompletionHandler(() {
+      if (!mounted) return;
+      setState(() => _isSpeaking = false);
+    });
+    _tts.setCancelHandler(() {
+      if (!mounted) return;
+      setState(() => _isSpeaking = false);
+    });
+    _tts.setErrorHandler((_) {
+      if (!mounted) return;
+      setState(() => _isSpeaking = false);
+    });
+
+    _speechToText = SpeechToText();
+    _initializeSpeechRecognition();
   }
 
   @override
@@ -43,6 +72,7 @@ class _FlashcardReviewScreenState extends ConsumerState<FlashcardReviewScreen>
     final languageCode = ref
         .read(userLearningLanguageProvider)
         .maybeWhen(data: (c) => c, orElse: () => 'fr');
+    _sessionLanguageCode = languageCode;
 
     final prewarmed = ref.read(flashcardPrewarmProvider(languageCode));
     prewarmed.whenData((cards) {
@@ -66,6 +96,8 @@ class _FlashcardReviewScreenState extends ConsumerState<FlashcardReviewScreen>
 
   @override
   void dispose() {
+    _stopListening();
+    _tts.stop();
     _flipController.dispose();
     super.dispose();
   }
@@ -76,8 +108,223 @@ class _FlashcardReviewScreenState extends ConsumerState<FlashcardReviewScreen>
   }
 
   void _onRate(FlashcardSessionController controller, int quality) {
+    _stopListening();
+    setState(() {
+      _recognizedPhrase = '';
+      _pronunciationScore = null;
+    });
     _flipController.reset();
     controller.rateCurrent(quality: quality);
+  }
+
+  Future<void> _initializeSpeechRecognition() async {
+    final available = await _speechToText.initialize(
+      onStatus: (status) {
+        if (!mounted) return;
+        if (status == 'notListening' || status == 'done') {
+          setState(() => _isListening = false);
+        }
+      },
+      onError: (_) {
+        if (!mounted) return;
+        setState(() => _isListening = false);
+      },
+    );
+
+    if (!mounted) return;
+    setState(() => _speechEnabled = available);
+  }
+
+  Future<void> _stopListening() async {
+    if (!_isListening) return;
+    await _speechToText.stop();
+    if (!mounted) return;
+    setState(() => _isListening = false);
+  }
+
+  Future<void> _toggleRepeatListening(String targetWord) async {
+    if (_isListening) {
+      await _stopListening();
+      return;
+    }
+
+    if (!_speechEnabled) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Speech recognition is unavailable on this device.'),
+        ),
+      );
+      return;
+    }
+
+    setState(() {
+      _recognizedPhrase = '';
+      _pronunciationScore = null;
+    });
+
+    final localeId = _sttLocaleFromLanguage(_sessionLanguageCode);
+    final didStart = await _speechToText.listen(
+      localeId: localeId,
+      listenFor: const Duration(seconds: 6),
+      pauseFor: const Duration(seconds: 2),
+      listenOptions: SpeechListenOptions(partialResults: true),
+      onResult: (result) {
+        if (!mounted) return;
+        final recognized = result.recognizedWords.trim();
+        if (recognized.isEmpty) return;
+
+        setState(() {
+          _recognizedPhrase = recognized;
+          _pronunciationScore = _computePronunciationScore(
+            expected: targetWord,
+            recognized: recognized,
+          );
+
+          if (result.finalResult) {
+            _isListening = false;
+          }
+        });
+      },
+    );
+
+    if (!mounted) return;
+    setState(() => _isListening = didStart);
+  }
+
+  Future<void> _speakWord(String word) async {
+    final text = word.trim();
+    if (text.isEmpty) return;
+
+    await _tts.stop();
+    await _tts.setLanguage(_ttsLocaleFromLanguage(_sessionLanguageCode));
+    await _tts.setSpeechRate(0.43);
+    if (!mounted) return;
+    setState(() => _isSpeaking = true);
+    await _tts.speak(text);
+  }
+
+  Future<void> _speakMeaning(String meaning) async {
+    final text = meaning.trim();
+    if (text.isEmpty) return;
+
+    await _tts.stop();
+    await _tts.setLanguage('en-US');
+    await _tts.setSpeechRate(0.45);
+    if (!mounted) return;
+    setState(() => _isSpeaking = true);
+    await _tts.speak(text);
+  }
+
+  String _ttsLocaleFromLanguage(String languageCode) {
+    switch (languageCode.toLowerCase()) {
+      case 'fr':
+        return 'fr-FR';
+      case 'es':
+        return 'es-ES';
+      case 'de':
+        return 'de-DE';
+      default:
+        return 'en-US';
+    }
+  }
+
+  String _sttLocaleFromLanguage(String languageCode) {
+    switch (languageCode.toLowerCase()) {
+      case 'fr':
+        return 'fr-FR';
+      case 'es':
+        return 'es-ES';
+      case 'de':
+        return 'de-DE';
+      default:
+        return 'en-US';
+    }
+  }
+
+  int _computePronunciationScore({
+    required String expected,
+    required String recognized,
+  }) {
+    final expectedNorm = _normalizeForComparison(expected);
+    final recognizedNorm = _normalizeForComparison(recognized);
+
+    if (expectedNorm.isEmpty || recognizedNorm.isEmpty) return 0;
+    if (expectedNorm == recognizedNorm) return 100;
+
+    final recognizedTokens = recognizedNorm
+        .split(' ')
+        .where((t) => t.isNotEmpty);
+    final candidates = <String>[recognizedNorm, ...recognizedTokens];
+
+    var bestScore = 0;
+    for (final candidate in candidates) {
+      final maxLen =
+          expectedNorm.length > candidate.length
+              ? expectedNorm.length
+              : candidate.length;
+      if (maxLen == 0) continue;
+
+      final distance = _levenshteinDistance(expectedNorm, candidate);
+      final similarity = ((maxLen - distance) / maxLen).clamp(0.0, 1.0);
+      final score = (similarity * 100).round();
+      if (score > bestScore) {
+        bestScore = score;
+      }
+    }
+
+    return bestScore;
+  }
+
+  String _normalizeForComparison(String input) {
+    final accentsReplaced = input
+        .toLowerCase()
+        .replaceAll(RegExp('[àáâãäå]'), 'a')
+        .replaceAll(RegExp('[èéêë]'), 'e')
+        .replaceAll(RegExp('[ìíîï]'), 'i')
+        .replaceAll(RegExp('[òóôõö]'), 'o')
+        .replaceAll(RegExp('[ùúûü]'), 'u')
+        .replaceAll(RegExp('[ç]'), 'c')
+        .replaceAll(RegExp('[ñ]'), 'n')
+        .replaceAll(RegExp('[ß]'), 'ss');
+
+    return accentsReplaced
+        .replaceAll(RegExp('[^a-z0-9\\s\'-]'), ' ')
+        .replaceAll(RegExp('\\s+'), ' ')
+        .trim();
+  }
+
+  int _levenshteinDistance(String a, String b) {
+    if (a == b) return 0;
+    if (a.isEmpty) return b.length;
+    if (b.isEmpty) return a.length;
+
+    final previous = List<int>.generate(b.length + 1, (i) => i);
+    final current = List<int>.filled(b.length + 1, 0);
+
+    for (var i = 1; i <= a.length; i++) {
+      current[0] = i;
+      for (var j = 1; j <= b.length; j++) {
+        final cost = a.codeUnitAt(i - 1) == b.codeUnitAt(j - 1) ? 0 : 1;
+        current[j] = [
+          current[j - 1] + 1,
+          previous[j] + 1,
+          previous[j - 1] + cost,
+        ].reduce((x, y) => x < y ? x : y);
+      }
+
+      for (var j = 0; j <= b.length; j++) {
+        previous[j] = current[j];
+      }
+    }
+
+    return previous[b.length];
+  }
+
+  String _scoreLabel(int score) {
+    if (score >= 90) return 'Excellent';
+    if (score >= 75) return 'Good';
+    if (score >= 55) return 'Keep going';
+    return 'Try again';
   }
 
   @override
@@ -86,6 +333,20 @@ class _FlashcardReviewScreenState extends ConsumerState<FlashcardReviewScreen>
       previous,
       next,
     ) {
+      final card = next.currentCard;
+      if (card != null &&
+          !next.showAnswer &&
+          !next.isLoading &&
+          card.id != _lastAutoSpokenCardId) {
+        _lastAutoSpokenCardId = card.id;
+        _stopListening();
+        setState(() {
+          _recognizedPhrase = '';
+          _pronunciationScore = null;
+        });
+        _speakWord(card.word);
+      }
+
       if (next.transientMessage != null &&
           next.transientMessage != previous?.transientMessage) {
         ScaffoldMessenger.of(
@@ -198,6 +459,71 @@ class _FlashcardReviewScreenState extends ConsumerState<FlashcardReviewScreen>
                               ),
                               textAlign: TextAlign.center,
                             ),
+                            const SizedBox(height: 14),
+                            Wrap(
+                              spacing: 10,
+                              runSpacing: 8,
+                              alignment: WrapAlignment.center,
+                              children: [
+                                OutlinedButton.icon(
+                                  onPressed:
+                                      _isSpeaking
+                                          ? null
+                                          : () => _speakWord(card.word),
+                                  icon: const Icon(Icons.volume_up_rounded),
+                                  label: const Text('Listen Word'),
+                                ),
+                                if (state.showAnswer)
+                                  OutlinedButton.icon(
+                                    onPressed:
+                                        _isSpeaking
+                                            ? null
+                                            : () => _speakMeaning(card.meaning),
+                                    icon: const Icon(
+                                      Icons.record_voice_over_rounded,
+                                    ),
+                                    label: const Text('Listen Meaning'),
+                                  ),
+                              ],
+                            ),
+                            if (!state.showAnswer) ...[
+                              const SizedBox(height: 10),
+                              FilledButton.icon(
+                                onPressed:
+                                    _isSpeaking
+                                        ? null
+                                        : () =>
+                                            _toggleRepeatListening(card.word),
+                                icon: Icon(
+                                  _isListening
+                                      ? Icons.stop_circle_outlined
+                                      : Icons.mic_none_rounded,
+                                ),
+                                label: Text(
+                                  _isListening
+                                      ? 'Stop Listening'
+                                      : 'Repeat After Audio',
+                                ),
+                              ),
+                              if (_recognizedPhrase.isNotEmpty) ...[
+                                const SizedBox(height: 10),
+                                Text(
+                                  'You said: "$_recognizedPhrase"',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: Colors.grey.shade700,
+                                    fontFamily: 'Circular',
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                              if (_pronunciationScore != null) ...[
+                                const SizedBox(height: 8),
+                                _buildPronunciationScoreBadge(
+                                  _pronunciationScore!,
+                                ),
+                              ],
+                            ],
                             // Example sentence (only shown when answer is revealed)
                             if (state.showAnswer &&
                                 card.exampleSentence != null &&
@@ -351,9 +677,9 @@ class _FlashcardReviewScreenState extends ConsumerState<FlashcardReviewScreen>
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.15),
+        color: color.withValues(alpha: 0.15),
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: color.withOpacity(0.4)),
+        border: Border.all(color: color.withValues(alpha: 0.4)),
       ),
       child: Text(
         label,
@@ -361,6 +687,28 @@ class _FlashcardReviewScreenState extends ConsumerState<FlashcardReviewScreen>
           color: color,
           fontSize: 12,
           fontWeight: FontWeight.w600,
+          fontFamily: 'Circular',
+        ),
+      ),
+    );
+  }
+
+  Widget _buildPronunciationScoreBadge(int score) {
+    final clamped = score.clamp(0, 100);
+    final color = Color.lerp(Colors.red, Colors.green, clamped / 100)!;
+
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: 0.12),
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: color.withValues(alpha: 0.45)),
+      ),
+      child: Text(
+        'Pronunciation: $clamped% • ${_scoreLabel(clamped)}',
+        style: TextStyle(
+          color: color,
+          fontWeight: FontWeight.w700,
           fontFamily: 'Circular',
         ),
       ),
