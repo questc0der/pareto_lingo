@@ -9,6 +9,10 @@ const LANGUAGE_MAP = {
   de: "de",
 };
 
+function getSupportedLanguages() {
+  return Object.keys(LANGUAGE_MAP);
+}
+
 function normalizeLanguage(input) {
   const code = String(input || "fr").toLowerCase();
   return LANGUAGE_MAP[code] ? code : "fr";
@@ -104,4 +108,6 @@ async function getFlashcards({
 
 module.exports = {
   getFlashcards,
+  getSupportedLanguages,
+  normalizeLanguage,
 };
