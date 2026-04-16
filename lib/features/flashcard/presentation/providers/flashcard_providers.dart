@@ -270,10 +270,10 @@ Future<void> _mergeMissingDeckFromPairs(
       continue;
     }
 
-    final meaning =
-        pair.meaning.trim().isEmpty
-            ? _fallbackMeaningForWord(word)
-            : pair.meaning.trim();
+    final meaning = _normalizedMeaningOrFallback(
+      word: word,
+      meaning: pair.meaning,
+    );
 
     await flashcardBox.add(Flashcard(word: word, meaning: meaning));
     existingWords.add(normalizedWord);
@@ -289,10 +289,10 @@ Future<void> _seedDeckFromPairs(
   final entries = <dynamic, Flashcard>{};
   int key = 0;
   for (final pair in pairs.take(1000)) {
-    final normalizedMeaning =
-        pair.meaning.trim().isEmpty
-            ? _fallbackMeaningForWord(pair.word)
-            : pair.meaning;
+    final normalizedMeaning = _normalizedMeaningOrFallback(
+      word: pair.word,
+      meaning: pair.meaning,
+    );
     entries[key++] = Flashcard(word: pair.word, meaning: normalizedMeaning);
   }
   await flashcardBox.putAll(entries);
@@ -306,7 +306,12 @@ Future<void> _normalizeExistingDeckMeanings(Box<Flashcard> flashcardBox) async {
 
     final meaning = card.meaning.trim();
     final isPlaceholder =
-        meaning.isEmpty || meaning == '—' || meaning == '-' || meaning == '...';
+        meaning.isEmpty ||
+        meaning == '—' ||
+        meaning == '-' ||
+        meaning == '...' ||
+        meaning == '?' ||
+        meaning == '？';
 
     if (isPlaceholder) {
       card.meaning = _fallbackMeaningForWord(card.word);
@@ -317,6 +322,24 @@ Future<void> _normalizeExistingDeckMeanings(Box<Flashcard> flashcardBox) async {
 
 String _fallbackMeaningForWord(String word) {
   return 'meaning: ${word.trim()}';
+}
+
+String _normalizedMeaningOrFallback({
+  required String word,
+  required String meaning,
+}) {
+  final normalized = meaning.trim();
+  final isPlaceholder =
+      normalized.isEmpty ||
+      normalized == '—' ||
+      normalized == '-' ||
+      normalized == '...' ||
+      normalized == '?' ||
+      normalized == '？';
+  if (isPlaceholder) {
+    return _fallbackMeaningForWord(word);
+  }
+  return normalized;
 }
 
 String _targetMeaningLanguageForDeck(

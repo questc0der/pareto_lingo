@@ -6,6 +6,7 @@ import 'package:pareto_lingo/features/podcast/presentation/models/podcast_route_
 import 'package:pareto_lingo/features/podcast/presentation/screens/podcast_episode_list_screen.dart';
 import 'package:pareto_lingo/home.dart';
 import 'package:pareto_lingo/screen/flashcard.dart';
+import 'package:pareto_lingo/screen/listening_match.dart';
 import 'package:pareto_lingo/screen/onboarding_language.dart';
 import 'package:pareto_lingo/screen/speak.dart';
 
@@ -36,6 +37,10 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/flashcard',
         builder: (context, state) => FlashCardReviewScreen(),
+      ),
+      GoRoute(
+        path: '/listening',
+        builder: (context, state) => const ListeningMatchScreen(),
       ),
       GoRoute(path: '/speak', builder: (context, state) => Speak()),
       GoRoute(

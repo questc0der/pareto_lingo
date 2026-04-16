@@ -64,6 +64,8 @@ class Progress extends ConsumerWidget {
         const SizedBox(height: 16),
         _speakingSection(context),
         const SizedBox(height: 16),
+        _listeningSection(context),
+        const SizedBox(height: 16),
         _readingSection(context, readingSnippet),
       ],
     );
@@ -174,7 +176,7 @@ class Progress extends ConsumerWidget {
     return _buildCard(
       context,
       mode: 'Flashcards',
-      buttonText: 'Start Talking',
+      buttonText: 'Start',
       onPressed: () => context.push('/flashcard'),
       description:
           'Speak immediately: hear each word, repeat it, then reveal the meaning. Built from the top $topWordsCount most-used $languageName words.',
@@ -190,6 +192,18 @@ class Progress extends ConsumerWidget {
       onPressed: () => context.push('/speak'),
       description:
           'Practice speaking by repeating after the narrator. Tap to play or pause the audio anytime.',
+      height: MediaQuery.of(context).size.height / 5,
+    );
+  }
+
+  Widget _listeningSection(BuildContext context) {
+    return _buildCard(
+      context,
+      mode: 'Listening Match',
+      buttonText: 'Play',
+      onPressed: () => context.push('/listening'),
+      description:
+          'Duolingo-style listening practice: hear a word and match it to the right meaning.',
       height: MediaQuery.of(context).size.height / 5,
     );
   }
