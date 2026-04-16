@@ -80,56 +80,39 @@ class LanguageBootstrapRemoteDataSource {
     }
 
     final seeds = switch (languageCode) {
-      'fr' => const [
-        'bonjour',
-        'merci',
-        'maison',
-        'manger',
-        'parler',
-        'ami',
-        'famille',
-        'travail',
-        'école',
-        'ville',
-        'jour',
-        'soir',
-        'livre',
-        'musique',
-        'voyage',
+      'zh' => const [
+        '你好',
+        '谢谢',
+        '家',
+        '吃',
+        '说',
+        '朋友',
+        '工作',
+        '学校',
+        '城市',
+        '今天',
+        '明天',
+        '音乐',
+        '学习',
+        '阅读',
+        '旅行',
       ],
-      'es' => const [
-        'hola',
-        'gracias',
-        'casa',
-        'comer',
-        'hablar',
-        'amigo',
-        'familia',
-        'trabajo',
-        'escuela',
-        'ciudad',
-        'día',
-        'noche',
-        'libro',
-        'música',
-        'viaje',
-      ],
-      'de' => const [
-        'hallo',
-        'danke',
-        'haus',
-        'essen',
-        'sprechen',
-        'freund',
-        'familie',
-        'arbeit',
-        'schule',
-        'stadt',
-        'tag',
-        'abend',
-        'buch',
-        'musik',
-        'reise',
+      'en' => const [
+        'hello',
+        'thank',
+        'house',
+        'eat',
+        'speak',
+        'friend',
+        'family',
+        'work',
+        'school',
+        'city',
+        'today',
+        'tomorrow',
+        'book',
+        'music',
+        'travel',
       ],
       _ => const ['hello', 'thanks', 'home', 'learn', 'speak'],
     };
@@ -168,18 +151,28 @@ class LanguageBootstrapRemoteDataSource {
   Future<List<FlashcardWordMeaning>> fetchFlashcardDeck({
     required String languageCode,
     int limit = 1000,
+    String? targetLanguage,
   }) async {
     if (!_useRemoteSources || _backendBaseUrl.trim().isEmpty) {
       if (languageCode == 'fr') {
         final pairs = await _loadFrenchDeckFromAsset();
         return pairs.take(limit).toList(growable: false);
       }
-      return const [];
+      return _buildFallbackDeck(
+        languageCode: languageCode,
+        targetLanguage: targetLanguage,
+        limit: limit,
+      );
+    }
+
+    final query = <String, String>{'language': languageCode, 'limit': '$limit'};
+    if (targetLanguage != null && targetLanguage.trim().isNotEmpty) {
+      query['targetLanguage'] = targetLanguage.trim();
     }
 
     final url = Uri.parse(
-      '$_backendBaseUrl/api/v1/content/flashcards?language=$languageCode&limit=$limit',
-    );
+      '$_backendBaseUrl/api/v1/content/flashcards',
+    ).replace(queryParameters: query);
 
     try {
       final response = await _client
@@ -203,7 +196,11 @@ class LanguageBootstrapRemoteDataSource {
           .where((entry) => entry.word.isNotEmpty && entry.meaning.isNotEmpty)
           .toList(growable: false);
     } catch (_) {
-      return const [];
+      return _buildFallbackDeck(
+        languageCode: languageCode,
+        targetLanguage: targetLanguage,
+        limit: limit,
+      );
     }
   }
 
@@ -254,5 +251,89 @@ class LanguageBootstrapRemoteDataSource {
     }
 
     return _offlineTopWordsWithFrenchAsset(languageCode);
+  }
+
+  List<FlashcardWordMeaning> _buildFallbackDeck({
+    required String languageCode,
+    required int limit,
+    String? targetLanguage,
+  }) {
+    final words = _offlineTopWords(languageCode).take(limit);
+
+    return words
+        .map(
+          (word) => FlashcardWordMeaning(
+            word: word,
+            meaning: _fallbackMeaningForWord(
+              languageCode: languageCode,
+              word: word,
+              targetLanguage: targetLanguage,
+            ),
+          ),
+        )
+        .toList(growable: false);
+  }
+
+  String _fallbackMeaningForWord({
+    required String languageCode,
+    required String word,
+    String? targetLanguage,
+  }) {
+    if (languageCode == 'en') {
+      return _localizedEnglishMeaning(word, targetLanguage ?? 'en');
+    }
+
+    return 'meaning: $word';
+  }
+
+  String _localizedEnglishMeaning(String word, String targetLanguage) {
+    final normalizedWord = word.trim().toLowerCase();
+    final target = targetLanguage.trim().toLowerCase();
+
+    const fr = {
+      'hello': 'bonjour',
+      'thank': 'merci',
+      'house': 'maison',
+      'eat': 'manger',
+      'speak': 'parler',
+      'friend': 'ami',
+      'family': 'famille',
+      'work': 'travail',
+      'school': 'ecole',
+      'city': 'ville',
+      'today': 'aujourd\'hui',
+      'tomorrow': 'demain',
+      'book': 'livre',
+      'music': 'musique',
+      'travel': 'voyage',
+    };
+
+    const zh = {
+      'hello': '你好',
+      'thank': '谢谢',
+      'house': '房子',
+      'eat': '吃',
+      'speak': '说',
+      'friend': '朋友',
+      'family': '家人',
+      'work': '工作',
+      'school': '学校',
+      'city': '城市',
+      'today': '今天',
+      'tomorrow': '明天',
+      'book': '书',
+      'music': '音乐',
+      'travel': '旅行',
+    };
+
+    if (target == 'fr') {
+      return fr[normalizedWord] ?? normalizedWord;
+    }
+
+    if (target == 'zh') {
+      return zh[normalizedWord] ?? normalizedWord;
+    }
+
+    return normalizedWord;
   }
 }

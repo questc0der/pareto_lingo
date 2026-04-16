@@ -19,6 +19,8 @@ class FlashcardStats {
   const FlashcardStats({required this.studied, required this.remaining});
 }
 
+const _nativeLanguageKey = 'native_language_code';
+
 final flashcardBoxProvider = Provider<Box<Flashcard>>((ref) {
   return Hive.box<Flashcard>('flashcards');
 });
@@ -122,6 +124,10 @@ final syncFlashcardDeckProvider = FutureProvider.family<void, String>((
   const targetDeckSize = 1000;
   final flashcardBox = ref.read(flashcardBoxProvider);
   final appSettingsBox = ref.read(appSettingsBoxProvider);
+  final targetMeaningLanguage = _targetMeaningLanguageForDeck(
+    languageCode,
+    appSettingsBox,
+  );
   final bootstrapContent = await ref.read(
     learningBootstrapContentProvider(languageCode).future,
   );
@@ -133,7 +139,11 @@ final syncFlashcardDeckProvider = FutureProvider.family<void, String>((
 
   final backendDeck = await ref
       .read(languageBootstrapRemoteDataSourceProvider)
-      .fetchFlashcardDeck(languageCode: languageCode, limit: 1000);
+      .fetchFlashcardDeck(
+        languageCode: languageCode,
+        limit: 1000,
+        targetLanguage: targetMeaningLanguage,
+      );
 
   final currentDeckLanguage = appSettingsBox.get('flashcard_deck_language');
   final hasStudyProgress = flashcardBox.values.any(
@@ -307,6 +317,22 @@ Future<void> _normalizeExistingDeckMeanings(Box<Flashcard> flashcardBox) async {
 
 String _fallbackMeaningForWord(String word) {
   return 'meaning: ${word.trim()}';
+}
+
+String _targetMeaningLanguageForDeck(
+  String languageCode,
+  Box<String> settings,
+) {
+  if (languageCode.toLowerCase() == 'en') {
+    final native = settings.get(_nativeLanguageKey)?.trim().toLowerCase();
+    if (native != null &&
+        (native == 'fr' || native == 'zh' || native == 'en')) {
+      return native;
+    }
+    return 'fr';
+  }
+
+  return 'en';
 }
 
 // ── FSRS ─────────────────────────────────────────────────────────────────────

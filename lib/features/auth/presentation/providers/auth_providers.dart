@@ -6,6 +6,7 @@ import 'package:pareto_lingo/features/auth/domain/entities/user_profile.dart';
 
 const _learningLanguageKey = 'selected_learning_language';
 const _displayNameKey = 'local_display_name';
+const _nativeLanguageKey = 'native_language_code';
 
 final localAppSettingsBoxProvider = Provider<Box<String>>((ref) {
   return Hive.box<String>('app_settings');
@@ -33,6 +34,25 @@ Future<void> setLearningLanguage(WidgetRef ref, String code) async {
       .read(localAppSettingsBoxProvider)
       .put(_learningLanguageKey, resolved);
   ref.read(selectedLearningLanguageProvider.notifier).state = resolved;
+}
+
+final selectedNativeLanguageProvider = StateProvider<String>((ref) {
+  final stored = ref.read(localAppSettingsBoxProvider).get(_nativeLanguageKey);
+  final resolved = languageOptionByCode(stored).code;
+  return resolved;
+});
+
+final userNativeLanguageProvider = FutureProvider<String>((ref) async {
+  final stored = ref.read(localAppSettingsBoxProvider).get(_nativeLanguageKey);
+  final resolved = languageOptionByCode(stored).code;
+  ref.read(selectedNativeLanguageProvider.notifier).state = resolved;
+  return resolved;
+});
+
+Future<void> setNativeLanguage(WidgetRef ref, String code) async {
+  final resolved = languageOptionByCode(code).code;
+  await ref.read(localAppSettingsBoxProvider).put(_nativeLanguageKey, resolved);
+  ref.read(selectedNativeLanguageProvider.notifier).state = resolved;
 }
 
 final authStateProvider = StreamProvider<AppUser?>((ref) async* {

@@ -288,10 +288,10 @@ class _NewsDetailScreenState extends ConsumerState<NewsDetailScreen> {
     switch (languageCode.toLowerCase()) {
       case 'fr':
         return 'fr-FR';
-      case 'es':
-        return 'es-ES';
-      case 'de':
-        return 'de-DE';
+      case 'zh':
+        return 'zh-CN';
+      case 'en':
+        return 'en-US';
       default:
         return 'en-US';
     }

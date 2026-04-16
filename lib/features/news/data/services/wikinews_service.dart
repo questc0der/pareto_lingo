@@ -10,11 +10,10 @@ class WikinewsService {
 
   WikinewsService(this._client);
 
-  static const _supportedCodes = {'fr', 'es', 'de', 'en'};
+  static const _supportedCodes = {'fr', 'zh', 'en'};
   static const _newsLocaleByLanguage = {
     'fr': ('FR', 'fr'),
-    'es': ('ES', 'es'),
-    'de': ('DE', 'de'),
+    'zh': ('CN', 'zh'),
     'en': ('US', 'en'),
   };
 

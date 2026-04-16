@@ -39,10 +39,7 @@ class Progress extends ConsumerWidget {
       data: (s) => s.studied,
       orElse: () => 0,
     );
-    final remaining = flashcardStatsAsync.maybeWhen(
-      data: (s) => s.remaining,
-      orElse: () => 0,
-    );
+    final remaining = max(0, topWordsCount - studied);
 
     return ListView(
       padding: const EdgeInsets.all(6),

@@ -219,10 +219,10 @@ class _FlashcardReviewScreenState extends ConsumerState<FlashcardReviewScreen>
     switch (languageCode.toLowerCase()) {
       case 'fr':
         return 'fr-FR';
-      case 'es':
-        return 'es-ES';
-      case 'de':
-        return 'de-DE';
+      case 'zh':
+        return 'zh-CN';
+      case 'en':
+        return 'en-US';
       default:
         return 'en-US';
     }
@@ -232,10 +232,10 @@ class _FlashcardReviewScreenState extends ConsumerState<FlashcardReviewScreen>
     switch (languageCode.toLowerCase()) {
       case 'fr':
         return 'fr-FR';
-      case 'es':
-        return 'es-ES';
-      case 'de':
-        return 'de-DE';
+      case 'zh':
+        return 'zh-CN';
+      case 'en':
+        return 'en-US';
       default:
         return 'en-US';
     }
