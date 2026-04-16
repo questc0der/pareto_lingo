@@ -323,13 +323,9 @@ String _targetMeaningLanguageForDeck(
   String languageCode,
   Box<String> settings,
 ) {
-  if (languageCode.toLowerCase() == 'en') {
-    final native = settings.get(_nativeLanguageKey)?.trim().toLowerCase();
-    if (native != null &&
-        (native == 'fr' || native == 'zh' || native == 'en')) {
-      return native;
-    }
-    return 'fr';
+  final native = settings.get(_nativeLanguageKey)?.trim().toLowerCase();
+  if (native != null && (native == 'fr' || native == 'zh' || native == 'en')) {
+    return native;
   }
 
   return 'en';

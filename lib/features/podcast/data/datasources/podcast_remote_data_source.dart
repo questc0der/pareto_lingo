@@ -11,8 +11,8 @@ class PodcastRemoteDataSource {
     required String languageCode,
   }) {
     final country = switch (languageCode.toLowerCase()) {
-      'es' => Country.spain,
-      'de' => Country.germany,
+      'zh' => Country.china,
+      'en' => Country.unitedStates,
       _ => Country.france,
     };
 

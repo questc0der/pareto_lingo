@@ -160,56 +160,55 @@ class _OnboardingLanguageScreenState
                 ),
               ],
               const SizedBox(height: 16),
-              if (_selectedCode == 'en')
-                DecoratedBox(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(14),
-                    color: theme.colorScheme.surfaceContainer,
-                    border: Border.all(color: theme.colorScheme.outlineVariant),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(12, 10, 12, 12),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'For English learning: what language do you speak?',
-                          style: theme.textTheme.titleSmall?.copyWith(
-                            fontWeight: FontWeight.w700,
-                          ),
+              DecoratedBox(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(14),
+                  color: theme.colorScheme.surfaceContainer,
+                  border: Border.all(color: theme.colorScheme.outlineVariant),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(12, 10, 12, 12),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'What language do you speak?',
+                        style: theme.textTheme.titleSmall?.copyWith(
+                          fontWeight: FontWeight.w700,
                         ),
-                        const SizedBox(height: 8),
-                        DropdownButtonFormField<String>(
-                          key: ValueKey(
-                            'native-lang-${_nativeLanguageCode ?? 'none'}',
-                          ),
-                          initialValue: _nativeLanguageCode,
-                          decoration: const InputDecoration(
-                            border: OutlineInputBorder(),
-                            isDense: true,
-                            labelText: 'Your speaking language',
-                          ),
-                          items: supportedLearningLanguages
-                              .map(
-                                (language) => DropdownMenuItem<String>(
-                                  value: language.code,
-                                  child: Text(
-                                    '${language.flag} ${language.name}',
-                                  ),
+                      ),
+                      const SizedBox(height: 8),
+                      DropdownButtonFormField<String>(
+                        key: ValueKey(
+                          'native-lang-${_nativeLanguageCode ?? 'none'}',
+                        ),
+                        initialValue: _nativeLanguageCode,
+                        decoration: const InputDecoration(
+                          border: OutlineInputBorder(),
+                          isDense: true,
+                          labelText: 'Your speaking language',
+                        ),
+                        items: supportedLearningLanguages
+                            .map(
+                              (language) => DropdownMenuItem<String>(
+                                value: language.code,
+                                child: Text(
+                                  '${language.flag} ${language.name}',
                                 ),
-                              )
-                              .toList(growable: false),
-                          onChanged: (value) {
-                            setState(() {
-                              _nativeLanguageCode = value;
-                            });
-                          },
-                        ),
-                      ],
-                    ),
+                              ),
+                            )
+                            .toList(growable: false),
+                        onChanged: (value) {
+                          setState(() {
+                            _nativeLanguageCode = value;
+                          });
+                        },
+                      ),
+                    ],
                   ),
                 ),
-              if (_selectedCode == 'en') const SizedBox(height: 12),
+              ),
+              const SizedBox(height: 12),
               Expanded(
                 child: ListView.separated(
                   itemCount: supportedLearningLanguages.length,
@@ -251,8 +250,6 @@ class _OnboardingLanguageScreenState
                           onTap: () {
                             setState(() {
                               _selectedCode = language.code;
-                              _nativeLanguageCode ??=
-                                  supportedLearningLanguages.first.code;
                             });
                           },
                           shape: RoundedRectangleBorder(
@@ -302,10 +299,9 @@ class _OnboardingLanguageScreenState
                     width: double.infinity,
                     child: FilledButton.icon(
                       onPressed:
-                          _selectedCode == null || _isPreparing
-                              ? null
-                              : (_selectedCode == 'en' &&
-                                  _nativeLanguageCode == null)
+                          _selectedCode == null ||
+                                  _isPreparing ||
+                                  _nativeLanguageCode == null
                               ? null
                               : () async {
                                 final code = _selectedCode!;
@@ -316,13 +312,10 @@ class _OnboardingLanguageScreenState
 
                                 try {
                                   await setLearningLanguage(ref, code);
-                                  if (code == 'en') {
-                                    await setNativeLanguage(
-                                      ref,
-                                      _nativeLanguageCode ??
-                                          supportedLearningLanguages.first.code,
-                                    );
-                                  }
+                                  await setNativeLanguage(
+                                    ref,
+                                    _nativeLanguageCode!,
+                                  );
                                   await ref.read(
                                     syncFlashcardDeckProvider(code).future,
                                   );

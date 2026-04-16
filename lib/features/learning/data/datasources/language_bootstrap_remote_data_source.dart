@@ -279,8 +279,14 @@ class LanguageBootstrapRemoteDataSource {
     required String word,
     String? targetLanguage,
   }) {
+    final target = (targetLanguage ?? 'en').trim().toLowerCase();
+
     if (languageCode == 'en') {
-      return _localizedEnglishMeaning(word, targetLanguage ?? 'en');
+      return _localizedEnglishMeaning(word, target);
+    }
+
+    if (languageCode == 'zh') {
+      return _localizedMandarinMeaning(word, target);
     }
 
     return 'meaning: $word';
@@ -332,6 +338,57 @@ class LanguageBootstrapRemoteDataSource {
 
     if (target == 'zh') {
       return zh[normalizedWord] ?? normalizedWord;
+    }
+
+    return normalizedWord;
+  }
+
+  String _localizedMandarinMeaning(String word, String targetLanguage) {
+    final normalizedWord = word.trim();
+    final target = targetLanguage.trim().toLowerCase();
+
+    const fr = {
+      '你好': 'bonjour',
+      '谢谢': 'merci',
+      '家': 'maison',
+      '吃': 'manger',
+      '说': 'parler',
+      '朋友': 'ami',
+      '工作': 'travail',
+      '学校': 'école',
+      '城市': 'ville',
+      '今天': 'aujourd\'hui',
+      '明天': 'demain',
+      '音乐': 'musique',
+      '学习': 'apprendre',
+      '阅读': 'lire',
+      '旅行': 'voyage',
+    };
+
+    const en = {
+      '你好': 'hello',
+      '谢谢': 'thank you',
+      '家': 'home',
+      '吃': 'eat',
+      '说': 'speak',
+      '朋友': 'friend',
+      '工作': 'work',
+      '学校': 'school',
+      '城市': 'city',
+      '今天': 'today',
+      '明天': 'tomorrow',
+      '音乐': 'music',
+      '学习': 'learn',
+      '阅读': 'read',
+      '旅行': 'travel',
+    };
+
+    if (target == 'fr') {
+      return fr[normalizedWord] ?? normalizedWord;
+    }
+
+    if (target == 'en') {
+      return en[normalizedWord] ?? normalizedWord;
     }
 
     return normalizedWord;

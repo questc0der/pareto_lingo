@@ -17,13 +17,13 @@ extension PodcastCategoryX on PodcastCategory {
   String get query {
     switch (this) {
       case PodcastCategory.popular:
-        return 'france';
+        return 'chinese podcast';
       case PodcastCategory.beginner:
-        return 'Easy French';
+        return 'Easy Chinese';
       case PodcastCategory.intermediate:
-        return 'Intermediate French';
+        return 'Intermediate Chinese';
       case PodcastCategory.advanced:
-        return 'Advanced French';
+        return 'Advanced Chinese';
     }
   }
 
@@ -33,26 +33,26 @@ extension PodcastCategoryX on PodcastCategory {
     switch (this) {
       case PodcastCategory.popular:
         return switch (normalizedCode) {
-          'es' => 'spanish language learning',
-          'de' => 'german language learning',
+          'zh' => 'chinese language learning',
+          'en' => 'english language learning',
           _ => 'french language learning',
         };
       case PodcastCategory.beginner:
         return switch (normalizedCode) {
-          'es' => 'Easy Spanish',
-          'de' => 'Easy German',
+          'zh' => 'Easy Chinese',
+          'en' => 'Easy English',
           _ => 'Easy French',
         };
       case PodcastCategory.intermediate:
         return switch (normalizedCode) {
-          'es' => 'Intermediate Spanish',
-          'de' => 'Intermediate German',
+          'zh' => 'Intermediate Chinese',
+          'en' => 'Intermediate English',
           _ => 'Intermediate French',
         };
       case PodcastCategory.advanced:
         return switch (normalizedCode) {
-          'es' => 'Advanced Spanish',
-          'de' => 'Advanced German',
+          'zh' => 'Advanced Chinese',
+          'en' => 'Advanced English',
           _ => 'Advanced French',
         };
     }
