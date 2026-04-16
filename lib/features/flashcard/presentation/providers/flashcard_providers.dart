@@ -347,7 +347,13 @@ final flashcardPrewarmProvider =
       ref,
       languageCode,
     ) async {
-      await ref.watch(syncFlashcardDeckProvider(languageCode).future);
+      try {
+        await ref
+            .watch(syncFlashcardDeckProvider(languageCode).future)
+            .timeout(const Duration(seconds: 15));
+      } catch (_) {
+        // Keep opening the session with whatever is already local.
+      }
 
       final rawLimit = ref
           .read(appSettingsBoxProvider)
@@ -436,16 +442,31 @@ class FlashcardSessionController extends StateNotifier<FlashcardSessionState> {
   /// Fallback: load due cards fresh (used if prewarm wasn't available).
   Future<void> initialize({required int dailyLimit}) async {
     state = state.copyWith(isLoading: true, clearTransientMessage: true);
-    final dueCards = await _getDueFlashcards(limit: dailyLimit);
+    try {
+      final dueCards = await _getDueFlashcards(
+        limit: dailyLimit,
+      ).timeout(const Duration(seconds: 8));
 
-    state = FlashcardSessionState(
-      isLoading: false,
-      queue: dueCards,
-      sessionRepeats: const [],
-      currentIndex: 0,
-      showAnswer: false,
-      isComplete: dueCards.isEmpty,
-    );
+      state = FlashcardSessionState(
+        isLoading: false,
+        queue: dueCards,
+        sessionRepeats: const [],
+        currentIndex: 0,
+        showAnswer: false,
+        isComplete: dueCards.isEmpty,
+      );
+    } catch (_) {
+      state = const FlashcardSessionState(
+        isLoading: false,
+        queue: [],
+        sessionRepeats: [],
+        currentIndex: 0,
+        showAnswer: false,
+        isComplete: true,
+        transientMessage:
+            'Deck loading timed out. Reopen flashcards to retry sync.',
+      );
+    }
   }
 
   void revealAnswer() {
