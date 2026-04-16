@@ -5,8 +5,8 @@ const { translateWord, mapWithConcurrency } = require("./translatorService");
 
 const LANGUAGE_MAP = {
   fr: "fr",
-  es: "es",
-  de: "de",
+  en: "en",
+  zh: "zh",
 };
 
 function getSupportedLanguages() {
@@ -22,9 +22,19 @@ async function ensureDirectory(directoryPath) {
   await fs.mkdir(directoryPath, { recursive: true });
 }
 
-async function loadCache(cacheDir, languageCode) {
+function normalizeTargetLanguage(input) {
+  const value = String(input || "en")
+    .toLowerCase()
+    .trim();
+  return value || "en";
+}
+
+async function loadCache(cacheDir, languageCode, targetLanguage) {
   await ensureDirectory(cacheDir);
-  const filePath = path.join(cacheDir, `${languageCode}.json`);
+  const filePath = path.join(
+    cacheDir,
+    `${languageCode}_${targetLanguage}.json`,
+  );
 
   try {
     const content = await fs.readFile(filePath, "utf8");
@@ -43,8 +53,33 @@ async function saveCache(filePath, map) {
 }
 
 async function fetchTopWords(languageCode, limit) {
-  const url = `https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/${languageCode}/${languageCode}_50k.txt`;
-  const response = await axios.get(url, { timeout: 20000 });
+  const sources = [
+    `https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/${languageCode}/${languageCode}_50k.txt`,
+  ];
+
+  // FrequencyWords stores some Chinese corpora under zh_cn.
+  if (languageCode === "zh") {
+    sources.push(
+      "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/zh_cn/zh_cn_50k.txt",
+    );
+  }
+
+  let response;
+  for (const source of sources) {
+    try {
+      response = await axios.get(source, { timeout: 20000 });
+      if (response.status === 200) {
+        break;
+      }
+    } catch (_) {
+      response = null;
+    }
+  }
+
+  if (!response || response.status !== 200) {
+    throw new Error(`Unable to fetch top words for ${languageCode}`);
+  }
+
   const lines = String(response.data || "").split("\n");
 
   const words = [];
@@ -68,10 +103,15 @@ async function getFlashcards({
   translationConcurrency,
 }) {
   const resolvedLanguage = normalizeLanguage(languageCode);
+  const resolvedTargetLanguage = normalizeTargetLanguage(targetLanguage);
   const resolvedLimit = Math.min(Math.max(Number(limit) || 1000, 1), 1000);
 
   const words = await fetchTopWords(resolvedLanguage, resolvedLimit);
-  const { filePath, map } = await loadCache(cacheDir, resolvedLanguage);
+  const { filePath, map } = await loadCache(
+    cacheDir,
+    resolvedLanguage,
+    resolvedTargetLanguage,
+  );
 
   const missingWords = words.filter((word) => !map[word]);
 
@@ -83,7 +123,7 @@ async function getFlashcards({
         const translated = await translateWord({
           word,
           sourceLanguage: resolvedLanguage,
-          targetLanguage,
+          targetLanguage: resolvedTargetLanguage,
         });
         return { word, translated };
       },

@@ -81,9 +81,27 @@ function validateFlashcardQuery(req, _res, next) {
     return;
   }
 
+  const rawTargetLanguage = String(
+    req.query.targetLanguage || config.translationTargetLanguage,
+  )
+    .toLowerCase()
+    .trim();
+
+  if (!/^[a-z]{2,8}(?:-[a-z]{2,8})?$/.test(rawTargetLanguage)) {
+    next(
+      createHttpError(
+        400,
+        "targetLanguage must be a valid language code.",
+        "INVALID_TARGET_LANGUAGE",
+      ),
+    );
+    return;
+  }
+
   req.flashcardQuery = {
     language: rawLanguage,
     limit: requestedLimit,
+    targetLanguage: rawTargetLanguage,
   };
   next();
 }
@@ -210,12 +228,12 @@ app.get(
   validateFlashcardQuery,
   async (req, res, next) => {
     try {
-      const { language, limit } = req.flashcardQuery;
+      const { language, limit, targetLanguage } = req.flashcardQuery;
 
       const result = await getFlashcards({
         languageCode: language,
         limit,
-        targetLanguage: config.translationTargetLanguage,
+        targetLanguage,
         cacheDir: config.cacheDir,
         translationConcurrency: config.translationConcurrency,
       });
