@@ -1,406 +1,5002 @@
 [
   {
-    "word": "bonjour",
-    "meaning": "hello"
-  },
-  {
-    "word": "au revoir",
-    "meaning": "goodbye"
-  },
-  {
-    "word": "merci",
-    "meaning": "thank you"
-  },
-  {
-    "word": "s'il vous plaît",
-    "meaning": "please"
-  },
-  {
-    "word": "excusez-moi",
-    "meaning": "excuse me"
-  },
-  {
-    "word": "oui",
-    "meaning": "yes"
-  },
-  {
-    "word": "non",
-    "meaning": "no"
-  },
-  {
-    "word": "eau",
-    "meaning": "water"
-  },
-  {
-    "word": "pain",
-    "meaning": "bread"
-  },
-  {
-    "word": "chat",
-    "meaning": "cat"
-  },
-  {
-    "word": "chien",
-    "meaning": "dog"
-  },
-  {
-    "word": "maison",
-    "meaning": "house"
-  },
-  {
-    "word": "voiture",
-    "meaning": "car"
-  },
-  {
-    "word": "temps",
-    "meaning": "time/weather"
-  },
-  {
-    "word": "argent",
-    "meaning": "money"
-  },
-  {
-    "word": "famille",
-    "meaning": "family"
-  },
-  {
-    "word": "amour",
-    "meaning": "love"
-  },
-  {
-    "word": "travail",
-    "meaning": "work"
-  },
-  {
-    "word": "école",
-    "meaning": "school"
-  },
-  {
-    "word": "livre",
-    "meaning": "book"
-  },
-  {
-    "word": "rouge",
-    "meaning": "red"
-  },
-  {
-    "word": "bleu",
-    "meaning": "blue"
-  },
-  {
-    "word": "vert",
-    "meaning": "green"
-  },
-  {
-    "word": "blanc",
-    "meaning": "white"
-  },
-  {
-    "word": "noir",
-    "meaning": "black"
-  },
-  {
-    "word": "grand",
-    "meaning": "big/tall"
-  },
-  {
-    "word": "petit",
-    "meaning": "small"
-  },
-  {
-    "word": "beau",
-    "meaning": "beautiful"
-  },
-  {
-    "word": "bon",
-    "meaning": "good"
-  },
-  {
-    "word": "mauvais",
-    "meaning": "bad"
+    "word": "de",
+    "meaning": "of",
+    "pinyin": ""
   },
   {
     "word": "je",
-    "meaning": "I"
+    "meaning": "i",
+    "pinyin": ""
   },
   {
-    "word": "tu",
-    "meaning": "you (informal)"
+    "word": "est",
+    "meaning": "is",
+    "pinyin": ""
   },
   {
-    "word": "il",
-    "meaning": "he"
+    "word": "pas",
+    "meaning": "not",
+    "pinyin": ""
   },
   {
-    "word": "elle",
-    "meaning": "she"
+    "word": "le",
+    "meaning": "the",
+    "pinyin": ""
   },
   {
-    "word": "nous",
-    "meaning": "we"
+    "word": "que",
+    "meaning": "that",
+    "pinyin": ""
+  },
+  {
+    "word": "la",
+    "meaning": "the",
+    "pinyin": ""
   },
   {
     "word": "vous",
-    "meaning": "you (formal/plural)"
+    "meaning": "you",
+    "pinyin": ""
   },
   {
-    "word": "ils",
-    "meaning": "they (masculine)"
-  },
-  {
-    "word": "elles",
-    "meaning": "they (feminine)"
-  },
-  {
-    "word": "avoir",
-    "meaning": "to have"
-  },
-  {
-    "word": "être",
-    "meaning": "to be"
-  },
-  {
-    "word": "faire",
-    "meaning": "to do/make"
-  },
-  {
-    "word": "aller",
-    "meaning": "to go"
-  },
-  {
-    "word": "venir",
-    "meaning": "to come"
-  },
-  {
-    "word": "voir",
-    "meaning": "to see"
-  },
-  {
-    "word": "savoir",
-    "meaning": "to know"
-  },
-  {
-    "word": "pouvoir",
-    "meaning": "to be able to"
-  },
-  {
-    "word": "vouloir",
-    "meaning": "to want"
-  },
-  {
-    "word": "devoir",
-    "meaning": "must/to owe"
-  },
-  {
-    "word": "manger",
-    "meaning": "to eat"
-  },
-  {
-    "word": "boire",
-    "meaning": "to drink"
-  },
-  {
-    "word": "parler",
-    "meaning": "to speak"
-  },
-  {
-    "word": "écouter",
-    "meaning": "to listen"
-  },
-  {
-    "word": "regarder",
-    "meaning": "to watch/look"
-  },
-  {
-    "word": "lire",
-    "meaning": "to read"
-  },
-  {
-    "word": "écrire",
-    "meaning": "to write"
-  },
-  {
-    "word": "dormir",
-    "meaning": "to sleep"
-  },
-  {
-    "word": "marcher",
-    "meaning": "to walk"
-  },
-  {
-    "word": "courir",
-    "meaning": "to run"
+    "word": "tu",
+    "meaning": "you",
+    "pinyin": ""
   },
   {
     "word": "un",
-    "meaning": "one/a (masculine)"
+    "meaning": "a",
+    "pinyin": ""
+  },
+  {
+    "word": "c'",
+    "meaning": "it's",
+    "pinyin": ""
+  },
+  {
+    "word": "à",
+    "meaning": "has",
+    "pinyin": ""
+  },
+  {
+    "word": "et",
+    "meaning": "and",
+    "pinyin": ""
+  },
+  {
+    "word": "il",
+    "meaning": "he",
+    "pinyin": ""
+  },
+  {
+    "word": "a",
+    "meaning": "has",
+    "pinyin": ""
+  },
+  {
+    "word": "l'",
+    "meaning": "l'",
+    "pinyin": ""
+  },
+  {
+    "word": "ne",
+    "meaning": "born",
+    "pinyin": ""
+  },
+  {
+    "word": "les",
+    "meaning": "the",
+    "pinyin": ""
+  },
+  {
+    "word": "j'",
+    "meaning": "i",
+    "pinyin": ""
+  },
+  {
+    "word": "en",
+    "meaning": "in",
+    "pinyin": ""
+  },
+  {
+    "word": "on",
+    "meaning": "we",
+    "pinyin": ""
+  },
+  {
+    "word": "ça",
+    "meaning": "that",
+    "pinyin": ""
   },
   {
     "word": "une",
-    "meaning": "one/a (feminine)"
+    "meaning": "a",
+    "pinyin": ""
   },
   {
-    "word": "deux",
-    "meaning": "two"
+    "word": "d'",
+    "meaning": "of",
+    "pinyin": ""
   },
   {
-    "word": "trois",
-    "meaning": "three"
+    "word": "ce",
+    "meaning": "this",
+    "pinyin": ""
   },
   {
-    "word": "quatre",
-    "meaning": "four"
+    "word": "qu'",
+    "meaning": "that",
+    "pinyin": ""
   },
   {
-    "word": "cinq",
-    "meaning": "five"
+    "word": "pour",
+    "meaning": "for",
+    "pinyin": ""
   },
   {
-    "word": "six",
-    "meaning": "six"
+    "word": "ai",
+    "meaning": "ai",
+    "pinyin": ""
   },
   {
-    "word": "sept",
-    "meaning": "seven"
+    "word": "n'",
+    "meaning": "n'",
+    "pinyin": ""
   },
   {
-    "word": "huit",
-    "meaning": "eight"
+    "word": "des",
+    "meaning": "some",
+    "pinyin": ""
   },
   {
-    "word": "neuf",
-    "meaning": "nine"
+    "word": "qui",
+    "meaning": "who",
+    "pinyin": ""
   },
   {
-    "word": "dix",
-    "meaning": "ten"
+    "word": "mais",
+    "meaning": "but",
+    "pinyin": ""
   },
   {
-    "word": "lundi",
-    "meaning": "Monday"
+    "word": "dans",
+    "meaning": "in",
+    "pinyin": ""
   },
   {
-    "word": "mardi",
-    "meaning": "Tuesday"
+    "word": "nous",
+    "meaning": "we",
+    "pinyin": ""
   },
   {
-    "word": "mercredi",
-    "meaning": "Wednesday"
+    "word": "elle",
+    "meaning": "she",
+    "pinyin": ""
   },
   {
-    "word": "jeudi",
-    "meaning": "Thursday"
+    "word": "me",
+    "meaning": "me",
+    "pinyin": ""
   },
   {
-    "word": "vendredi",
-    "meaning": "Friday"
+    "word": "bien",
+    "meaning": "good",
+    "pinyin": ""
   },
   {
-    "word": "samedi",
-    "meaning": "Saturday"
+    "word": "si",
+    "meaning": "if",
+    "pinyin": ""
   },
   {
-    "word": "dimanche",
-    "meaning": "Sunday"
+    "word": "du",
+    "meaning": "of the",
+    "pinyin": ""
   },
   {
-    "word": "janvier",
-    "meaning": "January"
+    "word": "y",
+    "meaning": "y",
+    "pinyin": ""
   },
   {
-    "word": "février",
-    "meaning": "February"
+    "word": "suis",
+    "meaning": "am",
+    "pinyin": ""
   },
   {
-    "word": "mars",
-    "meaning": "March"
+    "word": "non",
+    "meaning": "no",
+    "pinyin": ""
   },
   {
-    "word": "avril",
-    "meaning": "April"
+    "word": "t'",
+    "meaning": "you",
+    "pinyin": ""
   },
   {
-    "word": "mai",
-    "meaning": "May"
+    "word": "avec",
+    "meaning": "with",
+    "pinyin": ""
   },
   {
-    "word": "juin",
-    "meaning": "June"
+    "word": "tout",
+    "meaning": "all",
+    "pinyin": ""
   },
   {
-    "word": "juillet",
-    "meaning": "July"
+    "word": "plus",
+    "meaning": "more",
+    "pinyin": ""
   },
   {
-    "word": "août",
-    "meaning": "August"
+    "word": "mon",
+    "meaning": "my",
+    "pinyin": ""
   },
   {
-    "word": "septembre",
-    "meaning": "September"
+    "word": "m'",
+    "meaning": "me",
+    "pinyin": ""
   },
   {
-    "word": "octobre",
-    "meaning": "October"
+    "word": "te",
+    "meaning": "you",
+    "pinyin": ""
   },
   {
-    "word": "novembre",
-    "meaning": "November"
+    "word": "au",
+    "meaning": "to the",
+    "pinyin": ""
   },
   {
-    "word": "décembre",
-    "meaning": "December"
+    "word": "fait",
+    "meaning": "do",
+    "pinyin": ""
   },
   {
-    "word": "matin",
-    "meaning": "morning"
+    "word": "moi",
+    "meaning": "me",
+    "pinyin": ""
   },
   {
-    "word": "après-midi",
-    "meaning": "afternoon"
+    "word": "s'",
+    "meaning": "if",
+    "pinyin": ""
   },
   {
-    "word": "soir",
-    "meaning": "evening"
+    "word": "oui",
+    "meaning": "yes",
+    "pinyin": ""
   },
   {
-    "word": "nuit",
-    "meaning": "night"
+    "word": "va",
+    "meaning": "go",
+    "pinyin": ""
   },
   {
-    "word": "aujourd'hui",
-    "meaning": "today"
+    "word": "était",
+    "meaning": "was",
+    "pinyin": ""
   },
   {
-    "word": "hier",
-    "meaning": "yesterday"
+    "word": "as",
+    "meaning": "ace",
+    "pinyin": ""
   },
   {
-    "word": "demain",
-    "meaning": "tomorrow"
+    "word": "faire",
+    "meaning": "to do",
+    "pinyin": ""
   },
   {
-    "word": "maintenant",
-    "meaning": "now"
+    "word": "ils",
+    "meaning": "they",
+    "pinyin": ""
   },
   {
-    "word": "bientôt",
-    "meaning": "soon"
+    "word": "sur",
+    "meaning": "on",
+    "pinyin": ""
   },
   {
-    "word": "toujours",
-    "meaning": "always"
+    "word": "quoi",
+    "meaning": "what",
+    "pinyin": ""
+  },
+  {
+    "word": "se",
+    "meaning": "se",
+    "pinyin": ""
+  },
+  {
+    "word": "comme",
+    "meaning": "as",
+    "pinyin": ""
+  },
+  {
+    "word": "sais",
+    "meaning": "know",
+    "pinyin": ""
+  },
+  {
+    "word": "être",
+    "meaning": "be",
+    "pinyin": ""
+  },
+  {
+    "word": "veux",
+    "meaning": "want",
+    "pinyin": ""
+  },
+  {
+    "word": "ici",
+    "meaning": "here",
+    "pinyin": ""
+  },
+  {
+    "word": "ma",
+    "meaning": "my",
+    "pinyin": ""
+  },
+  {
+    "word": "toi",
+    "meaning": "you",
+    "pinyin": ""
+  },
+  {
+    "word": "est-ce",
+    "meaning": "is this",
+    "pinyin": ""
+  },
+  {
+    "word": "dit",
+    "meaning": "said",
+    "pinyin": ""
+  },
+  {
+    "word": "lui",
+    "meaning": "him",
+    "pinyin": ""
+  },
+  {
+    "word": "votre",
+    "meaning": "your",
+    "pinyin": ""
+  },
+  {
+    "word": "es",
+    "meaning": "are",
+    "pinyin": ""
+  },
+  {
+    "word": "pourquoi",
+    "meaning": "why",
+    "pinyin": ""
+  },
+  {
+    "word": "où",
+    "meaning": "or",
+    "pinyin": ""
+  },
+  {
+    "word": "là",
+    "meaning": "there",
+    "pinyin": ""
+  },
+  {
+    "word": "rien",
+    "meaning": "nothing",
+    "pinyin": ""
+  },
+  {
+    "word": "cette",
+    "meaning": "this",
+    "pinyin": ""
+  },
+  {
+    "word": "sont",
+    "meaning": "are",
+    "pinyin": ""
+  },
+  {
+    "word": "quand",
+    "meaning": "when",
+    "pinyin": ""
+  },
+  {
+    "word": "peux",
+    "meaning": "can",
+    "pinyin": ""
+  },
+  {
+    "word": "dire",
+    "meaning": "say",
+    "pinyin": ""
+  },
+  {
+    "word": "son",
+    "meaning": "her",
+    "pinyin": ""
+  },
+  {
+    "word": "avez",
+    "meaning": "have",
+    "pinyin": ""
+  },
+  {
+    "word": "vais",
+    "meaning": "go",
+    "pinyin": ""
+  },
+  {
+    "word": "alors",
+    "meaning": "so",
+    "pinyin": ""
+  },
+  {
+    "word": "ton",
+    "meaning": "your",
+    "pinyin": ""
+  },
+  {
+    "word": "comment",
+    "meaning": "how",
+    "pinyin": ""
+  },
+  {
+    "word": "par",
+    "meaning": "by",
+    "pinyin": ""
+  },
+  {
+    "word": "ou",
+    "meaning": "or",
+    "pinyin": ""
+  },
+  {
+    "word": "chose",
+    "meaning": "thing",
+    "pinyin": ""
+  },
+  {
+    "word": "bon",
+    "meaning": "good",
+    "pinyin": ""
+  },
+  {
+    "word": "ont",
+    "meaning": "have",
+    "pinyin": ""
+  },
+  {
+    "word": "merci",
+    "meaning": "thanks",
+    "pinyin": ""
+  },
+  {
+    "word": "juste",
+    "meaning": "just",
+    "pinyin": ""
+  },
+  {
+    "word": "très",
+    "meaning": "very",
+    "pinyin": ""
   },
   {
     "word": "jamais",
-    "meaning": "never"
+    "meaning": "never",
+    "pinyin": ""
   },
   {
-    "word": "souvent",
-    "meaning": "often"
+    "word": "été",
+    "meaning": "summer",
+    "pinyin": ""
+  },
+  {
+    "word": "aussi",
+    "meaning": "also",
+    "pinyin": ""
+  },
+  {
+    "word": "avoir",
+    "meaning": "to have",
+    "pinyin": ""
+  },
+  {
+    "word": "vraiment",
+    "meaning": "really",
+    "pinyin": ""
+  },
+  {
+    "word": "voir",
+    "meaning": "see",
+    "pinyin": ""
+  },
+  {
+    "word": "même",
+    "meaning": "even",
+    "pinyin": ""
+  },
+  {
+    "word": "sa",
+    "meaning": "its",
+    "pinyin": ""
+  },
+  {
+    "word": "oh",
+    "meaning": "oh",
+    "pinyin": ""
+  },
+  {
+    "word": "maintenant",
+    "meaning": "now",
+    "pinyin": ""
+  },
+  {
+    "word": "tous",
+    "meaning": "all",
+    "pinyin": ""
+  },
+  {
+    "word": "peut",
+    "meaning": "can",
+    "pinyin": ""
+  },
+  {
+    "word": "deux",
+    "meaning": "two",
+    "pinyin": ""
+  },
+  {
+    "word": "ces",
+    "meaning": "these",
+    "pinyin": ""
+  },
+  {
+    "word": "êtes",
+    "meaning": "are",
+    "pinyin": ""
+  },
+  {
+    "word": "allez",
+    "meaning": "go on",
+    "pinyin": ""
+  },
+  {
+    "word": "ta",
+    "meaning": "your",
+    "pinyin": ""
+  },
+  {
+    "word": "autre",
+    "meaning": "other",
+    "pinyin": ""
+  },
+  {
+    "word": "peu",
+    "meaning": "little",
+    "pinyin": ""
+  },
+  {
+    "word": "temps",
+    "meaning": "time",
+    "pinyin": ""
+  },
+  {
+    "word": "quelque",
+    "meaning": "some",
+    "pinyin": ""
+  },
+  {
+    "word": "fais",
+    "meaning": "do",
+    "pinyin": ""
+  },
+  {
+    "word": "toujours",
+    "meaning": "always",
+    "pinyin": ""
+  },
+  {
+    "word": "encore",
+    "meaning": "again",
+    "pinyin": ""
+  },
+  {
+    "word": "notre",
+    "meaning": "our",
+    "pinyin": ""
+  },
+  {
+    "word": "mes",
+    "meaning": "my",
+    "pinyin": ""
+  },
+  {
+    "word": "besoin",
+    "meaning": "need",
+    "pinyin": ""
+  },
+  {
+    "word": "avait",
+    "meaning": "had",
+    "pinyin": ""
+  },
+  {
+    "word": "accord",
+    "meaning": "agreement",
+    "pinyin": ""
+  },
+  {
+    "word": "faut",
+    "meaning": "must",
+    "pinyin": ""
+  },
+  {
+    "word": "dois",
+    "meaning": "have to",
+    "pinyin": ""
+  },
+  {
+    "word": "vie",
+    "meaning": "life",
+    "pinyin": ""
+  },
+  {
+    "word": "peut-être",
+    "meaning": "maybe",
+    "pinyin": ""
+  },
+  {
+    "word": "aller",
+    "meaning": "go",
+    "pinyin": ""
+  },
+  {
+    "word": "fois",
+    "meaning": "times",
+    "pinyin": ""
+  },
+  {
+    "word": "vu",
+    "meaning": "seen",
+    "pinyin": ""
+  },
+  {
+    "word": "donc",
+    "meaning": "so",
+    "pinyin": ""
+  },
+  {
+    "word": "sans",
+    "meaning": "without",
+    "pinyin": ""
+  },
+  {
+    "word": "monde",
+    "meaning": "world",
+    "pinyin": ""
+  },
+  {
+    "word": "étais",
+    "meaning": "was",
+    "pinyin": ""
+  },
+  {
+    "word": "parce",
+    "meaning": "because",
+    "pinyin": ""
+  },
+  {
+    "word": "avant",
+    "meaning": "before",
+    "pinyin": ""
+  },
+  {
+    "word": "sûr",
+    "meaning": "on",
+    "pinyin": ""
+  },
+  {
+    "word": "trop",
+    "meaning": "too much",
+    "pinyin": ""
+  },
+  {
+    "word": "quelqu'",
+    "meaning": "someone",
+    "pinyin": ""
+  },
+  {
+    "word": "parler",
+    "meaning": "talk",
+    "pinyin": ""
+  },
+  {
+    "word": "personne",
+    "meaning": "person",
+    "pinyin": ""
+  },
+  {
+    "word": "avais",
+    "meaning": "had",
+    "pinyin": ""
+  },
+  {
+    "word": "père",
+    "meaning": "father",
+    "pinyin": ""
+  },
+  {
+    "word": "crois",
+    "meaning": "believe",
+    "pinyin": ""
+  },
+  {
+    "word": "après",
+    "meaning": "after",
+    "pinyin": ""
+  },
+  {
+    "word": "aux",
+    "meaning": "to",
+    "pinyin": ""
+  },
+  {
+    "word": "dieu",
+    "meaning": "god",
+    "pinyin": ""
+  },
+  {
+    "word": "ouais",
+    "meaning": "yeah",
+    "pinyin": ""
+  },
+  {
+    "word": "ses",
+    "meaning": "his",
+    "pinyin": ""
+  },
+  {
+    "word": "pense",
+    "meaning": "think",
+    "pinyin": ""
+  },
+  {
+    "word": "eu",
+    "meaning": "had",
+    "pinyin": ""
+  },
+  {
+    "word": "aime",
+    "meaning": "love",
+    "pinyin": ""
+  },
+  {
+    "word": "leur",
+    "meaning": "their",
+    "pinyin": ""
+  },
+  {
+    "word": "homme",
+    "meaning": "man",
+    "pinyin": ""
+  },
+  {
+    "word": "viens",
+    "meaning": "come",
+    "pinyin": ""
+  },
+  {
+    "word": "vrai",
+    "meaning": "true",
+    "pinyin": ""
+  },
+  {
+    "word": "femme",
+    "meaning": "women",
+    "pinyin": ""
+  },
+  {
+    "word": "ok",
+    "meaning": "ok",
+    "pinyin": ""
+  },
+  {
+    "word": "doit",
+    "meaning": "must",
+    "pinyin": ""
+  },
+  {
+    "word": "veut",
+    "meaning": "wanna",
+    "pinyin": ""
+  },
+  {
+    "word": "ans",
+    "meaning": "years",
+    "pinyin": ""
+  },
+  {
+    "word": "mal",
+    "meaning": "wrong",
+    "pinyin": ""
+  },
+  {
+    "word": "chez",
+    "meaning": "at the house of",
+    "pinyin": ""
+  },
+  {
+    "word": "déjà",
+    "meaning": "already",
+    "pinyin": ""
+  },
+  {
+    "word": "depuis",
+    "meaning": "since",
+    "pinyin": ""
+  },
+  {
+    "word": "beaucoup",
+    "meaning": "a lot",
+    "pinyin": ""
+  },
+  {
+    "word": "vos",
+    "meaning": "your",
+    "pinyin": ""
+  },
+  {
+    "word": "bonne",
+    "meaning": "good",
+    "pinyin": ""
+  },
+  {
+    "word": "mort",
+    "meaning": "dead",
+    "pinyin": ""
+  },
+  {
+    "word": "mieux",
+    "meaning": "better",
+    "pinyin": ""
+  },
+  {
+    "word": "vas",
+    "meaning": "go",
+    "pinyin": ""
+  },
+  {
+    "word": "mère",
+    "meaning": "mother",
+    "pinyin": ""
+  },
+  {
+    "word": "sera",
+    "meaning": "will be",
+    "pinyin": ""
+  },
+  {
+    "word": "dis",
+    "meaning": "say",
+    "pinyin": ""
+  },
+  {
+    "word": "fille",
+    "meaning": "girl",
+    "pinyin": ""
+  },
+  {
+    "word": "tes",
+    "meaning": "your",
+    "pinyin": ""
+  },
+  {
+    "word": "gens",
+    "meaning": "people",
+    "pinyin": ""
+  },
+  {
+    "word": "quel",
+    "meaning": "what",
+    "pinyin": ""
+  },
+  {
+    "word": "vois",
+    "meaning": "see",
+    "pinyin": ""
+  },
+  {
+    "word": "désolé",
+    "meaning": "sorry",
+    "pinyin": ""
+  },
+  {
+    "word": "ca",
+    "meaning": "that",
+    "pinyin": ""
+  },
+  {
+    "word": "voilà",
+    "meaning": "there",
+    "pinyin": ""
+  },
+  {
+    "word": "avons",
+    "meaning": "have",
+    "pinyin": ""
+  },
+  {
+    "word": "petit",
+    "meaning": "little",
+    "pinyin": ""
+  },
+  {
+    "word": "maison",
+    "meaning": "house",
+    "pinyin": ""
+  },
+  {
+    "word": "soit",
+    "meaning": "either",
+    "pinyin": ""
+  },
+  {
+    "word": "cela",
+    "meaning": "that",
+    "pinyin": ""
+  },
+  {
+    "word": "autres",
+    "meaning": "others",
+    "pinyin": ""
+  },
+  {
+    "word": "toute",
+    "meaning": "all",
+    "pinyin": ""
+  },
+  {
+    "word": "soir",
+    "meaning": "evening",
+    "pinyin": ""
+  },
+  {
+    "word": "passé",
+    "meaning": "pass",
+    "pinyin": ""
+  },
+  {
+    "word": "prendre",
+    "meaning": "take",
+    "pinyin": ""
+  },
+  {
+    "word": "jour",
+    "meaning": "day",
+    "pinyin": ""
+  },
+  {
+    "word": "monsieur",
+    "meaning": "sir",
+    "pinyin": ""
+  },
+  {
+    "word": "nos",
+    "meaning": "our",
+    "pinyin": ""
+  },
+  {
+    "word": "savoir",
+    "meaning": "know",
+    "pinyin": ""
+  },
+  {
+    "word": "choses",
+    "meaning": "things",
+    "pinyin": ""
+  },
+  {
+    "word": "salut",
+    "meaning": "hi",
+    "pinyin": ""
+  },
+  {
+    "word": "cet",
+    "meaning": "this",
+    "pinyin": ""
+  },
+  {
+    "word": "nom",
+    "meaning": "name",
+    "pinyin": ""
+  },
+  {
+    "word": "argent",
+    "meaning": "money",
+    "pinyin": ""
+  },
+  {
+    "word": "bonjour",
+    "meaning": "good morning",
+    "pinyin": ""
+  },
+  {
+    "word": "nuit",
+    "meaning": "night",
+    "pinyin": ""
+  },
+  {
+    "word": "raison",
+    "meaning": "reason",
+    "pinyin": ""
+  },
+  {
+    "word": "moins",
+    "meaning": "less",
+    "pinyin": ""
+  },
+  {
+    "word": "arrive",
+    "meaning": "arrived",
+    "pinyin": ""
+  },
+  {
+    "word": "maman",
+    "meaning": "mom",
+    "pinyin": ""
+  },
+  {
+    "word": "reste",
+    "meaning": "stay",
+    "pinyin": ""
+  },
+  {
+    "word": "moment",
+    "meaning": "moment",
+    "pinyin": ""
+  },
+  {
+    "word": "voulais",
+    "meaning": "wanted",
+    "pinyin": ""
+  },
+  {
+    "word": "seul",
+    "meaning": "alone",
+    "pinyin": ""
+  },
+  {
+    "word": "aider",
+    "meaning": "help",
+    "pinyin": ""
+  },
+  {
+    "word": "air",
+    "meaning": "air",
+    "pinyin": ""
+  },
+  {
+    "word": "entre",
+    "meaning": "between",
+    "pinyin": ""
+  },
+  {
+    "word": "papa",
+    "meaning": "dad",
+    "pinyin": ""
+  },
+  {
+    "word": "passe",
+    "meaning": "pass",
+    "pinyin": ""
+  },
+  {
+    "word": "aurais",
+    "meaning": "would have",
+    "pinyin": ""
+  },
+  {
+    "word": "problème",
+    "meaning": "issue",
+    "pinyin": ""
+  },
+  {
+    "word": "ah",
+    "meaning": "oh",
+    "pinyin": ""
+  },
+  {
+    "word": "peur",
+    "meaning": "fear",
+    "pinyin": ""
+  },
+  {
+    "word": "regarde",
+    "meaning": "look at",
+    "pinyin": ""
+  },
+  {
+    "word": "voulez",
+    "meaning": "want",
+    "pinyin": ""
+  },
+  {
+    "word": "gars",
+    "meaning": "guys",
+    "pinyin": ""
+  },
+  {
+    "word": "trouvé",
+    "meaning": "find",
+    "pinyin": ""
+  },
+  {
+    "word": "fils",
+    "meaning": "son",
+    "pinyin": ""
+  },
+  {
+    "word": "attends",
+    "meaning": "wait",
+    "pinyin": ""
+  },
+  {
+    "word": "savez",
+    "meaning": "know",
+    "pinyin": ""
+  },
+  {
+    "word": "jusqu'",
+    "meaning": "until",
+    "pinyin": ""
+  },
+  {
+    "word": "trouver",
+    "meaning": "find",
+    "pinyin": ""
+  },
+  {
+    "word": "trois",
+    "meaning": "three",
+    "pinyin": ""
+  },
+  {
+    "word": "assez",
+    "meaning": "enough",
+    "pinyin": ""
+  },
+  {
+    "word": "famille",
+    "meaning": "family",
+    "pinyin": ""
+  },
+  {
+    "word": "dû",
+    "meaning": "of",
+    "pinyin": ""
+  },
+  {
+    "word": "eh",
+    "meaning": "eh",
+    "pinyin": ""
+  },
+  {
+    "word": "toutes",
+    "meaning": "all",
+    "pinyin": ""
+  },
+  {
+    "word": "plaît",
+    "meaning": "please",
+    "pinyin": ""
+  },
+  {
+    "word": "pourrait",
+    "meaning": "could",
+    "pinyin": ""
+  },
+  {
+    "word": "travail",
+    "meaning": "work",
+    "pinyin": ""
+  },
+  {
+    "word": "pris",
+    "meaning": "taken",
+    "pinyin": ""
+  },
+  {
+    "word": "pu",
+    "meaning": "could",
+    "pinyin": ""
+  },
+  {
+    "word": "tête",
+    "meaning": "head",
+    "pinyin": ""
+  },
+  {
+    "word": "quelle",
+    "meaning": "what",
+    "pinyin": ""
+  },
+  {
+    "word": "sait",
+    "meaning": "knows",
+    "pinyin": ""
+  },
+  {
+    "word": "sommes",
+    "meaning": "are",
+    "pinyin": ""
+  },
+  {
+    "word": "appelle",
+    "meaning": "calls",
+    "pinyin": ""
+  },
+  {
+    "word": "quelques",
+    "meaning": "a few",
+    "pinyin": ""
+  },
+  {
+    "word": "faites",
+    "meaning": "do",
+    "pinyin": ""
+  },
+  {
+    "word": "partir",
+    "meaning": "leave",
+    "pinyin": ""
+  },
+  {
+    "word": "vite",
+    "meaning": "quickly",
+    "pinyin": ""
+  },
+  {
+    "word": "arrête",
+    "meaning": "stop",
+    "pinyin": ""
+  },
+  {
+    "word": "seule",
+    "meaning": "alone",
+    "pinyin": ""
+  },
+  {
+    "word": "serait",
+    "meaning": "would be",
+    "pinyin": ""
+  },
+  {
+    "word": "voiture",
+    "meaning": "car",
+    "pinyin": ""
+  },
+  {
+    "word": "enfants",
+    "meaning": "children",
+    "pinyin": ""
+  },
+  {
+    "word": "tuer",
+    "meaning": "kill",
+    "pinyin": ""
+  },
+  {
+    "word": "merde",
+    "meaning": "shit",
+    "pinyin": ""
+  },
+  {
+    "word": "hé",
+    "meaning": "hey",
+    "pinyin": ""
+  },
+  {
+    "word": "pendant",
+    "meaning": "during",
+    "pinyin": ""
+  },
+  {
+    "word": "idée",
+    "meaning": "idea",
+    "pinyin": ""
+  },
+  {
+    "word": "chance",
+    "meaning": "chance",
+    "pinyin": ""
+  },
+  {
+    "word": "parle",
+    "meaning": "speak",
+    "pinyin": ""
+  },
+  {
+    "word": "aurait",
+    "meaning": "would have",
+    "pinyin": ""
+  },
+  {
+    "word": "part",
+    "meaning": "leaves",
+    "pinyin": ""
+  },
+  {
+    "word": "elles",
+    "meaning": "they",
+    "pinyin": ""
+  },
+  {
+    "word": "jours",
+    "meaning": "days",
+    "pinyin": ""
+  },
+  {
+    "word": "grand",
+    "meaning": "big",
+    "pinyin": ""
+  },
+  {
+    "word": "aujourd'hui",
+    "meaning": "today",
+    "pinyin": ""
+  },
+  {
+    "word": "venir",
+    "meaning": "come",
+    "pinyin": ""
+  },
+  {
+    "word": "ami",
+    "meaning": "friend",
+    "pinyin": ""
+  },
+  {
+    "word": "demain",
+    "meaning": "tomorrow",
+    "pinyin": ""
+  },
+  {
+    "word": "hein",
+    "meaning": "eh",
+    "pinyin": ""
+  },
+  {
+    "word": "tard",
+    "meaning": "late",
+    "pinyin": ""
+  },
+  {
+    "word": "puis",
+    "meaning": "then",
+    "pinyin": ""
+  },
+  {
+    "word": "truc",
+    "meaning": "thing",
+    "pinyin": ""
+  },
+  {
+    "word": "passer",
+    "meaning": "pass",
+    "pinyin": ""
+  },
+  {
+    "word": "petite",
+    "meaning": "small",
+    "pinyin": ""
+  },
+  {
+    "word": "tant",
+    "meaning": "so much",
+    "pinyin": ""
+  },
+  {
+    "word": "connais",
+    "meaning": "know",
+    "pinyin": ""
+  },
+  {
+    "word": "combien",
+    "meaning": "how much",
+    "pinyin": ""
+  },
+  {
+    "word": "mec",
+    "meaning": "dude",
+    "pinyin": ""
+  },
+  {
+    "word": "sens",
+    "meaning": "sense",
+    "pinyin": ""
+  },
+  {
+    "word": "pouvez",
+    "meaning": "can",
+    "pinyin": ""
+  },
+  {
+    "word": "porte",
+    "meaning": "door",
+    "pinyin": ""
+  },
+  {
+    "word": "sortir",
+    "meaning": "to go out",
+    "pinyin": ""
+  },
+  {
+    "word": "super",
+    "meaning": "great",
+    "pinyin": ""
+  },
+  {
+    "word": "heure",
+    "meaning": "hour",
+    "pinyin": ""
+  },
+  {
+    "word": "contre",
+    "meaning": "against",
+    "pinyin": ""
+  },
+  {
+    "word": "coup",
+    "meaning": "cut",
+    "pinyin": ""
+  },
+  {
+    "word": "comprends",
+    "meaning": "understand",
+    "pinyin": ""
+  },
+  {
+    "word": "entendu",
+    "meaning": "heard",
+    "pinyin": ""
+  },
+  {
+    "word": "vient",
+    "meaning": "come",
+    "pinyin": ""
+  },
+  {
+    "word": "allons",
+    "meaning": "let's go",
+    "pinyin": ""
+  },
+  {
+    "word": "ensemble",
+    "meaning": "together",
+    "pinyin": ""
+  },
+  {
+    "word": "nouveau",
+    "meaning": "new",
+    "pinyin": ""
+  },
+  {
+    "word": "amour",
+    "meaning": "love",
+    "pinyin": ""
+  },
+  {
+    "word": "importe",
+    "meaning": "imported",
+    "pinyin": ""
+  },
+  {
+    "word": "sang",
+    "meaning": "blood",
+    "pinyin": ""
+  },
+  {
+    "word": "désolée",
+    "meaning": "sorry",
+    "pinyin": ""
+  },
+  {
+    "word": "cas",
+    "meaning": "case",
+    "pinyin": ""
+  },
+  {
+    "word": "sous",
+    "meaning": "below",
+    "pinyin": ""
+  },
+  {
+    "word": "rester",
+    "meaning": "stay",
+    "pinyin": ""
+  },
+  {
+    "word": "amis",
+    "meaning": "friends",
+    "pinyin": ""
+  },
+  {
+    "word": "prends",
+    "meaning": "take",
+    "pinyin": ""
+  },
+  {
+    "word": "fini",
+    "meaning": "finished",
+    "pinyin": ""
+  },
+  {
+    "word": "hommes",
+    "meaning": "men",
+    "pinyin": ""
+  },
+  {
+    "word": "tué",
+    "meaning": "killed",
+    "pinyin": ""
+  },
+  {
+    "word": "question",
+    "meaning": "question",
+    "pinyin": ""
+  },
+  {
+    "word": "partie",
+    "meaning": "part",
+    "pinyin": ""
+  },
+  {
+    "word": "histoire",
+    "meaning": "history",
+    "pinyin": ""
+  },
+  {
+    "word": "devrais",
+    "meaning": "should",
+    "pinyin": ""
+  },
+  {
+    "word": "aide",
+    "meaning": "help",
+    "pinyin": ""
+  },
+  {
+    "word": "dernière",
+    "meaning": "last",
+    "pinyin": ""
+  },
+  {
+    "word": "demande",
+    "meaning": "request",
+    "pinyin": ""
+  },
+  {
+    "word": "chercher",
+    "meaning": "seek",
+    "pinyin": ""
+  },
+  {
+    "word": "pensais",
+    "meaning": "thought",
+    "pinyin": ""
+  },
+  {
+    "word": "genre",
+    "meaning": "gender",
+    "pinyin": ""
+  },
+  {
+    "word": "seulement",
+    "meaning": "only",
+    "pinyin": ""
+  },
+  {
+    "word": "police",
+    "meaning": "police",
+    "pinyin": ""
+  },
+  {
+    "word": "car",
+    "meaning": "because",
+    "pinyin": ""
+  },
+  {
+    "word": "mois",
+    "meaning": "month",
+    "pinyin": ""
+  },
+  {
+    "word": "frère",
+    "meaning": "brother",
+    "pinyin": ""
+  },
+  {
+    "word": "laisser",
+    "meaning": "to leave",
+    "pinyin": ""
+  },
+  {
+    "word": "aucun",
+    "meaning": "none",
+    "pinyin": ""
+  },
+  {
+    "word": "mettre",
+    "meaning": "put",
+    "pinyin": ""
+  },
+  {
+    "word": "eux",
+    "meaning": "them",
+    "pinyin": ""
+  },
+  {
+    "word": "laisse",
+    "meaning": "leave alone",
+    "pinyin": ""
+  },
+  {
+    "word": "chaque",
+    "meaning": "each",
+    "pinyin": ""
+  },
+  {
+    "word": "ville",
+    "meaning": "city",
+    "pinyin": ""
+  },
+  {
+    "word": "arrivé",
+    "meaning": "arrived",
+    "pinyin": ""
+  },
+  {
+    "word": "devrait",
+    "meaning": "should",
+    "pinyin": ""
+  },
+  {
+    "word": "parlé",
+    "meaning": "speak",
+    "pinyin": ""
+  },
+  {
+    "word": "avez-vous",
+    "meaning": "do you have",
+    "pinyin": ""
+  },
+  {
+    "word": "vont",
+    "meaning": "are going",
+    "pinyin": ""
+  },
+  {
+    "word": "longtemps",
+    "meaning": "a long time",
+    "pinyin": ""
+  },
+  {
+    "word": "aucune",
+    "meaning": "none",
+    "pinyin": ""
+  },
+  {
+    "word": "heures",
+    "meaning": "hours",
+    "pinyin": ""
+  },
+  {
+    "word": "bébé",
+    "meaning": "baby",
+    "pinyin": ""
+  },
+  {
+    "word": "place",
+    "meaning": "place",
+    "pinyin": ""
+  },
+  {
+    "word": "revoir",
+    "meaning": "goodbye",
+    "pinyin": ""
+  },
+  {
+    "word": "putain",
+    "meaning": "damn",
+    "pinyin": ""
+  },
+  {
+    "word": "compris",
+    "meaning": "understood",
+    "pinyin": ""
+  },
+  {
+    "word": "ni",
+    "meaning": "neither",
+    "pinyin": ""
+  },
+  {
+    "word": "savais",
+    "meaning": "knew",
+    "pinyin": ""
+  },
+  {
+    "word": "leurs",
+    "meaning": "their",
+    "pinyin": ""
+  },
+  {
+    "word": "étaient",
+    "meaning": "were",
+    "pinyin": ""
+  },
+  {
+    "word": "attention",
+    "meaning": "attention",
+    "pinyin": ""
+  },
+  {
+    "word": "donner",
+    "meaning": "give",
+    "pinyin": ""
+  },
+  {
+    "word": "affaire",
+    "meaning": "affair",
+    "pinyin": ""
+  },
+  {
+    "word": "endroit",
+    "meaning": "place",
+    "pinyin": ""
+  },
+  {
+    "word": "pourrais",
+    "meaning": "could",
+    "pinyin": ""
+  },
+  {
+    "word": "corps",
+    "meaning": "body",
+    "pinyin": ""
+  },
+  {
+    "word": "façon",
+    "meaning": "way",
+    "pinyin": ""
+  },
+  {
+    "word": "donné",
+    "meaning": "given",
+    "pinyin": ""
+  },
+  {
+    "word": "est-il",
+    "meaning": "is he",
+    "pinyin": ""
+  },
+  {
+    "word": "voici",
+    "meaning": "here is",
+    "pinyin": ""
+  },
+  {
+    "word": "train",
+    "meaning": "train",
+    "pinyin": ""
+  },
+  {
+    "word": "dont",
+    "meaning": "of which",
+    "pinyin": ""
+  },
+  {
+    "word": "écoute",
+    "meaning": "listen",
+    "pinyin": ""
+  },
+  {
+    "word": "yeux",
+    "meaning": "eyes",
+    "pinyin": ""
+  },
+  {
+    "word": "trouve",
+    "meaning": "find",
+    "pinyin": ""
+  },
+  {
+    "word": "pouvoir",
+    "meaning": "power",
+    "pinyin": ""
+  },
+  {
+    "word": "type",
+    "meaning": "kind",
+    "pinyin": ""
+  },
+  {
+    "word": "perdu",
+    "meaning": "lost",
+    "pinyin": ""
+  },
+  {
+    "word": "premier",
+    "meaning": "first",
+    "pinyin": ""
+  },
+  {
+    "word": "première",
+    "meaning": "first",
+    "pinyin": ""
+  },
+  {
+    "word": "côté",
+    "meaning": "side",
+    "pinyin": ""
+  },
+  {
+    "word": "point",
+    "meaning": "point",
+    "pinyin": ""
+  },
+  {
+    "word": "tellement",
+    "meaning": "such",
+    "pinyin": ""
+  },
+  {
+    "word": "main",
+    "meaning": "hand",
+    "pinyin": ""
+  },
+  {
+    "word": "tiens",
+    "meaning": "hold",
+    "pinyin": ""
+  },
+  {
+    "word": "sois",
+    "meaning": "be",
+    "pinyin": ""
+  },
+  {
+    "word": "enfant",
+    "meaning": "child",
+    "pinyin": ""
+  },
+  {
+    "word": "vieux",
+    "meaning": "old",
+    "pinyin": ""
+  },
+  {
+    "word": "matin",
+    "meaning": "morning",
+    "pinyin": ""
+  },
+  {
+    "word": "venu",
+    "meaning": "came",
+    "pinyin": ""
+  },
+  {
+    "word": "pardon",
+    "meaning": "pardon",
+    "pinyin": ""
+  },
+  {
+    "word": "là-bas",
+    "meaning": "over there",
+    "pinyin": ""
+  },
+  {
+    "word": "suite",
+    "meaning": "following",
+    "pinyin": ""
+  },
+  {
+    "word": "vers",
+    "meaning": "towards",
+    "pinyin": ""
+  },
+  {
+    "word": "minutes",
+    "meaning": "minutes",
+    "pinyin": ""
+  },
+  {
+    "word": "demandé",
+    "meaning": "request",
+    "pinyin": ""
+  },
+  {
+    "word": "venez",
+    "meaning": "come",
+    "pinyin": ""
+  },
+  {
+    "word": "devant",
+    "meaning": "in front",
+    "pinyin": ""
+  },
+  {
+    "word": "dr",
+    "meaning": "dr",
+    "pinyin": ""
+  },
+  {
+    "word": "enfin",
+    "meaning": "finally",
+    "pinyin": ""
+  },
+  {
+    "word": "arrêter",
+    "meaning": "stop",
+    "pinyin": ""
+  },
+  {
+    "word": "cause",
+    "meaning": "cause",
+    "pinyin": ""
+  },
+  {
+    "word": "nouvelle",
+    "meaning": "new",
+    "pinyin": ""
+  },
+  {
+    "word": "attendez",
+    "meaning": "wait",
+    "pinyin": ""
+  },
+  {
+    "word": "chambre",
+    "meaning": "bedroom",
+    "pinyin": ""
+  },
+  {
+    "word": "droit",
+    "meaning": "right",
+    "pinyin": ""
+  },
+  {
+    "word": "parti",
+    "meaning": "party",
+    "pinyin": ""
+  },
+  {
+    "word": "mis",
+    "meaning": "put",
+    "pinyin": ""
+  },
+  {
+    "word": "eau",
+    "meaning": "water",
+    "pinyin": ""
+  },
+  {
+    "word": "compte",
+    "meaning": "account",
+    "pinyin": ""
+  },
+  {
+    "word": "dirait",
+    "meaning": "would say",
+    "pinyin": ""
+  },
+  {
+    "word": "terre",
+    "meaning": "earth",
+    "pinyin": ""
+  },
+  {
+    "word": "belle",
+    "meaning": "beautiful",
+    "pinyin": ""
+  },
+  {
+    "word": "espère",
+    "meaning": "hope",
+    "pinyin": ""
+  },
+  {
+    "word": "aimerais",
+    "meaning": "would like",
+    "pinyin": ""
+  },
+  {
+    "word": "loin",
+    "meaning": "far",
+    "pinyin": ""
+  },
+  {
+    "word": "as-tu",
+    "meaning": "do you have",
+    "pinyin": ""
+  },
+  {
+    "word": "mari",
+    "meaning": "husband",
+    "pinyin": ""
+  },
+  {
+    "word": "donne",
+    "meaning": "given",
+    "pinyin": ""
+  },
+  {
+    "word": "fin",
+    "meaning": "end",
+    "pinyin": ""
+  },
+  {
+    "word": "croire",
+    "meaning": "believe",
+    "pinyin": ""
+  },
+  {
+    "word": "mme",
+    "meaning": "mrs",
+    "pinyin": ""
+  },
+  {
+    "word": "aura",
+    "meaning": "will have",
+    "pinyin": ""
+  },
+  {
+    "word": "gros",
+    "meaning": "fat",
+    "pinyin": ""
+  },
+  {
+    "word": "boulot",
+    "meaning": "job",
+    "pinyin": ""
+  },
+  {
+    "word": "plutôt",
+    "meaning": "instead",
+    "pinyin": ""
+  },
+  {
+    "word": "chérie",
+    "meaning": "dear",
+    "pinyin": ""
+  },
+  {
+    "word": "prêt",
+    "meaning": "ready",
+    "pinyin": ""
+  },
+  {
+    "word": "filles",
+    "meaning": "girls",
+    "pinyin": ""
+  },
+  {
+    "word": "bureau",
+    "meaning": "desk",
+    "pinyin": ""
+  },
+  {
+    "word": "mourir",
+    "meaning": "die",
+    "pinyin": ""
+  },
+  {
+    "word": "hier",
+    "meaning": "yesterday",
+    "pinyin": ""
+  },
+  {
+    "word": "possible",
+    "meaning": "possible",
+    "pinyin": ""
+  },
+  {
+    "word": "jouer",
+    "meaning": "play",
+    "pinyin": ""
+  },
+  {
+    "word": "demander",
+    "meaning": "ask",
+    "pinyin": ""
+  },
+  {
+    "word": "celui",
+    "meaning": "the one",
+    "pinyin": ""
+  },
+  {
+    "word": "voulait",
+    "meaning": "wanted",
+    "pinyin": ""
+  },
+  {
+    "word": "beau",
+    "meaning": "beautiful",
+    "pinyin": ""
+  },
+  {
+    "word": "jeune",
+    "meaning": "young",
+    "pinyin": ""
+  },
+  {
+    "word": "euh",
+    "meaning": "uh",
+    "pinyin": ""
+  },
+  {
+    "word": "dehors",
+    "meaning": "out",
+    "pinyin": ""
+  },
+  {
+    "word": "docteur",
+    "meaning": "doctor",
+    "pinyin": ""
+  },
+  {
+    "word": "a-t-il",
+    "meaning": "did he",
+    "pinyin": ""
+  },
+  {
+    "word": "confiance",
+    "meaning": "trust",
+    "pinyin": ""
+  },
+  {
+    "word": "appeler",
+    "meaning": "to call",
+    "pinyin": ""
+  },
+  {
+    "word": "années",
+    "meaning": "years",
+    "pinyin": ""
+  },
+  {
+    "word": "vérité",
+    "meaning": "truth",
+    "pinyin": ""
+  },
+  {
+    "word": "école",
+    "meaning": "school",
+    "pinyin": ""
+  },
+  {
+    "word": "chef",
+    "meaning": "chief",
+    "pinyin": ""
+  },
+  {
+    "word": "femmes",
+    "meaning": "women",
+    "pinyin": ""
+  },
+  {
+    "word": "propos",
+    "meaning": "about",
+    "pinyin": ""
+  },
+  {
+    "word": "semaine",
+    "meaning": "week",
+    "pinyin": ""
+  },
+  {
+    "word": "vivre",
+    "meaning": "live",
+    "pinyin": ""
+  },
+  {
+    "word": "regardez",
+    "meaning": "look",
+    "pinyin": ""
+  },
+  {
+    "word": "feu",
+    "meaning": "fire",
+    "pinyin": ""
+  },
+  {
+    "word": "journée",
+    "meaning": "daytime",
+    "pinyin": ""
+  },
+  {
+    "word": "madame",
+    "meaning": "mrs",
+    "pinyin": ""
+  },
+  {
+    "word": "hey",
+    "meaning": "hey",
+    "pinyin": ""
+  },
+  {
+    "word": "téléphone",
+    "meaning": "phone",
+    "pinyin": ""
+  },
+  {
+    "word": "près",
+    "meaning": "close",
+    "pinyin": ""
+  },
+  {
+    "word": "affaires",
+    "meaning": "business",
+    "pinyin": ""
+  },
+  {
+    "word": "meilleur",
+    "meaning": "best",
+    "pinyin": ""
+  },
+  {
+    "word": "devez",
+    "meaning": "must",
+    "pinyin": ""
+  },
+  {
+    "word": "dessus",
+    "meaning": "above",
+    "pinyin": ""
+  },
+  {
+    "word": "mains",
+    "meaning": "hands",
+    "pinyin": ""
+  },
+  {
+    "word": "penses",
+    "meaning": "think",
+    "pinyin": ""
+  },
+  {
+    "word": "prie",
+    "meaning": "pray",
+    "pinyin": ""
+  },
+  {
+    "word": "équipe",
+    "meaning": "team",
+    "pinyin": ""
+  },
+  {
+    "word": "vas-y",
+    "meaning": "go ahead",
+    "pinyin": ""
+  },
+  {
+    "word": "grande",
+    "meaning": "big",
+    "pinyin": ""
+  },
+  {
+    "word": "manger",
+    "meaning": "eat",
+    "pinyin": ""
+  },
+  {
+    "word": "arriver",
+    "meaning": "arrive",
+    "pinyin": ""
+  },
+  {
+    "word": "dur",
+    "meaning": "hard",
+    "pinyin": ""
+  },
+  {
+    "word": "guerre",
+    "meaning": "war",
+    "pinyin": ""
+  },
+  {
+    "word": "ait",
+    "meaning": "have",
+    "pinyin": ""
+  },
+  {
+    "word": "appelé",
+    "meaning": "called",
+    "pinyin": ""
+  },
+  {
+    "word": "marche",
+    "meaning": "walk",
+    "pinyin": ""
+  },
+  {
+    "word": "sécurité",
+    "meaning": "security",
+    "pinyin": ""
+  },
+  {
+    "word": "garçon",
+    "meaning": "boy",
+    "pinyin": ""
+  },
+  {
+    "word": "essaie",
+    "meaning": "try",
+    "pinyin": ""
+  },
+  {
+    "word": "important",
+    "meaning": "important",
+    "pinyin": ""
+  },
+  {
+    "word": "dites",
+    "meaning": "say",
+    "pinyin": ""
+  },
+  {
+    "word": "exactement",
+    "meaning": "exactly",
+    "pinyin": ""
+  },
+  {
+    "word": "font",
+    "meaning": "make",
+    "pinyin": ""
+  },
+  {
+    "word": "fort",
+    "meaning": "strong",
+    "pinyin": ""
+  },
+  {
+    "word": "presque",
+    "meaning": "almost",
+    "pinyin": ""
+  },
+  {
+    "word": "plein",
+    "meaning": "full",
+    "pinyin": ""
+  },
+  {
+    "word": "derrière",
+    "meaning": "behind",
+    "pinyin": ""
+  },
+  {
+    "word": "ben",
+    "meaning": "well",
+    "pinyin": ""
+  },
+  {
+    "word": "mariage",
+    "meaning": "marriage",
+    "pinyin": ""
+  },
+  {
+    "word": "parents",
+    "meaning": "parents",
+    "pinyin": ""
+  },
+  {
+    "word": "capitaine",
+    "meaning": "captain",
+    "pinyin": ""
+  },
+  {
+    "word": "dernier",
+    "meaning": "last",
+    "pinyin": ""
+  },
+  {
+    "word": "fou",
+    "meaning": "mad",
+    "pinyin": ""
+  },
+  {
+    "word": "ceux",
+    "meaning": "those",
+    "pinyin": ""
+  },
+  {
+    "word": "tomber",
+    "meaning": "to fall",
+    "pinyin": ""
+  },
+  {
+    "word": "attendre",
+    "meaning": "to wait for",
+    "pinyin": ""
+  },
+  {
+    "word": "vue",
+    "meaning": "view",
+    "pinyin": ""
+  },
+  {
+    "word": "pensé",
+    "meaning": "think",
+    "pinyin": ""
+  },
+  {
+    "word": "souviens",
+    "meaning": "remember",
+    "pinyin": ""
+  },
+  {
+    "word": "envie",
+    "meaning": "envy",
+    "pinyin": ""
+  },
+  {
+    "word": "fête",
+    "meaning": "party",
+    "pinyin": ""
+  },
+  {
+    "word": "jeu",
+    "meaning": "game",
+    "pinyin": ""
+  },
+  {
+    "word": "génial",
+    "meaning": "awesome",
+    "pinyin": ""
+  },
+  {
+    "word": "pays",
+    "meaning": "country",
+    "pinyin": ""
+  },
+  {
+    "word": "garde",
+    "meaning": "guard",
+    "pinyin": ""
+  },
+  {
+    "word": "cours",
+    "meaning": "course",
+    "pinyin": ""
+  },
+  {
+    "word": "bientôt",
+    "meaning": "soon",
+    "pinyin": ""
+  },
+  {
+    "word": "ii",
+    "meaning": "ii",
+    "pinyin": ""
+  },
+  {
+    "word": "numéro",
+    "meaning": "number",
+    "pinyin": ""
+  },
+  {
+    "word": "personnes",
+    "meaning": "people",
+    "pinyin": ""
+  },
+  {
+    "word": "cinq",
+    "meaning": "five",
+    "pinyin": ""
+  },
+  {
+    "word": "parfait",
+    "meaning": "perfect",
+    "pinyin": ""
+  },
+  {
+    "word": "excusez-moi",
+    "meaning": "excuse me",
+    "pinyin": ""
+  },
+  {
+    "word": "laissé",
+    "meaning": "leave alone",
+    "pinyin": ""
+  },
+  {
+    "word": "ainsi",
+    "meaning": "thus",
+    "pinyin": ""
+  },
+  {
+    "word": "retour",
+    "meaning": "back",
+    "pinyin": ""
+  },
+  {
+    "word": "semble",
+    "meaning": "seems",
+    "pinyin": ""
+  },
+  {
+    "word": "autant",
+    "meaning": "as much",
+    "pinyin": ""
+  },
+  {
+    "word": "peine",
+    "meaning": "penalty",
+    "pinyin": ""
+  },
+  {
+    "word": "minute",
+    "meaning": "minute",
+    "pinyin": ""
+  },
+  {
+    "word": "essayé",
+    "meaning": "try",
+    "pinyin": ""
+  },
+  {
+    "word": "plan",
+    "meaning": "plan",
+    "pinyin": ""
+  },
+  {
+    "word": "instant",
+    "meaning": "moment",
+    "pinyin": ""
+  },
+  {
+    "word": "serai",
+    "meaning": "will be",
+    "pinyin": ""
+  },
+  {
+    "word": "prison",
+    "meaning": "prison",
+    "pinyin": ""
+  },
+  {
+    "word": "penser",
+    "meaning": "think",
+    "pinyin": ""
+  },
+  {
+    "word": "essayer",
+    "meaning": "to try",
+    "pinyin": ""
+  },
+  {
+    "word": "prend",
+    "meaning": "takes",
+    "pinyin": ""
+  },
+  {
+    "word": "arme",
+    "meaning": "armed",
+    "pinyin": ""
+  },
+  {
+    "word": "mauvais",
+    "meaning": "bad",
+    "pinyin": ""
+  },
+  {
+    "word": "mot",
+    "meaning": "word",
+    "pinyin": ""
+  },
+  {
+    "word": "travailler",
+    "meaning": "to work",
+    "pinyin": ""
+  },
+  {
+    "word": "quatre",
+    "meaning": "four",
+    "pinyin": ""
+  },
+  {
+    "word": "rentrer",
+    "meaning": "to return",
+    "pinyin": ""
+  },
+  {
+    "word": "regarder",
+    "meaning": "look",
+    "pinyin": ""
+  },
+  {
+    "word": "choix",
+    "meaning": "choice",
+    "pinyin": ""
+  },
+  {
+    "word": "êtes-vous",
+    "meaning": "are you",
+    "pinyin": ""
   },
   {
     "word": "parfois",
-    "meaning": "sometimes"
+    "meaning": "sometimes",
+    "pinyin": ""
+  },
+  {
+    "word": "film",
+    "meaning": "movie",
+    "pinyin": ""
+  },
+  {
+    "word": "abord",
+    "meaning": "on board",
+    "pinyin": ""
+  },
+  {
+    "word": "voyez",
+    "meaning": "see",
+    "pinyin": ""
+  },
+  {
+    "word": "faute",
+    "meaning": "mistake",
+    "pinyin": ""
+  },
+  {
+    "word": "facile",
+    "meaning": "easy",
+    "pinyin": ""
+  },
+  {
+    "word": "croyais",
+    "meaning": "believed",
+    "pinyin": ""
+  },
+  {
+    "word": "bas",
+    "meaning": "down",
+    "pinyin": ""
+  },
+  {
+    "word": "changer",
+    "meaning": "to change",
+    "pinyin": ""
+  },
+  {
+    "word": "entendre",
+    "meaning": "hear",
+    "pinyin": ""
+  },
+  {
+    "word": "plaisir",
+    "meaning": "pleasure",
+    "pinyin": ""
+  },
+  {
+    "word": "heureux",
+    "meaning": "happy",
+    "pinyin": ""
+  },
+  {
+    "word": "entrer",
+    "meaning": "enter",
+    "pinyin": ""
+  },
+  {
+    "word": "voudrais",
+    "meaning": "would like",
+    "pinyin": ""
+  },
+  {
+    "word": "es-tu",
+    "meaning": "are you",
+    "pinyin": ""
+  },
+  {
+    "word": "propre",
+    "meaning": "own",
+    "pinyin": ""
+  },
+  {
+    "word": "étiez",
+    "meaning": "were",
+    "pinyin": ""
+  },
+  {
+    "word": "tour",
+    "meaning": "round",
+    "pinyin": ""
+  },
+  {
+    "word": "fera",
+    "meaning": "will do",
+    "pinyin": ""
+  },
+  {
+    "word": "ensuite",
+    "meaning": "next",
+    "pinyin": ""
+  },
+  {
+    "word": "garder",
+    "meaning": "keep",
+    "pinyin": ""
+  },
+  {
+    "word": "agent",
+    "meaning": "agent",
+    "pinyin": ""
+  },
+  {
+    "word": "allait",
+    "meaning": "was going",
+    "pinyin": ""
+  },
+  {
+    "word": "lit",
+    "meaning": "bed",
+    "pinyin": ""
+  },
+  {
+    "word": "travaille",
+    "meaning": "work",
+    "pinyin": ""
+  },
+  {
+    "word": "adore",
+    "meaning": "love",
+    "pinyin": ""
+  },
+  {
+    "word": "amie",
+    "meaning": "friend",
+    "pinyin": ""
+  },
+  {
+    "word": "rendre",
+    "meaning": "give back",
+    "pinyin": ""
+  },
+  {
+    "word": "allons-y",
+    "meaning": "let's go",
+    "pinyin": ""
+  },
+  {
+    "word": "route",
+    "meaning": "road",
+    "pinyin": ""
+  },
+  {
+    "word": "lieu",
+    "meaning": "place",
+    "pinyin": ""
+  },
+  {
+    "word": "année",
+    "meaning": "year",
+    "pinyin": ""
+  },
+  {
+    "word": "voit",
+    "meaning": "see",
+    "pinyin": ""
+  },
+  {
+    "word": "commence",
+    "meaning": "begin",
+    "pinyin": ""
+  },
+  {
+    "word": "service",
+    "meaning": "service",
+    "pinyin": ""
+  },
+  {
+    "word": "devoir",
+    "meaning": "duty",
+    "pinyin": ""
+  },
+  {
+    "word": "attend",
+    "meaning": "wait",
+    "pinyin": ""
+  },
+  {
+    "word": "drôle",
+    "meaning": "funny",
+    "pinyin": ""
+  },
+  {
+    "word": "difficile",
+    "meaning": "difficult",
+    "pinyin": ""
+  },
+  {
+    "word": "sûre",
+    "meaning": "safe",
+    "pinyin": ""
+  },
+  {
+    "word": "pire",
+    "meaning": "worse",
+    "pinyin": ""
+  },
+  {
+    "word": "pos",
+    "meaning": "pos",
+    "pinyin": ""
+  },
+  {
+    "word": "peuvent",
+    "meaning": "can",
+    "pinyin": ""
+  },
+  {
+    "word": "sujet",
+    "meaning": "subject",
+    "pinyin": ""
+  },
+  {
+    "word": "état",
+    "meaning": "state",
+    "pinyin": ""
+  },
+  {
+    "word": "ceci",
+    "meaning": "this",
+    "pinyin": ""
+  },
+  {
+    "word": "impossible",
+    "meaning": "impossible",
+    "pinyin": ""
+  },
+  {
+    "word": "sorte",
+    "meaning": "sort",
+    "pinyin": ""
+  },
+  {
+    "word": "perdre",
+    "meaning": "lose",
+    "pinyin": ""
+  },
+  {
+    "word": "dollars",
+    "meaning": "dollars",
+    "pinyin": ""
+  },
+  {
+    "word": "voulu",
+    "meaning": "wanted",
+    "pinyin": ""
+  },
+  {
+    "word": "morte",
+    "meaning": "dead",
+    "pinyin": ""
+  },
+  {
+    "word": "ira",
+    "meaning": "will go",
+    "pinyin": ""
+  },
+  {
+    "word": "faisait",
+    "meaning": "did",
+    "pinyin": ""
+  },
+  {
+    "word": "bizarre",
+    "meaning": "weird",
+    "pinyin": ""
+  },
+  {
+    "word": "oublié",
+    "meaning": "forget",
+    "pinyin": ""
+  },
+  {
+    "word": "arrêtez",
+    "meaning": "stop",
+    "pinyin": ""
+  },
+  {
+    "word": "ferai",
+    "meaning": "will do",
+    "pinyin": ""
+  },
+  {
+    "word": "serais",
+    "meaning": "would be",
+    "pinyin": ""
+  },
+  {
+    "word": "tôt",
+    "meaning": "early",
+    "pinyin": ""
+  },
+  {
+    "word": "inquiète",
+    "meaning": "worry",
+    "pinyin": ""
+  },
+  {
+    "word": "payer",
+    "meaning": "pay",
+    "pinyin": ""
+  },
+  {
+    "word": "coeur",
+    "meaning": "heart",
+    "pinyin": ""
+  },
+  {
+    "word": "dès",
+    "meaning": "of the",
+    "pinyin": ""
+  },
+  {
+    "word": "pouvais",
+    "meaning": "could",
+    "pinyin": ""
+  },
+  {
+    "word": "reviens",
+    "meaning": "come back",
+    "pinyin": ""
+  },
+  {
+    "word": "chien",
+    "meaning": "dog",
+    "pinyin": ""
+  },
+  {
+    "word": "suffit",
+    "meaning": "enough",
+    "pinyin": ""
+  },
+  {
+    "word": "prenez",
+    "meaning": "take",
+    "pinyin": ""
+  },
+  {
+    "word": "pensez",
+    "meaning": "think",
+    "pinyin": ""
+  },
+  {
+    "word": "café",
+    "meaning": "coffee",
+    "pinyin": ""
+  },
+  {
+    "word": "calme",
+    "meaning": "calm",
+    "pinyin": ""
+  },
+  {
+    "word": "cherche",
+    "meaning": "look for",
+    "pinyin": ""
+  },
+  {
+    "word": "montrer",
+    "meaning": "to show",
+    "pinyin": ""
+  },
+  {
+    "word": "parles",
+    "meaning": "speak",
+    "pinyin": ""
+  },
+  {
+    "word": "photo",
+    "meaning": "photo",
+    "pinyin": ""
+  },
+  {
+    "word": "ferme",
+    "meaning": "farm",
+    "pinyin": ""
+  },
+  {
+    "word": "problèmes",
+    "meaning": "problems",
+    "pinyin": ""
+  },
+  {
+    "word": "the",
+    "meaning": "tea",
+    "pinyin": ""
+  },
+  {
+    "word": "cœur",
+    "meaning": "heart",
+    "pinyin": ""
+  },
+  {
+    "word": "sûrement",
+    "meaning": "certainly",
+    "pinyin": ""
+  },
+  {
+    "word": "verre",
+    "meaning": "glass",
+    "pinyin": ""
+  },
+  {
+    "word": "aimes",
+    "meaning": "love",
+    "pinyin": ""
+  },
+  {
+    "word": "devons",
+    "meaning": "must",
+    "pinyin": ""
+  },
+  {
+    "word": "veulent",
+    "meaning": "want",
+    "pinyin": ""
+  },
+  {
+    "word": "doute",
+    "meaning": "doubt",
+    "pinyin": ""
+  },
+  {
+    "word": "musique",
+    "meaning": "music",
+    "pinyin": ""
+  },
+  {
+    "word": "courant",
+    "meaning": "fluent",
+    "pinyin": ""
+  },
+  {
+    "word": "sauf",
+    "meaning": "except",
+    "pinyin": ""
+  },
+  {
+    "word": "moyen",
+    "meaning": "average",
+    "pinyin": ""
+  },
+  {
+    "word": "nouvelles",
+    "meaning": "news",
+    "pinyin": ""
+  },
+  {
+    "word": "puis-je",
+    "meaning": "can i",
+    "pinyin": ""
+  },
+  {
+    "word": "avis",
+    "meaning": "notice",
+    "pinyin": ""
+  },
+  {
+    "word": "sauver",
+    "meaning": "save",
+    "pinyin": ""
+  },
+  {
+    "word": "hôpital",
+    "meaning": "hospital",
+    "pinyin": ""
+  },
+  {
+    "word": "questions",
+    "meaning": "questions",
+    "pinyin": ""
+  },
+  {
+    "word": "meurtre",
+    "meaning": "murder",
+    "pinyin": ""
+  },
+  {
+    "word": "sérieux",
+    "meaning": "serious",
+    "pinyin": ""
+  },
+  {
+    "word": "seconde",
+    "meaning": "second",
+    "pinyin": ""
+  },
+  {
+    "word": "trucs",
+    "meaning": "stuff",
+    "pinyin": ""
+  },
+  {
+    "word": "comprendre",
+    "meaning": "to understand",
+    "pinyin": ""
+  },
+  {
+    "word": "allais",
+    "meaning": "were going",
+    "pinyin": ""
+  },
+  {
+    "word": "esprit",
+    "meaning": "spirit",
+    "pinyin": ""
+  },
+  {
+    "word": "cool",
+    "meaning": "cool",
+    "pinyin": ""
+  },
+  {
+    "word": "mlle",
+    "meaning": "miss",
+    "pinyin": ""
+  },
+  {
+    "word": "marché",
+    "meaning": "walk",
+    "pinyin": ""
+  },
+  {
+    "word": "fous",
+    "meaning": "crazy",
+    "pinyin": ""
+  },
+  {
+    "word": "laisse-moi",
+    "meaning": "leave me",
+    "pinyin": ""
+  },
+  {
+    "word": "haut",
+    "meaning": "high",
+    "pinyin": ""
+  },
+  {
+    "word": "salle",
+    "meaning": "room",
+    "pinyin": ""
+  },
+  {
+    "word": "malade",
+    "meaning": "sick",
+    "pinyin": ""
+  },
+  {
+    "word": "changé",
+    "meaning": "exchange",
+    "pinyin": ""
+  },
+  {
+    "word": "gentil",
+    "meaning": "kind",
+    "pinyin": ""
+  },
+  {
+    "word": "allé",
+    "meaning": "gone",
+    "pinyin": ""
+  },
+  {
+    "word": "six",
+    "meaning": "six",
+    "pinyin": ""
+  },
+  {
+    "word": "simple",
+    "meaning": "simple",
+    "pinyin": ""
+  },
+  {
+    "word": "john",
+    "meaning": "john",
+    "pinyin": ""
+  },
+  {
+    "word": "semaines",
+    "meaning": "weeks",
+    "pinyin": ""
+  },
+  {
+    "word": "celle",
+    "meaning": "that",
+    "pinyin": ""
+  },
+  {
+    "word": "jack",
+    "meaning": "jack",
+    "pinyin": ""
+  },
+  {
+    "word": "appris",
+    "meaning": "learned",
+    "pinyin": ""
+  },
+  {
+    "word": "seigneur",
+    "meaning": "lord",
+    "pinyin": ""
+  },
+  {
+    "word": "dîner",
+    "meaning": "dinner",
+    "pinyin": ""
+  },
+  {
+    "word": "sors",
+    "meaning": "get out",
+    "pinyin": ""
+  },
+  {
+    "word": "commencé",
+    "meaning": "begin",
+    "pinyin": ""
+  },
+  {
+    "word": "suppose",
+    "meaning": "assumed",
+    "pinyin": ""
+  },
+  {
+    "word": "chemin",
+    "meaning": "path",
+    "pinyin": ""
+  },
+  {
+    "word": "partout",
+    "meaning": "everywhere",
+    "pinyin": ""
+  },
+  {
+    "word": "bras",
+    "meaning": "arm",
+    "pinyin": ""
+  },
+  {
+    "word": "cul",
+    "meaning": "ass",
+    "pinyin": ""
+  },
+  {
+    "word": "prochaine",
+    "meaning": "next",
+    "pinyin": ""
+  },
+  {
+    "word": "visage",
+    "meaning": "face",
+    "pinyin": ""
+  },
+  {
+    "word": "h",
+    "meaning": "h",
+    "pinyin": ""
+  },
+  {
+    "word": "meilleure",
+    "meaning": "best",
+    "pinyin": ""
+  },
+  {
+    "word": "face",
+    "meaning": "face",
+    "pinyin": ""
+  },
+  {
+    "word": "soirée",
+    "meaning": "evening",
+    "pinyin": ""
+  },
+  {
+    "word": "roi",
+    "meaning": "king",
+    "pinyin": ""
+  },
+  {
+    "word": "surtout",
+    "meaning": "above all",
+    "pinyin": ""
+  },
+  {
+    "word": "retard",
+    "meaning": "delay",
+    "pinyin": ""
+  },
+  {
+    "word": "écrit",
+    "meaning": "writing",
+    "pinyin": ""
+  },
+  {
+    "word": "livre",
+    "meaning": "book",
+    "pinyin": ""
+  },
+  {
+    "word": "rapport",
+    "meaning": "report",
+    "pinyin": ""
+  },
+  {
+    "word": "chéri",
+    "meaning": "dear",
+    "pinyin": ""
+  },
+  {
+    "word": "message",
+    "meaning": "message",
+    "pinyin": ""
+  },
+  {
+    "word": "voulez-vous",
+    "meaning": "do you want",
+    "pinyin": ""
+  },
+  {
+    "word": "vaut",
+    "meaning": "worth",
+    "pinyin": ""
+  },
+  {
+    "word": "ferais",
+    "meaning": "would do",
+    "pinyin": ""
+  },
+  {
+    "word": "morts",
+    "meaning": "dead",
+    "pinyin": ""
+  },
+  {
+    "word": "boire",
+    "meaning": "drink",
+    "pinyin": ""
+  },
+  {
+    "word": "soyez",
+    "meaning": "be",
+    "pinyin": ""
+  },
+  {
+    "word": "président",
+    "meaning": "president",
+    "pinyin": ""
+  },
+  {
+    "word": "plait",
+    "meaning": "please",
+    "pinyin": ""
+  },
+  {
+    "word": "bois",
+    "meaning": "drink",
+    "pinyin": ""
+  },
+  {
+    "word": "sinon",
+    "meaning": "otherwise",
+    "pinyin": ""
+  },
+  {
+    "word": "erreur",
+    "meaning": "error",
+    "pinyin": ""
+  },
+  {
+    "word": "new",
+    "meaning": "new",
+    "pinyin": ""
+  },
+  {
+    "word": "ecoute",
+    "meaning": "listen",
+    "pinyin": ""
+  },
+  {
+    "word": "mr",
+    "meaning": "mr",
+    "pinyin": ""
+  },
+  {
+    "word": "rentre",
+    "meaning": "go home",
+    "pinyin": ""
+  },
+  {
+    "word": "rendez-vous",
+    "meaning": "appointment",
+    "pinyin": ""
+  },
+  {
+    "word": "devait",
+    "meaning": "had to",
+    "pinyin": ""
+  },
+  {
+    "word": "revenir",
+    "meaning": "to come back",
+    "pinyin": ""
+  },
+  {
+    "word": "joue",
+    "meaning": "plays",
+    "pinyin": ""
+  },
+  {
+    "word": "pauvre",
+    "meaning": "poor",
+    "pinyin": ""
+  },
+  {
+    "word": "devenir",
+    "meaning": "become",
+    "pinyin": ""
+  },
+  {
+    "word": "s",
+    "meaning": "s",
+    "pinyin": ""
+  },
+  {
+    "word": "rencontrer",
+    "meaning": "meet",
+    "pinyin": ""
+  },
+  {
+    "word": "sort",
+    "meaning": "spell",
+    "pinyin": ""
+  },
+  {
+    "word": "commencer",
+    "meaning": "to start",
+    "pinyin": ""
+  },
+  {
+    "word": "pouvait",
+    "meaning": "could",
+    "pinyin": ""
+  },
+  {
+    "word": "occupe",
+    "meaning": "busy",
+    "pinyin": ""
+  },
+  {
+    "word": "entends",
+    "meaning": "hear",
+    "pinyin": ""
+  },
+  {
+    "word": "souvent",
+    "meaning": "often",
+    "pinyin": ""
+  },
+  {
+    "word": "pièce",
+    "meaning": "piece",
+    "pinyin": ""
+  },
+  {
+    "word": "reçu",
+    "meaning": "received",
+    "pinyin": ""
+  },
+  {
+    "word": "grave",
+    "meaning": "severe",
+    "pinyin": ""
+  },
+  {
+    "word": "mets",
+    "meaning": "put",
+    "pinyin": ""
+  },
+  {
+    "word": "intérieur",
+    "meaning": "interior",
+    "pinyin": ""
+  },
+  {
+    "word": "honneur",
+    "meaning": "honor",
+    "pinyin": ""
+  },
+  {
+    "word": "dormir",
+    "meaning": "sleep",
+    "pinyin": ""
+  },
+  {
+    "word": "an",
+    "meaning": "year",
+    "pinyin": ""
+  },
+  {
+    "word": "faux",
+    "meaning": "fake",
+    "pinyin": ""
+  },
+  {
+    "word": "messieurs",
+    "meaning": "gentlemen",
+    "pinyin": ""
+  },
+  {
+    "word": "groupe",
+    "meaning": "band",
+    "pinyin": ""
+  },
+  {
+    "word": "rêve",
+    "meaning": "dream",
+    "pinyin": ""
+  },
+  {
+    "word": "carte",
+    "meaning": "map",
+    "pinyin": ""
+  },
+  {
+    "word": "aviez",
+    "meaning": "had",
+    "pinyin": ""
+  },
+  {
+    "word": "appel",
+    "meaning": "call",
+    "pinyin": ""
+  },
+  {
+    "word": "manque",
+    "meaning": "lack",
+    "pinyin": ""
+  },
+  {
+    "word": "envoyé",
+    "meaning": "sent",
+    "pinyin": ""
+  },
+  {
+    "word": "début",
+    "meaning": "beginning",
+    "pinyin": ""
+  },
+  {
+    "word": "sam",
+    "meaning": "sat",
+    "pinyin": ""
+  },
+  {
+    "word": "puisse",
+    "meaning": "can",
+    "pinyin": ""
+  },
+  {
+    "word": "écoutez",
+    "meaning": "listen",
+    "pinyin": ""
+  },
+  {
+    "word": "laissez-moi",
+    "meaning": "leave me",
+    "pinyin": ""
+  },
+  {
+    "word": "bonsoir",
+    "meaning": "good evening",
+    "pinyin": ""
+  },
+  {
+    "word": "content",
+    "meaning": "thrilled",
+    "pinyin": ""
+  },
+  {
+    "word": "secret",
+    "meaning": "secret",
+    "pinyin": ""
+  },
+  {
+    "word": "venue",
+    "meaning": "coming",
+    "pinyin": ""
+  },
+  {
+    "word": "cher",
+    "meaning": "dear",
+    "pinyin": ""
+  },
+  {
+    "word": "dis-moi",
+    "meaning": "tell me",
+    "pinyin": ""
+  },
+  {
+    "word": "effet",
+    "meaning": "effect",
+    "pinyin": ""
+  },
+  {
+    "word": "voyons",
+    "meaning": "let's see",
+    "pinyin": ""
+  },
+  {
+    "word": "sac",
+    "meaning": "bag",
+    "pinyin": ""
+  },
+  {
+    "word": "continue",
+    "meaning": "continue",
+    "pinyin": ""
+  },
+  {
+    "word": "acheter",
+    "meaning": "buy",
+    "pinyin": ""
+  },
+  {
+    "word": "voix",
+    "meaning": "voice",
+    "pinyin": ""
+  },
+  {
+    "word": "certains",
+    "meaning": "some",
+    "pinyin": ""
+  },
+  {
+    "word": "occuper",
+    "meaning": "occupy",
+    "pinyin": ""
+  },
+  {
+    "word": "noël",
+    "meaning": "christmas",
+    "pinyin": ""
+  },
+  {
+    "word": "gagner",
+    "meaning": "earn",
+    "pinyin": ""
+  },
+  {
+    "word": "grâce",
+    "meaning": "grace",
+    "pinyin": ""
+  },
+  {
+    "word": "maître",
+    "meaning": "master",
+    "pinyin": ""
+  },
+  {
+    "word": "prix",
+    "meaning": "price",
+    "pinyin": ""
+  },
+  {
+    "word": "mauvaise",
+    "meaning": "bad",
+    "pinyin": ""
+  },
+  {
+    "word": "général",
+    "meaning": "general",
+    "pinyin": ""
+  },
+  {
+    "word": "âge",
+    "meaning": "age",
+    "pinyin": ""
+  },
+  {
+    "word": "long",
+    "meaning": "long",
+    "pinyin": ""
+  },
+  {
+    "word": "rue",
+    "meaning": "street",
+    "pinyin": ""
+  },
+  {
+    "word": "tirer",
+    "meaning": "to pull",
+    "pinyin": ""
+  },
+  {
+    "word": "apprendre",
+    "meaning": "learn",
+    "pinyin": ""
+  },
+  {
+    "word": "cheveux",
+    "meaning": "hair",
+    "pinyin": ""
+  },
+  {
+    "word": "noir",
+    "meaning": "black",
+    "pinyin": ""
+  },
+  {
+    "word": "promis",
+    "meaning": "promised",
+    "pinyin": ""
+  },
+  {
+    "word": "avaient",
+    "meaning": "had",
+    "pinyin": ""
+  },
+  {
+    "word": "patron",
+    "meaning": "boss",
+    "pinyin": ""
+  },
+  {
+    "word": "avocat",
+    "meaning": "lawyer",
+    "pinyin": ""
+  },
+  {
+    "word": "force",
+    "meaning": "strength",
+    "pinyin": ""
+  },
+  {
+    "word": "accident",
+    "meaning": "accident",
+    "pinyin": ""
+  },
+  {
+    "word": "dix",
+    "meaning": "ten",
+    "pinyin": ""
+  },
+  {
+    "word": "probablement",
+    "meaning": "probably",
+    "pinyin": ""
+  },
+  {
+    "word": "laissez",
+    "meaning": "let",
+    "pinyin": ""
+  },
+  {
+    "word": "bout",
+    "meaning": "end",
+    "pinyin": ""
+  },
+  {
+    "word": "ordre",
+    "meaning": "order",
+    "pinyin": ""
+  },
+  {
+    "word": "armes",
+    "meaning": "weapons",
+    "pinyin": ""
+  },
+  {
+    "word": "cru",
+    "meaning": "believed",
+    "pinyin": ""
+  },
+  {
+    "word": "déteste",
+    "meaning": "hated",
+    "pinyin": ""
+  },
+  {
+    "word": "retrouver",
+    "meaning": "find",
+    "pinyin": ""
+  },
+  {
+    "word": "millions",
+    "meaning": "millions",
+    "pinyin": ""
+  },
+  {
+    "word": "incroyable",
+    "meaning": "amazing",
+    "pinyin": ""
+  },
+  {
+    "word": "voyage",
+    "meaning": "journey",
+    "pinyin": ""
+  },
+  {
+    "word": "ailleurs",
+    "meaning": "elsewhere",
+    "pinyin": ""
+  },
+  {
+    "word": "oublie",
+    "meaning": "forget",
+    "pinyin": ""
+  },
+  {
+    "word": "ressemble",
+    "meaning": "looks like",
+    "pinyin": ""
+  },
+  {
+    "word": "bienvenue",
+    "meaning": "welcome",
+    "pinyin": ""
+  },
+  {
+    "word": "disparu",
+    "meaning": "disappeared",
+    "pinyin": ""
+  },
+  {
+    "word": "protéger",
+    "meaning": "protect",
+    "pinyin": ""
+  },
+  {
+    "word": "utiliser",
+    "meaning": "to use",
+    "pinyin": ""
+  },
+  {
+    "word": "situation",
+    "meaning": "situation",
+    "pinyin": ""
+  },
+  {
+    "word": "petits",
+    "meaning": "small",
+    "pinyin": ""
+  },
+  {
+    "word": "aurai",
+    "meaning": "will have",
+    "pinyin": ""
+  },
+  {
+    "word": "veux-tu",
+    "meaning": "do you want",
+    "pinyin": ""
+  },
+  {
+    "word": "connaissez",
+    "meaning": "know",
+    "pinyin": ""
+  },
+  {
+    "word": "simplement",
+    "meaning": "simply",
+    "pinyin": ""
+  },
+  {
+    "word": "scène",
+    "meaning": "scene",
+    "pinyin": ""
+  },
+  {
+    "word": "sœur",
+    "meaning": "sister",
+    "pinyin": ""
+  },
+  {
+    "word": "prête",
+    "meaning": "ready",
+    "pinyin": ""
+  },
+  {
+    "word": "oncle",
+    "meaning": "uncle",
+    "pinyin": ""
+  },
+  {
+    "word": "devriez",
+    "meaning": "should",
+    "pinyin": ""
+  },
+  {
+    "word": "liste",
+    "meaning": "list",
+    "pinyin": ""
+  },
+  {
+    "word": "soeur",
+    "meaning": "sister",
+    "pinyin": ""
+  },
+  {
+    "word": "complètement",
+    "meaning": "completely",
+    "pinyin": ""
+  },
+  {
+    "word": "dos",
+    "meaning": "back",
+    "pinyin": ""
+  },
+  {
+    "word": "armée",
+    "meaning": "army",
+    "pinyin": ""
+  },
+  {
+    "word": "paix",
+    "meaning": "peace",
+    "pinyin": ""
+  },
+  {
+    "word": "battre",
+    "meaning": "beat",
+    "pinyin": ""
+  },
+  {
+    "word": "york",
+    "meaning": "york",
+    "pinyin": ""
+  },
+  {
+    "word": "crime",
+    "meaning": "crime",
+    "pinyin": ""
+  },
+  {
+    "word": "anniversaire",
+    "meaning": "birthday",
+    "pinyin": ""
+  },
+  {
+    "word": "finir",
+    "meaning": "finish",
+    "pinyin": ""
+  },
+  {
+    "word": "réussi",
+    "meaning": "successful",
+    "pinyin": ""
+  },
+  {
+    "word": "agit",
+    "meaning": "acts",
+    "pinyin": ""
+  },
+  {
+    "word": "i",
+    "meaning": "i",
+    "pinyin": ""
+  },
+  {
+    "word": "retourner",
+    "meaning": "return",
+    "pinyin": ""
+  },
+  {
+    "word": "sale",
+    "meaning": "dirty",
+    "pinyin": ""
+  },
+  {
+    "word": "libre",
+    "meaning": "free",
+    "pinyin": ""
+  },
+  {
+    "word": "bouge",
+    "meaning": "move",
+    "pinyin": ""
+  },
+  {
+    "word": "contrôle",
+    "meaning": "control",
+    "pinyin": ""
+  },
+  {
+    "word": "rappelle",
+    "meaning": "reminds",
+    "pinyin": ""
+  },
+  {
+    "word": "arrêté",
+    "meaning": "arrested",
+    "pinyin": ""
+  },
+  {
+    "word": "hôtel",
+    "meaning": "hotel",
+    "pinyin": ""
+  },
+  {
+    "word": "idiot",
+    "meaning": "silly",
+    "pinyin": ""
+  },
+  {
+    "word": "okay",
+    "meaning": "okay",
+    "pinyin": ""
+  },
+  {
+    "word": "rencontré",
+    "meaning": "encounter",
+    "pinyin": ""
+  },
+  {
+    "word": "restez",
+    "meaning": "stay",
+    "pinyin": ""
+  },
+  {
+    "word": "absolument",
+    "meaning": "absolutely",
+    "pinyin": ""
+  },
+  {
+    "word": "mots",
+    "meaning": "words",
+    "pinyin": ""
+  },
+  {
+    "word": "victime",
+    "meaning": "victim",
+    "pinyin": ""
+  },
+  {
+    "word": "impression",
+    "meaning": "impression",
+    "pinyin": ""
+  },
+  {
+    "word": "décidé",
+    "meaning": "decided",
+    "pinyin": ""
+  },
+  {
+    "word": "sympa",
+    "meaning": "nice",
+    "pinyin": ""
+  },
+  {
+    "word": "pars",
+    "meaning": "leave",
+    "pinyin": ""
+  },
+  {
+    "word": "fasse",
+    "meaning": "do",
+    "pinyin": ""
+  },
+  {
+    "word": "avion",
+    "meaning": "plane",
+    "pinyin": ""
+  },
+  {
+    "word": "bordel",
+    "meaning": "mess",
+    "pinyin": ""
+  },
+  {
+    "word": "habitude",
+    "meaning": "habit",
+    "pinyin": ""
+  },
+  {
+    "word": "table",
+    "meaning": "table",
+    "pinyin": ""
+  },
+  {
+    "word": "rouge",
+    "meaning": "red",
+    "pinyin": ""
+  },
+  {
+    "word": "système",
+    "meaning": "system",
+    "pinyin": ""
+  },
+  {
+    "word": "photos",
+    "meaning": "pictures",
+    "pinyin": ""
+  },
+  {
+    "word": "médecin",
+    "meaning": "doctor",
+    "pinyin": ""
+  },
+  {
+    "word": "seras",
+    "meaning": "will be",
+    "pinyin": ""
+  },
+  {
+    "word": "bateau",
+    "meaning": "boat",
+    "pinyin": ""
+  },
+  {
+    "word": "stupide",
+    "meaning": "stupid",
+    "pinyin": ""
+  },
+  {
+    "word": "faim",
+    "meaning": "hunger",
+    "pinyin": ""
+  },
+  {
+    "word": "autour",
+    "meaning": "around",
+    "pinyin": ""
+  },
+  {
+    "word": "fond",
+    "meaning": "bottom",
+    "pinyin": ""
+  },
+  {
+    "word": "surprise",
+    "meaning": "surprise",
+    "pinyin": ""
+  },
+  {
+    "word": "croyez",
+    "meaning": "believe",
+    "pinyin": ""
+  },
+  {
+    "word": "devais",
+    "meaning": "had to",
+    "pinyin": ""
+  },
+  {
+    "word": "ligne",
+    "meaning": "line",
+    "pinyin": ""
+  },
+  {
+    "word": "porter",
+    "meaning": "to carry",
+    "pinyin": ""
+  },
+  {
+    "word": "imagine",
+    "meaning": "imagine",
+    "pinyin": ""
+  },
+  {
+    "word": "colère",
+    "meaning": "anger",
+    "pinyin": ""
+  },
+  {
+    "word": "clair",
+    "meaning": "clear",
+    "pinyin": ""
+  },
+  {
+    "word": "seront",
+    "meaning": "will be",
+    "pinyin": ""
+  },
+  {
+    "word": "savait",
+    "meaning": "knew",
+    "pinyin": ""
+  },
+  {
+    "word": "balle",
+    "meaning": "ball",
+    "pinyin": ""
+  },
+  {
+    "word": "gagné",
+    "meaning": "won",
+    "pinyin": ""
+  },
+  {
+    "word": "or",
+    "meaning": "gold",
+    "pinyin": ""
+  },
+  {
+    "word": "hors",
+    "meaning": "out",
+    "pinyin": ""
+  },
+  {
+    "word": "magnifique",
+    "meaning": "magnificent",
+    "pinyin": ""
+  },
+  {
+    "word": "risque",
+    "meaning": "risk",
+    "pinyin": ""
+  },
+  {
+    "word": "terminé",
+    "meaning": "finished",
+    "pinyin": ""
+  },
+  {
+    "word": "su",
+    "meaning": "know",
+    "pinyin": ""
+  },
+  {
+    "word": "heureuse",
+    "meaning": "happy",
+    "pinyin": ""
+  },
+  {
+    "word": "mission",
+    "meaning": "assignment",
+    "pinyin": ""
+  },
+  {
+    "word": "jolie",
+    "meaning": "pretty",
+    "pinyin": ""
+  },
+  {
+    "word": "parlez",
+    "meaning": "speak",
+    "pinyin": ""
+  },
+  {
+    "word": "présent",
+    "meaning": "here",
+    "pinyin": ""
+  },
+  {
+    "word": "sorti",
+    "meaning": "released",
+    "pinyin": ""
+  },
+  {
+    "word": "cadeau",
+    "meaning": "gift",
+    "pinyin": ""
+  },
+  {
+    "word": "expliquer",
+    "meaning": "explain",
+    "pinyin": ""
+  },
+  {
+    "word": "volé",
+    "meaning": "stolen",
+    "pinyin": ""
+  },
+  {
+    "word": "plusieurs",
+    "meaning": "several",
+    "pinyin": ""
+  },
+  {
+    "word": "gauche",
+    "meaning": "left",
+    "pinyin": ""
+  },
+  {
+    "word": "ferait",
+    "meaning": "would do",
+    "pinyin": ""
+  },
+  {
+    "word": "neuf",
+    "meaning": "nine",
+    "pinyin": ""
+  },
+  {
+    "word": "passe-t-il",
+    "meaning": "does it happen",
+    "pinyin": ""
+  },
+  {
+    "word": "ouvre",
+    "meaning": "opens",
+    "pinyin": ""
+  },
+  {
+    "word": "disais",
+    "meaning": "said",
+    "pinyin": ""
+  },
+  {
+    "word": "dedans",
+    "meaning": "inside",
+    "pinyin": ""
+  },
+  {
+    "word": "disent",
+    "meaning": "say",
+    "pinyin": ""
+  },
+  {
+    "word": "pouvons",
+    "meaning": "can",
+    "pinyin": ""
+  },
+  {
+    "word": "allez-y",
+    "meaning": "go for it",
+    "pinyin": ""
+  },
+  {
+    "word": "suivre",
+    "meaning": "follow",
+    "pinyin": ""
+  },
+  {
+    "word": "pourra",
+    "meaning": "will be able to",
+    "pinyin": ""
+  },
+  {
+    "word": "inspecteur",
+    "meaning": "inspector",
+    "pinyin": ""
+  },
+  {
+    "word": "réponse",
+    "meaning": "answer",
+    "pinyin": ""
+  },
+  {
+    "word": "lumière",
+    "meaning": "light",
+    "pinyin": ""
+  },
+  {
+    "word": "pieds",
+    "meaning": "feet",
+    "pinyin": ""
+  },
+  {
+    "word": "pote",
+    "meaning": "pal",
+    "pinyin": ""
+  },
+  {
+    "word": "montre",
+    "meaning": "watch",
+    "pinyin": ""
+  },
+  {
+    "word": "pied",
+    "meaning": "foot",
+    "pinyin": ""
+  },
+  {
+    "word": "marcher",
+    "meaning": "to walk",
+    "pinyin": ""
+  },
+  {
+    "word": "charlie",
+    "meaning": "charlie",
+    "pinyin": ""
+  },
+  {
+    "word": "auras",
+    "meaning": "will have",
+    "pinyin": ""
+  },
+  {
+    "word": "envoyer",
+    "meaning": "send",
+    "pinyin": ""
+  },
+  {
+    "word": "vraie",
+    "meaning": "true",
+    "pinyin": ""
+  },
+  {
+    "word": "espèce",
+    "meaning": "species",
+    "pinyin": ""
+  },
+  {
+    "word": "doivent",
+    "meaning": "must",
+    "pinyin": ""
+  },
+  {
+    "word": "allô",
+    "meaning": "hello",
+    "pinyin": ""
+  },
+  {
+    "word": "pareil",
+    "meaning": "the same",
+    "pinyin": ""
+  },
+  {
+    "word": "vas-tu",
+    "meaning": "are you going",
+    "pinyin": ""
+  },
+  {
+    "word": "soleil",
+    "meaning": "sun",
+    "pinyin": ""
+  },
+  {
+    "word": "camp",
+    "meaning": "camp",
+    "pinyin": ""
+  },
+  {
+    "word": "fallait",
+    "meaning": "had to",
+    "pinyin": ""
+  },
+  {
+    "word": "coin",
+    "meaning": "corner",
+    "pinyin": ""
+  },
+  {
+    "word": "ignore",
+    "meaning": "ignore",
+    "pinyin": ""
+  },
+  {
+    "word": "moitié",
+    "meaning": "half",
+    "pinyin": ""
+  },
+  {
+    "word": "you",
+    "meaning": "you",
+    "pinyin": ""
+  },
+  {
+    "word": "selon",
+    "meaning": "according to",
+    "pinyin": ""
+  },
+  {
+    "word": "tenir",
+    "meaning": "hold",
+    "pinyin": ""
+  },
+  {
+    "word": "grosse",
+    "meaning": "fat",
+    "pinyin": ""
+  },
+  {
+    "word": "vouloir",
+    "meaning": "to want",
+    "pinyin": ""
+  },
+  {
+    "word": "michael",
+    "meaning": "michael",
+    "pinyin": ""
+  },
+  {
+    "word": "vieille",
+    "meaning": "old",
+    "pinyin": ""
+  },
+  {
+    "word": "devenu",
+    "meaning": "became",
+    "pinyin": ""
+  },
+  {
+    "word": "continuer",
+    "meaning": "continue",
+    "pinyin": ""
+  },
+  {
+    "word": "rend",
+    "meaning": "makes",
+    "pinyin": ""
+  },
+  {
+    "word": "sortie",
+    "meaning": "exit",
+    "pinyin": ""
+  },
+  {
+    "word": "recherche",
+    "meaning": "research",
+    "pinyin": ""
+  },
+  {
+    "word": "arrière",
+    "meaning": "back",
+    "pinyin": ""
+  },
+  {
+    "word": "lire",
+    "meaning": "read",
+    "pinyin": ""
+  },
+  {
+    "word": "doucement",
+    "meaning": "gently",
+    "pinyin": ""
+  },
+  {
+    "word": "joli",
+    "meaning": "pretty",
+    "pinyin": ""
+  },
+  {
+    "word": "avance",
+    "meaning": "advance",
+    "pinyin": ""
+  },
+  {
+    "word": "exact",
+    "meaning": "exact",
+    "pinyin": ""
+  },
+  {
+    "word": "disait",
+    "meaning": "said",
+    "pinyin": ""
+  },
+  {
+    "word": "club",
+    "meaning": "club",
+    "pinyin": ""
+  },
+  {
+    "word": "arrivée",
+    "meaning": "arrival",
+    "pinyin": ""
+  },
+  {
+    "word": "tue",
+    "meaning": "kill",
+    "pinyin": ""
+  },
+  {
+    "word": "laquelle",
+    "meaning": "which",
+    "pinyin": ""
+  },
+  {
+    "word": "poser",
+    "meaning": "to set down",
+    "pinyin": ""
+  },
+  {
+    "word": "chaud",
+    "meaning": "hot",
+    "pinyin": ""
+  },
+  {
+    "word": "aimé",
+    "meaning": "love",
+    "pinyin": ""
+  },
+  {
+    "word": "david",
+    "meaning": "david",
+    "pinyin": ""
+  },
+  {
+    "word": "fais-tu",
+    "meaning": "do you",
+    "pinyin": ""
+  },
+  {
+    "word": "tom",
+    "meaning": "tom",
+    "pinyin": ""
+  },
+  {
+    "word": "professeur",
+    "meaning": "teacher",
+    "pinyin": ""
+  },
+  {
+    "word": "quitter",
+    "meaning": "to leave",
+    "pinyin": ""
+  },
+  {
+    "word": "loi",
+    "meaning": "law",
+    "pinyin": ""
+  },
+  {
+    "word": "tueur",
+    "meaning": "killer",
+    "pinyin": ""
+  },
+  {
+    "word": "donne-moi",
+    "meaning": "give me",
+    "pinyin": ""
+  },
+  {
+    "word": "flics",
+    "meaning": "cops",
+    "pinyin": ""
+  },
+  {
+    "word": "connaître",
+    "meaning": "to know",
+    "pinyin": ""
+  },
+  {
+    "word": "lettre",
+    "meaning": "letter",
+    "pinyin": ""
+  },
+  {
+    "word": "forme",
+    "meaning": "shape",
+    "pinyin": ""
+  },
+  {
+    "word": "connaît",
+    "meaning": "knows",
+    "pinyin": ""
+  },
+  {
+    "word": "conseil",
+    "meaning": "advice",
+    "pinyin": ""
+  },
+  {
+    "word": "bar",
+    "meaning": "bar",
+    "pinyin": ""
+  },
+  {
+    "word": "normal",
+    "meaning": "normal",
+    "pinyin": ""
+  },
+  {
+    "word": "danger",
+    "meaning": "hazard",
+    "pinyin": ""
+  },
+  {
+    "word": "dangereux",
+    "meaning": "dangerous",
+    "pinyin": ""
+  },
+  {
+    "word": "folle",
+    "meaning": "crazy",
+    "pinyin": ""
+  },
+  {
+    "word": "jure",
+    "meaning": "sworn",
+    "pinyin": ""
+  },
+  {
+    "word": "tiré",
+    "meaning": "pulled",
+    "pinyin": ""
+  },
+  {
+    "word": "essaye",
+    "meaning": "try",
+    "pinyin": ""
+  },
+  {
+    "word": "bonnes",
+    "meaning": "good",
+    "pinyin": ""
+  },
+  {
+    "word": "offre",
+    "meaning": "offer",
+    "pinyin": ""
+  },
+  {
+    "word": "but",
+    "meaning": "aim",
+    "pinyin": ""
+  },
+  {
+    "word": "froid",
+    "meaning": "cold",
+    "pinyin": ""
+  },
+  {
+    "word": "allez-vous",
+    "meaning": "are you going",
+    "pinyin": ""
+  },
+  {
+    "word": "prêts",
+    "meaning": "loans",
+    "pinyin": ""
+  },
+  {
+    "word": "tranquille",
+    "meaning": "calm",
+    "pinyin": ""
+  },
+  {
+    "word": "gamin",
+    "meaning": "kid",
+    "pinyin": ""
+  },
+  {
+    "word": "joe",
+    "meaning": "joe",
+    "pinyin": ""
+  },
+  {
+    "word": "classe",
+    "meaning": "class",
+    "pinyin": ""
+  },
+  {
+    "word": "joué",
+    "meaning": "plays",
+    "pinyin": ""
+  },
+  {
+    "word": "poste",
+    "meaning": "job",
+    "pinyin": ""
+  },
+  {
+    "word": "con",
+    "meaning": "idiot",
+    "pinyin": ""
+  },
+  {
+    "word": "mike",
+    "meaning": "mike",
+    "pinyin": ""
+  },
+  {
+    "word": "attaque",
+    "meaning": "attack",
+    "pinyin": ""
+  },
+  {
+    "word": "boîte",
+    "meaning": "box",
+    "pinyin": ""
+  },
+  {
+    "word": "enquête",
+    "meaning": "investigation",
+    "pinyin": ""
+  },
+  {
+    "word": "visite",
+    "meaning": "visit",
+    "pinyin": ""
+  },
+  {
+    "word": "juge",
+    "meaning": "judge",
+    "pinyin": ""
+  },
+  {
+    "word": "moi-même",
+    "meaning": "myself",
+    "pinyin": ""
+  },
+  {
+    "word": "bord",
+    "meaning": "edge",
+    "pinyin": ""
+  },
+  {
+    "word": "debout",
+    "meaning": "standing",
+    "pinyin": ""
+  },
+  {
+    "word": "envoie",
+    "meaning": "send",
+    "pinyin": ""
+  },
+  {
+    "word": "preuve",
+    "meaning": "evidence",
+    "pinyin": ""
+  },
+  {
+    "word": "oublier",
+    "meaning": "forget",
+    "pinyin": ""
+  },
+  {
+    "word": "bons",
+    "meaning": "good",
+    "pinyin": ""
+  },
+  {
+    "word": "vivant",
+    "meaning": "alive",
+    "pinyin": ""
+  },
+  {
+    "word": "ciel",
+    "meaning": "sky",
+    "pinyin": ""
+  },
+  {
+    "word": "lu",
+    "meaning": "read",
+    "pinyin": ""
+  },
+  {
+    "word": "touche",
+    "meaning": "touch",
+    "pinyin": ""
+  },
+  {
+    "word": "aimer",
+    "meaning": "to like",
+    "pinyin": ""
+  },
+  {
+    "word": "faites-vous",
+    "meaning": "do you",
+    "pinyin": ""
+  },
+  {
+    "word": "télé",
+    "meaning": "tv",
+    "pinyin": ""
+  },
+  {
+    "word": "met",
+    "meaning": "puts",
+    "pinyin": ""
+  },
+  {
+    "word": "écouter",
+    "meaning": "listen",
+    "pinyin": ""
+  },
+  {
+    "word": "serez",
+    "meaning": "will be",
+    "pinyin": ""
+  },
+  {
+    "word": "ll",
+    "meaning": "ll",
+    "pinyin": ""
+  },
+  {
+    "word": "pourtant",
+    "meaning": "yet",
+    "pinyin": ""
+  },
+  {
+    "word": "change",
+    "meaning": "exchange",
+    "pinyin": ""
+  },
+  {
+    "word": "triste",
+    "meaning": "sad",
+    "pinyin": ""
+  },
+  {
+    "word": "droite",
+    "meaning": "right",
+    "pinyin": ""
+  },
+  {
+    "word": "gueule",
+    "meaning": "mouth",
+    "pinyin": ""
+  },
+  {
+    "word": "tombe",
+    "meaning": "fall",
+    "pinyin": ""
+  },
+  {
+    "word": "sentir",
+    "meaning": "feel",
+    "pinyin": ""
+  },
+  {
+    "word": "ouvrir",
+    "meaning": "open",
+    "pinyin": ""
+  },
+  {
+    "word": "travers",
+    "meaning": "through",
+    "pinyin": ""
+  },
+  {
+    "word": "santé",
+    "meaning": "health",
+    "pinyin": ""
+  },
+  {
+    "word": "dossier",
+    "meaning": "case",
+    "pinyin": ""
+  },
+  {
+    "word": "ie",
+    "meaning": "ie",
+    "pinyin": ""
+  },
+  {
+    "word": "jeunes",
+    "meaning": "young people",
+    "pinyin": ""
+  },
+  {
+    "word": "frank",
+    "meaning": "frank",
+    "pinyin": ""
+  },
+  {
+    "word": "coucher",
+    "meaning": "to sleep",
+    "pinyin": ""
+  },
+  {
+    "word": "cuisine",
+    "meaning": "kitchen",
+    "pinyin": ""
+  },
+  {
+    "word": "monte",
+    "meaning": "mounted",
+    "pinyin": ""
+  },
+  {
+    "word": "pouvez-vous",
+    "meaning": "can you",
+    "pinyin": ""
+  },
+  {
+    "word": "signifie",
+    "meaning": "means",
+    "pinyin": ""
   }
 ]

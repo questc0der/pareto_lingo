@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:hive/hive.dart';
+import 'package:just_audio/just_audio.dart';
 import 'package:pareto_lingo/core/content/learning_language.dart';
 import 'package:pareto_lingo/features/auth/presentation/providers/auth_providers.dart';
 import 'package:pareto_lingo/features/engagement/presentation/providers/engagement_providers.dart';
@@ -100,19 +101,24 @@ class _PracticeStudioScreenState extends ConsumerState<PracticeStudioScreen>
                       borderRadius: BorderRadius.circular(10),
                       border: Border.all(color: Colors.black, width: 2),
                     ),
-                    child: TabBar(
-                      controller: _tabController,
-                      indicator: BoxDecoration(
-                        color: _kCyan,
-                        borderRadius: BorderRadius.circular(8),
+                    child: Padding(
+                      padding: const EdgeInsets.all(4),
+                      child: TabBar(
+                        controller: _tabController,
+                        indicator: BoxDecoration(
+                          color: _kCyan,
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        indicatorSize: TabBarIndicatorSize.tab,
+                        labelPadding: const EdgeInsets.symmetric(horizontal: 10),
+                        labelColor: Colors.black,
+                        unselectedLabelColor: Colors.black54,
+                        labelStyle: const TextStyle(fontWeight: FontWeight.w800),
+                        tabs: const [
+                          Tab(text: 'Mini-Dialogues'),
+                          Tab(text: 'Active Recall'),
+                        ],
                       ),
-                      labelColor: Colors.black,
-                      unselectedLabelColor: Colors.black54,
-                      labelStyle: const TextStyle(fontWeight: FontWeight.w800),
-                      tabs: const [
-                        Tab(text: 'Mini-Dialogues'),
-                        Tab(text: 'Active Recall'),
-                      ],
                     ),
                   ),
                 ],
@@ -140,11 +146,13 @@ class _PracticeStudioScreenState extends ConsumerState<PracticeStudioScreen>
 class _DialogueLine {
   final bool speakerA;
   final String target;
+  final String? pinyin;
   final String english;
 
   const _DialogueLine({
     required this.speakerA,
     required this.target,
+    this.pinyin,
     required this.english,
   });
 }
@@ -153,6 +161,7 @@ class _Scenario {
   final String id;
   final String title;
   final String subtitle;
+  final String? lessonAudioAsset;
   final List<_DialogueLine> fr;
   final List<_DialogueLine> zh;
   final List<_DialogueLine> en;
@@ -161,6 +170,7 @@ class _Scenario {
     required this.id,
     required this.title,
     required this.subtitle,
+    this.lessonAudioAsset,
     required this.fr,
     required this.zh,
     required this.en,
@@ -227,6 +237,7 @@ const _scenarios = <_Scenario>[
     id: 'intro',
     title: 'Introducing Yourself',
     subtitle: 'Meet people naturally',
+    lessonAudioAsset: 'assets/dialogue1.mp3',
     fr: [
       _DialogueLine(speakerA: true, target: 'Salut, je m\'appelle Alex.', english: 'Hi, my name is Alex.'),
       _DialogueLine(speakerA: false, target: 'Enchanté, moi c\'est Lina.', english: 'Nice to meet you, I am Lina.'),
@@ -234,10 +245,16 @@ const _scenarios = <_Scenario>[
       _DialogueLine(speakerA: false, target: 'Moi aussi, à bientôt!', english: 'Me too, see you soon!'),
     ],
     zh: [
-      _DialogueLine(speakerA: true, target: '你好，我叫Alex。', english: 'Hi, my name is Alex.'),
-      _DialogueLine(speakerA: false, target: '很高兴认识你，我叫Lina。', english: 'Nice to meet you, I am Lina.'),
-      _DialogueLine(speakerA: true, target: '我是学生。', english: 'I am a student.'),
-      _DialogueLine(speakerA: false, target: '我也是，回头见！', english: 'Me too, see you!'),
+      _DialogueLine(speakerA: true, target: '你好。', pinyin: 'Nǐ hǎo.', english: 'Hello.'),
+      _DialogueLine(speakerA: false, target: '你好吗？', pinyin: 'Nǐ hǎo ma?', english: 'Are you fine?'),
+      _DialogueLine(
+        speakerA: true,
+        target: '我很好，谢谢，你呢？',
+        pinyin: 'Wǒ hěn hǎo, xièxie, nǐ ne?',
+        english: 'I\'m fine, thank you, and you?',
+      ),
+      _DialogueLine(speakerA: false, target: '我不好。', pinyin: 'Wǒ bù hǎo.', english: 'I\'m not fine.'),
+      _DialogueLine(speakerA: true, target: '再见。', pinyin: 'Zàijiàn.', english: 'Goodbye.'),
     ],
     en: [
       _DialogueLine(speakerA: true, target: 'Hi, my name is Alex.', english: 'Hi, my name is Alex.'),
@@ -262,6 +279,42 @@ class _DialoguesTabState extends State<_DialoguesTab> {
   int _scenarioIndex = 0;
   bool _roleA = true;
   final Set<int> _translated = <int>{};
+  final AudioPlayer _lessonAudioPlayer = AudioPlayer();
+  bool _isLessonAudioPlaying = false;
+
+  @override
+  void dispose() {
+    _lessonAudioPlayer.dispose();
+    super.dispose();
+  }
+
+  Future<void> _toggleLessonAudio(String assetPath) async {
+    try {
+      if (_isLessonAudioPlaying) {
+        await _lessonAudioPlayer.stop();
+        if (!mounted) return;
+        setState(() => _isLessonAudioPlaying = false);
+        return;
+      }
+
+      await _lessonAudioPlayer.stop();
+      await _lessonAudioPlayer.setAsset(assetPath);
+      await _lessonAudioPlayer.play();
+      if (!mounted) return;
+      setState(() => _isLessonAudioPlaying = true);
+      await _lessonAudioPlayer.playerStateStream.firstWhere(
+        (state) => state.processingState == ProcessingState.completed || !state.playing,
+      );
+      if (!mounted) return;
+      setState(() => _isLessonAudioPlaying = false);
+    } catch (_) {
+      if (!mounted) return;
+      setState(() => _isLessonAudioPlaying = false);
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Unable to play lesson audio.')),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -313,12 +366,41 @@ class _DialoguesTabState extends State<_DialoguesTab> {
             ],
           ),
         ),
+        if (widget.languageCode == 'zh' && scenario.lessonAudioAsset != null) ...[
+          const SizedBox(height: 8),
+          Container(
+            padding: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: _kCyan,
+              borderRadius: BorderRadius.circular(10),
+              border: Border.all(color: Colors.black, width: 2),
+            ),
+            child: Row(
+              children: [
+                const Expanded(
+                  child: Text(
+                    'Lesson audio (resource-backed)',
+                    style: TextStyle(fontWeight: FontWeight.w800),
+                  ),
+                ),
+                TextButton.icon(
+                  onPressed: () => _toggleLessonAudio(scenario.lessonAudioAsset!),
+                  icon: Icon(
+                    _isLessonAudioPlaying ? Icons.stop_rounded : Icons.play_arrow_rounded,
+                  ),
+                  label: Text(_isLessonAudioPlaying ? 'Stop' : 'Play'),
+                ),
+              ],
+            ),
+          ),
+        ],
         const SizedBox(height: 10),
         for (var i = 0; i < lines.length; i++)
           _DialogueBubble(
             line: lines[i],
             isUserSide: lines[i].speakerA == _roleA,
             showTranslation: _translated.contains(i),
+            showPinyin: widget.languageCode == 'zh',
             onToggleTranslation: () {
               setState(() {
                 if (_translated.contains(i)) {
@@ -364,6 +446,7 @@ class _DialogueBubble extends StatelessWidget {
   final _DialogueLine line;
   final bool isUserSide;
   final bool showTranslation;
+  final bool showPinyin;
   final VoidCallback onToggleTranslation;
   final VoidCallback onSpeak;
 
@@ -371,6 +454,7 @@ class _DialogueBubble extends StatelessWidget {
     required this.line,
     required this.isUserSide,
     required this.showTranslation,
+    required this.showPinyin,
     required this.onToggleTranslation,
     required this.onSpeak,
   });
@@ -414,6 +498,17 @@ class _DialogueBubble extends StatelessWidget {
             line.target,
             style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16),
           ),
+          if (showPinyin && (line.pinyin ?? '').trim().isNotEmpty) ...[
+            const SizedBox(height: 6),
+            Text(
+              line.pinyin!,
+              style: const TextStyle(
+                color: Colors.black54,
+                fontSize: 13,
+                fontStyle: FontStyle.italic,
+              ),
+            ),
+          ],
           if (showTranslation) ...[
             const SizedBox(height: 6),
             Text(

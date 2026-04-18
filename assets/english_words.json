@@ -1,0 +1,5002 @@
+[
+  {
+    "word": "you",
+    "meaning": "the person being addressed",
+    "pinyin": ""
+  },
+  {
+    "word": "i",
+    "meaning": "the speaker",
+    "pinyin": ""
+  },
+  {
+    "word": "the",
+    "meaning": "definite article",
+    "pinyin": ""
+  },
+  {
+    "word": "to",
+    "meaning": "toward; in order to",
+    "pinyin": ""
+  },
+  {
+    "word": "a",
+    "meaning": "indefinite article",
+    "pinyin": ""
+  },
+  {
+    "word": "it",
+    "meaning": "thing or situation",
+    "pinyin": ""
+  },
+  {
+    "word": "and",
+    "meaning": "used to connect words or ideas",
+    "pinyin": ""
+  },
+  {
+    "word": "that",
+    "meaning": "used to refer to something",
+    "pinyin": ""
+  },
+  {
+    "word": "of",
+    "meaning": "belonging to; relating to",
+    "pinyin": ""
+  },
+  {
+    "word": "is",
+    "meaning": "form of be",
+    "pinyin": ""
+  },
+  {
+    "word": "in",
+    "meaning": "inside; within",
+    "pinyin": ""
+  },
+  {
+    "word": "what",
+    "meaning": "which thing",
+    "pinyin": ""
+  },
+  {
+    "word": "we",
+    "meaning": "the speaker and others",
+    "pinyin": ""
+  },
+  {
+    "word": "me",
+    "meaning": "As the direct object of a verb",
+    "pinyin": ""
+  },
+  {
+    "word": "this",
+    "meaning": "the thing near or being discussed",
+    "pinyin": ""
+  },
+  {
+    "word": "he",
+    "meaning": "The game of tag, or it, in which the player attempting to catch the others is called \"he\"",
+    "pinyin": ""
+  },
+  {
+    "word": "for",
+    "meaning": "intended for; because of",
+    "pinyin": ""
+  },
+  {
+    "word": "my",
+    "meaning": "Used to express surprise, shock or amazement",
+    "pinyin": ""
+  },
+  {
+    "word": "on",
+    "meaning": "on top of; about",
+    "pinyin": ""
+  },
+  {
+    "word": "have",
+    "meaning": "to possess; to experience",
+    "pinyin": ""
+  },
+  {
+    "word": "your",
+    "meaning": "belonging to you",
+    "pinyin": ""
+  },
+  {
+    "word": "do",
+    "meaning": "to perform",
+    "pinyin": ""
+  },
+  {
+    "word": "was",
+    "meaning": "past form of be",
+    "pinyin": ""
+  },
+  {
+    "word": "no",
+    "meaning": "A negating expression",
+    "pinyin": ""
+  },
+  {
+    "word": "not",
+    "meaning": "negative marker",
+    "pinyin": ""
+  },
+  {
+    "word": "be",
+    "meaning": "to exist",
+    "pinyin": ""
+  },
+  {
+    "word": "are",
+    "meaning": "An accepted (but deprecated and rarely used) SI unit of area equal to 100 square metres, or a former",
+    "pinyin": ""
+  },
+  {
+    "word": "don",
+    "meaning": "A university professor, particularly one at Oxford or Cambridge",
+    "pinyin": ""
+  },
+  {
+    "word": "know",
+    "meaning": "Knowledge",
+    "pinyin": ""
+  },
+  {
+    "word": "can",
+    "meaning": "to be able to",
+    "pinyin": ""
+  },
+  {
+    "word": "with",
+    "meaning": "accompanied by",
+    "pinyin": ""
+  },
+  {
+    "word": "but",
+    "meaning": "however; except",
+    "pinyin": ""
+  },
+  {
+    "word": "all",
+    "meaning": "the whole amount",
+    "pinyin": ""
+  },
+  {
+    "word": "so",
+    "meaning": "so",
+    "pinyin": ""
+  },
+  {
+    "word": "just",
+    "meaning": "just",
+    "pinyin": ""
+  },
+  {
+    "word": "there",
+    "meaning": "in that place",
+    "pinyin": ""
+  },
+  {
+    "word": "here",
+    "meaning": "here",
+    "pinyin": ""
+  },
+  {
+    "word": "they",
+    "meaning": "they",
+    "pinyin": ""
+  },
+  {
+    "word": "like",
+    "meaning": "like",
+    "pinyin": ""
+  },
+  {
+    "word": "get",
+    "meaning": "get",
+    "pinyin": ""
+  },
+  {
+    "word": "she",
+    "meaning": "female person previously mentioned",
+    "pinyin": ""
+  },
+  {
+    "word": "go",
+    "meaning": "go",
+    "pinyin": ""
+  },
+  {
+    "word": "if",
+    "meaning": "in the case that",
+    "pinyin": ""
+  },
+  {
+    "word": "right",
+    "meaning": "right",
+    "pinyin": ""
+  },
+  {
+    "word": "out",
+    "meaning": "to the outside",
+    "pinyin": ""
+  },
+  {
+    "word": "about",
+    "meaning": "concerning; approximately",
+    "pinyin": ""
+  },
+  {
+    "word": "up",
+    "meaning": "toward a higher place",
+    "pinyin": ""
+  },
+  {
+    "word": "at",
+    "meaning": "in or near a place",
+    "pinyin": ""
+  },
+  {
+    "word": "him",
+    "meaning": "him",
+    "pinyin": ""
+  },
+  {
+    "word": "now",
+    "meaning": "now",
+    "pinyin": ""
+  },
+  {
+    "word": "oh",
+    "meaning": "oh",
+    "pinyin": ""
+  },
+  {
+    "word": "one",
+    "meaning": "single unit",
+    "pinyin": ""
+  },
+  {
+    "word": "come",
+    "meaning": "come",
+    "pinyin": ""
+  },
+  {
+    "word": "well",
+    "meaning": "well",
+    "pinyin": ""
+  },
+  {
+    "word": "her",
+    "meaning": "her",
+    "pinyin": ""
+  },
+  {
+    "word": "how",
+    "meaning": "in what way",
+    "pinyin": ""
+  },
+  {
+    "word": "yeah",
+    "meaning": "yeah",
+    "pinyin": ""
+  },
+  {
+    "word": "will",
+    "meaning": "future marker; intention",
+    "pinyin": ""
+  },
+  {
+    "word": "got",
+    "meaning": "got",
+    "pinyin": ""
+  },
+  {
+    "word": "want",
+    "meaning": "want",
+    "pinyin": ""
+  },
+  {
+    "word": "think",
+    "meaning": "think",
+    "pinyin": ""
+  },
+  {
+    "word": "as",
+    "meaning": "in the role of; like",
+    "pinyin": ""
+  },
+  {
+    "word": "see",
+    "meaning": "see",
+    "pinyin": ""
+  },
+  {
+    "word": "did",
+    "meaning": "did",
+    "pinyin": ""
+  },
+  {
+    "word": "good",
+    "meaning": "good",
+    "pinyin": ""
+  },
+  {
+    "word": "who",
+    "meaning": "who",
+    "pinyin": ""
+  },
+  {
+    "word": "why",
+    "meaning": "why",
+    "pinyin": ""
+  },
+  {
+    "word": "from",
+    "meaning": "starting point",
+    "pinyin": ""
+  },
+  {
+    "word": "let",
+    "meaning": "let",
+    "pinyin": ""
+  },
+  {
+    "word": "his",
+    "meaning": "his",
+    "pinyin": ""
+  },
+  {
+    "word": "yes",
+    "meaning": "yes",
+    "pinyin": ""
+  },
+  {
+    "word": "when",
+    "meaning": "at what time",
+    "pinyin": ""
+  },
+  {
+    "word": "going",
+    "meaning": "going",
+    "pinyin": ""
+  },
+  {
+    "word": "time",
+    "meaning": "time",
+    "pinyin": ""
+  },
+  {
+    "word": "an",
+    "meaning": "an",
+    "pinyin": ""
+  },
+  {
+    "word": "okay",
+    "meaning": "okay",
+    "pinyin": ""
+  },
+  {
+    "word": "back",
+    "meaning": "back",
+    "pinyin": ""
+  },
+  {
+    "word": "look",
+    "meaning": "look",
+    "pinyin": ""
+  },
+  {
+    "word": "us",
+    "meaning": "us",
+    "pinyin": ""
+  },
+  {
+    "word": "would",
+    "meaning": "would",
+    "pinyin": ""
+  },
+  {
+    "word": "them",
+    "meaning": "them",
+    "pinyin": ""
+  },
+  {
+    "word": "where",
+    "meaning": "where",
+    "pinyin": ""
+  },
+  {
+    "word": "were",
+    "meaning": "past plural form of be",
+    "pinyin": ""
+  },
+  {
+    "word": "take",
+    "meaning": "take",
+    "pinyin": ""
+  },
+  {
+    "word": "then",
+    "meaning": "then",
+    "pinyin": ""
+  },
+  {
+    "word": "had",
+    "meaning": "past form of have",
+    "pinyin": ""
+  },
+  {
+    "word": "or",
+    "meaning": "alternative",
+    "pinyin": ""
+  },
+  {
+    "word": "been",
+    "meaning": "been",
+    "pinyin": ""
+  },
+  {
+    "word": "our",
+    "meaning": "our",
+    "pinyin": ""
+  },
+  {
+    "word": "gonna",
+    "meaning": "gonna",
+    "pinyin": ""
+  },
+  {
+    "word": "tell",
+    "meaning": "tell",
+    "pinyin": ""
+  },
+  {
+    "word": "really",
+    "meaning": "really",
+    "pinyin": ""
+  },
+  {
+    "word": "man",
+    "meaning": "man",
+    "pinyin": ""
+  },
+  {
+    "word": "some",
+    "meaning": "some",
+    "pinyin": ""
+  },
+  {
+    "word": "say",
+    "meaning": "say",
+    "pinyin": ""
+  },
+  {
+    "word": "hey",
+    "meaning": "hey",
+    "pinyin": ""
+  },
+  {
+    "word": "could",
+    "meaning": "could",
+    "pinyin": ""
+  },
+  {
+    "word": "didn",
+    "meaning": "didn",
+    "pinyin": ""
+  },
+  {
+    "word": "by",
+    "meaning": "next to; through the action of",
+    "pinyin": ""
+  },
+  {
+    "word": "need",
+    "meaning": "need",
+    "pinyin": ""
+  },
+  {
+    "word": "something",
+    "meaning": "something",
+    "pinyin": ""
+  },
+  {
+    "word": "has",
+    "meaning": "has",
+    "pinyin": ""
+  },
+  {
+    "word": "too",
+    "meaning": "too",
+    "pinyin": ""
+  },
+  {
+    "word": "more",
+    "meaning": "more",
+    "pinyin": ""
+  },
+  {
+    "word": "way",
+    "meaning": "way",
+    "pinyin": ""
+  },
+  {
+    "word": "down",
+    "meaning": "down",
+    "pinyin": ""
+  },
+  {
+    "word": "make",
+    "meaning": "make",
+    "pinyin": ""
+  },
+  {
+    "word": "very",
+    "meaning": "very",
+    "pinyin": ""
+  },
+  {
+    "word": "never",
+    "meaning": "never",
+    "pinyin": ""
+  },
+  {
+    "word": "only",
+    "meaning": "only",
+    "pinyin": ""
+  },
+  {
+    "word": "people",
+    "meaning": "people",
+    "pinyin": ""
+  },
+  {
+    "word": "over",
+    "meaning": "over",
+    "pinyin": ""
+  },
+  {
+    "word": "because",
+    "meaning": "because",
+    "pinyin": ""
+  },
+  {
+    "word": "little",
+    "meaning": "little",
+    "pinyin": ""
+  },
+  {
+    "word": "please",
+    "meaning": "please",
+    "pinyin": ""
+  },
+  {
+    "word": "love",
+    "meaning": "love",
+    "pinyin": ""
+  },
+  {
+    "word": "should",
+    "meaning": "should",
+    "pinyin": ""
+  },
+  {
+    "word": "mean",
+    "meaning": "mean",
+    "pinyin": ""
+  },
+  {
+    "word": "said",
+    "meaning": "past form of say",
+    "pinyin": ""
+  },
+  {
+    "word": "sorry",
+    "meaning": "sorry",
+    "pinyin": ""
+  },
+  {
+    "word": "give",
+    "meaning": "give",
+    "pinyin": ""
+  },
+  {
+    "word": "off",
+    "meaning": "off",
+    "pinyin": ""
+  },
+  {
+    "word": "am",
+    "meaning": "am",
+    "pinyin": ""
+  },
+  {
+    "word": "thank",
+    "meaning": "thank",
+    "pinyin": ""
+  },
+  {
+    "word": "any",
+    "meaning": "any",
+    "pinyin": ""
+  },
+  {
+    "word": "two",
+    "meaning": "two",
+    "pinyin": ""
+  },
+  {
+    "word": "even",
+    "meaning": "even",
+    "pinyin": ""
+  },
+  {
+    "word": "much",
+    "meaning": "much",
+    "pinyin": ""
+  },
+  {
+    "word": "doing",
+    "meaning": "doing",
+    "pinyin": ""
+  },
+  {
+    "word": "sure",
+    "meaning": "sure",
+    "pinyin": ""
+  },
+  {
+    "word": "thing",
+    "meaning": "thing",
+    "pinyin": ""
+  },
+  {
+    "word": "these",
+    "meaning": "these",
+    "pinyin": ""
+  },
+  {
+    "word": "help",
+    "meaning": "help",
+    "pinyin": ""
+  },
+  {
+    "word": "first",
+    "meaning": "first",
+    "pinyin": ""
+  },
+  {
+    "word": "into",
+    "meaning": "into",
+    "pinyin": ""
+  },
+  {
+    "word": "anything",
+    "meaning": "anything",
+    "pinyin": ""
+  },
+  {
+    "word": "still",
+    "meaning": "still",
+    "pinyin": ""
+  },
+  {
+    "word": "find",
+    "meaning": "find",
+    "pinyin": ""
+  },
+  {
+    "word": "life",
+    "meaning": "life",
+    "pinyin": ""
+  },
+  {
+    "word": "nothing",
+    "meaning": "nothing",
+    "pinyin": ""
+  },
+  {
+    "word": "sir",
+    "meaning": "sir",
+    "pinyin": ""
+  },
+  {
+    "word": "day",
+    "meaning": "day",
+    "pinyin": ""
+  },
+  {
+    "word": "god",
+    "meaning": "god",
+    "pinyin": ""
+  },
+  {
+    "word": "work",
+    "meaning": "work",
+    "pinyin": ""
+  },
+  {
+    "word": "their",
+    "meaning": "belonging to them",
+    "pinyin": ""
+  },
+  {
+    "word": "uh",
+    "meaning": "uh",
+    "pinyin": ""
+  },
+  {
+    "word": "again",
+    "meaning": "again",
+    "pinyin": ""
+  },
+  {
+    "word": "maybe",
+    "meaning": "maybe",
+    "pinyin": ""
+  },
+  {
+    "word": "must",
+    "meaning": "must",
+    "pinyin": ""
+  },
+  {
+    "word": "before",
+    "meaning": "before",
+    "pinyin": ""
+  },
+  {
+    "word": "other",
+    "meaning": "different or additional",
+    "pinyin": ""
+  },
+  {
+    "word": "wait",
+    "meaning": "wait",
+    "pinyin": ""
+  },
+  {
+    "word": "stop",
+    "meaning": "stop",
+    "pinyin": ""
+  },
+  {
+    "word": "call",
+    "meaning": "call",
+    "pinyin": ""
+  },
+  {
+    "word": "after",
+    "meaning": "after",
+    "pinyin": ""
+  },
+  {
+    "word": "won",
+    "meaning": "won",
+    "pinyin": ""
+  },
+  {
+    "word": "talk",
+    "meaning": "talk",
+    "pinyin": ""
+  },
+  {
+    "word": "away",
+    "meaning": "away",
+    "pinyin": ""
+  },
+  {
+    "word": "than",
+    "meaning": "than",
+    "pinyin": ""
+  },
+  {
+    "word": "thought",
+    "meaning": "thought",
+    "pinyin": ""
+  },
+  {
+    "word": "home",
+    "meaning": "home",
+    "pinyin": ""
+  },
+  {
+    "word": "night",
+    "meaning": "night",
+    "pinyin": ""
+  },
+  {
+    "word": "put",
+    "meaning": "put",
+    "pinyin": ""
+  },
+  {
+    "word": "great",
+    "meaning": "great",
+    "pinyin": ""
+  },
+  {
+    "word": "those",
+    "meaning": "those",
+    "pinyin": ""
+  },
+  {
+    "word": "last",
+    "meaning": "last",
+    "pinyin": ""
+  },
+  {
+    "word": "better",
+    "meaning": "better",
+    "pinyin": ""
+  },
+  {
+    "word": "everything",
+    "meaning": "everything",
+    "pinyin": ""
+  },
+  {
+    "word": "told",
+    "meaning": "told",
+    "pinyin": ""
+  },
+  {
+    "word": "new",
+    "meaning": "new",
+    "pinyin": ""
+  },
+  {
+    "word": "things",
+    "meaning": "things",
+    "pinyin": ""
+  },
+  {
+    "word": "always",
+    "meaning": "always",
+    "pinyin": ""
+  },
+  {
+    "word": "keep",
+    "meaning": "keep",
+    "pinyin": ""
+  },
+  {
+    "word": "long",
+    "meaning": "long",
+    "pinyin": ""
+  },
+  {
+    "word": "years",
+    "meaning": "years",
+    "pinyin": ""
+  },
+  {
+    "word": "leave",
+    "meaning": "leave",
+    "pinyin": ""
+  },
+  {
+    "word": "does",
+    "meaning": "does",
+    "pinyin": ""
+  },
+  {
+    "word": "money",
+    "meaning": "money",
+    "pinyin": ""
+  },
+  {
+    "word": "around",
+    "meaning": "around",
+    "pinyin": ""
+  },
+  {
+    "word": "doesn",
+    "meaning": "doesn",
+    "pinyin": ""
+  },
+  {
+    "word": "name",
+    "meaning": "name",
+    "pinyin": ""
+  },
+  {
+    "word": "place",
+    "meaning": "place",
+    "pinyin": ""
+  },
+  {
+    "word": "ever",
+    "meaning": "ever",
+    "pinyin": ""
+  },
+  {
+    "word": "feel",
+    "meaning": "feel",
+    "pinyin": ""
+  },
+  {
+    "word": "guys",
+    "meaning": "guys",
+    "pinyin": ""
+  },
+  {
+    "word": "father",
+    "meaning": "father",
+    "pinyin": ""
+  },
+  {
+    "word": "guy",
+    "meaning": "guy",
+    "pinyin": ""
+  },
+  {
+    "word": "made",
+    "meaning": "made",
+    "pinyin": ""
+  },
+  {
+    "word": "old",
+    "meaning": "old",
+    "pinyin": ""
+  },
+  {
+    "word": "isn",
+    "meaning": "isn",
+    "pinyin": ""
+  },
+  {
+    "word": "which",
+    "meaning": "what one; what kind",
+    "pinyin": ""
+  },
+  {
+    "word": "big",
+    "meaning": "big",
+    "pinyin": ""
+  },
+  {
+    "word": "lot",
+    "meaning": "lot",
+    "pinyin": ""
+  },
+  {
+    "word": "done",
+    "meaning": "done",
+    "pinyin": ""
+  },
+  {
+    "word": "hello",
+    "meaning": "hello",
+    "pinyin": ""
+  },
+  {
+    "word": "nice",
+    "meaning": "nice",
+    "pinyin": ""
+  },
+  {
+    "word": "believe",
+    "meaning": "believe",
+    "pinyin": ""
+  },
+  {
+    "word": "girl",
+    "meaning": "girl",
+    "pinyin": ""
+  },
+  {
+    "word": "someone",
+    "meaning": "someone",
+    "pinyin": ""
+  },
+  {
+    "word": "fine",
+    "meaning": "fine",
+    "pinyin": ""
+  },
+  {
+    "word": "thanks",
+    "meaning": "thanks",
+    "pinyin": ""
+  },
+  {
+    "word": "wanted",
+    "meaning": "wanted",
+    "pinyin": ""
+  },
+  {
+    "word": "kind",
+    "meaning": "kind",
+    "pinyin": ""
+  },
+  {
+    "word": "coming",
+    "meaning": "coming",
+    "pinyin": ""
+  },
+  {
+    "word": "house",
+    "meaning": "house",
+    "pinyin": ""
+  },
+  {
+    "word": "every",
+    "meaning": "every",
+    "pinyin": ""
+  },
+  {
+    "word": "ok",
+    "meaning": "ok",
+    "pinyin": ""
+  },
+  {
+    "word": "through",
+    "meaning": "through",
+    "pinyin": ""
+  },
+  {
+    "word": "being",
+    "meaning": "being",
+    "pinyin": ""
+  },
+  {
+    "word": "course",
+    "meaning": "course",
+    "pinyin": ""
+  },
+  {
+    "word": "stay",
+    "meaning": "stay",
+    "pinyin": ""
+  },
+  {
+    "word": "left",
+    "meaning": "left",
+    "pinyin": ""
+  },
+  {
+    "word": "dad",
+    "meaning": "dad",
+    "pinyin": ""
+  },
+  {
+    "word": "enough",
+    "meaning": "enough",
+    "pinyin": ""
+  },
+  {
+    "word": "happened",
+    "meaning": "happened",
+    "pinyin": ""
+  },
+  {
+    "word": "came",
+    "meaning": "came",
+    "pinyin": ""
+  },
+  {
+    "word": "may",
+    "meaning": "may",
+    "pinyin": ""
+  },
+  {
+    "word": "mother",
+    "meaning": "mother",
+    "pinyin": ""
+  },
+  {
+    "word": "wrong",
+    "meaning": "wrong",
+    "pinyin": ""
+  },
+  {
+    "word": "world",
+    "meaning": "world",
+    "pinyin": ""
+  },
+  {
+    "word": "bad",
+    "meaning": "bad",
+    "pinyin": ""
+  },
+  {
+    "word": "might",
+    "meaning": "might",
+    "pinyin": ""
+  },
+  {
+    "word": "three",
+    "meaning": "three",
+    "pinyin": ""
+  },
+  {
+    "word": "today",
+    "meaning": "today",
+    "pinyin": ""
+  },
+  {
+    "word": "listen",
+    "meaning": "listen",
+    "pinyin": ""
+  },
+  {
+    "word": "another",
+    "meaning": "another",
+    "pinyin": ""
+  },
+  {
+    "word": "understand",
+    "meaning": "understand",
+    "pinyin": ""
+  },
+  {
+    "word": "hear",
+    "meaning": "hear",
+    "pinyin": ""
+  },
+  {
+    "word": "remember",
+    "meaning": "remember",
+    "pinyin": ""
+  },
+  {
+    "word": "ask",
+    "meaning": "ask",
+    "pinyin": ""
+  },
+  {
+    "word": "own",
+    "meaning": "own",
+    "pinyin": ""
+  },
+  {
+    "word": "same",
+    "meaning": "same",
+    "pinyin": ""
+  },
+  {
+    "word": "show",
+    "meaning": "show",
+    "pinyin": ""
+  },
+  {
+    "word": "else",
+    "meaning": "else",
+    "pinyin": ""
+  },
+  {
+    "word": "kill",
+    "meaning": "kill",
+    "pinyin": ""
+  },
+  {
+    "word": "talking",
+    "meaning": "talking",
+    "pinyin": ""
+  },
+  {
+    "word": "found",
+    "meaning": "found",
+    "pinyin": ""
+  },
+  {
+    "word": "next",
+    "meaning": "next",
+    "pinyin": ""
+  },
+  {
+    "word": "getting",
+    "meaning": "getting",
+    "pinyin": ""
+  },
+  {
+    "word": "care",
+    "meaning": "care",
+    "pinyin": ""
+  },
+  {
+    "word": "car",
+    "meaning": "car",
+    "pinyin": ""
+  },
+  {
+    "word": "looking",
+    "meaning": "looking",
+    "pinyin": ""
+  },
+  {
+    "word": "son",
+    "meaning": "son",
+    "pinyin": ""
+  },
+  {
+    "word": "try",
+    "meaning": "try",
+    "pinyin": ""
+  },
+  {
+    "word": "woman",
+    "meaning": "woman",
+    "pinyin": ""
+  },
+  {
+    "word": "went",
+    "meaning": "went",
+    "pinyin": ""
+  },
+  {
+    "word": "hi",
+    "meaning": "hi",
+    "pinyin": ""
+  },
+  {
+    "word": "dead",
+    "meaning": "dead",
+    "pinyin": ""
+  },
+  {
+    "word": "many",
+    "meaning": "a large number",
+    "pinyin": ""
+  },
+  {
+    "word": "mind",
+    "meaning": "mind",
+    "pinyin": ""
+  },
+  {
+    "word": "wasn",
+    "meaning": "wasn",
+    "pinyin": ""
+  },
+  {
+    "word": "friend",
+    "meaning": "friend",
+    "pinyin": ""
+  },
+  {
+    "word": "best",
+    "meaning": "best",
+    "pinyin": ""
+  },
+  {
+    "word": "mom",
+    "meaning": "mom",
+    "pinyin": ""
+  },
+  {
+    "word": "hell",
+    "meaning": "hell",
+    "pinyin": ""
+  },
+  {
+    "word": "morning",
+    "meaning": "morning",
+    "pinyin": ""
+  },
+  {
+    "word": "trying",
+    "meaning": "trying",
+    "pinyin": ""
+  },
+  {
+    "word": "boy",
+    "meaning": "boy",
+    "pinyin": ""
+  },
+  {
+    "word": "together",
+    "meaning": "together",
+    "pinyin": ""
+  },
+  {
+    "word": "yourself",
+    "meaning": "yourself",
+    "pinyin": ""
+  },
+  {
+    "word": "job",
+    "meaning": "job",
+    "pinyin": ""
+  },
+  {
+    "word": "saw",
+    "meaning": "saw",
+    "pinyin": ""
+  },
+  {
+    "word": "family",
+    "meaning": "family",
+    "pinyin": ""
+  },
+  {
+    "word": "real",
+    "meaning": "real",
+    "pinyin": ""
+  },
+  {
+    "word": "without",
+    "meaning": "without",
+    "pinyin": ""
+  },
+  {
+    "word": "baby",
+    "meaning": "baby",
+    "pinyin": ""
+  },
+  {
+    "word": "room",
+    "meaning": "room",
+    "pinyin": ""
+  },
+  {
+    "word": "wouldn",
+    "meaning": "wouldn",
+    "pinyin": ""
+  },
+  {
+    "word": "already",
+    "meaning": "already",
+    "pinyin": ""
+  },
+  {
+    "word": "move",
+    "meaning": "move",
+    "pinyin": ""
+  },
+  {
+    "word": "most",
+    "meaning": "most",
+    "pinyin": ""
+  },
+  {
+    "word": "seen",
+    "meaning": "seen",
+    "pinyin": ""
+  },
+  {
+    "word": "live",
+    "meaning": "live",
+    "pinyin": ""
+  },
+  {
+    "word": "miss",
+    "meaning": "miss",
+    "pinyin": ""
+  },
+  {
+    "word": "actually",
+    "meaning": "actually",
+    "pinyin": ""
+  },
+  {
+    "word": "huh",
+    "meaning": "huh",
+    "pinyin": ""
+  },
+  {
+    "word": "shit",
+    "meaning": "shit",
+    "pinyin": ""
+  },
+  {
+    "word": "both",
+    "meaning": "both",
+    "pinyin": ""
+  },
+  {
+    "word": "heard",
+    "meaning": "heard",
+    "pinyin": ""
+  },
+  {
+    "word": "once",
+    "meaning": "once",
+    "pinyin": ""
+  },
+  {
+    "word": "ready",
+    "meaning": "ready",
+    "pinyin": ""
+  },
+  {
+    "word": "head",
+    "meaning": "head",
+    "pinyin": ""
+  },
+  {
+    "word": "called",
+    "meaning": "called",
+    "pinyin": ""
+  },
+  {
+    "word": "used",
+    "meaning": "used",
+    "pinyin": ""
+  },
+  {
+    "word": "idea",
+    "meaning": "idea",
+    "pinyin": ""
+  },
+  {
+    "word": "knew",
+    "meaning": "knew",
+    "pinyin": ""
+  },
+  {
+    "word": "hold",
+    "meaning": "hold",
+    "pinyin": ""
+  },
+  {
+    "word": "happy",
+    "meaning": "happy",
+    "pinyin": ""
+  },
+  {
+    "word": "door",
+    "meaning": "door",
+    "pinyin": ""
+  },
+  {
+    "word": "such",
+    "meaning": "such",
+    "pinyin": ""
+  },
+  {
+    "word": "fuck",
+    "meaning": "fuck",
+    "pinyin": ""
+  },
+  {
+    "word": "brother",
+    "meaning": "brother",
+    "pinyin": ""
+  },
+  {
+    "word": "also",
+    "meaning": "also",
+    "pinyin": ""
+  },
+  {
+    "word": "pretty",
+    "meaning": "pretty",
+    "pinyin": ""
+  },
+  {
+    "word": "bit",
+    "meaning": "bit",
+    "pinyin": ""
+  },
+  {
+    "word": "took",
+    "meaning": "took",
+    "pinyin": ""
+  },
+  {
+    "word": "haven",
+    "meaning": "haven",
+    "pinyin": ""
+  },
+  {
+    "word": "yet",
+    "meaning": "yet",
+    "pinyin": ""
+  },
+  {
+    "word": "men",
+    "meaning": "men",
+    "pinyin": ""
+  },
+  {
+    "word": "whole",
+    "meaning": "whole",
+    "pinyin": ""
+  },
+  {
+    "word": "start",
+    "meaning": "start",
+    "pinyin": ""
+  },
+  {
+    "word": "use",
+    "meaning": "to employ",
+    "pinyin": ""
+  },
+  {
+    "word": "while",
+    "meaning": "while",
+    "pinyin": ""
+  },
+  {
+    "word": "since",
+    "meaning": "since",
+    "pinyin": ""
+  },
+  {
+    "word": "wife",
+    "meaning": "wife",
+    "pinyin": ""
+  },
+  {
+    "word": "days",
+    "meaning": "days",
+    "pinyin": ""
+  },
+  {
+    "word": "guess",
+    "meaning": "guess",
+    "pinyin": ""
+  },
+  {
+    "word": "tomorrow",
+    "meaning": "tomorrow",
+    "pinyin": ""
+  },
+  {
+    "word": "matter",
+    "meaning": "matter",
+    "pinyin": ""
+  },
+  {
+    "word": "meet",
+    "meaning": "meet",
+    "pinyin": ""
+  },
+  {
+    "word": "bring",
+    "meaning": "bring",
+    "pinyin": ""
+  },
+  {
+    "word": "tonight",
+    "meaning": "tonight",
+    "pinyin": ""
+  },
+  {
+    "word": "everyone",
+    "meaning": "everyone",
+    "pinyin": ""
+  },
+  {
+    "word": "run",
+    "meaning": "run",
+    "pinyin": ""
+  },
+  {
+    "word": "wanna",
+    "meaning": "wanna",
+    "pinyin": ""
+  },
+  {
+    "word": "hard",
+    "meaning": "hard",
+    "pinyin": ""
+  },
+  {
+    "word": "ah",
+    "meaning": "ah",
+    "pinyin": ""
+  },
+  {
+    "word": "alone",
+    "meaning": "alone",
+    "pinyin": ""
+  },
+  {
+    "word": "myself",
+    "meaning": "myself",
+    "pinyin": ""
+  },
+  {
+    "word": "school",
+    "meaning": "school",
+    "pinyin": ""
+  },
+  {
+    "word": "gone",
+    "meaning": "gone",
+    "pinyin": ""
+  },
+  {
+    "word": "um",
+    "meaning": "um",
+    "pinyin": ""
+  },
+  {
+    "word": "end",
+    "meaning": "end",
+    "pinyin": ""
+  },
+  {
+    "word": "saying",
+    "meaning": "saying",
+    "pinyin": ""
+  },
+  {
+    "word": "phone",
+    "meaning": "phone",
+    "pinyin": ""
+  },
+  {
+    "word": "play",
+    "meaning": "play",
+    "pinyin": ""
+  },
+  {
+    "word": "looks",
+    "meaning": "looks",
+    "pinyin": ""
+  },
+  {
+    "word": "couldn",
+    "meaning": "couldn",
+    "pinyin": ""
+  },
+  {
+    "word": "fucking",
+    "meaning": "fucking",
+    "pinyin": ""
+  },
+  {
+    "word": "problem",
+    "meaning": "problem",
+    "pinyin": ""
+  },
+  {
+    "word": "few",
+    "meaning": "few",
+    "pinyin": ""
+  },
+  {
+    "word": "friends",
+    "meaning": "friends",
+    "pinyin": ""
+  },
+  {
+    "word": "gotta",
+    "meaning": "gotta",
+    "pinyin": ""
+  },
+  {
+    "word": "ago",
+    "meaning": "ago",
+    "pinyin": ""
+  },
+  {
+    "word": "open",
+    "meaning": "open",
+    "pinyin": ""
+  },
+  {
+    "word": "anyone",
+    "meaning": "anyone",
+    "pinyin": ""
+  },
+  {
+    "word": "killed",
+    "meaning": "killed",
+    "pinyin": ""
+  },
+  {
+    "word": "hope",
+    "meaning": "hope",
+    "pinyin": ""
+  },
+  {
+    "word": "face",
+    "meaning": "face",
+    "pinyin": ""
+  },
+  {
+    "word": "until",
+    "meaning": "until",
+    "pinyin": ""
+  },
+  {
+    "word": "lost",
+    "meaning": "lost",
+    "pinyin": ""
+  },
+  {
+    "word": "police",
+    "meaning": "police",
+    "pinyin": ""
+  },
+  {
+    "word": "excuse",
+    "meaning": "excuse",
+    "pinyin": ""
+  },
+  {
+    "word": "turn",
+    "meaning": "turn",
+    "pinyin": ""
+  },
+  {
+    "word": "business",
+    "meaning": "business",
+    "pinyin": ""
+  },
+  {
+    "word": "case",
+    "meaning": "case",
+    "pinyin": ""
+  },
+  {
+    "word": "wants",
+    "meaning": "wants",
+    "pinyin": ""
+  },
+  {
+    "word": "says",
+    "meaning": "says",
+    "pinyin": ""
+  },
+  {
+    "word": "true",
+    "meaning": "true",
+    "pinyin": ""
+  },
+  {
+    "word": "die",
+    "meaning": "die",
+    "pinyin": ""
+  },
+  {
+    "word": "heart",
+    "meaning": "heart",
+    "pinyin": ""
+  },
+  {
+    "word": "soon",
+    "meaning": "soon",
+    "pinyin": ""
+  },
+  {
+    "word": "each",
+    "meaning": "every one of a group",
+    "pinyin": ""
+  },
+  {
+    "word": "worry",
+    "meaning": "worry",
+    "pinyin": ""
+  },
+  {
+    "word": "later",
+    "meaning": "later",
+    "pinyin": ""
+  },
+  {
+    "word": "year",
+    "meaning": "year",
+    "pinyin": ""
+  },
+  {
+    "word": "watch",
+    "meaning": "watch",
+    "pinyin": ""
+  },
+  {
+    "word": "music",
+    "meaning": "music",
+    "pinyin": ""
+  },
+  {
+    "word": "hand",
+    "meaning": "hand",
+    "pinyin": ""
+  },
+  {
+    "word": "having",
+    "meaning": "having",
+    "pinyin": ""
+  },
+  {
+    "word": "probably",
+    "meaning": "probably",
+    "pinyin": ""
+  },
+  {
+    "word": "beautiful",
+    "meaning": "beautiful",
+    "pinyin": ""
+  },
+  {
+    "word": "doctor",
+    "meaning": "doctor",
+    "pinyin": ""
+  },
+  {
+    "word": "sit",
+    "meaning": "sit",
+    "pinyin": ""
+  },
+  {
+    "word": "eat",
+    "meaning": "eat",
+    "pinyin": ""
+  },
+  {
+    "word": "thinking",
+    "meaning": "thinking",
+    "pinyin": ""
+  },
+  {
+    "word": "young",
+    "meaning": "young",
+    "pinyin": ""
+  },
+  {
+    "word": "second",
+    "meaning": "second",
+    "pinyin": ""
+  },
+  {
+    "word": "working",
+    "meaning": "working",
+    "pinyin": ""
+  },
+  {
+    "word": "water",
+    "meaning": "water",
+    "pinyin": ""
+  },
+  {
+    "word": "person",
+    "meaning": "person",
+    "pinyin": ""
+  },
+  {
+    "word": "part",
+    "meaning": "part",
+    "pinyin": ""
+  },
+  {
+    "word": "kids",
+    "meaning": "kids",
+    "pinyin": ""
+  },
+  {
+    "word": "late",
+    "meaning": "late",
+    "pinyin": ""
+  },
+  {
+    "word": "stuff",
+    "meaning": "stuff",
+    "pinyin": ""
+  },
+  {
+    "word": "exactly",
+    "meaning": "exactly",
+    "pinyin": ""
+  },
+  {
+    "word": "under",
+    "meaning": "under",
+    "pinyin": ""
+  },
+  {
+    "word": "death",
+    "meaning": "death",
+    "pinyin": ""
+  },
+  {
+    "word": "minute",
+    "meaning": "minute",
+    "pinyin": ""
+  },
+  {
+    "word": "pay",
+    "meaning": "pay",
+    "pinyin": ""
+  },
+  {
+    "word": "crazy",
+    "meaning": "crazy",
+    "pinyin": ""
+  },
+  {
+    "word": "forget",
+    "meaning": "forget",
+    "pinyin": ""
+  },
+  {
+    "word": "everybody",
+    "meaning": "everybody",
+    "pinyin": ""
+  },
+  {
+    "word": "kid",
+    "meaning": "kid",
+    "pinyin": ""
+  },
+  {
+    "word": "change",
+    "meaning": "change",
+    "pinyin": ""
+  },
+  {
+    "word": "gave",
+    "meaning": "gave",
+    "pinyin": ""
+  },
+  {
+    "word": "happen",
+    "meaning": "happen",
+    "pinyin": ""
+  },
+  {
+    "word": "damn",
+    "meaning": "damn",
+    "pinyin": ""
+  },
+  {
+    "word": "five",
+    "meaning": "five",
+    "pinyin": ""
+  },
+  {
+    "word": "drink",
+    "meaning": "drink",
+    "pinyin": ""
+  },
+  {
+    "word": "far",
+    "meaning": "far",
+    "pinyin": ""
+  },
+  {
+    "word": "knows",
+    "meaning": "knows",
+    "pinyin": ""
+  },
+  {
+    "word": "its",
+    "meaning": "its",
+    "pinyin": ""
+  },
+  {
+    "word": "whatever",
+    "meaning": "whatever",
+    "pinyin": ""
+  },
+  {
+    "word": "eyes",
+    "meaning": "eyes",
+    "pinyin": ""
+  },
+  {
+    "word": "shut",
+    "meaning": "shut",
+    "pinyin": ""
+  },
+  {
+    "word": "aren",
+    "meaning": "aren",
+    "pinyin": ""
+  },
+  {
+    "word": "hit",
+    "meaning": "hit",
+    "pinyin": ""
+  },
+  {
+    "word": "taking",
+    "meaning": "taking",
+    "pinyin": ""
+  },
+  {
+    "word": "easy",
+    "meaning": "easy",
+    "pinyin": ""
+  },
+  {
+    "word": "times",
+    "meaning": "times",
+    "pinyin": ""
+  },
+  {
+    "word": "check",
+    "meaning": "check",
+    "pinyin": ""
+  },
+  {
+    "word": "hands",
+    "meaning": "hands",
+    "pinyin": ""
+  },
+  {
+    "word": "minutes",
+    "meaning": "minutes",
+    "pinyin": ""
+  },
+  {
+    "word": "deal",
+    "meaning": "deal",
+    "pinyin": ""
+  },
+  {
+    "word": "different",
+    "meaning": "different",
+    "pinyin": ""
+  },
+  {
+    "word": "means",
+    "meaning": "means",
+    "pinyin": ""
+  },
+  {
+    "word": "point",
+    "meaning": "point",
+    "pinyin": ""
+  },
+  {
+    "word": "inside",
+    "meaning": "inside",
+    "pinyin": ""
+  },
+  {
+    "word": "makes",
+    "meaning": "makes",
+    "pinyin": ""
+  },
+  {
+    "word": "asked",
+    "meaning": "asked",
+    "pinyin": ""
+  },
+  {
+    "word": "somebody",
+    "meaning": "somebody",
+    "pinyin": ""
+  },
+  {
+    "word": "mine",
+    "meaning": "mine",
+    "pinyin": ""
+  },
+  {
+    "word": "making",
+    "meaning": "making",
+    "pinyin": ""
+  },
+  {
+    "word": "body",
+    "meaning": "body",
+    "pinyin": ""
+  },
+  {
+    "word": "afraid",
+    "meaning": "afraid",
+    "pinyin": ""
+  },
+  {
+    "word": "sleep",
+    "meaning": "sleep",
+    "pinyin": ""
+  },
+  {
+    "word": "chance",
+    "meaning": "chance",
+    "pinyin": ""
+  },
+  {
+    "word": "dear",
+    "meaning": "dear",
+    "pinyin": ""
+  },
+  {
+    "word": "quite",
+    "meaning": "quite",
+    "pinyin": ""
+  },
+  {
+    "word": "four",
+    "meaning": "four",
+    "pinyin": ""
+  },
+  {
+    "word": "anyway",
+    "meaning": "anyway",
+    "pinyin": ""
+  },
+  {
+    "word": "close",
+    "meaning": "close",
+    "pinyin": ""
+  },
+  {
+    "word": "ain",
+    "meaning": "ain",
+    "pinyin": ""
+  },
+  {
+    "word": "party",
+    "meaning": "party",
+    "pinyin": ""
+  },
+  {
+    "word": "fun",
+    "meaning": "fun",
+    "pinyin": ""
+  },
+  {
+    "word": "against",
+    "meaning": "against",
+    "pinyin": ""
+  },
+  {
+    "word": "word",
+    "meaning": "word",
+    "pinyin": ""
+  },
+  {
+    "word": "comes",
+    "meaning": "comes",
+    "pinyin": ""
+  },
+  {
+    "word": "important",
+    "meaning": "important",
+    "pinyin": ""
+  },
+  {
+    "word": "set",
+    "meaning": "set",
+    "pinyin": ""
+  },
+  {
+    "word": "shall",
+    "meaning": "shall",
+    "pinyin": ""
+  },
+  {
+    "word": "story",
+    "meaning": "story",
+    "pinyin": ""
+  },
+  {
+    "word": "number",
+    "meaning": "number",
+    "pinyin": ""
+  },
+  {
+    "word": "daughter",
+    "meaning": "daughter",
+    "pinyin": ""
+  },
+  {
+    "word": "least",
+    "meaning": "least",
+    "pinyin": ""
+  },
+  {
+    "word": "waiting",
+    "meaning": "waiting",
+    "pinyin": ""
+  },
+  {
+    "word": "hurt",
+    "meaning": "hurt",
+    "pinyin": ""
+  },
+  {
+    "word": "wish",
+    "meaning": "wish",
+    "pinyin": ""
+  },
+  {
+    "word": "moment",
+    "meaning": "moment",
+    "pinyin": ""
+  },
+  {
+    "word": "fight",
+    "meaning": "fight",
+    "pinyin": ""
+  },
+  {
+    "word": "week",
+    "meaning": "week",
+    "pinyin": ""
+  },
+  {
+    "word": "husband",
+    "meaning": "husband",
+    "pinyin": ""
+  },
+  {
+    "word": "girls",
+    "meaning": "girls",
+    "pinyin": ""
+  },
+  {
+    "word": "rest",
+    "meaning": "rest",
+    "pinyin": ""
+  },
+  {
+    "word": "married",
+    "meaning": "married",
+    "pinyin": ""
+  },
+  {
+    "word": "fire",
+    "meaning": "fire",
+    "pinyin": ""
+  },
+  {
+    "word": "game",
+    "meaning": "game",
+    "pinyin": ""
+  },
+  {
+    "word": "nobody",
+    "meaning": "nobody",
+    "pinyin": ""
+  },
+  {
+    "word": "mr",
+    "meaning": "mr",
+    "pinyin": ""
+  },
+  {
+    "word": "children",
+    "meaning": "children",
+    "pinyin": ""
+  },
+  {
+    "word": "side",
+    "meaning": "side",
+    "pinyin": ""
+  },
+  {
+    "word": "stand",
+    "meaning": "stand",
+    "pinyin": ""
+  },
+  {
+    "word": "read",
+    "meaning": "read",
+    "pinyin": ""
+  },
+  {
+    "word": "though",
+    "meaning": "though",
+    "pinyin": ""
+  },
+  {
+    "word": "cut",
+    "meaning": "cut",
+    "pinyin": ""
+  },
+  {
+    "word": "started",
+    "meaning": "started",
+    "pinyin": ""
+  },
+  {
+    "word": "sister",
+    "meaning": "sister",
+    "pinyin": ""
+  },
+  {
+    "word": "supposed",
+    "meaning": "supposed",
+    "pinyin": ""
+  },
+  {
+    "word": "between",
+    "meaning": "between",
+    "pinyin": ""
+  },
+  {
+    "word": "child",
+    "meaning": "child",
+    "pinyin": ""
+  },
+  {
+    "word": "goes",
+    "meaning": "goes",
+    "pinyin": ""
+  },
+  {
+    "word": "hours",
+    "meaning": "hours",
+    "pinyin": ""
+  },
+  {
+    "word": "speak",
+    "meaning": "speak",
+    "pinyin": ""
+  },
+  {
+    "word": "women",
+    "meaning": "women",
+    "pinyin": ""
+  },
+  {
+    "word": "behind",
+    "meaning": "behind",
+    "pinyin": ""
+  },
+  {
+    "word": "almost",
+    "meaning": "almost",
+    "pinyin": ""
+  },
+  {
+    "word": "truth",
+    "meaning": "truth",
+    "pinyin": ""
+  },
+  {
+    "word": "blood",
+    "meaning": "blood",
+    "pinyin": ""
+  },
+  {
+    "word": "able",
+    "meaning": "able",
+    "pinyin": ""
+  },
+  {
+    "word": "lady",
+    "meaning": "lady",
+    "pinyin": ""
+  },
+  {
+    "word": "anymore",
+    "meaning": "anymore",
+    "pinyin": ""
+  },
+  {
+    "word": "playing",
+    "meaning": "playing",
+    "pinyin": ""
+  },
+  {
+    "word": "gets",
+    "meaning": "gets",
+    "pinyin": ""
+  },
+  {
+    "word": "shot",
+    "meaning": "shot",
+    "pinyin": ""
+  },
+  {
+    "word": "reason",
+    "meaning": "reason",
+    "pinyin": ""
+  },
+  {
+    "word": "trouble",
+    "meaning": "trouble",
+    "pinyin": ""
+  },
+  {
+    "word": "break",
+    "meaning": "break",
+    "pinyin": ""
+  },
+  {
+    "word": "war",
+    "meaning": "war",
+    "pinyin": ""
+  },
+  {
+    "word": "city",
+    "meaning": "city",
+    "pinyin": ""
+  },
+  {
+    "word": "walk",
+    "meaning": "walk",
+    "pinyin": ""
+  },
+  {
+    "word": "town",
+    "meaning": "town",
+    "pinyin": ""
+  },
+  {
+    "word": "trust",
+    "meaning": "trust",
+    "pinyin": ""
+  },
+  {
+    "word": "met",
+    "meaning": "met",
+    "pinyin": ""
+  },
+  {
+    "word": "office",
+    "meaning": "office",
+    "pinyin": ""
+  },
+  {
+    "word": "question",
+    "meaning": "question",
+    "pinyin": ""
+  },
+  {
+    "word": "brought",
+    "meaning": "brought",
+    "pinyin": ""
+  },
+  {
+    "word": "yours",
+    "meaning": "yours",
+    "pinyin": ""
+  },
+  {
+    "word": "welcome",
+    "meaning": "welcome",
+    "pinyin": ""
+  },
+  {
+    "word": "high",
+    "meaning": "high",
+    "pinyin": ""
+  },
+  {
+    "word": "wow",
+    "meaning": "wow",
+    "pinyin": ""
+  },
+  {
+    "word": "couple",
+    "meaning": "couple",
+    "pinyin": ""
+  },
+  {
+    "word": "half",
+    "meaning": "half",
+    "pinyin": ""
+  },
+  {
+    "word": "died",
+    "meaning": "died",
+    "pinyin": ""
+  },
+  {
+    "word": "cool",
+    "meaning": "cool",
+    "pinyin": ""
+  },
+  {
+    "word": "free",
+    "meaning": "free",
+    "pinyin": ""
+  },
+  {
+    "word": "either",
+    "meaning": "either",
+    "pinyin": ""
+  },
+  {
+    "word": "seems",
+    "meaning": "seems",
+    "pinyin": ""
+  },
+  {
+    "word": "power",
+    "meaning": "power",
+    "pinyin": ""
+  },
+  {
+    "word": "whoa",
+    "meaning": "whoa",
+    "pinyin": ""
+  },
+  {
+    "word": "bye",
+    "meaning": "bye",
+    "pinyin": ""
+  },
+  {
+    "word": "buy",
+    "meaning": "buy",
+    "pinyin": ""
+  },
+  {
+    "word": "telling",
+    "meaning": "telling",
+    "pinyin": ""
+  },
+  {
+    "word": "honey",
+    "meaning": "honey",
+    "pinyin": ""
+  },
+  {
+    "word": "tried",
+    "meaning": "tried",
+    "pinyin": ""
+  },
+  {
+    "word": "front",
+    "meaning": "front",
+    "pinyin": ""
+  },
+  {
+    "word": "team",
+    "meaning": "team",
+    "pinyin": ""
+  },
+  {
+    "word": "answer",
+    "meaning": "answer",
+    "pinyin": ""
+  },
+  {
+    "word": "gun",
+    "meaning": "gun",
+    "pinyin": ""
+  },
+  {
+    "word": "boys",
+    "meaning": "boys",
+    "pinyin": ""
+  },
+  {
+    "word": "line",
+    "meaning": "line",
+    "pinyin": ""
+  },
+  {
+    "word": "send",
+    "meaning": "send",
+    "pinyin": ""
+  },
+  {
+    "word": "news",
+    "meaning": "news",
+    "pinyin": ""
+  },
+  {
+    "word": "stupid",
+    "meaning": "stupid",
+    "pinyin": ""
+  },
+  {
+    "word": "bed",
+    "meaning": "bed",
+    "pinyin": ""
+  },
+  {
+    "word": "hurry",
+    "meaning": "hurry",
+    "pinyin": ""
+  },
+  {
+    "word": "full",
+    "meaning": "full",
+    "pinyin": ""
+  },
+  {
+    "word": "months",
+    "meaning": "months",
+    "pinyin": ""
+  },
+  {
+    "word": "save",
+    "meaning": "save",
+    "pinyin": ""
+  },
+  {
+    "word": "sometimes",
+    "meaning": "sometimes",
+    "pinyin": ""
+  },
+  {
+    "word": "become",
+    "meaning": "become",
+    "pinyin": ""
+  },
+  {
+    "word": "along",
+    "meaning": "along",
+    "pinyin": ""
+  },
+  {
+    "word": "hate",
+    "meaning": "hate",
+    "pinyin": ""
+  },
+  {
+    "word": "food",
+    "meaning": "food",
+    "pinyin": ""
+  },
+  {
+    "word": "outside",
+    "meaning": "outside",
+    "pinyin": ""
+  },
+  {
+    "word": "light",
+    "meaning": "light",
+    "pinyin": ""
+  },
+  {
+    "word": "l",
+    "meaning": "l",
+    "pinyin": ""
+  },
+  {
+    "word": "needs",
+    "meaning": "needs",
+    "pinyin": ""
+  },
+  {
+    "word": "dog",
+    "meaning": "dog",
+    "pinyin": ""
+  },
+  {
+    "word": "country",
+    "meaning": "country",
+    "pinyin": ""
+  },
+  {
+    "word": "clear",
+    "meaning": "clear",
+    "pinyin": ""
+  },
+  {
+    "word": "order",
+    "meaning": "order",
+    "pinyin": ""
+  },
+  {
+    "word": "em",
+    "meaning": "em",
+    "pinyin": ""
+  },
+  {
+    "word": "fact",
+    "meaning": "fact",
+    "pinyin": ""
+  },
+  {
+    "word": "lord",
+    "meaning": "lord",
+    "pinyin": ""
+  },
+  {
+    "word": "captain",
+    "meaning": "captain",
+    "pinyin": ""
+  },
+  {
+    "word": "six",
+    "meaning": "six",
+    "pinyin": ""
+  },
+  {
+    "word": "hot",
+    "meaning": "hot",
+    "pinyin": ""
+  },
+  {
+    "word": "funny",
+    "meaning": "funny",
+    "pinyin": ""
+  },
+  {
+    "word": "black",
+    "meaning": "black",
+    "pinyin": ""
+  },
+  {
+    "word": "alive",
+    "meaning": "alive",
+    "pinyin": ""
+  },
+  {
+    "word": "pick",
+    "meaning": "pick",
+    "pinyin": ""
+  },
+  {
+    "word": "feeling",
+    "meaning": "feeling",
+    "pinyin": ""
+  },
+  {
+    "word": "living",
+    "meaning": "living",
+    "pinyin": ""
+  },
+  {
+    "word": "cause",
+    "meaning": "cause",
+    "pinyin": ""
+  },
+  {
+    "word": "ahead",
+    "meaning": "ahead",
+    "pinyin": ""
+  },
+  {
+    "word": "lose",
+    "meaning": "lose",
+    "pinyin": ""
+  },
+  {
+    "word": "king",
+    "meaning": "king",
+    "pinyin": ""
+  },
+  {
+    "word": "plan",
+    "meaning": "plan",
+    "pinyin": ""
+  },
+  {
+    "word": "dinner",
+    "meaning": "dinner",
+    "pinyin": ""
+  },
+  {
+    "word": "sighs",
+    "meaning": "sighs",
+    "pinyin": ""
+  },
+  {
+    "word": "sort",
+    "meaning": "sort",
+    "pinyin": ""
+  },
+  {
+    "word": "leaving",
+    "meaning": "leaving",
+    "pinyin": ""
+  },
+  {
+    "word": "shouldn",
+    "meaning": "shouldn",
+    "pinyin": ""
+  },
+  {
+    "word": "running",
+    "meaning": "running",
+    "pinyin": ""
+  },
+  {
+    "word": "boss",
+    "meaning": "boss",
+    "pinyin": ""
+  },
+  {
+    "word": "alright",
+    "meaning": "alright",
+    "pinyin": ""
+  },
+  {
+    "word": "promise",
+    "meaning": "promise",
+    "pinyin": ""
+  },
+  {
+    "word": "taken",
+    "meaning": "taken",
+    "pinyin": ""
+  },
+  {
+    "word": "safe",
+    "meaning": "safe",
+    "pinyin": ""
+  },
+  {
+    "word": "ma",
+    "meaning": "ma",
+    "pinyin": ""
+  },
+  {
+    "word": "book",
+    "meaning": "book",
+    "pinyin": ""
+  },
+  {
+    "word": "sent",
+    "meaning": "sent",
+    "pinyin": ""
+  },
+  {
+    "word": "white",
+    "meaning": "white",
+    "pinyin": ""
+  },
+  {
+    "word": "hour",
+    "meaning": "hour",
+    "pinyin": ""
+  },
+  {
+    "word": "anybody",
+    "meaning": "anybody",
+    "pinyin": ""
+  },
+  {
+    "word": "small",
+    "meaning": "small",
+    "pinyin": ""
+  },
+  {
+    "word": "perfect",
+    "meaning": "perfect",
+    "pinyin": ""
+  },
+  {
+    "word": "lives",
+    "meaning": "lives",
+    "pinyin": ""
+  },
+  {
+    "word": "special",
+    "meaning": "special",
+    "pinyin": ""
+  },
+  {
+    "word": "parents",
+    "meaning": "parents",
+    "pinyin": ""
+  },
+  {
+    "word": "s",
+    "meaning": "s",
+    "pinyin": ""
+  },
+  {
+    "word": "john",
+    "meaning": "john",
+    "pinyin": ""
+  },
+  {
+    "word": "himself",
+    "meaning": "himself",
+    "pinyin": ""
+  },
+  {
+    "word": "perhaps",
+    "meaning": "perhaps",
+    "pinyin": ""
+  },
+  {
+    "word": "sounds",
+    "meaning": "sounds",
+    "pinyin": ""
+  },
+  {
+    "word": "serious",
+    "meaning": "serious",
+    "pinyin": ""
+  },
+  {
+    "word": "sick",
+    "meaning": "sick",
+    "pinyin": ""
+  },
+  {
+    "word": "company",
+    "meaning": "company",
+    "pinyin": ""
+  },
+  {
+    "word": "ha",
+    "meaning": "ha",
+    "pinyin": ""
+  },
+  {
+    "word": "scared",
+    "meaning": "scared",
+    "pinyin": ""
+  },
+  {
+    "word": "uncle",
+    "meaning": "uncle",
+    "pinyin": ""
+  },
+  {
+    "word": "poor",
+    "meaning": "poor",
+    "pinyin": ""
+  },
+  {
+    "word": "red",
+    "meaning": "red",
+    "pinyin": ""
+  },
+  {
+    "word": "past",
+    "meaning": "past",
+    "pinyin": ""
+  },
+  {
+    "word": "earth",
+    "meaning": "earth",
+    "pinyin": ""
+  },
+  {
+    "word": "possible",
+    "meaning": "possible",
+    "pinyin": ""
+  },
+  {
+    "word": "shoot",
+    "meaning": "shoot",
+    "pinyin": ""
+  },
+  {
+    "word": "touch",
+    "meaning": "touch",
+    "pinyin": ""
+  },
+  {
+    "word": "sound",
+    "meaning": "sound",
+    "pinyin": ""
+  },
+  {
+    "word": "top",
+    "meaning": "top",
+    "pinyin": ""
+  },
+  {
+    "word": "ass",
+    "meaning": "ass",
+    "pinyin": ""
+  },
+  {
+    "word": "laughs",
+    "meaning": "laughs",
+    "pinyin": ""
+  },
+  {
+    "word": "cannot",
+    "meaning": "cannot",
+    "pinyin": ""
+  },
+  {
+    "word": "asking",
+    "meaning": "asking",
+    "pinyin": ""
+  },
+  {
+    "word": "win",
+    "meaning": "win",
+    "pinyin": ""
+  },
+  {
+    "word": "glad",
+    "meaning": "glad",
+    "pinyin": ""
+  },
+  {
+    "word": "control",
+    "meaning": "control",
+    "pinyin": ""
+  },
+  {
+    "word": "hmm",
+    "meaning": "hmm",
+    "pinyin": ""
+  },
+  {
+    "word": "human",
+    "meaning": "human",
+    "pinyin": ""
+  },
+  {
+    "word": "drive",
+    "meaning": "drive",
+    "pinyin": ""
+  },
+  {
+    "word": "hair",
+    "meaning": "hair",
+    "pinyin": ""
+  },
+  {
+    "word": "jack",
+    "meaning": "jack",
+    "pinyin": ""
+  },
+  {
+    "word": "bitch",
+    "meaning": "bitch",
+    "pinyin": ""
+  },
+  {
+    "word": "luck",
+    "meaning": "luck",
+    "pinyin": ""
+  },
+  {
+    "word": "murder",
+    "meaning": "murder",
+    "pinyin": ""
+  },
+  {
+    "word": "happens",
+    "meaning": "happens",
+    "pinyin": ""
+  },
+  {
+    "word": "air",
+    "meaning": "air",
+    "pinyin": ""
+  },
+  {
+    "word": "ten",
+    "meaning": "ten",
+    "pinyin": ""
+  },
+  {
+    "word": "daddy",
+    "meaning": "daddy",
+    "pinyin": ""
+  },
+  {
+    "word": "finally",
+    "meaning": "finally",
+    "pinyin": ""
+  },
+  {
+    "word": "chuckles",
+    "meaning": "chuckles",
+    "pinyin": ""
+  },
+  {
+    "word": "fast",
+    "meaning": "fast",
+    "pinyin": ""
+  },
+  {
+    "word": "cold",
+    "meaning": "cold",
+    "pinyin": ""
+  },
+  {
+    "word": "seem",
+    "meaning": "seem",
+    "pinyin": ""
+  },
+  {
+    "word": "laughing",
+    "meaning": "laughing",
+    "pinyin": ""
+  },
+  {
+    "word": "words",
+    "meaning": "words",
+    "pinyin": ""
+  },
+  {
+    "word": "hospital",
+    "meaning": "hospital",
+    "pinyin": ""
+  },
+  {
+    "word": "street",
+    "meaning": "street",
+    "pinyin": ""
+  },
+  {
+    "word": "hang",
+    "meaning": "hang",
+    "pinyin": ""
+  },
+  {
+    "word": "dance",
+    "meaning": "dance",
+    "pinyin": ""
+  },
+  {
+    "word": "meeting",
+    "meaning": "meeting",
+    "pinyin": ""
+  },
+  {
+    "word": "till",
+    "meaning": "till",
+    "pinyin": ""
+  },
+  {
+    "word": "others",
+    "meaning": "others",
+    "pinyin": ""
+  },
+  {
+    "word": "catch",
+    "meaning": "catch",
+    "pinyin": ""
+  },
+  {
+    "word": "follow",
+    "meaning": "follow",
+    "pinyin": ""
+  },
+  {
+    "word": "sense",
+    "meaning": "sense",
+    "pinyin": ""
+  },
+  {
+    "word": "sex",
+    "meaning": "sex",
+    "pinyin": ""
+  },
+  {
+    "word": "lie",
+    "meaning": "lie",
+    "pinyin": ""
+  },
+  {
+    "word": "evening",
+    "meaning": "evening",
+    "pinyin": ""
+  },
+  {
+    "word": "master",
+    "meaning": "master",
+    "pinyin": ""
+  },
+  {
+    "word": "known",
+    "meaning": "known",
+    "pinyin": ""
+  },
+  {
+    "word": "dream",
+    "meaning": "dream",
+    "pinyin": ""
+  },
+  {
+    "word": "write",
+    "meaning": "write",
+    "pinyin": ""
+  },
+  {
+    "word": "million",
+    "meaning": "million",
+    "pinyin": ""
+  },
+  {
+    "word": "voice",
+    "meaning": "voice",
+    "pinyin": ""
+  },
+  {
+    "word": "sweet",
+    "meaning": "sweet",
+    "pinyin": ""
+  },
+  {
+    "word": "rather",
+    "meaning": "rather",
+    "pinyin": ""
+  },
+  {
+    "word": "felt",
+    "meaning": "felt",
+    "pinyin": ""
+  },
+  {
+    "word": "sign",
+    "meaning": "sign",
+    "pinyin": ""
+  },
+  {
+    "word": "lucky",
+    "meaning": "lucky",
+    "pinyin": ""
+  },
+  {
+    "word": "somewhere",
+    "meaning": "somewhere",
+    "pinyin": ""
+  },
+  {
+    "word": "bet",
+    "meaning": "bet",
+    "pinyin": ""
+  },
+  {
+    "word": "o",
+    "meaning": "o",
+    "pinyin": ""
+  },
+  {
+    "word": "jesus",
+    "meaning": "jesus",
+    "pinyin": ""
+  },
+  {
+    "word": "longer",
+    "meaning": "longer",
+    "pinyin": ""
+  },
+  {
+    "word": "calling",
+    "meaning": "calling",
+    "pinyin": ""
+  },
+  {
+    "word": "worked",
+    "meaning": "worked",
+    "pinyin": ""
+  },
+  {
+    "word": "quiet",
+    "meaning": "quiet",
+    "pinyin": ""
+  },
+  {
+    "word": "looked",
+    "meaning": "looked",
+    "pinyin": ""
+  },
+  {
+    "word": "less",
+    "meaning": "less",
+    "pinyin": ""
+  },
+  {
+    "word": "pull",
+    "meaning": "pull",
+    "pinyin": ""
+  },
+  {
+    "word": "beat",
+    "meaning": "beat",
+    "pinyin": ""
+  },
+  {
+    "word": "careful",
+    "meaning": "careful",
+    "pinyin": ""
+  },
+  {
+    "word": "coffee",
+    "meaning": "coffee",
+    "pinyin": ""
+  },
+  {
+    "word": "return",
+    "meaning": "return",
+    "pinyin": ""
+  },
+  {
+    "word": "secret",
+    "meaning": "secret",
+    "pinyin": ""
+  },
+  {
+    "word": "weeks",
+    "meaning": "weeks",
+    "pinyin": ""
+  },
+  {
+    "word": "weren",
+    "meaning": "weren",
+    "pinyin": ""
+  },
+  {
+    "word": "date",
+    "meaning": "date",
+    "pinyin": ""
+  },
+  {
+    "word": "seeing",
+    "meaning": "seeing",
+    "pinyin": ""
+  },
+  {
+    "word": "fall",
+    "meaning": "fall",
+    "pinyin": ""
+  },
+  {
+    "word": "given",
+    "meaning": "given",
+    "pinyin": ""
+  },
+  {
+    "word": "ooh",
+    "meaning": "ooh",
+    "pinyin": ""
+  },
+  {
+    "word": "fault",
+    "meaning": "fault",
+    "pinyin": ""
+  },
+  {
+    "word": "straight",
+    "meaning": "straight",
+    "pinyin": ""
+  },
+  {
+    "word": "takes",
+    "meaning": "takes",
+    "pinyin": ""
+  },
+  {
+    "word": "song",
+    "meaning": "song",
+    "pinyin": ""
+  },
+  {
+    "word": "future",
+    "meaning": "future",
+    "pinyin": ""
+  },
+  {
+    "word": "gentlemen",
+    "meaning": "gentlemen",
+    "pinyin": ""
+  },
+  {
+    "word": "loved",
+    "meaning": "loved",
+    "pinyin": ""
+  },
+  {
+    "word": "changed",
+    "meaning": "changed",
+    "pinyin": ""
+  },
+  {
+    "word": "road",
+    "meaning": "road",
+    "pinyin": ""
+  },
+  {
+    "word": "calm",
+    "meaning": "calm",
+    "pinyin": ""
+  },
+  {
+    "word": "wonderful",
+    "meaning": "wonderful",
+    "pinyin": ""
+  },
+  {
+    "word": "mad",
+    "meaning": "mad",
+    "pinyin": ""
+  },
+  {
+    "word": "turned",
+    "meaning": "turned",
+    "pinyin": ""
+  },
+  {
+    "word": "drop",
+    "meaning": "drop",
+    "pinyin": ""
+  },
+  {
+    "word": "ladies",
+    "meaning": "ladies",
+    "pinyin": ""
+  },
+  {
+    "word": "learn",
+    "meaning": "learn",
+    "pinyin": ""
+  },
+  {
+    "word": "step",
+    "meaning": "step",
+    "pinyin": ""
+  },
+  {
+    "word": "absolutely",
+    "meaning": "absolutely",
+    "pinyin": ""
+  },
+  {
+    "word": "early",
+    "meaning": "early",
+    "pinyin": ""
+  },
+  {
+    "word": "explain",
+    "meaning": "explain",
+    "pinyin": ""
+  },
+  {
+    "word": "clean",
+    "meaning": "clean",
+    "pinyin": ""
+  },
+  {
+    "word": "piece",
+    "meaning": "piece",
+    "pinyin": ""
+  },
+  {
+    "word": "yesterday",
+    "meaning": "yesterday",
+    "pinyin": ""
+  },
+  {
+    "word": "throw",
+    "meaning": "throw",
+    "pinyin": ""
+  },
+  {
+    "word": "picture",
+    "meaning": "picture",
+    "pinyin": ""
+  },
+  {
+    "word": "land",
+    "meaning": "land",
+    "pinyin": ""
+  },
+  {
+    "word": "feet",
+    "meaning": "feet",
+    "pinyin": ""
+  },
+  {
+    "word": "wonder",
+    "meaning": "wonder",
+    "pinyin": ""
+  },
+  {
+    "word": "questions",
+    "meaning": "questions",
+    "pinyin": ""
+  },
+  {
+    "word": "speaking",
+    "meaning": "speaking",
+    "pinyin": ""
+  },
+  {
+    "word": "worth",
+    "meaning": "worth",
+    "pinyin": ""
+  },
+  {
+    "word": "darling",
+    "meaning": "darling",
+    "pinyin": ""
+  },
+  {
+    "word": "dude",
+    "meaning": "dude",
+    "pinyin": ""
+  },
+  {
+    "word": "giving",
+    "meaning": "giving",
+    "pinyin": ""
+  },
+  {
+    "word": "president",
+    "meaning": "president",
+    "pinyin": ""
+  },
+  {
+    "word": "eye",
+    "meaning": "eye",
+    "pinyin": ""
+  },
+  {
+    "word": "quick",
+    "meaning": "quick",
+    "pinyin": ""
+  },
+  {
+    "word": "moving",
+    "meaning": "moving",
+    "pinyin": ""
+  },
+  {
+    "word": "figure",
+    "meaning": "figure",
+    "pinyin": ""
+  },
+  {
+    "word": "state",
+    "meaning": "state",
+    "pinyin": ""
+  },
+  {
+    "word": "strong",
+    "meaning": "strong",
+    "pinyin": ""
+  },
+  {
+    "word": "sam",
+    "meaning": "sam",
+    "pinyin": ""
+  },
+  {
+    "word": "none",
+    "meaning": "none",
+    "pinyin": ""
+  },
+  {
+    "word": "amazing",
+    "meaning": "amazing",
+    "pinyin": ""
+  },
+  {
+    "word": "ones",
+    "meaning": "ones",
+    "pinyin": ""
+  },
+  {
+    "word": "works",
+    "meaning": "works",
+    "pinyin": ""
+  },
+  {
+    "word": "act",
+    "meaning": "act",
+    "pinyin": ""
+  },
+  {
+    "word": "needed",
+    "meaning": "needed",
+    "pinyin": ""
+  },
+  {
+    "word": "weird",
+    "meaning": "weird",
+    "pinyin": ""
+  },
+  {
+    "word": "law",
+    "meaning": "law",
+    "pinyin": ""
+  },
+  {
+    "word": "worried",
+    "meaning": "worried",
+    "pinyin": ""
+  },
+  {
+    "word": "report",
+    "meaning": "report",
+    "pinyin": ""
+  },
+  {
+    "word": "goodbye",
+    "meaning": "goodbye",
+    "pinyin": ""
+  },
+  {
+    "word": "missing",
+    "meaning": "missing",
+    "pinyin": ""
+  },
+  {
+    "word": "choice",
+    "meaning": "choice",
+    "pinyin": ""
+  },
+  {
+    "word": "happening",
+    "meaning": "happening",
+    "pinyin": ""
+  },
+  {
+    "word": "chief",
+    "meaning": "chief",
+    "pinyin": ""
+  },
+  {
+    "word": "wedding",
+    "meaning": "wedding",
+    "pinyin": ""
+  },
+  {
+    "word": "strange",
+    "meaning": "strange",
+    "pinyin": ""
+  },
+  {
+    "word": "general",
+    "meaning": "general",
+    "pinyin": ""
+  },
+  {
+    "word": "pain",
+    "meaning": "pain",
+    "pinyin": ""
+  },
+  {
+    "word": "kidding",
+    "meaning": "kidding",
+    "pinyin": ""
+  },
+  {
+    "word": "decided",
+    "meaning": "decided",
+    "pinyin": ""
+  },
+  {
+    "word": "ya",
+    "meaning": "ya",
+    "pinyin": ""
+  },
+  {
+    "word": "pass",
+    "meaning": "pass",
+    "pinyin": ""
+  },
+  {
+    "word": "tired",
+    "meaning": "tired",
+    "pinyin": ""
+  },
+  {
+    "word": "class",
+    "meaning": "class",
+    "pinyin": ""
+  },
+  {
+    "word": "officer",
+    "meaning": "officer",
+    "pinyin": ""
+  },
+  {
+    "word": "kept",
+    "meaning": "kept",
+    "pinyin": ""
+  },
+  {
+    "word": "wake",
+    "meaning": "wake",
+    "pinyin": ""
+  },
+  {
+    "word": "worse",
+    "meaning": "worse",
+    "pinyin": ""
+  },
+  {
+    "word": "busy",
+    "meaning": "busy",
+    "pinyin": ""
+  },
+  {
+    "word": "eh",
+    "meaning": "eh",
+    "pinyin": ""
+  },
+  {
+    "word": "mistake",
+    "meaning": "mistake",
+    "pinyin": ""
+  },
+  {
+    "word": "kiss",
+    "meaning": "kiss",
+    "pinyin": ""
+  },
+  {
+    "word": "court",
+    "meaning": "court",
+    "pinyin": ""
+  },
+  {
+    "word": "building",
+    "meaning": "building",
+    "pinyin": ""
+  },
+  {
+    "word": "finish",
+    "meaning": "finish",
+    "pinyin": ""
+  },
+  {
+    "word": "during",
+    "meaning": "during",
+    "pinyin": ""
+  },
+  {
+    "word": "age",
+    "meaning": "age",
+    "pinyin": ""
+  },
+  {
+    "word": "ship",
+    "meaning": "ship",
+    "pinyin": ""
+  },
+  {
+    "word": "caught",
+    "meaning": "caught",
+    "pinyin": ""
+  },
+  {
+    "word": "marry",
+    "meaning": "marry",
+    "pinyin": ""
+  },
+  {
+    "word": "meant",
+    "meaning": "meant",
+    "pinyin": ""
+  },
+  {
+    "word": "sell",
+    "meaning": "sell",
+    "pinyin": ""
+  },
+  {
+    "word": "dark",
+    "meaning": "dark",
+    "pinyin": ""
+  },
+  {
+    "word": "watching",
+    "meaning": "watching",
+    "pinyin": ""
+  },
+  {
+    "word": "system",
+    "meaning": "system",
+    "pinyin": ""
+  },
+  {
+    "word": "suppose",
+    "meaning": "suppose",
+    "pinyin": ""
+  },
+  {
+    "word": "evidence",
+    "meaning": "evidence",
+    "pinyin": ""
+  },
+  {
+    "word": "movie",
+    "meaning": "movie",
+    "pinyin": ""
+  },
+  {
+    "word": "ride",
+    "meaning": "ride",
+    "pinyin": ""
+  },
+  {
+    "word": "t",
+    "meaning": "t",
+    "pinyin": ""
+  },
+  {
+    "word": "completely",
+    "meaning": "completely",
+    "pinyin": ""
+  },
+  {
+    "word": "mouth",
+    "meaning": "mouth",
+    "pinyin": ""
+  },
+  {
+    "word": "totally",
+    "meaning": "totally",
+    "pinyin": ""
+  },
+  {
+    "word": "birthday",
+    "meaning": "birthday",
+    "pinyin": ""
+  },
+  {
+    "word": "tv",
+    "meaning": "tv",
+    "pinyin": ""
+  },
+  {
+    "word": "forgive",
+    "meaning": "forgive",
+    "pinyin": ""
+  },
+  {
+    "word": "born",
+    "meaning": "born",
+    "pinyin": ""
+  },
+  {
+    "word": "imagine",
+    "meaning": "imagine",
+    "pinyin": ""
+  },
+  {
+    "word": "information",
+    "meaning": "information",
+    "pinyin": ""
+  },
+  {
+    "word": "instead",
+    "meaning": "instead",
+    "pinyin": ""
+  },
+  {
+    "word": "definitely",
+    "meaning": "definitely",
+    "pinyin": ""
+  },
+  {
+    "word": "security",
+    "meaning": "security",
+    "pinyin": ""
+  },
+  {
+    "word": "certainly",
+    "meaning": "certainly",
+    "pinyin": ""
+  },
+  {
+    "word": "film",
+    "meaning": "film",
+    "pinyin": ""
+  },
+  {
+    "word": "month",
+    "meaning": "month",
+    "pinyin": ""
+  },
+  {
+    "word": "lying",
+    "meaning": "lying",
+    "pinyin": ""
+  },
+  {
+    "word": "unless",
+    "meaning": "unless",
+    "pinyin": ""
+  },
+  {
+    "word": "train",
+    "meaning": "train",
+    "pinyin": ""
+  },
+  {
+    "word": "seven",
+    "meaning": "seven",
+    "pinyin": ""
+  },
+  {
+    "word": "wear",
+    "meaning": "wear",
+    "pinyin": ""
+  },
+  {
+    "word": "clothes",
+    "meaning": "clothes",
+    "pinyin": ""
+  },
+  {
+    "word": "michael",
+    "meaning": "michael",
+    "pinyin": ""
+  },
+  {
+    "word": "hotel",
+    "meaning": "hotel",
+    "pinyin": ""
+  },
+  {
+    "word": "christmas",
+    "meaning": "christmas",
+    "pinyin": ""
+  },
+  {
+    "word": "attack",
+    "meaning": "attack",
+    "pinyin": ""
+  },
+  {
+    "word": "hasn",
+    "meaning": "hasn",
+    "pinyin": ""
+  },
+  {
+    "word": "round",
+    "meaning": "round",
+    "pinyin": ""
+  },
+  {
+    "word": "expect",
+    "meaning": "expect",
+    "pinyin": ""
+  },
+  {
+    "word": "sing",
+    "meaning": "sing",
+    "pinyin": ""
+  },
+  {
+    "word": "terrible",
+    "meaning": "terrible",
+    "pinyin": ""
+  },
+  {
+    "word": "george",
+    "meaning": "george",
+    "pinyin": ""
+  },
+  {
+    "word": "bag",
+    "meaning": "bag",
+    "pinyin": ""
+  },
+  {
+    "word": "history",
+    "meaning": "history",
+    "pinyin": ""
+  },
+  {
+    "word": "blue",
+    "meaning": "blue",
+    "pinyin": ""
+  },
+  {
+    "word": "near",
+    "meaning": "near",
+    "pinyin": ""
+  },
+  {
+    "word": "broke",
+    "meaning": "broke",
+    "pinyin": ""
+  },
+  {
+    "word": "station",
+    "meaning": "station",
+    "pinyin": ""
+  },
+  {
+    "word": "seriously",
+    "meaning": "seriously",
+    "pinyin": ""
+  },
+  {
+    "word": "forever",
+    "meaning": "forever",
+    "pinyin": ""
+  },
+  {
+    "word": "david",
+    "meaning": "david",
+    "pinyin": ""
+  },
+  {
+    "word": "frank",
+    "meaning": "frank",
+    "pinyin": ""
+  },
+  {
+    "word": "except",
+    "meaning": "except",
+    "pinyin": ""
+  },
+  {
+    "word": "thinks",
+    "meaning": "thinks",
+    "pinyin": ""
+  },
+  {
+    "word": "message",
+    "meaning": "message",
+    "pinyin": ""
+  },
+  {
+    "word": "entire",
+    "meaning": "entire",
+    "pinyin": ""
+  },
+  {
+    "word": "joe",
+    "meaning": "joe",
+    "pinyin": ""
+  },
+  {
+    "word": "table",
+    "meaning": "table",
+    "pinyin": ""
+  },
+  {
+    "word": "talked",
+    "meaning": "talked",
+    "pinyin": ""
+  },
+  {
+    "word": "across",
+    "meaning": "across",
+    "pinyin": ""
+  },
+  {
+    "word": "rock",
+    "meaning": "rock",
+    "pinyin": ""
+  },
+  {
+    "word": "lovely",
+    "meaning": "lovely",
+    "pinyin": ""
+  },
+  {
+    "word": "handle",
+    "meaning": "handle",
+    "pinyin": ""
+  },
+  {
+    "word": "middle",
+    "meaning": "middle",
+    "pinyin": ""
+  },
+  {
+    "word": "buddy",
+    "meaning": "buddy",
+    "pinyin": ""
+  },
+  {
+    "word": "paid",
+    "meaning": "paid",
+    "pinyin": ""
+  },
+  {
+    "word": "protect",
+    "meaning": "protect",
+    "pinyin": ""
+  },
+  {
+    "word": "using",
+    "meaning": "using",
+    "pinyin": ""
+  },
+  {
+    "word": "floor",
+    "meaning": "floor",
+    "pinyin": ""
+  },
+  {
+    "word": "ran",
+    "meaning": "ran",
+    "pinyin": ""
+  },
+  {
+    "word": "swear",
+    "meaning": "swear",
+    "pinyin": ""
+  },
+  {
+    "word": "spend",
+    "meaning": "spend",
+    "pinyin": ""
+  },
+  {
+    "word": "situation",
+    "meaning": "situation",
+    "pinyin": ""
+  },
+  {
+    "word": "ring",
+    "meaning": "ring",
+    "pinyin": ""
+  },
+  {
+    "word": "anywhere",
+    "meaning": "anywhere",
+    "pinyin": ""
+  },
+  {
+    "word": "dangerous",
+    "meaning": "dangerous",
+    "pinyin": ""
+  },
+  {
+    "word": "bill",
+    "meaning": "bill",
+    "pinyin": ""
+  },
+  {
+    "word": "york",
+    "meaning": "york",
+    "pinyin": ""
+  },
+  {
+    "word": "army",
+    "meaning": "army",
+    "pinyin": ""
+  },
+  {
+    "word": "lead",
+    "meaning": "lead",
+    "pinyin": ""
+  },
+  {
+    "word": "bought",
+    "meaning": "bought",
+    "pinyin": ""
+  },
+  {
+    "word": "finished",
+    "meaning": "finished",
+    "pinyin": ""
+  },
+  {
+    "word": "fair",
+    "meaning": "fair",
+    "pinyin": ""
+  },
+  {
+    "word": "sun",
+    "meaning": "sun",
+    "pinyin": ""
+  },
+  {
+    "word": "letter",
+    "meaning": "letter",
+    "pinyin": ""
+  },
+  {
+    "word": "fool",
+    "meaning": "fool",
+    "pinyin": ""
+  },
+  {
+    "word": "attention",
+    "meaning": "attention",
+    "pinyin": ""
+  },
+  {
+    "word": "club",
+    "meaning": "club",
+    "pinyin": ""
+  },
+  {
+    "word": "simple",
+    "meaning": "simple",
+    "pinyin": ""
+  },
+  {
+    "word": "interesting",
+    "meaning": "interesting",
+    "pinyin": ""
+  },
+  {
+    "word": "space",
+    "meaning": "space",
+    "pinyin": ""
+  },
+  {
+    "word": "test",
+    "meaning": "test",
+    "pinyin": ""
+  },
+  {
+    "word": "box",
+    "meaning": "box",
+    "pinyin": ""
+  },
+  {
+    "word": "group",
+    "meaning": "group",
+    "pinyin": ""
+  },
+  {
+    "word": "single",
+    "meaning": "single",
+    "pinyin": ""
+  },
+  {
+    "word": "sitting",
+    "meaning": "sitting",
+    "pinyin": ""
+  },
+  {
+    "word": "marriage",
+    "meaning": "marriage",
+    "pinyin": ""
+  },
+  {
+    "word": "join",
+    "meaning": "join",
+    "pinyin": ""
+  },
+  {
+    "word": "fear",
+    "meaning": "fear",
+    "pinyin": ""
+  },
+  {
+    "word": "d",
+    "meaning": "d",
+    "pinyin": ""
+  },
+  {
+    "word": "peace",
+    "meaning": "peace",
+    "pinyin": ""
+  },
+  {
+    "word": "forgot",
+    "meaning": "forgot",
+    "pinyin": ""
+  },
+  {
+    "word": "force",
+    "meaning": "force",
+    "pinyin": ""
+  },
+  {
+    "word": "short",
+    "meaning": "short",
+    "pinyin": ""
+  },
+  {
+    "word": "normal",
+    "meaning": "normal",
+    "pinyin": ""
+  },
+  {
+    "word": "charlie",
+    "meaning": "charlie",
+    "pinyin": ""
+  },
+  {
+    "word": "present",
+    "meaning": "present",
+    "pinyin": ""
+  },
+  {
+    "word": "enjoy",
+    "meaning": "enjoy",
+    "pinyin": ""
+  },
+  {
+    "word": "mike",
+    "meaning": "mike",
+    "pinyin": ""
+  },
+  {
+    "word": "crime",
+    "meaning": "crime",
+    "pinyin": ""
+  },
+  {
+    "word": "horse",
+    "meaning": "horse",
+    "pinyin": ""
+  },
+  {
+    "word": "ground",
+    "meaning": "ground",
+    "pinyin": ""
+  },
+  {
+    "word": "american",
+    "meaning": "american",
+    "pinyin": ""
+  },
+  {
+    "word": "count",
+    "meaning": "count",
+    "pinyin": ""
+  },
+  {
+    "word": "area",
+    "meaning": "area",
+    "pinyin": ""
+  },
+  {
+    "word": "charge",
+    "meaning": "charge",
+    "pinyin": ""
+  },
+  {
+    "word": "honor",
+    "meaning": "honor",
+    "pinyin": ""
+  },
+  {
+    "word": "lunch",
+    "meaning": "lunch",
+    "pinyin": ""
+  },
+  {
+    "word": "miles",
+    "meaning": "miles",
+    "pinyin": ""
+  },
+  {
+    "word": "radio",
+    "meaning": "radio",
+    "pinyin": ""
+  },
+  {
+    "word": "idiot",
+    "meaning": "idiot",
+    "pinyin": ""
+  },
+  {
+    "word": "ball",
+    "meaning": "ball",
+    "pinyin": ""
+  },
+  {
+    "word": "surprise",
+    "meaning": "surprise",
+    "pinyin": ""
+  },
+  {
+    "word": "paper",
+    "meaning": "paper",
+    "pinyin": ""
+  },
+  {
+    "word": "key",
+    "meaning": "key",
+    "pinyin": ""
+  },
+  {
+    "word": "boat",
+    "meaning": "boat",
+    "pinyin": ""
+  },
+  {
+    "word": "quickly",
+    "meaning": "quickly",
+    "pinyin": ""
+  },
+  {
+    "word": "gold",
+    "meaning": "gold",
+    "pinyin": ""
+  },
+  {
+    "word": "bar",
+    "meaning": "bar",
+    "pinyin": ""
+  },
+  {
+    "word": "fish",
+    "meaning": "fish",
+    "pinyin": ""
+  },
+  {
+    "word": "mark",
+    "meaning": "mark",
+    "pinyin": ""
+  },
+  {
+    "word": "tom",
+    "meaning": "tom",
+    "pinyin": ""
+  },
+  {
+    "word": "wearing",
+    "meaning": "wearing",
+    "pinyin": ""
+  },
+  {
+    "word": "crying",
+    "meaning": "crying",
+    "pinyin": ""
+  },
+  {
+    "word": "accident",
+    "meaning": "accident",
+    "pinyin": ""
+  },
+  {
+    "word": "government",
+    "meaning": "government",
+    "pinyin": ""
+  },
+  {
+    "word": "eight",
+    "meaning": "eight",
+    "pinyin": ""
+  },
+  {
+    "word": "fell",
+    "meaning": "fell",
+    "pinyin": ""
+  },
+  {
+    "word": "cover",
+    "meaning": "cover",
+    "pinyin": ""
+  },
+  {
+    "word": "certain",
+    "meaning": "certain",
+    "pinyin": ""
+  },
+  {
+    "word": "interested",
+    "meaning": "interested",
+    "pinyin": ""
+  },
+  {
+    "word": "deep",
+    "meaning": "deep",
+    "pinyin": ""
+  },
+  {
+    "word": "star",
+    "meaning": "star",
+    "pinyin": ""
+  },
+  {
+    "word": "sea",
+    "meaning": "sea",
+    "pinyin": ""
+  },
+  {
+    "word": "agree",
+    "meaning": "agree",
+    "pinyin": ""
+  },
+  {
+    "word": "problems",
+    "meaning": "problems",
+    "pinyin": ""
+  },
+  {
+    "word": "detective",
+    "meaning": "detective",
+    "pinyin": ""
+  },
+  {
+    "word": "prison",
+    "meaning": "prison",
+    "pinyin": ""
+  },
+  {
+    "word": "major",
+    "meaning": "major",
+    "pinyin": ""
+  },
+  {
+    "word": "stick",
+    "meaning": "stick",
+    "pinyin": ""
+  },
+  {
+    "word": "offer",
+    "meaning": "offer",
+    "pinyin": ""
+  },
+  {
+    "word": "difficult",
+    "meaning": "difficult",
+    "pinyin": ""
+  },
+  {
+    "word": "smart",
+    "meaning": "smart",
+    "pinyin": ""
+  },
+  {
+    "word": "personal",
+    "meaning": "personal",
+    "pinyin": ""
+  },
+  {
+    "word": "record",
+    "meaning": "record",
+    "pinyin": ""
+  },
+  {
+    "word": "stopped",
+    "meaning": "stopped",
+    "pinyin": ""
+  },
+  {
+    "word": "hide",
+    "meaning": "hide",
+    "pinyin": ""
+  },
+  {
+    "word": "whether",
+    "meaning": "whether",
+    "pinyin": ""
+  },
+  {
+    "word": "bank",
+    "meaning": "bank",
+    "pinyin": ""
+  },
+  {
+    "word": "trip",
+    "meaning": "trip",
+    "pinyin": ""
+  },
+  {
+    "word": "relax",
+    "meaning": "relax",
+    "pinyin": ""
+  },
+  {
+    "word": "america",
+    "meaning": "america",
+    "pinyin": ""
+  },
+  {
+    "word": "public",
+    "meaning": "public",
+    "pinyin": ""
+  },
+  {
+    "word": "list",
+    "meaning": "list",
+    "pinyin": ""
+  },
+  {
+    "word": "afternoon",
+    "meaning": "afternoon",
+    "pinyin": ""
+  },
+  {
+    "word": "brain",
+    "meaning": "brain",
+    "pinyin": ""
+  },
+  {
+    "word": "fix",
+    "meaning": "fix",
+    "pinyin": ""
+  },
+  {
+    "word": "bastard",
+    "meaning": "bastard",
+    "pinyin": ""
+  },
+  {
+    "word": "proud",
+    "meaning": "proud",
+    "pinyin": ""
+  },
+  {
+    "word": "tea",
+    "meaning": "tea",
+    "pinyin": ""
+  },
+  {
+    "word": "service",
+    "meaning": "service",
+    "pinyin": ""
+  },
+  {
+    "word": "screaming",
+    "meaning": "screaming",
+    "pinyin": ""
+  },
+  {
+    "word": "forward",
+    "meaning": "forward",
+    "pinyin": ""
+  },
+  {
+    "word": "angry",
+    "meaning": "angry",
+    "pinyin": ""
+  },
+  {
+    "word": "park",
+    "meaning": "park",
+    "pinyin": ""
+  },
+  {
+    "word": "soul",
+    "meaning": "soul",
+    "pinyin": ""
+  },
+  {
+    "word": "fighting",
+    "meaning": "fighting",
+    "pinyin": ""
+  },
+  {
+    "word": "peter",
+    "meaning": "peter",
+    "pinyin": ""
+  },
+  {
+    "word": "rich",
+    "meaning": "rich",
+    "pinyin": ""
+  },
+  {
+    "word": "agent",
+    "meaning": "agent",
+    "pinyin": ""
+  },
+  {
+    "word": "blow",
+    "meaning": "blow",
+    "pinyin": ""
+  },
+  {
+    "word": "paul",
+    "meaning": "paul",
+    "pinyin": ""
+  },
+  {
+    "word": "dress",
+    "meaning": "dress",
+    "pinyin": ""
+  },
+  {
+    "word": "mary",
+    "meaning": "mary",
+    "pinyin": ""
+  },
+  {
+    "word": "missed",
+    "meaning": "missed",
+    "pinyin": ""
+  },
+  {
+    "word": "scene",
+    "meaning": "scene",
+    "pinyin": ""
+  },
+  {
+    "word": "killing",
+    "meaning": "killing",
+    "pinyin": ""
+  },
+  {
+    "word": "standing",
+    "meaning": "standing",
+    "pinyin": ""
+  },
+  {
+    "word": "saved",
+    "meaning": "saved",
+    "pinyin": ""
+  },
+  {
+    "word": "mm",
+    "meaning": "mm",
+    "pinyin": ""
+  },
+  {
+    "word": "respect",
+    "meaning": "respect",
+    "pinyin": ""
+  },
+  {
+    "word": "killer",
+    "meaning": "killer",
+    "pinyin": ""
+  },
+  {
+    "word": "ice",
+    "meaning": "ice",
+    "pinyin": ""
+  },
+  {
+    "word": "mess",
+    "meaning": "mess",
+    "pinyin": ""
+  },
+  {
+    "word": "tough",
+    "meaning": "tough",
+    "pinyin": ""
+  },
+  {
+    "word": "feels",
+    "meaning": "feels",
+    "pinyin": ""
+  },
+  {
+    "word": "church",
+    "meaning": "church",
+    "pinyin": ""
+  },
+  {
+    "word": "sad",
+    "meaning": "sad",
+    "pinyin": ""
+  },
+  {
+    "word": "cell",
+    "meaning": "cell",
+    "pinyin": ""
+  },
+  {
+    "word": "drunk",
+    "meaning": "drunk",
+    "pinyin": ""
+  },
+  {
+    "word": "share",
+    "meaning": "share",
+    "pinyin": ""
+  },
+  {
+    "word": "camera",
+    "meaning": "camera",
+    "pinyin": ""
+  },
+  {
+    "word": "mm-hmm",
+    "meaning": "mm-hmm",
+    "pinyin": ""
+  },
+  {
+    "word": "within",
+    "meaning": "within",
+    "pinyin": ""
+  },
+  {
+    "word": "card",
+    "meaning": "card",
+    "pinyin": ""
+  },
+  {
+    "word": "fly",
+    "meaning": "fly",
+    "pinyin": ""
+  },
+  {
+    "word": "ben",
+    "meaning": "ben",
+    "pinyin": ""
+  },
+  {
+    "word": "girlfriend",
+    "meaning": "girlfriend",
+    "pinyin": ""
+  },
+  {
+    "word": "laugh",
+    "meaning": "laugh",
+    "pinyin": ""
+  },
+  {
+    "word": "smell",
+    "meaning": "smell",
+    "pinyin": ""
+  },
+  {
+    "word": "broken",
+    "meaning": "broken",
+    "pinyin": ""
+  },
+  {
+    "word": "mum",
+    "meaning": "mum",
+    "pinyin": ""
+  },
+  {
+    "word": "honest",
+    "meaning": "honest",
+    "pinyin": ""
+  },
+  {
+    "word": "often",
+    "meaning": "often",
+    "pinyin": ""
+  },
+  {
+    "word": "starting",
+    "meaning": "starting",
+    "pinyin": ""
+  },
+  {
+    "word": "calls",
+    "meaning": "calls",
+    "pinyin": ""
+  },
+  {
+    "word": "y",
+    "meaning": "y",
+    "pinyin": ""
+  },
+  {
+    "word": "spent",
+    "meaning": "spent",
+    "pinyin": ""
+  },
+  {
+    "word": "third",
+    "meaning": "third",
+    "pinyin": ""
+  },
+  {
+    "word": "english",
+    "meaning": "english",
+    "pinyin": ""
+  },
+  {
+    "word": "visit",
+    "meaning": "visit",
+    "pinyin": ""
+  },
+  {
+    "word": "mama",
+    "meaning": "mama",
+    "pinyin": ""
+  },
+  {
+    "word": "judge",
+    "meaning": "judge",
+    "pinyin": ""
+  },
+  {
+    "word": "window",
+    "meaning": "window",
+    "pinyin": ""
+  },
+  {
+    "word": "hungry",
+    "meaning": "hungry",
+    "pinyin": ""
+  },
+  {
+    "word": "dare",
+    "meaning": "dare",
+    "pinyin": ""
+  },
+  {
+    "word": "relationship",
+    "meaning": "relationship",
+    "pinyin": ""
+  },
+  {
+    "word": "moved",
+    "meaning": "moved",
+    "pinyin": ""
+  },
+  {
+    "word": "prove",
+    "meaning": "prove",
+    "pinyin": ""
+  },
+  {
+    "word": "private",
+    "meaning": "private",
+    "pinyin": ""
+  },
+  {
+    "word": "wall",
+    "meaning": "wall",
+    "pinyin": ""
+  },
+  {
+    "word": "seat",
+    "meaning": "seat",
+    "pinyin": ""
+  },
+  {
+    "word": "i-i",
+    "meaning": "i-i",
+    "pinyin": ""
+  },
+  {
+    "word": "position",
+    "meaning": "position",
+    "pinyin": ""
+  },
+  {
+    "word": "lieutenant",
+    "meaning": "lieutenant",
+    "pinyin": ""
+  },
+  {
+    "word": "realize",
+    "meaning": "realize",
+    "pinyin": ""
+  },
+  {
+    "word": "lt",
+    "meaning": "lt",
+    "pinyin": ""
+  },
+  {
+    "word": "especially",
+    "meaning": "especially",
+    "pinyin": ""
+  },
+  {
+    "word": "machine",
+    "meaning": "machine",
+    "pinyin": ""
+  },
+  {
+    "word": "walking",
+    "meaning": "walking",
+    "pinyin": ""
+  },
+  {
+    "word": "art",
+    "meaning": "art",
+    "pinyin": ""
+  },
+  {
+    "word": "pleasure",
+    "meaning": "pleasure",
+    "pinyin": ""
+  },
+  {
+    "word": "bloody",
+    "meaning": "bloody",
+    "pinyin": ""
+  },
+  {
+    "word": "college",
+    "meaning": "college",
+    "pinyin": ""
+  },
+  {
+    "word": "french",
+    "meaning": "french",
+    "pinyin": ""
+  },
+  {
+    "word": "involved",
+    "meaning": "involved",
+    "pinyin": ""
+  },
+  {
+    "word": "cry",
+    "meaning": "cry",
+    "pinyin": ""
+  },
+  {
+    "word": "became",
+    "meaning": "became",
+    "pinyin": ""
+  },
+  {
+    "word": "lived",
+    "meaning": "lived",
+    "pinyin": ""
+  },
+  {
+    "word": "impossible",
+    "meaning": "impossible",
+    "pinyin": ""
+  },
+  {
+    "word": "obviously",
+    "meaning": "obviously",
+    "pinyin": ""
+  },
+  {
+    "word": "neither",
+    "meaning": "neither",
+    "pinyin": ""
+  },
+  {
+    "word": "accept",
+    "meaning": "accept",
+    "pinyin": ""
+  },
+  {
+    "word": "boyfriend",
+    "meaning": "boyfriend",
+    "pinyin": ""
+  }
+]

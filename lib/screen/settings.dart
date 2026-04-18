@@ -23,17 +23,19 @@ class SettingsScreen extends ConsumerWidget {
       data: (v) => v,
       orElse: () => 10,
     );
-    final reminderSettings = ref.watch(reminderSettingsProvider).maybeWhen(
-      data: (value) => value,
-      orElse: () => const ReminderSettings(
-        enabled: false,
-        time: TimeOfDay(hour: 20, minute: 0),
-      ),
-    );
-    final streak = ref.watch(streakCounterProvider).maybeWhen(
-      data: (value) => value,
-      orElse: () => 0,
-    );
+    final reminderSettings = ref
+        .watch(reminderSettingsProvider)
+        .maybeWhen(
+          data: (value) => value,
+          orElse:
+              () => const ReminderSettings(
+                enabled: false,
+                time: TimeOfDay(hour: 20, minute: 0),
+              ),
+        );
+    final streak = ref
+        .watch(streakCounterProvider)
+        .maybeWhen(data: (value) => value, orElse: () => 0);
 
     return Scaffold(
       backgroundColor: _kBg,
@@ -57,8 +59,11 @@ class SettingsScreen extends ConsumerWidget {
                       color: Colors.black,
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: const Icon(Icons.settings_rounded,
-                        color: _kAccentYellow, size: 26),
+                    child: const Icon(
+                      Icons.settings_rounded,
+                      color: _kAccentYellow,
+                      size: 26,
+                    ),
                   ),
                   const SizedBox(width: 12),
                   const Column(
@@ -99,7 +104,9 @@ class SettingsScreen extends ConsumerWidget {
                           children: [
                             Container(
                               padding: const EdgeInsets.symmetric(
-                                  horizontal: 16, vertical: 8),
+                                horizontal: 16,
+                                vertical: 8,
+                              ),
                               decoration: BoxDecoration(
                                 color: Colors.black,
                                 borderRadius: BorderRadius.circular(10),
@@ -118,7 +125,9 @@ class SettingsScreen extends ConsumerWidget {
                               child: Text(
                                 'cards per day\nConsistency beats volume.',
                                 style: TextStyle(
-                                    fontSize: 13, color: Colors.black54),
+                                  fontSize: 13,
+                                  color: Colors.black54,
+                                ),
                               ),
                             ),
                           ],
@@ -131,7 +140,8 @@ class SettingsScreen extends ConsumerWidget {
                             inactiveTrackColor: Colors.black26,
                             thumbColor: Colors.black,
                             thumbShape: const RoundSliderThumbShape(
-                                enabledThumbRadius: 12),
+                              enabledThumbRadius: 12,
+                            ),
                             overlayColor: Colors.black12,
                           ),
                           child: Slider(
@@ -140,8 +150,9 @@ class SettingsScreen extends ConsumerWidget {
                             max: 100,
                             divisions: 19,
                             label: '$dailyLimit',
-                            onChanged: (value) =>
-                                setDailyFlashcardLimit(ref, value.round()),
+                            onChanged:
+                                (value) =>
+                                    setDailyFlashcardLimit(ref, value.round()),
                           ),
                         ),
                         Row(
@@ -167,14 +178,15 @@ class SettingsScreen extends ConsumerWidget {
                     ),
                     child: Row(
                       children: [
-                        const Icon(Icons.tips_and_updates_rounded,
-                            size: 22),
+                        const Icon(Icons.tips_and_updates_rounded, size: 22),
                         const SizedBox(width: 10),
                         const Expanded(
                           child: Text(
                             'Default is 10 cards/day. Science shows even 5–10 minutes daily beats cramming.',
                             style: TextStyle(
-                                fontWeight: FontWeight.w600, fontSize: 13),
+                              fontWeight: FontWeight.w600,
+                              fontSize: 13,
+                            ),
                           ),
                         ),
                       ],
@@ -264,14 +276,16 @@ class SettingsScreen extends ConsumerWidget {
                     icon: Icons.bookmark_rounded,
                     title: 'Saved Articles',
                     child: savedNewsAsync.when(
-                      loading: () => const Padding(
-                        padding: EdgeInsets.symmetric(vertical: 12),
-                        child: LinearProgressIndicator(color: Colors.black),
-                      ),
-                      error: (_, __) => const Text(
-                        'Unable to load saved articles.',
-                        style: TextStyle(color: Colors.black54),
-                      ),
+                      loading:
+                          () => const Padding(
+                            padding: EdgeInsets.symmetric(vertical: 12),
+                            child: LinearProgressIndicator(color: Colors.black),
+                          ),
+                      error:
+                          (_, __) => const Text(
+                            'Unable to load saved articles.',
+                            style: TextStyle(color: Colors.black54),
+                          ),
                       data: (articles) {
                         if (articles.isEmpty) {
                           return Container(
@@ -280,20 +294,26 @@ class SettingsScreen extends ConsumerWidget {
                               color: const Color(0xFFEEEEE8),
                               borderRadius: BorderRadius.circular(10),
                               border: Border.all(
-                                  color: Colors.black26, width: 1.5),
+                                color: Colors.black26,
+                                width: 1.5,
+                              ),
                             ),
                             child: const Row(
                               children: [
-                                Icon(Icons.info_outline_rounded,
-                                    size: 18, color: Colors.black38),
+                                Icon(
+                                  Icons.info_outline_rounded,
+                                  size: 18,
+                                  color: Colors.black38,
+                                ),
                                 SizedBox(width: 8),
                                 Expanded(
                                   child: Text(
                                     'No saved articles yet.\nSave them from the News tab.',
                                     style: TextStyle(
-                                        color: Colors.black54,
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w600),
+                                      color: Colors.black54,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w600,
+                                    ),
                                   ),
                                 ),
                               ],
@@ -358,7 +378,8 @@ class _SectionCard extends StatelessWidget {
             decoration: BoxDecoration(
               color: accentColor,
               borderRadius: const BorderRadius.vertical(
-                  top: Radius.circular(11)),
+                top: Radius.circular(11),
+              ),
               border: const Border(bottom: _kBorder),
             ),
             child: Row(
@@ -368,15 +389,14 @@ class _SectionCard extends StatelessWidget {
                 Text(
                   title,
                   style: const TextStyle(
-                      fontWeight: FontWeight.w900, fontSize: 15),
+                    fontWeight: FontWeight.w900,
+                    fontSize: 15,
+                  ),
                 ),
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(14),
-            child: child,
-          ),
+          Padding(padding: const EdgeInsets.all(14), child: child),
         ],
       ),
     );
@@ -397,10 +417,11 @@ class _SavedArticleTile extends StatelessWidget {
       onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (_) => NewsDetailScreen(
-              languageCode: article.languageCode,
-              article: article,
-            ),
+            builder:
+                (_) => NewsDetailScreen(
+                  languageCode: article.languageCode,
+                  article: article,
+                ),
           ),
         );
       },
@@ -423,12 +444,16 @@ class _SavedArticleTile extends StatelessWidget {
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
-                        fontWeight: FontWeight.w700, fontSize: 13),
+                      fontWeight: FontWeight.w700,
+                      fontSize: 13,
+                    ),
                   ),
                   const SizedBox(height: 4),
                   Container(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 6, vertical: 2),
+                      horizontal: 6,
+                      vertical: 2,
+                    ),
                     decoration: BoxDecoration(
                       color: Colors.black,
                       borderRadius: BorderRadius.circular(4),
@@ -436,9 +461,10 @@ class _SavedArticleTile extends StatelessWidget {
                     child: Text(
                       article.languageCode.toUpperCase(),
                       style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 10,
-                          fontWeight: FontWeight.w700),
+                        color: Colors.white,
+                        fontSize: 10,
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
                   ),
                 ],
@@ -477,8 +503,10 @@ class _Tag extends StatelessWidget {
         color: Colors.black12,
         borderRadius: BorderRadius.circular(6),
       ),
-      child: Text(label,
-          style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600)),
+      child: Text(
+        label,
+        style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
+      ),
     );
   }
 }
@@ -500,12 +528,11 @@ class _NeuButton extends StatelessWidget {
           color: _kAccent,
           borderRadius: BorderRadius.circular(10),
           border: Border.all(color: Colors.black, width: 2),
-          boxShadow: const [BoxShadow(offset: Offset(2, 2), color: Colors.black)],
+          boxShadow: const [
+            BoxShadow(offset: Offset(2, 2), color: Colors.black),
+          ],
         ),
-        child: Text(
-          label,
-          style: const TextStyle(fontWeight: FontWeight.w700),
-        ),
+        child: Text(label, style: const TextStyle(fontWeight: FontWeight.w700)),
       ),
     );
   }

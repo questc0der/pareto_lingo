@@ -69,13 +69,21 @@ Future<void> setNativeLanguage(WidgetRef ref, String code) async {
   ref.read(selectedNativeLanguageProvider.notifier).state = resolved;
 }
 
+String getLocalDisplayName(WidgetRef ref) {
+  return (ref.read(localAppSettingsBoxProvider).get(_displayNameKey) ?? '').trim();
+}
+
+Future<void> setLocalDisplayName(WidgetRef ref, String name) async {
+  final normalized = name.trim();
+  await ref.read(localAppSettingsBoxProvider).put(_displayNameKey, normalized);
+}
+
 final authStateProvider = StreamProvider<AppUser?>((ref) async* {
   yield const AppUser(id: 'local-user', email: 'local@pareto.lingo');
 });
 
 final currentUserProfileProvider = FutureProvider<UserProfile>((ref) async {
   final languageCode = await ref.read(userLearningLanguageProvider.future);
-  final name =
-      ref.read(localAppSettingsBoxProvider).get(_displayNameKey) ?? 'Learner';
+  final name = (ref.read(localAppSettingsBoxProvider).get(_displayNameKey) ?? '').trim();
   return UserProfile(displayName: name, learningLanguage: languageCode);
 });

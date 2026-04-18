@@ -236,6 +236,9 @@ app.get(
         targetLanguage,
         cacheDir: config.cacheDir,
         translationConcurrency: config.translationConcurrency,
+        supabaseUrl: config.supabaseUrl,
+        supabaseAnonKey: config.supabaseAnonKey,
+        supabaseTable: config.supabaseFlashcardsTable,
       });
 
       res.json({

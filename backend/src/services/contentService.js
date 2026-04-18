@@ -29,6 +29,88 @@ function normalizeTargetLanguage(input) {
   return value || "en";
 }
 
+function resolveMeaningFromRow(row, targetLanguage) {
+  if (!row || typeof row !== "object") return "";
+
+  const target = normalizeTargetLanguage(targetLanguage);
+  const directKey = `meaning_${target}`;
+  if (row[directKey] && String(row[directKey]).trim()) {
+    return String(row[directKey]).trim();
+  }
+
+  if (row.meaning_en && String(row.meaning_en).trim()) {
+    return String(row.meaning_en).trim();
+  }
+
+  if (row.meaning && String(row.meaning).trim()) {
+    return String(row.meaning).trim();
+  }
+
+  return "";
+}
+
+async function fetchFlashcardsFromSupabase({
+  languageCode,
+  limit,
+  targetLanguage,
+  supabaseUrl,
+  supabaseAnonKey,
+  supabaseTable,
+}) {
+  const hasSupabaseConfig =
+    typeof supabaseUrl === "string" &&
+    supabaseUrl.trim() &&
+    typeof supabaseAnonKey === "string" &&
+    supabaseAnonKey.trim();
+
+  if (!hasSupabaseConfig) {
+    return null;
+  }
+
+  const baseUrl = supabaseUrl.replace(/\/+$/, "");
+  const url = `${baseUrl}/rest/v1/${encodeURIComponent(supabaseTable || "learning_words")}`;
+
+  const response = await axios.get(url, {
+    timeout: 15000,
+    headers: {
+      apikey: supabaseAnonKey,
+      Authorization: `Bearer ${supabaseAnonKey}`,
+    },
+    params: {
+      select: "word,pinyin,meaning_en,meaning,frequency_rank,audio_url",
+      language_code: `eq.${languageCode}`,
+      order: "frequency_rank.asc",
+      limit,
+    },
+  });
+
+  const rows = Array.isArray(response.data) ? response.data : [];
+  if (rows.length === 0) {
+    return {
+      language: languageCode,
+      total: 0,
+      source: "supabase",
+      items: [],
+    };
+  }
+
+  const items = rows
+    .map((row) => ({
+      word: String(row.word || "").trim(),
+      meaning: resolveMeaningFromRow(row, targetLanguage),
+      pinyin: row.pinyin ? String(row.pinyin).trim() : undefined,
+      audioUrl: row.audio_url ? String(row.audio_url).trim() : undefined,
+    }))
+    .filter((row) => row.word && row.meaning);
+
+  return {
+    language: languageCode,
+    total: items.length,
+    source: "supabase",
+    items,
+  };
+}
+
 async function loadCache(cacheDir, languageCode, targetLanguage) {
   await ensureDirectory(cacheDir);
   const filePath = path.join(
@@ -101,10 +183,30 @@ async function getFlashcards({
   targetLanguage,
   cacheDir,
   translationConcurrency,
+  supabaseUrl,
+  supabaseAnonKey,
+  supabaseTable,
 }) {
   const resolvedLanguage = normalizeLanguage(languageCode);
   const resolvedTargetLanguage = normalizeTargetLanguage(targetLanguage);
   const resolvedLimit = Math.min(Math.max(Number(limit) || 1000, 1), 1000);
+
+  try {
+    const supabaseResult = await fetchFlashcardsFromSupabase({
+      languageCode: resolvedLanguage,
+      limit: resolvedLimit,
+      targetLanguage: resolvedTargetLanguage,
+      supabaseUrl,
+      supabaseAnonKey,
+      supabaseTable,
+    });
+
+    if (supabaseResult && supabaseResult.items.length > 0) {
+      return supabaseResult;
+    }
+  } catch (_) {
+    // Graceful fallback to existing generation flow.
+  }
 
   const words = await fetchTopWords(resolvedLanguage, resolvedLimit);
   const { filePath, map } = await loadCache(
@@ -139,6 +241,7 @@ async function getFlashcards({
   return {
     language: resolvedLanguage,
     total: words.length,
+    source: "generated",
     items: words.map((word) => ({
       word,
       meaning: map[word] || word,

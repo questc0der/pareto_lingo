@@ -49,4 +49,8 @@ module.exports = {
   requireApiKey:
     String(process.env.REQUIRE_API_KEY || "false").toLowerCase() === "true",
   cacheDir: path.join(__dirname, "..", "data", "cache"),
+  supabaseUrl: process.env.SUPABASE_URL || "",
+  supabaseAnonKey: process.env.SUPABASE_ANON_KEY || "",
+  supabaseFlashcardsTable:
+    process.env.SUPABASE_FLASHCARDS_TABLE || "learning_words",
 };

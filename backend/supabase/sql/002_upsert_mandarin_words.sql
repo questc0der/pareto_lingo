@@ -1,0 +1,32 @@
+-- Optional SQL import script template for Mandarin seed rows.
+-- This is generated manually by loading CSV in Supabase SQL editor or table import.
+-- Recommended: use Supabase Dashboard -> Table Editor -> Import data from CSV
+-- File: backend/data/seed/mandarin_1000.csv
+
+-- Example upsert statement shape if you load into a staging table first:
+-- insert into public.learning_words (
+--   language_code,
+--   word,
+--   pinyin,
+--   meaning_en,
+--   frequency_rank,
+--   source_freq,
+--   source_dict
+-- )
+-- select
+--   language_code,
+--   word,
+--   pinyin,
+--   meaning_en,
+--   frequency_rank,
+--   source_freq,
+--   source_dict
+-- from public.learning_words_staging
+-- on conflict (language_code, word)
+-- do update set
+--   pinyin = excluded.pinyin,
+--   meaning_en = excluded.meaning_en,
+--   frequency_rank = excluded.frequency_rank,
+--   source_freq = excluded.source_freq,
+--   source_dict = excluded.source_dict,
+--   updated_at = now();

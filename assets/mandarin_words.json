@@ -1,0 +1,5002 @@
+[
+  {
+    "word": "的",
+    "meaning": "of; ~'s",
+    "pinyin": "de5"
+  },
+  {
+    "word": "我",
+    "meaning": "I; me; my",
+    "pinyin": "wo3"
+  },
+  {
+    "word": "你",
+    "meaning": "you",
+    "pinyin": "ni3"
+  },
+  {
+    "word": "了",
+    "meaning": "finish",
+    "pinyin": "liao3"
+  },
+  {
+    "word": "是",
+    "meaning": "be",
+    "pinyin": "shi4"
+  },
+  {
+    "word": "在",
+    "meaning": "exist; to be alive",
+    "pinyin": "zai4"
+  },
+  {
+    "word": "他",
+    "meaning": "he; him; his",
+    "pinyin": "ta1"
+  },
+  {
+    "word": "我们",
+    "meaning": "we; us; ourselves; our",
+    "pinyin": "wo3 men5"
+  },
+  {
+    "word": "不",
+    "meaning": "no; not so",
+    "pinyin": "bu4"
+  },
+  {
+    "word": "吗",
+    "meaning": "what?",
+    "pinyin": "ma2"
+  },
+  {
+    "word": "好",
+    "meaning": "good",
+    "pinyin": "hao3"
+  },
+  {
+    "word": "什么",
+    "meaning": "what?",
+    "pinyin": "shen2 me5"
+  },
+  {
+    "word": "有",
+    "meaning": "have; there is",
+    "pinyin": "you3"
+  },
+  {
+    "word": "就",
+    "meaning": "in that case; then",
+    "pinyin": "jiu4"
+  },
+  {
+    "word": "吧",
+    "meaning": "bar",
+    "pinyin": "ba1"
+  },
+  {
+    "word": "她",
+    "meaning": "she",
+    "pinyin": "ta1"
+  },
+  {
+    "word": "这",
+    "meaning": "this; these",
+    "pinyin": "zhe4"
+  },
+  {
+    "word": "知道",
+    "meaning": "know; to become aware of",
+    "pinyin": "zhi1 dao4"
+  },
+  {
+    "word": "说",
+    "meaning": "persuade",
+    "pinyin": "shui4"
+  },
+  {
+    "word": "都",
+    "meaning": "surname Du",
+    "pinyin": "Du1"
+  },
+  {
+    "word": "去",
+    "meaning": "go",
+    "pinyin": "qu4"
+  },
+  {
+    "word": "很",
+    "meaning": "very; quite",
+    "pinyin": "hen3"
+  },
+  {
+    "word": "啊",
+    "meaning": "interjection of surprise",
+    "pinyin": "a1"
+  },
+  {
+    "word": "要",
+    "meaning": "to demand; to coerce",
+    "pinyin": "yao1"
+  },
+  {
+    "word": "也",
+    "meaning": "surname Ye",
+    "pinyin": "Ye3"
+  },
+  {
+    "word": "他们",
+    "meaning": "they; them",
+    "pinyin": "ta1 men5"
+  },
+  {
+    "word": "和",
+    "meaning": "old variant of 和[he2]",
+    "pinyin": "he2"
+  },
+  {
+    "word": "那",
+    "meaning": "surname Na",
+    "pinyin": "Na1"
+  },
+  {
+    "word": "想",
+    "meaning": "think",
+    "pinyin": "xiang3"
+  },
+  {
+    "word": "人",
+    "meaning": "person; people",
+    "pinyin": "ren2"
+  },
+  {
+    "word": "会",
+    "meaning": "can; to have the skill; to know how to",
+    "pinyin": "hui4"
+  },
+  {
+    "word": "一个",
+    "meaning": "a; an; one",
+    "pinyin": "yi1 ge5"
+  },
+  {
+    "word": "来",
+    "meaning": "come",
+    "pinyin": "lai2"
+  },
+  {
+    "word": "把",
+    "meaning": "hold; to grasp",
+    "pinyin": "ba3"
+  },
+  {
+    "word": "对",
+    "meaning": "right; correct",
+    "pinyin": "dui4"
+  },
+  {
+    "word": "没有",
+    "meaning": "haven't",
+    "pinyin": "mei2 you3"
+  },
+  {
+    "word": "做",
+    "meaning": "make; to produce",
+    "pinyin": "zuo4"
+  },
+  {
+    "word": "不是",
+    "meaning": "no",
+    "pinyin": "bu4 shi4"
+  },
+  {
+    "word": "让",
+    "meaning": "yield",
+    "pinyin": "rang4"
+  },
+  {
+    "word": "给",
+    "meaning": "to",
+    "pinyin": "gei3"
+  },
+  {
+    "word": "可以",
+    "meaning": "can",
+    "pinyin": "ke3 yi3"
+  },
+  {
+    "word": "你们",
+    "meaning": "you",
+    "pinyin": "ni3 men5"
+  },
+  {
+    "word": "呢",
+    "meaning": "used in questions to link back to prior discourse or context",
+    "pinyin": "ne5"
+  },
+  {
+    "word": "但",
+    "meaning": "but; yet; however; still",
+    "pinyin": "dan4"
+  },
+  {
+    "word": "到",
+    "meaning": "reach; to arrive",
+    "pinyin": "dao4"
+  },
+  {
+    "word": "还",
+    "meaning": "surname Huan",
+    "pinyin": "Huan2"
+  },
+  {
+    "word": "现在",
+    "meaning": "now; at present; currently",
+    "pinyin": "xian4 zai4"
+  },
+  {
+    "word": "这个",
+    "meaning": "this",
+    "pinyin": "zhe4 ge5"
+  },
+  {
+    "word": "能",
+    "meaning": "surname Neng",
+    "pinyin": "Neng2"
+  },
+  {
+    "word": "怎么",
+    "meaning": "how?",
+    "pinyin": "zen3 me5"
+  },
+  {
+    "word": "就是",
+    "meaning": "exactly; precisely",
+    "pinyin": "jiu4 shi4"
+  },
+  {
+    "word": "跟",
+    "meaning": "heel",
+    "pinyin": "gen1"
+  },
+  {
+    "word": "如果",
+    "meaning": "if; in case; in the event that",
+    "pinyin": "ru2 guo3"
+  },
+  {
+    "word": "没",
+    "meaning": "have not; not",
+    "pinyin": "mei2"
+  },
+  {
+    "word": "它",
+    "meaning": "it",
+    "pinyin": "ta1"
+  },
+  {
+    "word": "走",
+    "meaning": "walk",
+    "pinyin": "zou3"
+  },
+  {
+    "word": "上",
+    "meaning": "used in 上聲|上声[shang3 sheng1]",
+    "pinyin": "shang3"
+  },
+  {
+    "word": "得",
+    "meaning": "obtain",
+    "pinyin": "de2"
+  },
+  {
+    "word": "被",
+    "meaning": "quilt",
+    "pinyin": "bei4"
+  },
+  {
+    "word": "这里",
+    "meaning": "variant of 這裡|这里[zhe4 li3]",
+    "pinyin": "zhe4 li3"
+  },
+  {
+    "word": "这样",
+    "meaning": "this way; like this; so",
+    "pinyin": "zhe4 yang4"
+  },
+  {
+    "word": "个",
+    "meaning": "used in 自個兒|自个儿[zi4 ge3 r5]",
+    "pinyin": "ge3"
+  },
+  {
+    "word": "看",
+    "meaning": "look after",
+    "pinyin": "kan1"
+  },
+  {
+    "word": "事",
+    "meaning": "matter",
+    "pinyin": "shi4"
+  },
+  {
+    "word": "自己",
+    "meaning": "oneself; one's own",
+    "pinyin": "zi4 ji3"
+  },
+  {
+    "word": "着",
+    "meaning": "variant of 著|着[zhao1]",
+    "pinyin": "zhao1"
+  },
+  {
+    "word": "谁",
+    "meaning": "who",
+    "pinyin": "shei2"
+  },
+  {
+    "word": "过",
+    "meaning": "surname Guo",
+    "pinyin": "Guo1"
+  },
+  {
+    "word": "不会",
+    "meaning": "improbable",
+    "pinyin": "bu4 hui4"
+  },
+  {
+    "word": "告诉",
+    "meaning": "press charges; to file a complaint",
+    "pinyin": "gao4 su4"
+  },
+  {
+    "word": "为什么",
+    "meaning": "why?",
+    "pinyin": "wei4 shen2 me5"
+  },
+  {
+    "word": "不能",
+    "meaning": "cannot",
+    "pinyin": "bu4 neng2"
+  },
+  {
+    "word": "真的",
+    "meaning": "really; truly; indeed",
+    "pinyin": "zhen1 de5"
+  },
+  {
+    "word": "先生",
+    "meaning": "teacher",
+    "pinyin": "xian1 sheng5"
+  },
+  {
+    "word": "只是",
+    "meaning": "merely; only; just; nothing but",
+    "pinyin": "zhi3 shi4"
+  },
+  {
+    "word": "不要",
+    "meaning": "don't!; must not",
+    "pinyin": "bu4 yao4"
+  },
+  {
+    "word": "已经",
+    "meaning": "already",
+    "pinyin": "yi3 jing1"
+  },
+  {
+    "word": "再",
+    "meaning": "again; once more; re-",
+    "pinyin": "zai4"
+  },
+  {
+    "word": "哦",
+    "meaning": "chant",
+    "pinyin": "e2"
+  },
+  {
+    "word": "需要",
+    "meaning": "need; to want; to demand; to require",
+    "pinyin": "xu1 yao4"
+  },
+  {
+    "word": "因为",
+    "meaning": "because; owing to; on account of",
+    "pinyin": "yin1 wei4"
+  },
+  {
+    "word": "谢谢",
+    "meaning": "thank",
+    "pinyin": "xie4 xie5"
+  },
+  {
+    "word": "像",
+    "meaning": "resemble",
+    "pinyin": "xiang4"
+  },
+  {
+    "word": "这么",
+    "meaning": "so much",
+    "pinyin": "zhe4 me5"
+  },
+  {
+    "word": "可能",
+    "meaning": "might",
+    "pinyin": "ke3 neng2"
+  },
+  {
+    "word": "但是",
+    "meaning": "but; however",
+    "pinyin": "dan4 shi4"
+  },
+  {
+    "word": "那个",
+    "meaning": "that one",
+    "pinyin": "na4 ge5"
+  },
+  {
+    "word": "所以",
+    "meaning": "therefore",
+    "pinyin": "suo3 yi3"
+  },
+  {
+    "word": "喜欢",
+    "meaning": "like; to be fond of",
+    "pinyin": "xi3 huan5"
+  },
+  {
+    "word": "又",
+    "meaning": "again",
+    "pinyin": "you4"
+  },
+  {
+    "word": "叫",
+    "meaning": "shout",
+    "pinyin": "jiao4"
+  },
+  {
+    "word": "快",
+    "meaning": "rapid",
+    "pinyin": "kuai4"
+  },
+  {
+    "word": "觉得",
+    "meaning": "think that ...; to feel that ...",
+    "pinyin": "jue2 de5"
+  },
+  {
+    "word": "别",
+    "meaning": "surname Bie",
+    "pinyin": "Bie2"
+  },
+  {
+    "word": "听",
+    "meaning": "smile",
+    "pinyin": "yin3"
+  },
+  {
+    "word": "找",
+    "meaning": "try to find",
+    "pinyin": "zhao3"
+  },
+  {
+    "word": "里",
+    "meaning": "variant of 裡|里[li3]",
+    "pinyin": "li3"
+  },
+  {
+    "word": "还有",
+    "meaning": "there still remain; there is still",
+    "pinyin": "hai2 you3"
+  },
+  {
+    "word": "时候",
+    "meaning": "time",
+    "pinyin": "shi2 hou5"
+  },
+  {
+    "word": "东西",
+    "meaning": "east and west",
+    "pinyin": "dong1 xi1"
+  },
+  {
+    "word": "等",
+    "meaning": "wait for; to await",
+    "pinyin": "deng3"
+  },
+  {
+    "word": "死",
+    "meaning": "die",
+    "pinyin": "si3"
+  },
+  {
+    "word": "多",
+    "meaning": "many; much; more; a lot of",
+    "pinyin": "duo1"
+  },
+  {
+    "word": "从",
+    "meaning": "variant of 從|从[cong2]",
+    "pinyin": "cong2"
+  },
+  {
+    "word": "一起",
+    "meaning": "the same place",
+    "pinyin": "yi1 qi3"
+  },
+  {
+    "word": "应该",
+    "meaning": "ought to; should; must",
+    "pinyin": "ying1 gai1"
+  },
+  {
+    "word": "这些",
+    "meaning": "these",
+    "pinyin": "zhe4 xie1"
+  },
+  {
+    "word": "请",
+    "meaning": "ask",
+    "pinyin": "qing3"
+  },
+  {
+    "word": "孩子",
+    "meaning": "child",
+    "pinyin": "hai2 zi5"
+  },
+  {
+    "word": "看到",
+    "meaning": "see",
+    "pinyin": "kan4 dao4"
+  },
+  {
+    "word": "一下",
+    "meaning": "a bit; a little",
+    "pinyin": "yi1 xia4"
+  },
+  {
+    "word": "那么",
+    "meaning": "like that; in that way; to that extent",
+    "pinyin": "na4 me5"
+  },
+  {
+    "word": "为",
+    "meaning": "as",
+    "pinyin": "wei2"
+  },
+  {
+    "word": "而",
+    "meaning": "and",
+    "pinyin": "er2"
+  },
+  {
+    "word": "您",
+    "meaning": "you",
+    "pinyin": "nin2"
+  },
+  {
+    "word": "才",
+    "meaning": "ability; talent",
+    "pinyin": "cai2"
+  },
+  {
+    "word": "用",
+    "meaning": "use; to make use of; to employ",
+    "pinyin": "yong4"
+  },
+  {
+    "word": "还是",
+    "meaning": "still",
+    "pinyin": "hai2 shi5"
+  },
+  {
+    "word": "嗯",
+    "meaning": "interjection indicating approval, appreciation or agreement",
+    "pinyin": "en5"
+  },
+  {
+    "word": "问题",
+    "meaning": "question",
+    "pinyin": "wen4 ti2"
+  },
+  {
+    "word": "工作",
+    "meaning": "work",
+    "pinyin": "gong1 zuo4"
+  },
+  {
+    "word": "一样",
+    "meaning": "same",
+    "pinyin": "yi1 yang4"
+  },
+  {
+    "word": "呀",
+    "meaning": "ah",
+    "pinyin": "ya1"
+  },
+  {
+    "word": "开始",
+    "meaning": "begin",
+    "pinyin": "kai1 shi3"
+  },
+  {
+    "word": "吃",
+    "meaning": "eat; to consume",
+    "pinyin": "chi1"
+  },
+  {
+    "word": "嘿",
+    "meaning": "hey",
+    "pinyin": "hei1"
+  },
+  {
+    "word": "当",
+    "meaning": "dong",
+    "pinyin": "dang1"
+  },
+  {
+    "word": "真",
+    "meaning": "really",
+    "pinyin": "zhen1"
+  },
+  {
+    "word": "中",
+    "meaning": "China; Chinese",
+    "pinyin": "Zhong1"
+  },
+  {
+    "word": "然后",
+    "meaning": "then; after that; afterwards",
+    "pinyin": "ran2 hou4"
+  },
+  {
+    "word": "看看",
+    "meaning": "take a look at",
+    "pinyin": "kan4 kan5"
+  },
+  {
+    "word": "地方",
+    "meaning": "region",
+    "pinyin": "di4 fang1"
+  },
+  {
+    "word": "一定",
+    "meaning": "surely; certainly; definitely",
+    "pinyin": "yi1 ding4"
+  },
+  {
+    "word": "将",
+    "meaning": "will",
+    "pinyin": "jiang1"
+  },
+  {
+    "word": "希望",
+    "meaning": "hope",
+    "pinyin": "xi1 wang4"
+  },
+  {
+    "word": "朋友",
+    "meaning": "friend",
+    "pinyin": "peng2 you5"
+  },
+  {
+    "word": "今天",
+    "meaning": "today",
+    "pinyin": "jin1 tian1"
+  },
+  {
+    "word": "拿",
+    "meaning": "old variant of 拿[na2]",
+    "pinyin": "na2"
+  },
+  {
+    "word": "一",
+    "meaning": "one",
+    "pinyin": "yi1"
+  },
+  {
+    "word": "啦",
+    "meaning": "sound of singing, cheering etc",
+    "pinyin": "la1"
+  },
+  {
+    "word": "事情",
+    "meaning": "affair; matter; thing; business",
+    "pinyin": "shi4 qing5"
+  },
+  {
+    "word": "一直",
+    "meaning": "straight",
+    "pinyin": "yi1 zhi2"
+  },
+  {
+    "word": "所有",
+    "meaning": "all",
+    "pinyin": "suo3 you3"
+  },
+  {
+    "word": "找到",
+    "meaning": "find",
+    "pinyin": "zhao3 dao4"
+  },
+  {
+    "word": "哪",
+    "meaning": "how",
+    "pinyin": "na3"
+  },
+  {
+    "word": "当然",
+    "meaning": "only natural",
+    "pinyin": "dang1 ran2"
+  },
+  {
+    "word": "们",
+    "meaning": "plural marker for pronouns, and nouns referring to individuals",
+    "pinyin": "men5"
+  },
+  {
+    "word": "回来",
+    "meaning": "return; to come back",
+    "pinyin": "hui2 lai5"
+  },
+  {
+    "word": "不想",
+    "meaning": "unexpectedly; to one's surprise",
+    "pinyin": "bu4 xiang3"
+  },
+  {
+    "word": "更",
+    "meaning": "change or replace",
+    "pinyin": "geng1"
+  },
+  {
+    "word": "最",
+    "meaning": "variant of 最[zui4]",
+    "pinyin": "zui4"
+  },
+  {
+    "word": "帮",
+    "meaning": "old variant of 幫|帮[bang1]",
+    "pinyin": "bang1"
+  },
+  {
+    "word": "没事",
+    "meaning": "it's not important",
+    "pinyin": "mei2 shi4"
+  },
+  {
+    "word": "只",
+    "meaning": "variant of 隻|只[zhi1]",
+    "pinyin": "zhi1"
+  },
+  {
+    "word": "那些",
+    "meaning": "those",
+    "pinyin": "na4 xie1"
+  },
+  {
+    "word": "可",
+    "meaning": "can; may; able to; -able",
+    "pinyin": "ke3"
+  },
+  {
+    "word": "明白",
+    "meaning": "clear; obvious; unequivocal",
+    "pinyin": "ming2 bai5"
+  },
+  {
+    "word": "的话",
+    "meaning": "if",
+    "pinyin": "de5 hua4"
+  },
+  {
+    "word": "爸爸",
+    "meaning": "father; dad",
+    "pinyin": "ba4 ba5"
+  },
+  {
+    "word": "下",
+    "meaning": "down",
+    "pinyin": "xia4"
+  },
+  {
+    "word": "太",
+    "meaning": "highest",
+    "pinyin": "tai4"
+  },
+  {
+    "word": "离开",
+    "meaning": "depart; to leave",
+    "pinyin": "li2 kai1"
+  },
+  {
+    "word": "一切",
+    "meaning": "everything",
+    "pinyin": "yi1 qie4"
+  },
+  {
+    "word": "时间",
+    "meaning": "time",
+    "pinyin": "shi2 jian1"
+  },
+  {
+    "word": "相信",
+    "meaning": "believe; to be convinced; to accept as true",
+    "pinyin": "xiang1 xin4"
+  },
+  {
+    "word": "妈妈",
+    "meaning": "mama",
+    "pinyin": "ma1 ma5"
+  },
+  {
+    "word": "想要",
+    "meaning": "want to",
+    "pinyin": "xiang3 yao4"
+  },
+  {
+    "word": "爱",
+    "meaning": "love; to be fond of; to like",
+    "pinyin": "ai4"
+  },
+  {
+    "word": "发生",
+    "meaning": "happen; to occur; to take place; to break out",
+    "pinyin": "fa1 sheng1"
+  },
+  {
+    "word": "打",
+    "meaning": "dozen",
+    "pinyin": "da2"
+  },
+  {
+    "word": "点",
+    "meaning": "touch briefly; to tap",
+    "pinyin": "dian3"
+  },
+  {
+    "word": "钱",
+    "meaning": "surname Qian",
+    "pinyin": "Qian2"
+  },
+  {
+    "word": "大",
+    "meaning": "big; large; great",
+    "pinyin": "da4"
+  },
+  {
+    "word": "起来",
+    "meaning": "stand up; to get up",
+    "pinyin": "qi3 lai5"
+  },
+  {
+    "word": "真是",
+    "meaning": "indeed; truly",
+    "pinyin": "zhen1 shi5"
+  },
+  {
+    "word": "你好",
+    "meaning": "hello; hi",
+    "pinyin": "ni3 hao3"
+  },
+  {
+    "word": "抱歉",
+    "meaning": "be sorry",
+    "pinyin": "bao4 qian4"
+  },
+  {
+    "word": "必须",
+    "meaning": "have to",
+    "pinyin": "bi4 xu1"
+  },
+  {
+    "word": "认为",
+    "meaning": "believe; to think; to consider; to feel",
+    "pinyin": "ren4 wei2"
+  },
+  {
+    "word": "一点",
+    "meaning": "a bit; a little bit",
+    "pinyin": "yi1 dian3"
+  },
+  {
+    "word": "非常",
+    "meaning": "very; really",
+    "pinyin": "fei1 chang2"
+  },
+  {
+    "word": "那里",
+    "meaning": "there; that place",
+    "pinyin": "na4 li5"
+  },
+  {
+    "word": "对不起",
+    "meaning": "I'm sorry; excuse me; I beg your pardon",
+    "pinyin": "dui4 bu5 qi3"
+  },
+  {
+    "word": "天",
+    "meaning": "day",
+    "pinyin": "tian1"
+  },
+  {
+    "word": "也许",
+    "meaning": "perhaps; maybe",
+    "pinyin": "ye3 xu3"
+  },
+  {
+    "word": "大家",
+    "meaning": "everyone",
+    "pinyin": "da4 jia1"
+  },
+  {
+    "word": "哪里",
+    "meaning": "where?",
+    "pinyin": "na3 li3"
+  },
+  {
+    "word": "有人",
+    "meaning": "someone",
+    "pinyin": "you3 ren2"
+  },
+  {
+    "word": "该",
+    "meaning": "should",
+    "pinyin": "gai1"
+  },
+  {
+    "word": "意思",
+    "meaning": "idea",
+    "pinyin": "yi4 si5"
+  },
+  {
+    "word": "杀",
+    "meaning": "kill; to slay; to murder; to attack",
+    "pinyin": "sha1"
+  },
+  {
+    "word": "准备",
+    "meaning": "preparation",
+    "pinyin": "zhun3 bei4"
+  },
+  {
+    "word": "并",
+    "meaning": "and",
+    "pinyin": "bing4"
+  },
+  {
+    "word": "出来",
+    "meaning": "come out",
+    "pinyin": "chu1 lai2"
+  },
+  {
+    "word": "与",
+    "meaning": "variant of 歟|欤[yu2]",
+    "pinyin": "yu2"
+  },
+  {
+    "word": "时",
+    "meaning": "old variant of 時|时[shi2]",
+    "pinyin": "shi2"
+  },
+  {
+    "word": "不过",
+    "meaning": "only",
+    "pinyin": "bu4 guo4"
+  },
+  {
+    "word": "一些",
+    "meaning": "some; a few; a little; slightly ...er",
+    "pinyin": "yi1 xie1"
+  },
+  {
+    "word": "为了",
+    "meaning": "for; for the purpose of; in order to",
+    "pinyin": "wei4 le5"
+  },
+  {
+    "word": "带",
+    "meaning": "band",
+    "pinyin": "dai4"
+  },
+  {
+    "word": "女人",
+    "meaning": "woman",
+    "pinyin": "nu:3 ren2"
+  },
+  {
+    "word": "这儿",
+    "meaning": "here",
+    "pinyin": "zhe4 r5"
+  },
+  {
+    "word": "后",
+    "meaning": "surname Hou",
+    "pinyin": "Hou4"
+  },
+  {
+    "word": "只有",
+    "meaning": "only have ...; there is only ...",
+    "pinyin": "zhi3 you3"
+  },
+  {
+    "word": "过来",
+    "meaning": "come over",
+    "pinyin": "guo4 lai2"
+  },
+  {
+    "word": "比",
+    "meaning": "Belgium",
+    "pinyin": "Bi3"
+  },
+  {
+    "word": "一次",
+    "meaning": "first",
+    "pinyin": "yi1 ci4"
+  },
+  {
+    "word": "得到",
+    "meaning": "get; to obtain; to receive",
+    "pinyin": "de2 dao4"
+  },
+  {
+    "word": "任何",
+    "meaning": "any; whatever; whichever",
+    "pinyin": "ren4 he2"
+  },
+  {
+    "word": "这种",
+    "meaning": "this kind of",
+    "pinyin": "zhe4 zhong3"
+  },
+  {
+    "word": "小",
+    "meaning": "small",
+    "pinyin": "xiao3"
+  },
+  {
+    "word": "怎么样",
+    "meaning": "how?",
+    "pinyin": "zen3 me5 yang4"
+  },
+  {
+    "word": "感觉",
+    "meaning": "feeling; impression; sensation",
+    "pinyin": "gan3 jue2"
+  },
+  {
+    "word": "年",
+    "meaning": "surname Nian",
+    "pinyin": "Nian2"
+  },
+  {
+    "word": "是不是",
+    "meaning": "is or is not",
+    "pinyin": "shi4 bu5 shi4"
+  },
+  {
+    "word": "以为",
+    "meaning": "think; to believe",
+    "pinyin": "yi3 wei2"
+  },
+  {
+    "word": "而且",
+    "meaning": "but also",
+    "pinyin": "er2 qie3"
+  },
+  {
+    "word": "前",
+    "meaning": "front",
+    "pinyin": "qian2"
+  },
+  {
+    "word": "生活",
+    "meaning": "live",
+    "pinyin": "sheng1 huo2"
+  },
+  {
+    "word": "男人",
+    "meaning": "a man",
+    "pinyin": "nan2 ren2"
+  },
+  {
+    "word": "之前",
+    "meaning": "before",
+    "pinyin": "zhi1 qian2"
+  },
+  {
+    "word": "喂",
+    "meaning": "hello",
+    "pinyin": "wei2"
+  },
+  {
+    "word": "问",
+    "meaning": "ask; to inquire",
+    "pinyin": "wen4"
+  },
+  {
+    "word": "发现",
+    "meaning": "notice; to become aware of",
+    "pinyin": "fa1 xian4"
+  },
+  {
+    "word": "噢",
+    "meaning": "oh; ah",
+    "pinyin": "o1"
+  },
+  {
+    "word": "可是",
+    "meaning": "but; however",
+    "pinyin": "ke3 shi4"
+  },
+  {
+    "word": "快点",
+    "meaning": "do sth more quickly",
+    "pinyin": "kuai4 dian3"
+  },
+  {
+    "word": "嗨",
+    "meaning": "oh alas",
+    "pinyin": "hai1"
+  },
+  {
+    "word": "妈",
+    "meaning": "ma",
+    "pinyin": "ma1"
+  },
+  {
+    "word": "不用",
+    "meaning": "need not",
+    "pinyin": "bu4 yong4"
+  },
+  {
+    "word": "地",
+    "meaning": "-ly",
+    "pinyin": "de5"
+  },
+  {
+    "word": "向",
+    "meaning": "surname Xiang",
+    "pinyin": "Xiang4"
+  },
+  {
+    "word": "名字",
+    "meaning": "name",
+    "pinyin": "ming2 zi5"
+  },
+  {
+    "word": "没错",
+    "meaning": "that's right",
+    "pinyin": "mei2 cuo4"
+  },
+  {
+    "word": "见",
+    "meaning": "see",
+    "pinyin": "jian4"
+  },
+  {
+    "word": "世界",
+    "meaning": "world",
+    "pinyin": "shi4 jie4"
+  },
+  {
+    "word": "记得",
+    "meaning": "remember",
+    "pinyin": "ji4 de5"
+  },
+  {
+    "word": "住",
+    "meaning": "live; to reside; to stay",
+    "pinyin": "zhu4"
+  },
+  {
+    "word": "新",
+    "meaning": "abbr. for Xinjiang 新疆[Xin1 jiang1]",
+    "pinyin": "Xin1"
+  },
+  {
+    "word": "不错",
+    "meaning": "correct",
+    "pinyin": "bu4 cuo4"
+  },
+  {
+    "word": "肯定",
+    "meaning": "be certain; to be positive",
+    "pinyin": "ken3 ding4"
+  },
+  {
+    "word": "最好",
+    "meaning": "best",
+    "pinyin": "zui4 hao3"
+  },
+  {
+    "word": "不行",
+    "meaning": "won't do",
+    "pinyin": "bu4 xing2"
+  },
+  {
+    "word": "等等",
+    "meaning": "et cetera",
+    "pinyin": "deng3 deng3"
+  },
+  {
+    "word": "嘛",
+    "meaning": "used in 唵嘛呢叭咪吽[an3 ma2 ni2 ba1 mi1 hong1]",
+    "pinyin": "ma2"
+  },
+  {
+    "word": "出去",
+    "meaning": "go out",
+    "pinyin": "chu1 qu4"
+  },
+  {
+    "word": "么",
+    "meaning": "exclamatory final particle",
+    "pinyin": "ma2"
+  },
+  {
+    "word": "先",
+    "meaning": "beforehand; first; earlier",
+    "pinyin": "xian1"
+  },
+  {
+    "word": "亲爱",
+    "meaning": "dear",
+    "pinyin": "qin1 ai4"
+  },
+  {
+    "word": "或",
+    "meaning": "maybe",
+    "pinyin": "huo4"
+  },
+  {
+    "word": "担心",
+    "meaning": "anxious",
+    "pinyin": "dan1 xin1"
+  },
+  {
+    "word": "如何",
+    "meaning": "how",
+    "pinyin": "ru2 he2"
+  },
+  {
+    "word": "到底",
+    "meaning": "finally",
+    "pinyin": "dao4 di3"
+  },
+  {
+    "word": "有点",
+    "meaning": "a little",
+    "pinyin": "you3 dian3"
+  },
+  {
+    "word": "最后",
+    "meaning": "final; last; ultimate",
+    "pinyin": "zui4 hou4"
+  },
+  {
+    "word": "小姐",
+    "meaning": "young lady",
+    "pinyin": "xiao3 jie5"
+  },
+  {
+    "word": "上帝",
+    "meaning": "God",
+    "pinyin": "Shang4 di4"
+  },
+  {
+    "word": "认识",
+    "meaning": "know",
+    "pinyin": "ren4 shi5"
+  },
+  {
+    "word": "正在",
+    "meaning": "be in the process of; to be currently ...-ing",
+    "pinyin": "zheng4 zai4"
+  },
+  {
+    "word": "那样",
+    "meaning": "that kind",
+    "pinyin": "na4 yang4"
+  },
+  {
+    "word": "父亲",
+    "meaning": "father",
+    "pinyin": "fu4 qin1"
+  },
+  {
+    "word": "高兴",
+    "meaning": "happy",
+    "pinyin": "gao1 xing4"
+  },
+  {
+    "word": "明天",
+    "meaning": "tomorrow",
+    "pinyin": "ming2 tian1"
+  },
+  {
+    "word": "重要",
+    "meaning": "important; significant; major",
+    "pinyin": "zhong4 yao4"
+  },
+  {
+    "word": "跑",
+    "meaning": "to paw",
+    "pinyin": "pao2"
+  },
+  {
+    "word": "警察",
+    "meaning": "police; police officer",
+    "pinyin": "jing3 cha2"
+  },
+  {
+    "word": "只要",
+    "meaning": "so long as; provided; if",
+    "pinyin": "zhi3 yao4"
+  },
+  {
+    "word": "干什么",
+    "meaning": "what are you doing?",
+    "pinyin": "gan4 shen2 me5"
+  },
+  {
+    "word": "好像",
+    "meaning": "as if",
+    "pinyin": "hao3 xiang4"
+  },
+  {
+    "word": "再见",
+    "meaning": "goodbye",
+    "pinyin": "zai4 jian4"
+  },
+  {
+    "word": "月",
+    "meaning": "moon",
+    "pinyin": "yue4"
+  },
+  {
+    "word": "继续",
+    "meaning": "continue; to proceed with; to go on with",
+    "pinyin": "ji4 xu4"
+  },
+  {
+    "word": "出",
+    "meaning": "go out; to come out",
+    "pinyin": "chu1"
+  },
+  {
+    "word": "今晚",
+    "meaning": "tonight",
+    "pinyin": "jin1 wan3"
+  },
+  {
+    "word": "他妈的",
+    "meaning": "damn it!",
+    "pinyin": "ta1 ma1 de5"
+  },
+  {
+    "word": "回家",
+    "meaning": "return home",
+    "pinyin": "hui2 jia1"
+  },
+  {
+    "word": "它们",
+    "meaning": "they; them",
+    "pinyin": "ta1 men5"
+  },
+  {
+    "word": "多少",
+    "meaning": "number; amount",
+    "pinyin": "duo1 shao3"
+  },
+  {
+    "word": "电话",
+    "meaning": "telephone",
+    "pinyin": "dian4 hua4"
+  },
+  {
+    "word": "听到",
+    "meaning": "hear",
+    "pinyin": "ting1 dao4"
+  },
+  {
+    "word": "干嘛",
+    "meaning": "what are you doing?",
+    "pinyin": "gan4 ma2"
+  },
+  {
+    "word": "干",
+    "meaning": "old variant of 乾|干[gan1]",
+    "pinyin": "gan1"
+  },
+  {
+    "word": "医生",
+    "meaning": "doctor",
+    "pinyin": "yi1 sheng1"
+  },
+  {
+    "word": "要是",
+    "meaning": "if",
+    "pinyin": "yao4 shi5"
+  },
+  {
+    "word": "女孩",
+    "meaning": "girl; lass",
+    "pinyin": "nu:3 hai2"
+  },
+  {
+    "word": "所",
+    "meaning": "actually",
+    "pinyin": "suo3"
+  },
+  {
+    "word": "马上",
+    "meaning": "at once",
+    "pinyin": "ma3 shang4"
+  },
+  {
+    "word": "过去",
+    "meaning": "past; former; previous",
+    "pinyin": "guo4 qu4"
+  },
+  {
+    "word": "以前",
+    "meaning": "before",
+    "pinyin": "yi3 qian2"
+  },
+  {
+    "word": "儿子",
+    "meaning": "son",
+    "pinyin": "er2 zi5"
+  },
+  {
+    "word": "哪儿",
+    "meaning": "where?",
+    "pinyin": "na3 r5"
+  },
+  {
+    "word": "说话",
+    "meaning": "speak",
+    "pinyin": "shuo1 hua4"
+  },
+  {
+    "word": "买",
+    "meaning": "buy",
+    "pinyin": "mai3"
+  },
+  {
+    "word": "看起来",
+    "meaning": "seemingly; apparently; looks as if; appears to be; gives the impression that; seems on the face of it to be",
+    "pinyin": "kan4 qi3 lai5"
+  },
+  {
+    "word": "完全",
+    "meaning": "complete; whole",
+    "pinyin": "wan2 quan2"
+  },
+  {
+    "word": "该死",
+    "meaning": "Damn it!",
+    "pinyin": "gai1 si3"
+  },
+  {
+    "word": "美国",
+    "meaning": "United States; USA; US",
+    "pinyin": "Mei3 guo2"
+  },
+  {
+    "word": "怎样",
+    "meaning": "how",
+    "pinyin": "zen3 yang4"
+  },
+  {
+    "word": "回去",
+    "meaning": "return",
+    "pinyin": "hui2 qu5"
+  },
+  {
+    "word": "以",
+    "meaning": "old variant of 以[yi3]",
+    "pinyin": "yi3"
+  },
+  {
+    "word": "却",
+    "meaning": "old variant of 卻|却[que4]",
+    "pinyin": "que4"
+  },
+  {
+    "word": "其他",
+    "meaning": "other",
+    "pinyin": "qi2 ta1"
+  },
+  {
+    "word": "永远",
+    "meaning": "forever",
+    "pinyin": "yong3 yuan3"
+  },
+  {
+    "word": "家伙",
+    "meaning": "variant of 家伙[jia1 huo5]",
+    "pinyin": "jia1 huo5"
+  },
+  {
+    "word": "之后",
+    "meaning": "after; behind",
+    "pinyin": "zhi1 hou4"
+  },
+  {
+    "word": "看见",
+    "meaning": "see; to catch sight of",
+    "pinyin": "kan4 jian4"
+  },
+  {
+    "word": "或者",
+    "meaning": "or",
+    "pinyin": "huo4 zhe3"
+  },
+  {
+    "word": "小心",
+    "meaning": "be careful",
+    "pinyin": "xiao3 xin1"
+  },
+  {
+    "word": "行",
+    "meaning": "row; line",
+    "pinyin": "hang2"
+  },
+  {
+    "word": "别人",
+    "meaning": "other people; others; other person",
+    "pinyin": "bie2 ren5"
+  },
+  {
+    "word": "成为",
+    "meaning": "become; to turn into",
+    "pinyin": "cheng2 wei2"
+  },
+  {
+    "word": "写",
+    "meaning": "write",
+    "pinyin": "xie3"
+  },
+  {
+    "word": "不到",
+    "meaning": "not to arrive",
+    "pinyin": "bu4 dao4"
+  },
+  {
+    "word": "情况",
+    "meaning": "circumstances; state of affairs; situation",
+    "pinyin": "qing2 kuang4"
+  },
+  {
+    "word": "送",
+    "meaning": "send; to deliver; to transmit",
+    "pinyin": "song4"
+  },
+  {
+    "word": "伙计",
+    "meaning": "partner",
+    "pinyin": "huo3 ji5"
+  },
+  {
+    "word": "玩",
+    "meaning": "play",
+    "pinyin": "wan2"
+  },
+  {
+    "word": "见到",
+    "meaning": "see",
+    "pinyin": "jian4 dao4"
+  },
+  {
+    "word": "放",
+    "meaning": "put",
+    "pinyin": "fang4"
+  },
+  {
+    "word": "晚上",
+    "meaning": "evening",
+    "pinyin": "wan3 shang5"
+  },
+  {
+    "word": "喝",
+    "meaning": "drink",
+    "pinyin": "he1"
+  },
+  {
+    "word": "总是",
+    "meaning": "always",
+    "pinyin": "zong3 shi4"
+  },
+  {
+    "word": "好好",
+    "meaning": "well; carefully; nicely; properly",
+    "pinyin": "hao3 hao3"
+  },
+  {
+    "word": "号",
+    "meaning": "to wail; to howl",
+    "pinyin": "hao2"
+  },
+  {
+    "word": "如此",
+    "meaning": "like this; so; such",
+    "pinyin": "ru2 ci3"
+  },
+  {
+    "word": "家",
+    "meaning": "used in 傢伙|家伙[jia1 huo5] and 傢俱|家俱[jia1 ju4]",
+    "pinyin": "jia1"
+  },
+  {
+    "word": "坐",
+    "meaning": "surname Zuo",
+    "pinyin": "Zuo4"
+  },
+  {
+    "word": "了解",
+    "meaning": "understand",
+    "pinyin": "liao3 jie3"
+  },
+  {
+    "word": "有没有",
+    "meaning": "Do have ...?",
+    "pinyin": "you3 mei2 you3"
+  },
+  {
+    "word": "兄弟",
+    "meaning": "brothers",
+    "pinyin": "xiong1 di4"
+  },
+  {
+    "word": "没什么",
+    "meaning": "it doesn't matter; it's nothing; never mind",
+    "pinyin": "mei2 shen2 me5"
+  },
+  {
+    "word": "结束",
+    "meaning": "termination",
+    "pinyin": "jie2 shu4"
+  },
+  {
+    "word": "机会",
+    "meaning": "opportunity",
+    "pinyin": "ji1 hui4"
+  },
+  {
+    "word": "已",
+    "meaning": "already",
+    "pinyin": "yi3"
+  },
+  {
+    "word": "安全",
+    "meaning": "safe; secure",
+    "pinyin": "an1 quan2"
+  },
+  {
+    "word": "拜托",
+    "meaning": "request sb to do sth",
+    "pinyin": "bai4 tuo1"
+  },
+  {
+    "word": "决定",
+    "meaning": "decide; to determine; to make up one's mind",
+    "pinyin": "jue2 ding4"
+  },
+  {
+    "word": "穿",
+    "meaning": "wear",
+    "pinyin": "chuan1"
+  },
+  {
+    "word": "确定",
+    "meaning": "definite",
+    "pinyin": "que4 ding4"
+  },
+  {
+    "word": "里面",
+    "meaning": "variant of 裡面|里面[li3 mian4]",
+    "pinyin": "li3 mian4"
+  },
+  {
+    "word": "怎么办",
+    "meaning": "what's to be done",
+    "pinyin": "zen3 me5 ban4"
+  },
+  {
+    "word": "还好",
+    "meaning": "not bad; pretty good",
+    "pinyin": "hai2 hao3"
+  },
+  {
+    "word": "无法",
+    "meaning": "unable to; incapable of",
+    "pinyin": "wu2 fa3"
+  },
+  {
+    "word": "小时",
+    "meaning": "hour",
+    "pinyin": "xiao3 shi2"
+  },
+  {
+    "word": "站",
+    "meaning": "station",
+    "pinyin": "zhan4"
+  },
+  {
+    "word": "清楚",
+    "meaning": "clear",
+    "pinyin": "qing1 chu5"
+  },
+  {
+    "word": "有些",
+    "meaning": "some",
+    "pinyin": "you3 xie1"
+  },
+  {
+    "word": "错",
+    "meaning": "surname Cuo",
+    "pinyin": "Cuo4"
+  },
+  {
+    "word": "帮助",
+    "meaning": "assistance; aid",
+    "pinyin": "bang1 zhu4"
+  },
+  {
+    "word": "长官",
+    "meaning": "senior official",
+    "pinyin": "zhang3 guan1"
+  },
+  {
+    "word": "公司",
+    "meaning": "company; firm; corporation",
+    "pinyin": "gong1 si1"
+  },
+  {
+    "word": "打电话",
+    "meaning": "make a telephone call",
+    "pinyin": "da3 dian4 hua4"
+  },
+  {
+    "word": "房子",
+    "meaning": "house",
+    "pinyin": "fang2 zi5"
+  },
+  {
+    "word": "根本",
+    "meaning": "fundamental",
+    "pinyin": "gen1 ben3"
+  },
+  {
+    "word": "懂",
+    "meaning": "understand",
+    "pinyin": "dong3"
+  },
+  {
+    "word": "办法",
+    "meaning": "way of handling sth; means; measure; solution to a problem",
+    "pinyin": "ban4 fa3"
+  },
+  {
+    "word": "不管",
+    "meaning": "not to be concerned",
+    "pinyin": "bu4 guan3"
+  },
+  {
+    "word": "混蛋",
+    "meaning": "scoundrel",
+    "pinyin": "hun2 dan4"
+  },
+  {
+    "word": "关于",
+    "meaning": "pertaining to",
+    "pinyin": "guan1 yu2"
+  },
+  {
+    "word": "搞",
+    "meaning": "do",
+    "pinyin": "gao3"
+  },
+  {
+    "word": "计划",
+    "meaning": "plan",
+    "pinyin": "ji4 hua4"
+  },
+  {
+    "word": "唯一",
+    "meaning": "only; sole",
+    "pinyin": "wei2 yi1"
+  },
+  {
+    "word": "女儿",
+    "meaning": "daughter",
+    "pinyin": "nu:3 er2"
+  },
+  {
+    "word": "宝贝",
+    "meaning": "treasured object",
+    "pinyin": "bao3 bei4"
+  },
+  {
+    "word": "每个",
+    "meaning": "each; every",
+    "pinyin": "mei3 ge4"
+  },
+  {
+    "word": "怎么回事",
+    "meaning": "what's the matter?",
+    "pinyin": "zen3 me5 hui2 shi4"
+  },
+  {
+    "word": "其实",
+    "meaning": "actually; in fact; really",
+    "pinyin": "qi2 shi2"
+  },
+  {
+    "word": "漂亮",
+    "meaning": "pretty; beautiful",
+    "pinyin": "piao4 liang5"
+  },
+  {
+    "word": "黑体",
+    "meaning": "bold",
+    "pinyin": "hei1 ti3"
+  },
+  {
+    "word": "车",
+    "meaning": "surname Che",
+    "pinyin": "Che1"
+  },
+  {
+    "word": "人们",
+    "meaning": "people",
+    "pinyin": "ren2 men5"
+  },
+  {
+    "word": "真正",
+    "meaning": "genuine; real; true",
+    "pinyin": "zhen1 zheng4"
+  },
+  {
+    "word": "甚至",
+    "meaning": "even; so much so that",
+    "pinyin": "shen4 zhi4"
+  },
+  {
+    "word": "那边",
+    "meaning": "over there",
+    "pinyin": "na4 bian5"
+  },
+  {
+    "word": "弄",
+    "meaning": "lane",
+    "pinyin": "long4"
+  },
+  {
+    "word": "开",
+    "meaning": "open",
+    "pinyin": "kai1"
+  },
+  {
+    "word": "不好",
+    "meaning": "no good",
+    "pinyin": "bu4 hao3"
+  },
+  {
+    "word": "喔",
+    "meaning": "oh; I see",
+    "pinyin": "o1"
+  },
+  {
+    "word": "回",
+    "meaning": "circle",
+    "pinyin": "hui2"
+  },
+  {
+    "word": "进来",
+    "meaning": "come in",
+    "pinyin": "jin4 lai2"
+  },
+  {
+    "word": "夫人",
+    "meaning": "lady",
+    "pinyin": "fu1 ren5"
+  },
+  {
+    "word": "愿意",
+    "meaning": "wish",
+    "pinyin": "yuan4 yi4"
+  },
+  {
+    "word": "麻烦",
+    "meaning": "trouble; inconvenience",
+    "pinyin": "ma2 fan5"
+  },
+  {
+    "word": "睡",
+    "meaning": "sleep",
+    "pinyin": "shui4"
+  },
+  {
+    "word": "哇",
+    "meaning": "Wow!",
+    "pinyin": "wa1"
+  },
+  {
+    "word": "就要",
+    "meaning": "will",
+    "pinyin": "jiu4 yao4"
+  },
+  {
+    "word": "打算",
+    "meaning": "plan",
+    "pinyin": "da3 suan4"
+  },
+  {
+    "word": "完",
+    "meaning": "finish",
+    "pinyin": "wan2"
+  },
+  {
+    "word": "故事",
+    "meaning": "old practice",
+    "pinyin": "gu4 shi4"
+  },
+  {
+    "word": "一种",
+    "meaning": "one kind of; one type of",
+    "pinyin": "yi1 zhong3"
+  },
+  {
+    "word": "害怕",
+    "meaning": "be afraid; to be scared",
+    "pinyin": "hai4 pa4"
+  },
+  {
+    "word": "救",
+    "meaning": "variant of 救[jiu4]",
+    "pinyin": "jiu4"
+  },
+  {
+    "word": "手",
+    "meaning": "hand",
+    "pinyin": "shou3"
+  },
+  {
+    "word": "房间",
+    "meaning": "room",
+    "pinyin": "fang2 jian1"
+  },
+  {
+    "word": "由",
+    "meaning": "follow",
+    "pinyin": "you2"
+  },
+  {
+    "word": "那儿",
+    "meaning": "there",
+    "pinyin": "na4 r5"
+  },
+  {
+    "word": "衣服",
+    "meaning": "clothes",
+    "pinyin": "yi1 fu5"
+  },
+  {
+    "word": "枪",
+    "meaning": "surname Qiang",
+    "pinyin": "Qiang1"
+  },
+  {
+    "word": "母亲",
+    "meaning": "mother",
+    "pinyin": "mu3 qin1"
+  },
+  {
+    "word": "另",
+    "meaning": "other",
+    "pinyin": "ling4"
+  },
+  {
+    "word": "下来",
+    "meaning": "come down",
+    "pinyin": "xia4 lai5"
+  },
+  {
+    "word": "听说",
+    "meaning": "hear",
+    "pinyin": "ting1 shuo1"
+  },
+  {
+    "word": "不了",
+    "meaning": "no thanks",
+    "pinyin": "bu4 le5"
+  },
+  {
+    "word": "注意",
+    "meaning": "take note of; to pay attention to",
+    "pinyin": "zhu4 yi4"
+  },
+  {
+    "word": "改变",
+    "meaning": "change",
+    "pinyin": "gai3 bian4"
+  },
+  {
+    "word": "没关系",
+    "meaning": "it doesn't matter",
+    "pinyin": "mei2 guan1 xi5"
+  },
+  {
+    "word": "接受",
+    "meaning": "accept; to acquiesce",
+    "pinyin": "jie1 shou4"
+  },
+  {
+    "word": "妻子",
+    "meaning": "wife and children",
+    "pinyin": "qi1 zi3"
+  },
+  {
+    "word": "老",
+    "meaning": "prefix used before the surname of a person or a numeral indicating the order of birth of the children in a family or to indicate affection or familiarity",
+    "pinyin": "lao3"
+  },
+  {
+    "word": "失去",
+    "meaning": "lose",
+    "pinyin": "shi1 qu4"
+  },
+  {
+    "word": "回到",
+    "meaning": "return to",
+    "pinyin": "hui2 dao4"
+  },
+  {
+    "word": "以后",
+    "meaning": "after",
+    "pinyin": "yi3 hou4"
+  },
+  {
+    "word": "话",
+    "meaning": "dialect",
+    "pinyin": "hua4"
+  },
+  {
+    "word": "是否",
+    "meaning": "whether",
+    "pinyin": "shi4 fou3"
+  },
+  {
+    "word": "疯",
+    "meaning": "insane",
+    "pinyin": "feng1"
+  },
+  {
+    "word": "生命",
+    "meaning": "life",
+    "pinyin": "sheng1 ming4"
+  },
+  {
+    "word": "她们",
+    "meaning": "they; them",
+    "pinyin": "ta1 men5"
+  },
+  {
+    "word": "忙",
+    "meaning": "busy",
+    "pinyin": "mang2"
+  },
+  {
+    "word": "进去",
+    "meaning": "go in",
+    "pinyin": "jin4 qu4"
+  },
+  {
+    "word": "抓",
+    "meaning": "grab",
+    "pinyin": "zhua1"
+  },
+  {
+    "word": "女士",
+    "meaning": "lady",
+    "pinyin": "nu:3 shi4"
+  },
+  {
+    "word": "原因",
+    "meaning": "cause",
+    "pinyin": "yuan2 yin1"
+  },
+  {
+    "word": "刚才",
+    "meaning": "just now",
+    "pinyin": "gang1 cai2"
+  },
+  {
+    "word": "保护",
+    "meaning": "protect",
+    "pinyin": "bao3 hu4"
+  },
+  {
+    "word": "选择",
+    "meaning": "select; to pick",
+    "pinyin": "xuan3 ze2"
+  },
+  {
+    "word": "几个",
+    "meaning": "a few",
+    "pinyin": "ji3 ge5"
+  },
+  {
+    "word": "笑",
+    "meaning": "old variant of 笑[xiao4]",
+    "pinyin": "xiao4"
+  },
+  {
+    "word": "关系",
+    "meaning": "relation",
+    "pinyin": "guan1 xi5"
+  },
+  {
+    "word": "从来",
+    "meaning": "always",
+    "pinyin": "cong2 lai2"
+  },
+  {
+    "word": "当时",
+    "meaning": "then; at that time",
+    "pinyin": "dang1 shi2"
+  },
+  {
+    "word": "出现",
+    "meaning": "appear",
+    "pinyin": "chu1 xian4"
+  },
+  {
+    "word": "结婚",
+    "meaning": "marry; to get married",
+    "pinyin": "jie2 hun1"
+  },
+  {
+    "word": "些",
+    "meaning": "classifier indicating a small amount or small number greater than 1: some, a few, several",
+    "pinyin": "xie1"
+  },
+  {
+    "word": "至少",
+    "meaning": "at least",
+    "pinyin": "zhi4 shao3"
+  },
+  {
+    "word": "挺",
+    "meaning": "straight",
+    "pinyin": "ting3"
+  },
+  {
+    "word": "成功",
+    "meaning": "Chenggong or Chengkung town in Taitung County 臺東縣|台东县[Tai2 dong1 Xian4], southeast Taiwan",
+    "pinyin": "Cheng2 gong1"
+  },
+  {
+    "word": "奇怪",
+    "meaning": "strange",
+    "pinyin": "qi2 guai4"
+  },
+  {
+    "word": "虽然",
+    "meaning": "although; even though",
+    "pinyin": "sui1 ran2"
+  },
+  {
+    "word": "忘",
+    "meaning": "forget",
+    "pinyin": "wang4"
+  },
+  {
+    "word": "太好了",
+    "meaning": "very good",
+    "pinyin": "tai4 hao3 le5"
+  },
+  {
+    "word": "身上",
+    "meaning": "on the body",
+    "pinyin": "shen1 shang5"
+  },
+  {
+    "word": "或许",
+    "meaning": "perhaps; maybe",
+    "pinyin": "huo4 xu3"
+  },
+  {
+    "word": "讲",
+    "meaning": "speak",
+    "pinyin": "jiang3"
+  },
+  {
+    "word": "岁",
+    "meaning": "variant of 歲|岁[sui4], year",
+    "pinyin": "sui4"
+  },
+  {
+    "word": "保证",
+    "meaning": "guarantee",
+    "pinyin": "bao3 zheng4"
+  },
+  {
+    "word": "外面",
+    "meaning": "outside",
+    "pinyin": "wai4 mian4"
+  },
+  {
+    "word": "丈夫",
+    "meaning": "husband",
+    "pinyin": "zhang4 fu5"
+  },
+  {
+    "word": "连",
+    "meaning": "surname Lian",
+    "pinyin": "Lian2"
+  },
+  {
+    "word": "国家",
+    "meaning": "country; nation; state",
+    "pinyin": "guo2 jia1"
+  },
+  {
+    "word": "整个",
+    "meaning": "whole",
+    "pinyin": "zheng3 ge4"
+  },
+  {
+    "word": "特别",
+    "meaning": "unusual; special",
+    "pinyin": "te4 bie2"
+  },
+  {
+    "word": "那种",
+    "meaning": "that kind of",
+    "pinyin": "na4 zhong3"
+  },
+  {
+    "word": "不同",
+    "meaning": "different",
+    "pinyin": "bu4 tong2"
+  },
+  {
+    "word": "著",
+    "meaning": "make known",
+    "pinyin": "zhu4"
+  },
+  {
+    "word": "变成",
+    "meaning": "change into",
+    "pinyin": "bian4 cheng2"
+  },
+  {
+    "word": "够",
+    "meaning": "enough",
+    "pinyin": "gou4"
+  },
+  {
+    "word": "难道",
+    "meaning": "don't tell me ...",
+    "pinyin": "nan2 dao4"
+  },
+  {
+    "word": "学校",
+    "meaning": "school",
+    "pinyin": "xue2 xiao4"
+  },
+  {
+    "word": "样子",
+    "meaning": "appearance",
+    "pinyin": "yang4 zi5"
+  },
+  {
+    "word": "倒",
+    "meaning": "fall; to collapse; to lie horizontally",
+    "pinyin": "dao3"
+  },
+  {
+    "word": "电影",
+    "meaning": "movie; film",
+    "pinyin": "dian4 ying3"
+  },
+  {
+    "word": "谈谈",
+    "meaning": "discuss; to have a chat",
+    "pinyin": "tan2 tan2"
+  },
+  {
+    "word": "危险",
+    "meaning": "danger",
+    "pinyin": "wei1 xian3"
+  },
+  {
+    "word": "开心",
+    "meaning": "feel happy",
+    "pinyin": "kai1 xin1"
+  },
+  {
+    "word": "别的",
+    "meaning": "else",
+    "pinyin": "bie2 de5"
+  },
+  {
+    "word": "才能",
+    "meaning": "talent",
+    "pinyin": "cai2 neng2"
+  },
+  {
+    "word": "闭嘴",
+    "meaning": "Shut up!",
+    "pinyin": "bi4 zui3"
+  },
+  {
+    "word": "正",
+    "meaning": "first month of the lunar year",
+    "pinyin": "zheng1"
+  },
+  {
+    "word": "进行",
+    "meaning": "to proceed; to be in progress; to be underway",
+    "pinyin": "jin4 xing2"
+  },
+  {
+    "word": "照片",
+    "meaning": "photograph",
+    "pinyin": "zhao4 pian4"
+  },
+  {
+    "word": "刚刚",
+    "meaning": "just recently",
+    "pinyin": "gang1 gang5"
+  },
+  {
+    "word": "而已",
+    "meaning": "that's all",
+    "pinyin": "er2 yi3"
+  },
+  {
+    "word": "完成",
+    "meaning": "complete; to accomplish",
+    "pinyin": "wan2 cheng2"
+  },
+  {
+    "word": "方式",
+    "meaning": "way; method; manner; mode; pattern",
+    "pinyin": "fang1 shi4"
+  },
+  {
+    "word": "做到",
+    "meaning": "accomplish",
+    "pinyin": "zuo4 dao4"
+  },
+  {
+    "word": "爸",
+    "meaning": "father",
+    "pinyin": "ba4"
+  },
+  {
+    "word": "声音",
+    "meaning": "voice",
+    "pinyin": "sheng1 yin1"
+  },
+  {
+    "word": "第一次",
+    "meaning": "the first time; for the first time",
+    "pinyin": "di4 yi1 ci4"
+  },
+  {
+    "word": "看来",
+    "meaning": "apparently",
+    "pinyin": "kan4 lai5"
+  },
+  {
+    "word": "只能",
+    "meaning": "can only",
+    "pinyin": "zhi3 neng2"
+  },
+  {
+    "word": "太太",
+    "meaning": "married woman",
+    "pinyin": "tai4 tai5"
+  },
+  {
+    "word": "下去",
+    "meaning": "go down",
+    "pinyin": "xia4 qu4"
+  },
+  {
+    "word": "绝对",
+    "meaning": "absolute; unconditional",
+    "pinyin": "jue2 dui4"
+  },
+  {
+    "word": "处理",
+    "meaning": "handle; to deal with",
+    "pinyin": "chu3 li3"
+  },
+  {
+    "word": "欢迎",
+    "meaning": "welcome",
+    "pinyin": "huan1 ying2"
+  },
+  {
+    "word": "眼睛",
+    "meaning": "eye",
+    "pinyin": "yan3 jing5"
+  },
+  {
+    "word": "通过",
+    "meaning": "pass through; to get through",
+    "pinyin": "tong1 guo4"
+  },
+  {
+    "word": "行动",
+    "meaning": "operation",
+    "pinyin": "xing2 dong4"
+  },
+  {
+    "word": "啥",
+    "meaning": "dialectal equivalent of 什麼|什么[shen2 me5]",
+    "pinyin": "sha2"
+  },
+  {
+    "word": "感到",
+    "meaning": "feel; to sense; to perceive",
+    "pinyin": "gan3 dao4"
+  },
+  {
+    "word": "最近",
+    "meaning": "recently",
+    "pinyin": "zui4 jin4"
+  },
+  {
+    "word": "各位",
+    "meaning": "everybody",
+    "pinyin": "ge4 wei4"
+  },
+  {
+    "word": "这边",
+    "meaning": "this side",
+    "pinyin": "zhe4 bian1"
+  },
+  {
+    "word": "待",
+    "meaning": "stay; to remain",
+    "pinyin": "dai1"
+  },
+  {
+    "word": "掉",
+    "meaning": "fall",
+    "pinyin": "diao4"
+  },
+  {
+    "word": "不好意思",
+    "meaning": "feel embarrassed",
+    "pinyin": "bu4 hao3 yi4 si5"
+  },
+  {
+    "word": "猜",
+    "meaning": "guess",
+    "pinyin": "cai1"
+  },
+  {
+    "word": "使",
+    "meaning": "make",
+    "pinyin": "shi3"
+  },
+  {
+    "word": "作为",
+    "meaning": "one's conduct",
+    "pinyin": "zuo4 wei2"
+  },
+  {
+    "word": "于",
+    "meaning": "surname Yu",
+    "pinyin": "Yu2"
+  },
+  {
+    "word": "狗",
+    "meaning": "dog",
+    "pinyin": "gou3"
+  },
+  {
+    "word": "容易",
+    "meaning": "easy; straightforward",
+    "pinyin": "rong2 yi4"
+  },
+  {
+    "word": "直到",
+    "meaning": "until",
+    "pinyin": "zhi2 dao4"
+  },
+  {
+    "word": "求",
+    "meaning": "seek",
+    "pinyin": "qiu2"
+  },
+  {
+    "word": "比赛",
+    "meaning": "competition",
+    "pinyin": "bi3 sai4"
+  },
+  {
+    "word": "麽",
+    "meaning": "tiny",
+    "pinyin": "mo2"
+  },
+  {
+    "word": "拉",
+    "meaning": "pull",
+    "pinyin": "la1"
+  },
+  {
+    "word": "拍",
+    "meaning": "pat",
+    "pinyin": "pai1"
+  },
+  {
+    "word": "曾",
+    "meaning": "surname Zeng",
+    "pinyin": "Zeng1"
+  },
+  {
+    "word": "有趣",
+    "meaning": "interesting; fascinating; amusing",
+    "pinyin": "you3 qu4"
+  },
+  {
+    "word": "就算",
+    "meaning": "even if",
+    "pinyin": "jiu4 suan4"
+  },
+  {
+    "word": "活着",
+    "meaning": "alive",
+    "pinyin": "huo2 zhe5"
+  },
+  {
+    "word": "努力",
+    "meaning": "make an effort; to try hard; to strive",
+    "pinyin": "nu3 li4"
+  },
+  {
+    "word": "帮忙",
+    "meaning": "help",
+    "pinyin": "bang1 mang2"
+  },
+  {
+    "word": "留下",
+    "meaning": "leave behind",
+    "pinyin": "liu2 xia4"
+  },
+  {
+    "word": "同意",
+    "meaning": "agree",
+    "pinyin": "tong2 yi4"
+  },
+  {
+    "word": "参加",
+    "meaning": "participate",
+    "pinyin": "can1 jia1"
+  },
+  {
+    "word": "赢",
+    "meaning": "beat",
+    "pinyin": "ying2"
+  },
+  {
+    "word": "死亡",
+    "meaning": "die",
+    "pinyin": "si3 wang2"
+  },
+  {
+    "word": "每",
+    "meaning": "each",
+    "pinyin": "mei3"
+  },
+  {
+    "word": "上面",
+    "meaning": "on top of",
+    "pinyin": "shang4 mian4"
+  },
+  {
+    "word": "结果",
+    "meaning": "bear fruit",
+    "pinyin": "jie1 guo3"
+  },
+  {
+    "word": "消息",
+    "meaning": "news; information",
+    "pinyin": "xiao1 xi5"
+  },
+  {
+    "word": "要求",
+    "meaning": "request",
+    "pinyin": "yao1 qiu2"
+  },
+  {
+    "word": "理解",
+    "meaning": "comprehend; to understand",
+    "pinyin": "li3 jie3"
+  },
+  {
+    "word": "曾经",
+    "meaning": "once",
+    "pinyin": "ceng2 jing1"
+  },
+  {
+    "word": "打开",
+    "meaning": "open",
+    "pinyin": "da3 kai1"
+  },
+  {
+    "word": "收到",
+    "meaning": "receive",
+    "pinyin": "shou1 dao4"
+  },
+  {
+    "word": "照顾",
+    "meaning": "take care of",
+    "pinyin": "zhao4 gu5"
+  },
+  {
+    "word": "人类",
+    "meaning": "humanity",
+    "pinyin": "ren2 lei4"
+  },
+  {
+    "word": "主意",
+    "meaning": "plan",
+    "pinyin": "zhu3 yi5"
+  },
+  {
+    "word": "保持",
+    "meaning": "keep",
+    "pinyin": "bao3 chi2"
+  },
+  {
+    "word": "成",
+    "meaning": "surname Cheng",
+    "pinyin": "Cheng2"
+  },
+  {
+    "word": "杰克",
+    "meaning": "Jack",
+    "pinyin": "Jie2 ke4"
+  },
+  {
+    "word": "存在",
+    "meaning": "exist",
+    "pinyin": "cun2 zai4"
+  },
+  {
+    "word": "进",
+    "meaning": "go forward",
+    "pinyin": "jin4"
+  },
+  {
+    "word": "高",
+    "meaning": "surname Gao",
+    "pinyin": "Gao1"
+  },
+  {
+    "word": "晚安",
+    "meaning": "Good night!",
+    "pinyin": "wan3 an1"
+  },
+  {
+    "word": "确实",
+    "meaning": "indeed",
+    "pinyin": "que4 shi2"
+  },
+  {
+    "word": "全部",
+    "meaning": "whole; all",
+    "pinyin": "quan2 bu4"
+  },
+  {
+    "word": "靠",
+    "meaning": "lean against or on",
+    "pinyin": "kao4"
+  },
+  {
+    "word": "呆",
+    "meaning": "foolish; stupid",
+    "pinyin": "dai1"
+  },
+  {
+    "word": "起",
+    "meaning": "rise",
+    "pinyin": "qi3"
+  },
+  {
+    "word": "讨厌",
+    "meaning": "dislike",
+    "pinyin": "tao3 yan4"
+  },
+  {
+    "word": "俩",
+    "meaning": "two",
+    "pinyin": "lia3"
+  },
+  {
+    "word": "突然",
+    "meaning": "sudden; abrupt; unexpected",
+    "pinyin": "tu1 ran2"
+  },
+  {
+    "word": "多久",
+    "meaning": "how long?",
+    "pinyin": "duo1 jiu3"
+  },
+  {
+    "word": "老婆",
+    "meaning": "wife",
+    "pinyin": "lao3 po2"
+  },
+  {
+    "word": "不再",
+    "meaning": "no more; no longer",
+    "pinyin": "bu4 zai4"
+  },
+  {
+    "word": "开玩笑",
+    "meaning": "play a joke; to make fun of; to joke",
+    "pinyin": "kai1 wan2 xiao4"
+  },
+  {
+    "word": "进入",
+    "meaning": "enter",
+    "pinyin": "jin4 ru4"
+  },
+  {
+    "word": "父母",
+    "meaning": "father and mother; parents",
+    "pinyin": "fu4 mu3"
+  },
+  {
+    "word": "总统",
+    "meaning": "president",
+    "pinyin": "zong3 tong3"
+  },
+  {
+    "word": "伤害",
+    "meaning": "injure; to harm",
+    "pinyin": "shang1 hai4"
+  },
+  {
+    "word": "回答",
+    "meaning": "reply; to answer",
+    "pinyin": "hui2 da2"
+  },
+  {
+    "word": "所有人",
+    "meaning": "everyone",
+    "pinyin": "suo3 you3 ren2"
+  },
+  {
+    "word": "老师",
+    "meaning": "teacher",
+    "pinyin": "lao3 shi1"
+  },
+  {
+    "word": "早",
+    "meaning": "early",
+    "pinyin": "zao3"
+  },
+  {
+    "word": "除了",
+    "meaning": "apart from; besides; in addition to",
+    "pinyin": "chu2 le5"
+  },
+  {
+    "word": "派",
+    "meaning": "used in 派司[pa1 si5]",
+    "pinyin": "pa1"
+  },
+  {
+    "word": "咱们",
+    "meaning": "we or us spoken to)",
+    "pinyin": "zan2 men5"
+  },
+  {
+    "word": "自由",
+    "meaning": "freedom; liberty",
+    "pinyin": "zi4 you2"
+  },
+  {
+    "word": "可爱",
+    "meaning": "adorable",
+    "pinyin": "ke3 ai4"
+  },
+  {
+    "word": "日",
+    "meaning": "abbr. for 日本[Ri4 ben3], Japan",
+    "pinyin": "Ri4"
+  },
+  {
+    "word": "抓住",
+    "meaning": "grab hold of; to capture",
+    "pinyin": "zhua1 zhu4"
+  },
+  {
+    "word": "路",
+    "meaning": "surname Lu",
+    "pinyin": "Lu4"
+  },
+  {
+    "word": "谈",
+    "meaning": "surname Tan",
+    "pinyin": "Tan2"
+  },
+  {
+    "word": "简单",
+    "meaning": "simple; not complicated",
+    "pinyin": "jian3 dan1"
+  },
+  {
+    "word": "身体",
+    "meaning": "the body",
+    "pinyin": "shen1 ti3"
+  },
+  {
+    "word": "想法",
+    "meaning": "way of thinking; opinion; notion",
+    "pinyin": "xiang3 fa3"
+  },
+  {
+    "word": "早上",
+    "meaning": "early morning",
+    "pinyin": "zao3 shang5"
+  },
+  {
+    "word": "能够",
+    "meaning": "be capable of",
+    "pinyin": "neng2 gou4"
+  },
+  {
+    "word": "昨晚",
+    "meaning": "yesterday evening",
+    "pinyin": "zuo2 wan3"
+  },
+  {
+    "word": "哥哥",
+    "meaning": "older brother",
+    "pinyin": "ge1 ge5"
+  },
+  {
+    "word": "跳",
+    "meaning": "jump",
+    "pinyin": "tiao4"
+  },
+  {
+    "word": "秘密",
+    "meaning": "secret; private; confidential; clandestine",
+    "pinyin": "mi4 mi4"
+  },
+  {
+    "word": "休息",
+    "meaning": "rest",
+    "pinyin": "xiu1 xi5"
+  },
+  {
+    "word": "战争",
+    "meaning": "war; conflict",
+    "pinyin": "zhan4 zheng1"
+  },
+  {
+    "word": "其中",
+    "meaning": "among",
+    "pinyin": "qi2 zhong1"
+  },
+  {
+    "word": "内",
+    "meaning": "inside",
+    "pinyin": "nei4"
+  },
+  {
+    "word": "医院",
+    "meaning": "hospital",
+    "pinyin": "yi1 yuan4"
+  },
+  {
+    "word": "每天",
+    "meaning": "every day",
+    "pinyin": "mei3 tian1"
+  },
+  {
+    "word": "之间",
+    "meaning": "between; among; amid",
+    "pinyin": "zhi1 jian1"
+  },
+  {
+    "word": "大概",
+    "meaning": "roughly",
+    "pinyin": "da4 gai4"
+  },
+  {
+    "word": "控制",
+    "meaning": "control",
+    "pinyin": "kong4 zhi4"
+  },
+  {
+    "word": "刚",
+    "meaning": "hard",
+    "pinyin": "gang1"
+  },
+  {
+    "word": "小孩",
+    "meaning": "child",
+    "pinyin": "xiao3 hai2"
+  },
+  {
+    "word": "带来",
+    "meaning": "bring",
+    "pinyin": "dai4 lai2"
+  },
+  {
+    "word": "停止",
+    "meaning": "stop; to halt; to cease",
+    "pinyin": "ting2 zhi3"
+  },
+  {
+    "word": "因此",
+    "meaning": "thus; consequently; as a result",
+    "pinyin": "yin1 ci3"
+  },
+  {
+    "word": "花",
+    "meaning": "surname Hua",
+    "pinyin": "Hua1"
+  },
+  {
+    "word": "证明",
+    "meaning": "proof",
+    "pinyin": "zheng4 ming2"
+  },
+  {
+    "word": "约翰",
+    "meaning": "John",
+    "pinyin": "Yue1 han4"
+  },
+  {
+    "word": "飞机",
+    "meaning": "airplane",
+    "pinyin": "fei1 ji1"
+  },
+  {
+    "word": "替",
+    "meaning": "substitute for",
+    "pinyin": "ti4"
+  },
+  {
+    "word": "解释",
+    "meaning": "explanation",
+    "pinyin": "jie3 shi4"
+  },
+  {
+    "word": "律师",
+    "meaning": "lawyer",
+    "pinyin": "lu:4 shi1"
+  },
+  {
+    "word": "终于",
+    "meaning": "at last",
+    "pinyin": "zhong1 yu2"
+  },
+  {
+    "word": "耶",
+    "meaning": "interrogative particle",
+    "pinyin": "ye2"
+  },
+  {
+    "word": "翻译",
+    "meaning": "translate",
+    "pinyin": "fan1 yi4"
+  },
+  {
+    "word": "调查",
+    "meaning": "investigation",
+    "pinyin": "diao4 cha2"
+  },
+  {
+    "word": "为何",
+    "meaning": "why",
+    "pinyin": "wei4 he2"
+  },
+  {
+    "word": "糟糕",
+    "meaning": "too bad",
+    "pinyin": "zao1 gao1"
+  },
+  {
+    "word": "任务",
+    "meaning": "mission; assignment; task; duty; role",
+    "pinyin": "ren4 wu5"
+  },
+  {
+    "word": "武器",
+    "meaning": "weapon",
+    "pinyin": "wu3 qi4"
+  },
+  {
+    "word": "家里",
+    "meaning": "home",
+    "pinyin": "jia1 li3"
+  },
+  {
+    "word": "头",
+    "meaning": "head",
+    "pinyin": "tou2"
+  },
+  {
+    "word": "来自",
+    "meaning": "come from",
+    "pinyin": "lai2 zi4"
+  },
+  {
+    "word": "后面",
+    "meaning": "the back; the rear; the last bit",
+    "pinyin": "hou4 mian5"
+  },
+  {
+    "word": "小子",
+    "meaning": "youngster",
+    "pinyin": "xiao3 zi3"
+  },
+  {
+    "word": "来到",
+    "meaning": "arrive; to come",
+    "pinyin": "lai2 dao4"
+  },
+  {
+    "word": "解决",
+    "meaning": "solve; to resolve; to settle",
+    "pinyin": "jie3 jue2"
+  },
+  {
+    "word": "家人",
+    "meaning": "family member",
+    "pinyin": "jia1 ren2"
+  },
+  {
+    "word": "坐下",
+    "meaning": "sit down",
+    "pinyin": "zuo4 xia5"
+  },
+  {
+    "word": "怕",
+    "meaning": "surname Pa",
+    "pinyin": "Pa4"
+  },
+  {
+    "word": "直接",
+    "meaning": "direct",
+    "pinyin": "zhi2 jie1"
+  },
+  {
+    "word": "办公室",
+    "meaning": "office; business premises",
+    "pinyin": "ban4 gong1 shi4"
+  },
+  {
+    "word": "停",
+    "meaning": "stop",
+    "pinyin": "ting2"
+  },
+  {
+    "word": "放弃",
+    "meaning": "renounce; to abandon; to give up",
+    "pinyin": "fang4 qi4"
+  },
+  {
+    "word": "鬼",
+    "meaning": "disembodied spirit; ghost; devil",
+    "pinyin": "gui3"
+  },
+  {
+    "word": "加油",
+    "meaning": "add oil; to top up with gas; to refuel",
+    "pinyin": "jia1 you2"
+  },
+  {
+    "word": "方法",
+    "meaning": "method; way; technique; procedure",
+    "pinyin": "fang1 fa3"
+  },
+  {
+    "word": "游戏",
+    "meaning": "game",
+    "pinyin": "you2 xi4"
+  },
+  {
+    "word": "即使",
+    "meaning": "even if; even though",
+    "pinyin": "ji2 shi3"
+  },
+  {
+    "word": "本",
+    "meaning": "root; stem",
+    "pinyin": "ben3"
+  },
+  {
+    "word": "年轻",
+    "meaning": "young",
+    "pinyin": "nian2 qing1"
+  },
+  {
+    "word": "大人",
+    "meaning": "adult",
+    "pinyin": "da4 ren5"
+  },
+  {
+    "word": "使用",
+    "meaning": "use",
+    "pinyin": "shi3 yong4"
+  },
+  {
+    "word": "卖",
+    "meaning": "sell",
+    "pinyin": "mai4"
+  },
+  {
+    "word": "老板",
+    "meaning": "variant of 老闆|老板[lao3 ban3]",
+    "pinyin": "lao3 ban3"
+  },
+  {
+    "word": "水",
+    "meaning": "surname Shui",
+    "pinyin": "Shui3"
+  },
+  {
+    "word": "目标",
+    "meaning": "target",
+    "pinyin": "mu4 biao1"
+  },
+  {
+    "word": "变得",
+    "meaning": "become",
+    "pinyin": "bian4 de5"
+  },
+  {
+    "word": "可怕",
+    "meaning": "awful",
+    "pinyin": "ke3 pa4"
+  },
+  {
+    "word": "拿到",
+    "meaning": "get",
+    "pinyin": "na2 dao4"
+  },
+  {
+    "word": "考虑",
+    "meaning": "think over",
+    "pinyin": "kao3 lu:4"
+  },
+  {
+    "word": "个人",
+    "meaning": "individual",
+    "pinyin": "ge4 ren2"
+  },
+  {
+    "word": "开枪",
+    "meaning": "open fire",
+    "pinyin": "kai1 qiang1"
+  },
+  {
+    "word": "哭",
+    "meaning": "cry; to weep",
+    "pinyin": "ku1"
+  },
+  {
+    "word": "睡觉",
+    "meaning": "go to bed",
+    "pinyin": "shui4 jiao4"
+  },
+  {
+    "word": "分钟",
+    "meaning": "minute",
+    "pinyin": "fen1 zhong1"
+  },
+  {
+    "word": "想到",
+    "meaning": "think of",
+    "pinyin": "xiang3 dao4"
+  },
+  {
+    "word": "等待",
+    "meaning": "wait; to wait for",
+    "pinyin": "deng3 dai4"
+  },
+  {
+    "word": "音乐",
+    "meaning": "music",
+    "pinyin": "yin1 yue4"
+  },
+  {
+    "word": "再说",
+    "meaning": "say again",
+    "pinyin": "zai4 shuo1"
+  },
+  {
+    "word": "聪明",
+    "meaning": "intelligent; clever; bright",
+    "pinyin": "cong1 ming5"
+  },
+  {
+    "word": "姑娘",
+    "meaning": "girl",
+    "pinyin": "gu1 niang5"
+  },
+  {
+    "word": "地球",
+    "meaning": "the earth",
+    "pinyin": "di4 qiu2"
+  },
+  {
+    "word": "感谢",
+    "meaning": "thanks",
+    "pinyin": "gan3 xie4"
+  },
+  {
+    "word": "命令",
+    "meaning": "order",
+    "pinyin": "ming4 ling4"
+  },
+  {
+    "word": "阻止",
+    "meaning": "prevent",
+    "pinyin": "zu3 zhi3"
+  },
+  {
+    "word": "消失",
+    "meaning": "disappear; to fade away",
+    "pinyin": "xiao1 shi1"
+  },
+  {
+    "word": "心",
+    "meaning": "heart",
+    "pinyin": "xin1"
+  },
+  {
+    "word": "冷静",
+    "meaning": "calm; cool-headed; dispassionate",
+    "pinyin": "leng3 jing4"
+  },
+  {
+    "word": "似乎",
+    "meaning": "it seems; seemingly; as if",
+    "pinyin": "si4 hu1"
+  },
+  {
+    "word": "联系",
+    "meaning": "variant of 聯繫|联系[lian2 xi4]",
+    "pinyin": "lian2 xi4"
+  },
+  {
+    "word": "家庭",
+    "meaning": "family; household",
+    "pinyin": "jia1 ting2"
+  },
+  {
+    "word": "痛苦",
+    "meaning": "pain",
+    "pinyin": "tong4 ku3"
+  },
+  {
+    "word": "城市",
+    "meaning": "city; town",
+    "pinyin": "cheng2 shi4"
+  },
+  {
+    "word": "力量",
+    "meaning": "power; force; strength",
+    "pinyin": "li4 liang5"
+  },
+  {
+    "word": "对于",
+    "meaning": "regarding; as far as is concerned; with regard to",
+    "pinyin": "dui4 yu2"
+  },
+  {
+    "word": "未来",
+    "meaning": "future",
+    "pinyin": "wei4 lai2"
+  },
+  {
+    "word": "男孩",
+    "meaning": "boy",
+    "pinyin": "nan2 hai2"
+  },
+  {
+    "word": "三",
+    "meaning": "surname San",
+    "pinyin": "San1"
+  },
+  {
+    "word": "博士",
+    "meaning": "doctor",
+    "pinyin": "bo2 shi4"
+  },
+  {
+    "word": "姐姐",
+    "meaning": "older sister",
+    "pinyin": "jie3 jie5"
+  },
+  {
+    "word": "疯狂",
+    "meaning": "crazy; frenzied; wild",
+    "pinyin": "feng1 kuang2"
+  },
+  {
+    "word": "报告",
+    "meaning": "inform",
+    "pinyin": "bao4 gao4"
+  },
+  {
+    "word": "放下",
+    "meaning": "lay down; to put down",
+    "pinyin": "fang4 xia4"
+  },
+  {
+    "word": "昨天",
+    "meaning": "yesterday",
+    "pinyin": "zuo2 tian1"
+  },
+  {
+    "word": "那天",
+    "meaning": "that day",
+    "pinyin": "na4 tian1"
+  },
+  {
+    "word": "完美",
+    "meaning": "perfect",
+    "pinyin": "wan2 mei3"
+  },
+  {
+    "word": "答应",
+    "meaning": "answer; to respond",
+    "pinyin": "da1 ying5"
+  },
+  {
+    "word": "证据",
+    "meaning": "evidence",
+    "pinyin": "zheng4 ju4"
+  },
+  {
+    "word": "本来",
+    "meaning": "original",
+    "pinyin": "ben3 lai2"
+  },
+  {
+    "word": "负责",
+    "meaning": "be responsible for; to be in charge of; to bear responsibility for",
+    "pinyin": "fu4 ze2"
+  },
+  {
+    "word": "检查",
+    "meaning": "inspection",
+    "pinyin": "jian3 cha2"
+  },
+  {
+    "word": "厉害",
+    "meaning": "terrible; intense; severe; devastating; amazing; awesome; outstanding",
+    "pinyin": "li4 hai5"
+  },
+  {
+    "word": "拥有",
+    "meaning": "have; to possess",
+    "pinyin": "yong1 you3"
+  },
+  {
+    "word": "正常",
+    "meaning": "regular",
+    "pinyin": "zheng4 chang2"
+  },
+  {
+    "word": "并且",
+    "meaning": "and; besides; moreover; furthermore; in addition",
+    "pinyin": "bing4 qie3"
+  },
+  {
+    "word": "否则",
+    "meaning": "otherwise; if not; or",
+    "pinyin": "fou3 ze2"
+  },
+  {
+    "word": "以及",
+    "meaning": "and; as well as",
+    "pinyin": "yi3 ji2"
+  },
+  {
+    "word": "重新",
+    "meaning": "again; once more; re-",
+    "pinyin": "chong2 xin1"
+  },
+  {
+    "word": "忘记",
+    "meaning": "forget",
+    "pinyin": "wang4 ji4"
+  },
+  {
+    "word": "这位",
+    "meaning": "this",
+    "pinyin": "zhe4 wei4"
+  },
+  {
+    "word": "研究",
+    "meaning": "research",
+    "pinyin": "yan2 jiu1"
+  },
+  {
+    "word": "附近",
+    "meaning": "nearby; neighboring",
+    "pinyin": "fu4 jin4"
+  },
+  {
+    "word": "不然",
+    "meaning": "not so",
+    "pinyin": "bu4 ran2"
+  },
+  {
+    "word": "方正",
+    "meaning": "see 方正縣|方正县[Fang1 zheng4 Xian4]",
+    "pinyin": "Fang1 zheng4"
+  },
+  {
+    "word": "字幕",
+    "meaning": "subtitles; captions",
+    "pinyin": "zi4 mu4"
+  },
+  {
+    "word": "脸",
+    "meaning": "face",
+    "pinyin": "lian3"
+  },
+  {
+    "word": "者",
+    "meaning": "one who ...",
+    "pinyin": "zhe3"
+  },
+  {
+    "word": "加入",
+    "meaning": "become a member",
+    "pinyin": "jia1 ru4"
+  },
+  {
+    "word": "於",
+    "meaning": "surname Yu",
+    "pinyin": "Yu1"
+  },
+  {
+    "word": "唱",
+    "meaning": "sing",
+    "pinyin": "chang4"
+  },
+  {
+    "word": "反正",
+    "meaning": "anyway",
+    "pinyin": "fan3 zheng4"
+  },
+  {
+    "word": "不该",
+    "meaning": "should not",
+    "pinyin": "bu4 gai1"
+  },
+  {
+    "word": "政府",
+    "meaning": "government",
+    "pinyin": "zheng4 fu3"
+  },
+  {
+    "word": "快乐",
+    "meaning": "happy; joyful",
+    "pinyin": "kuai4 le4"
+  },
+  {
+    "word": "身边",
+    "meaning": "at one's side",
+    "pinyin": "shen1 bian1"
+  },
+  {
+    "word": "遇到",
+    "meaning": "meet; to run into; to come across",
+    "pinyin": "yu4 dao4"
+  },
+  {
+    "word": "伟大",
+    "meaning": "huge; great; grand; worthy of the greatest admiration; important",
+    "pinyin": "wei3 da4"
+  },
+  {
+    "word": "咖啡",
+    "meaning": "coffee",
+    "pinyin": "ka1 fei1"
+  },
+  {
+    "word": "接",
+    "meaning": "receive",
+    "pinyin": "jie1"
+  },
+  {
+    "word": "仍然",
+    "meaning": "still; as before; yet",
+    "pinyin": "reng2 ran2"
+  },
+  {
+    "word": "门",
+    "meaning": "surname Men",
+    "pinyin": "Men2"
+  },
+  {
+    "word": "开车",
+    "meaning": "drive a car",
+    "pinyin": "kai1 che1"
+  },
+  {
+    "word": "代表",
+    "meaning": "representative",
+    "pinyin": "dai4 biao3"
+  },
+  {
+    "word": "陪",
+    "meaning": "accompany",
+    "pinyin": "pei2"
+  },
+  {
+    "word": "若",
+    "meaning": "used in 般若[bo1 re3]",
+    "pinyin": "re3"
+  },
+  {
+    "word": "尸体",
+    "meaning": "corpse; dead body",
+    "pinyin": "shi1 ti3"
+  },
+  {
+    "word": "比较",
+    "meaning": "compare",
+    "pinyin": "bi3 jiao4"
+  },
+  {
+    "word": "紧张",
+    "meaning": "nervous",
+    "pinyin": "jin3 zhang1"
+  },
+  {
+    "word": "监狱",
+    "meaning": "prison",
+    "pinyin": "jian1 yu4"
+  },
+  {
+    "word": "位置",
+    "meaning": "position",
+    "pinyin": "wei4 zhi5"
+  },
+  {
+    "word": "随便",
+    "meaning": "as one wishes",
+    "pinyin": "sui2 bian4"
+  },
+  {
+    "word": "偷",
+    "meaning": "steal",
+    "pinyin": "tou1"
+  },
+  {
+    "word": "安排",
+    "meaning": "arrange",
+    "pinyin": "an1 pai2"
+  },
+  {
+    "word": "表演",
+    "meaning": "play",
+    "pinyin": "biao3 yan3"
+  },
+  {
+    "word": "从没",
+    "meaning": "never",
+    "pinyin": "cong2 mei2"
+  },
+  {
+    "word": "除非",
+    "meaning": "only if",
+    "pinyin": "chu2 fei1"
+  },
+  {
+    "word": "屁股",
+    "meaning": "buttocks",
+    "pinyin": "pi4 gu5"
+  },
+  {
+    "word": "酒",
+    "meaning": "wine",
+    "pinyin": "jiu3"
+  },
+  {
+    "word": "恩",
+    "meaning": "variant of 恩[en1]",
+    "pinyin": "en1"
+  },
+  {
+    "word": "老兄",
+    "meaning": "elder brother",
+    "pinyin": "lao3 xiong1"
+  },
+  {
+    "word": "支持",
+    "meaning": "be in favor of",
+    "pinyin": "zhi1 chi2"
+  },
+  {
+    "word": "必要",
+    "meaning": "necessary",
+    "pinyin": "bi4 yao4"
+  },
+  {
+    "word": "人生",
+    "meaning": "life",
+    "pinyin": "ren2 sheng1"
+  },
+  {
+    "word": "正确",
+    "meaning": "correct; sound; right; proper",
+    "pinyin": "zheng4 que4"
+  },
+  {
+    "word": "跟着",
+    "meaning": "follow after",
+    "pinyin": "gen1 zhe5"
+  },
+  {
+    "word": "杀死",
+    "meaning": "kill",
+    "pinyin": "sha1 si3"
+  },
+  {
+    "word": "交给",
+    "meaning": "give; to deliver; to hand over",
+    "pinyin": "jiao1 gei3"
+  },
+  {
+    "word": "叔叔",
+    "meaning": "father's younger brother; paternal uncle",
+    "pinyin": "shu1 shu5"
+  },
+  {
+    "word": "食物",
+    "meaning": "food",
+    "pinyin": "shi2 wu4"
+  },
+  {
+    "word": "事实",
+    "meaning": "fact",
+    "pinyin": "shi4 shi2"
+  },
+  {
+    "word": "简直",
+    "meaning": "simply; really",
+    "pinyin": "jian3 zhi2"
+  },
+  {
+    "word": "安静",
+    "meaning": "quiet",
+    "pinyin": "an1 jing4"
+  },
+  {
+    "word": "离",
+    "meaning": "mythical beast",
+    "pinyin": "chi1"
+  },
+  {
+    "word": "妹妹",
+    "meaning": "younger sister",
+    "pinyin": "mei4 mei5"
+  },
+  {
+    "word": "斯",
+    "meaning": "Slovakia",
+    "pinyin": "Si1"
+  },
+  {
+    "word": "美丽",
+    "meaning": "beautiful",
+    "pinyin": "mei3 li4"
+  },
+  {
+    "word": "再次",
+    "meaning": "once more; once again",
+    "pinyin": "zai4 ci4"
+  },
+  {
+    "word": "案子",
+    "meaning": "long table; counter",
+    "pinyin": "an4 zi5"
+  },
+  {
+    "word": "下面",
+    "meaning": "below",
+    "pinyin": "xia4 mian4"
+  },
+  {
+    "word": "不够",
+    "meaning": "not enough",
+    "pinyin": "bu4 gou4"
+  },
+  {
+    "word": "哈",
+    "meaning": "abbr. for 哈薩克斯坦|哈萨克斯坦[Ha1 sa4 ke4 si1 tan3], Kazakhstan",
+    "pinyin": "Ha1"
+  },
+  {
+    "word": "可怜",
+    "meaning": "pitiful",
+    "pinyin": "ke3 lian2"
+  },
+  {
+    "word": "教",
+    "meaning": "surname Jiao",
+    "pinyin": "Jiao4"
+  },
+  {
+    "word": "首先",
+    "meaning": "first of all; in the first place",
+    "pinyin": "shou3 xian1"
+  },
+  {
+    "word": "另外",
+    "meaning": "additional",
+    "pinyin": "ling4 wai4"
+  },
+  {
+    "word": "提供",
+    "meaning": "offer",
+    "pinyin": "ti2 gong1"
+  },
+  {
+    "word": "记住",
+    "meaning": "remember",
+    "pinyin": "ji4 zhu5"
+  },
+  {
+    "word": "听见",
+    "meaning": "hear",
+    "pinyin": "ting1 jian4"
+  },
+  {
+    "word": "信",
+    "meaning": "letter",
+    "pinyin": "xin4"
+  },
+  {
+    "word": "国王",
+    "meaning": "king",
+    "pinyin": "guo2 wang2"
+  },
+  {
+    "word": "面前",
+    "meaning": "in front of",
+    "pinyin": "mian4 qian2"
+  },
+  {
+    "word": "几乎",
+    "meaning": "almost; nearly; practically",
+    "pinyin": "ji1 hu1"
+  },
+  {
+    "word": "日子",
+    "meaning": "day",
+    "pinyin": "ri4 zi5"
+  },
+  {
+    "word": "舒服",
+    "meaning": "comfortable",
+    "pinyin": "shu1 fu5"
+  },
+  {
+    "word": "原来",
+    "meaning": "original; former",
+    "pinyin": "yuan2 lai2"
+  },
+  {
+    "word": "再也",
+    "meaning": "ever again; any longer",
+    "pinyin": "zai4 ye3"
+  },
+  {
+    "word": "操",
+    "meaning": "old variant of 操[cao1]",
+    "pinyin": "cao1"
+  },
+  {
+    "word": "纽约",
+    "meaning": "New York",
+    "pinyin": "Niu3 yue1"
+  },
+  {
+    "word": "早就",
+    "meaning": "already at an earlier time",
+    "pinyin": "zao3 jiu4"
+  },
+  {
+    "word": "逼",
+    "meaning": "variant of 逼[bi1]",
+    "pinyin": "bi1"
+  },
+  {
+    "word": "有关",
+    "meaning": "have sth to do with",
+    "pinyin": "you3 guan1"
+  },
+  {
+    "word": "放开",
+    "meaning": "let go",
+    "pinyin": "fang4 kai1"
+  },
+  {
+    "word": "信息",
+    "meaning": "information; news; message",
+    "pinyin": "xin4 xi1"
+  },
+  {
+    "word": "星期",
+    "meaning": "week",
+    "pinyin": "xing1 qi1"
+  },
+  {
+    "word": "不得不",
+    "meaning": "have no choice or option but to",
+    "pinyin": "bu4 de2 bu4"
+  },
+  {
+    "word": "发誓",
+    "meaning": "vow",
+    "pinyin": "fa1 shi4"
+  },
+  {
+    "word": "钥匙",
+    "meaning": "key",
+    "pinyin": "yao4 shi5"
+  },
+  {
+    "word": "错误",
+    "meaning": "mistaken; false; wrong",
+    "pinyin": "cuo4 wu4"
+  },
+  {
+    "word": "放松",
+    "meaning": "relax; to slacken; to loosen",
+    "pinyin": "fang4 song1"
+  },
+  {
+    "word": "约会",
+    "meaning": "appointment",
+    "pinyin": "yue1 hui4"
+  },
+  {
+    "word": "船",
+    "meaning": "variant of 船[chuan2]",
+    "pinyin": "chuan2"
+  },
+  {
+    "word": "打扰",
+    "meaning": "disturb",
+    "pinyin": "da3 rao3"
+  },
+  {
+    "word": "女",
+    "meaning": "female",
+    "pinyin": "nu:3"
+  },
+  {
+    "word": "手机",
+    "meaning": "cell phone; mobile phone",
+    "pinyin": "shou3 ji1"
+  },
+  {
+    "word": "二",
+    "meaning": "two",
+    "pinyin": "er4"
+  },
+  {
+    "word": "到处",
+    "meaning": "everywhere",
+    "pinyin": "dao4 chu4"
+  },
+  {
+    "word": "攻击",
+    "meaning": "attack",
+    "pinyin": "gong1 ji1"
+  },
+  {
+    "word": "第一",
+    "meaning": "first",
+    "pinyin": "di4 yi1"
+  },
+  {
+    "word": "建议",
+    "meaning": "propose; to suggest; to recommend",
+    "pinyin": "jian4 yi4"
+  },
+  {
+    "word": "日本",
+    "meaning": "Japan",
+    "pinyin": "Ri4 ben3"
+  },
+  {
+    "word": "理由",
+    "meaning": "reason",
+    "pinyin": "li3 you2"
+  },
+  {
+    "word": "事实上",
+    "meaning": "in fact",
+    "pinyin": "shi4 shi2 shang4"
+  },
+  {
+    "word": "阿",
+    "meaning": "prefix used before monosyllabic names, kinship terms etc to indicate familiarity",
+    "pinyin": "a1"
+  },
+  {
+    "word": "跳舞",
+    "meaning": "dance",
+    "pinyin": "tiao4 wu3"
+  },
+  {
+    "word": "生气",
+    "meaning": "get angry; to be furious",
+    "pinyin": "sheng1 qi4"
+  },
+  {
+    "word": "久",
+    "meaning": "long",
+    "pinyin": "jiu3"
+  },
+  {
+    "word": "信任",
+    "meaning": "trust",
+    "pinyin": "xin4 ren4"
+  },
+  {
+    "word": "此",
+    "meaning": "this; these",
+    "pinyin": "ci3"
+  },
+  {
+    "word": "差不多",
+    "meaning": "almost",
+    "pinyin": "cha4 bu5 duo1"
+  },
+  {
+    "word": "原谅",
+    "meaning": "excuse",
+    "pinyin": "yuan2 liang4"
+  },
+  {
+    "word": "神",
+    "meaning": "God",
+    "pinyin": "Shen2"
+  },
+  {
+    "word": "经常",
+    "meaning": "frequently; constantly; regularly; often",
+    "pinyin": "jing1 chang2"
+  },
+  {
+    "word": "的确",
+    "meaning": "really",
+    "pinyin": "di2 que4"
+  },
+  {
+    "word": "之一",
+    "meaning": "one of",
+    "pinyin": "zhi1 yi1"
+  },
+  {
+    "word": "幸福",
+    "meaning": "happiness",
+    "pinyin": "xing4 fu2"
+  },
+  {
+    "word": "哎",
+    "meaning": "hey!",
+    "pinyin": "ai1"
+  },
+  {
+    "word": "便",
+    "meaning": "plain",
+    "pinyin": "bian4"
+  },
+  {
+    "word": "马",
+    "meaning": "surname Ma",
+    "pinyin": "Ma3"
+  },
+  {
+    "word": "算",
+    "meaning": "regard as",
+    "pinyin": "suan4"
+  },
+  {
+    "word": "吃饭",
+    "meaning": "have a meal",
+    "pinyin": "chi1 fan4"
+  },
+  {
+    "word": "正是",
+    "meaning": "is precisely",
+    "pinyin": "zheng4 shi4"
+  },
+  {
+    "word": "不必",
+    "meaning": "need not",
+    "pinyin": "bu4 bi4"
+  },
+  {
+    "word": "幸运",
+    "meaning": "fortunate; lucky",
+    "pinyin": "xing4 yun4"
+  },
+  {
+    "word": "丢",
+    "meaning": "lose",
+    "pinyin": "diu1"
+  },
+  {
+    "word": "长",
+    "meaning": "long",
+    "pinyin": "chang2"
+  },
+  {
+    "word": "而是",
+    "meaning": "rather",
+    "pinyin": "er2 shi4"
+  },
+  {
+    "word": "住手",
+    "meaning": "desist",
+    "pinyin": "zhu4 shou3"
+  },
+  {
+    "word": "动物",
+    "meaning": "animal",
+    "pinyin": "dong4 wu4"
+  },
+  {
+    "word": "弟弟",
+    "meaning": "younger brother",
+    "pinyin": "di4 di5"
+  },
+  {
+    "word": "道歉",
+    "meaning": "apologize",
+    "pinyin": "dao4 qian4"
+  },
+  {
+    "word": "严重",
+    "meaning": "grave; serious; severe; critical",
+    "pinyin": "yan2 zhong4"
+  },
+  {
+    "word": "人家",
+    "meaning": "household",
+    "pinyin": "ren2 jia1"
+  },
+  {
+    "word": "坚持",
+    "meaning": "persevere with",
+    "pinyin": "jian1 chi2"
+  },
+  {
+    "word": "想象",
+    "meaning": "imagine; to envision",
+    "pinyin": "xiang3 xiang4"
+  },
+  {
+    "word": "按",
+    "meaning": "press",
+    "pinyin": "an4"
+  },
+  {
+    "word": "礼物",
+    "meaning": "gift; present",
+    "pinyin": "li3 wu4"
+  },
+  {
+    "word": "每次",
+    "meaning": "every time",
+    "pinyin": "mei3 ci4"
+  },
+  {
+    "word": "将军",
+    "meaning": "general",
+    "pinyin": "jiang1 jun1"
+  },
+  {
+    "word": "剩下",
+    "meaning": "remain; to be left over",
+    "pinyin": "sheng4 xia4"
+  },
+  {
+    "word": "有事",
+    "meaning": "be occupied with sth",
+    "pinyin": "you3 shi4"
+  },
+  {
+    "word": "老爸",
+    "meaning": "father; dad",
+    "pinyin": "lao3 ba4"
+  },
+  {
+    "word": "系统",
+    "meaning": "system",
+    "pinyin": "xi4 tong3"
+  },
+  {
+    "word": "全都",
+    "meaning": "all",
+    "pinyin": "quan2 dou1"
+  },
+  {
+    "word": "组织",
+    "meaning": "organize",
+    "pinyin": "zu3 zhi1"
+  },
+  {
+    "word": "敌人",
+    "meaning": "enemy",
+    "pinyin": "di2 ren2"
+  },
+  {
+    "word": "看上去",
+    "meaning": "it would appear",
+    "pinyin": "kan4 shang5 qu5"
+  },
+  {
+    "word": "老天",
+    "meaning": "God",
+    "pinyin": "lao3 tian1"
+  },
+  {
+    "word": "认真",
+    "meaning": "conscientious",
+    "pinyin": "ren4 zhen1"
+  },
+  {
+    "word": "分",
+    "meaning": "divide; to separate",
+    "pinyin": "fen1"
+  },
+  {
+    "word": "书",
+    "meaning": "abbr. for 書經|书经[Shu1 jing1]",
+    "pinyin": "Shu1"
+  },
+  {
+    "word": "往",
+    "meaning": "go",
+    "pinyin": "wang3"
+  },
+  {
+    "word": "关心",
+    "meaning": "be concerned about; to care about",
+    "pinyin": "guan1 xin1"
+  },
+  {
+    "word": "坏",
+    "meaning": "bad",
+    "pinyin": "huai4"
+  },
+  {
+    "word": "骗",
+    "meaning": "cheat",
+    "pinyin": "pian4"
+  },
+  {
+    "word": "中国",
+    "meaning": "China",
+    "pinyin": "Zhong1 guo2"
+  },
+  {
+    "word": "生意",
+    "meaning": "life force",
+    "pinyin": "sheng1 yi4"
+  },
+  {
+    "word": "上去",
+    "meaning": "go up",
+    "pinyin": "shang4 qu4"
+  },
+  {
+    "word": "值得",
+    "meaning": "worth the money",
+    "pinyin": "zhi2 de5"
+  },
+  {
+    "word": "搞定",
+    "meaning": "fix",
+    "pinyin": "gao3 ding4"
+  },
+  {
+    "word": "寻找",
+    "meaning": "seek; to look for",
+    "pinyin": "xun2 zhao3"
+  },
+  {
+    "word": "派对",
+    "meaning": "party",
+    "pinyin": "pai4 dui4"
+  },
+  {
+    "word": "许多",
+    "meaning": "many",
+    "pinyin": "xu3 duo1"
+  },
+  {
+    "word": "学生",
+    "meaning": "student",
+    "pinyin": "xue2 sheng5"
+  },
+  {
+    "word": "下次",
+    "meaning": "next time",
+    "pinyin": "xia4 ci4"
+  },
+  {
+    "word": "通知",
+    "meaning": "notify",
+    "pinyin": "tong1 zhi1"
+  },
+  {
+    "word": "救命",
+    "meaning": "save sb's life",
+    "pinyin": "jiu4 ming4"
+  },
+  {
+    "word": "表现",
+    "meaning": "show",
+    "pinyin": "biao3 xian4"
+  },
+  {
+    "word": "利用",
+    "meaning": "exploit",
+    "pinyin": "li4 yong4"
+  },
+  {
+    "word": "受伤",
+    "meaning": "sustain injuries",
+    "pinyin": "shou4 shang1"
+  },
+  {
+    "word": "后来",
+    "meaning": "afterwards; later",
+    "pinyin": "hou4 lai2"
+  },
+  {
+    "word": "早上好",
+    "meaning": "Good morning!",
+    "pinyin": "zao3 shang5 hao3"
+  },
+  {
+    "word": "精神",
+    "meaning": "spirit",
+    "pinyin": "jing1 shen2"
+  },
+  {
+    "word": "居然",
+    "meaning": "unexpectedly",
+    "pinyin": "ju1 ran2"
+  },
+  {
+    "word": "受到",
+    "meaning": "receive; to be ...ed",
+    "pinyin": "shou4 dao4"
+  },
+  {
+    "word": "大学",
+    "meaning": "the Great Learning, one of the Four Books 四書|四书[Si4 shu1] in Confucianism",
+    "pinyin": "Da4 xue2"
+  },
+  {
+    "word": "那时",
+    "meaning": "then",
+    "pinyin": "na4 shi2"
+  },
+  {
+    "word": "既然",
+    "meaning": "since; as; this being the case",
+    "pinyin": "ji4 ran2"
+  },
+  {
+    "word": "几天",
+    "meaning": "several days",
+    "pinyin": "ji3 tian1"
+  },
+  {
+    "word": "有时",
+    "meaning": "sometimes",
+    "pinyin": "you3 shi2"
+  },
+  {
+    "word": "米",
+    "meaning": "surname Mi",
+    "pinyin": "Mi3"
+  },
+  {
+    "word": "总",
+    "meaning": "general; overall",
+    "pinyin": "zong3"
+  },
+  {
+    "word": "真相",
+    "meaning": "the truth about sth; the actual facts",
+    "pinyin": "zhen1 xiang4"
+  },
+  {
+    "word": "恨",
+    "meaning": "hate",
+    "pinyin": "hen4"
+  },
+  {
+    "word": "卡",
+    "meaning": "stop",
+    "pinyin": "ka3"
+  },
+  {
+    "word": "不知",
+    "meaning": "not to know",
+    "pinyin": "bu4 zhi1"
+  },
+  {
+    "word": "远",
+    "meaning": "far",
+    "pinyin": "yuan3"
+  },
+  {
+    "word": "警官",
+    "meaning": "constable; police officer",
+    "pinyin": "jing3 guan1"
+  },
+  {
+    "word": "属于",
+    "meaning": "belong to; to fall under",
+    "pinyin": "shu3 yu2"
+  },
+  {
+    "word": "什",
+    "meaning": "what",
+    "pinyin": "shen2"
+  },
+  {
+    "word": "可不是",
+    "meaning": "exactly!; indeed; that's for sure",
+    "pinyin": "ke3 bu5 shi4"
+  },
+  {
+    "word": "怪",
+    "meaning": "bewildering",
+    "pinyin": "guai4"
+  },
+  {
+    "word": "怀疑",
+    "meaning": "doubt; to be skeptical of",
+    "pinyin": "huai2 yi2"
+  },
+  {
+    "word": "笨蛋",
+    "meaning": "fool; idiot",
+    "pinyin": "ben4 dan4"
+  },
+  {
+    "word": "战斗",
+    "meaning": "fight",
+    "pinyin": "zhan4 dou4"
+  },
+  {
+    "word": "承认",
+    "meaning": "admit",
+    "pinyin": "cheng2 ren4"
+  },
+  {
+    "word": "法律",
+    "meaning": "law",
+    "pinyin": "fa3 lu:4"
+  },
+  {
+    "word": "别说",
+    "meaning": "say nothing of; not to mention; let alone",
+    "pinyin": "bie2 shuo1"
+  },
+  {
+    "word": "简体",
+    "meaning": "simplified form of Chinese characters, as opposed to traditional form 繁體|繁体[fan2 ti3]",
+    "pinyin": "jian3 ti3"
+  },
+  {
+    "word": "记录",
+    "meaning": "record",
+    "pinyin": "ji4 lu4"
+  },
+  {
+    "word": "见面",
+    "meaning": "meet; to see each other",
+    "pinyin": "jian4 mian4"
+  },
+  {
+    "word": "能力",
+    "meaning": "capability",
+    "pinyin": "neng2 li4"
+  },
+  {
+    "word": "足够",
+    "meaning": "enough; sufficient",
+    "pinyin": "zu2 gou4"
+  },
+  {
+    "word": "瞧",
+    "meaning": "look at",
+    "pinyin": "qiao2"
+  },
+  {
+    "word": "同样",
+    "meaning": "same; equal; similar",
+    "pinyin": "tong2 yang4"
+  },
+  {
+    "word": "白痴",
+    "meaning": "idiocy",
+    "pinyin": "bai2 chi1"
+  },
+  {
+    "word": "拒绝",
+    "meaning": "refuse; to decline; to reject",
+    "pinyin": "ju4 jue2"
+  },
+  {
+    "word": "影响",
+    "meaning": "influence",
+    "pinyin": "ying3 xiang3"
+  },
+  {
+    "word": "画",
+    "meaning": "draw; to paint",
+    "pinyin": "hua4"
+  },
+  {
+    "word": "其",
+    "meaning": "his",
+    "pinyin": "qi2"
+  },
+  {
+    "word": "德",
+    "meaning": "Germany",
+    "pinyin": "De2"
+  },
+  {
+    "word": "交易",
+    "meaning": "deal; to trade; to transact",
+    "pinyin": "jiao1 yi4"
+  },
+  {
+    "word": "管",
+    "meaning": "variant of 管[guan3]",
+    "pinyin": "guan3"
+  },
+  {
+    "word": "开门",
+    "meaning": "to open a door",
+    "pinyin": "kai1 men2"
+  },
+  {
+    "word": "意味着",
+    "meaning": "signify",
+    "pinyin": "yi4 wei4 zhe5"
+  },
+  {
+    "word": "或是",
+    "meaning": "or",
+    "pinyin": "huo4 shi4"
+  },
+  {
+    "word": "美",
+    "meaning": "the Americas",
+    "pinyin": "Mei3"
+  },
+  {
+    "word": "教授",
+    "meaning": "professor",
+    "pinyin": "jiao4 shou4"
+  },
+  {
+    "word": "享受",
+    "meaning": "enjoy",
+    "pinyin": "xiang3 shou4"
+  },
+  {
+    "word": "喝酒",
+    "meaning": "drink",
+    "pinyin": "he1 jiu3"
+  },
+  {
+    "word": "好多",
+    "meaning": "many",
+    "pinyin": "hao3 duo1"
+  },
+  {
+    "word": "接下来",
+    "meaning": "accept",
+    "pinyin": "jie1 xia4 lai2"
+  },
+  {
+    "word": "腿",
+    "meaning": "leg",
+    "pinyin": "tui3"
+  },
+  {
+    "word": "走开",
+    "meaning": "leave; to walk away; to beat it",
+    "pinyin": "zou3 kai1"
+  },
+  {
+    "word": "合作",
+    "meaning": "cooperate; to collaborate; to work together",
+    "pinyin": "he2 zuo4"
+  },
+  {
+    "word": "女朋友",
+    "meaning": "girlfriend",
+    "pinyin": "nu:3 peng2 you5"
+  },
+  {
+    "word": "好吃",
+    "meaning": "tasty; delicious",
+    "pinyin": "hao3 chi1"
+  },
+  {
+    "word": "事件",
+    "meaning": "incident; event",
+    "pinyin": "shi4 jian4"
+  },
+  {
+    "word": "出发",
+    "meaning": "set off",
+    "pinyin": "chu1 fa1"
+  },
+  {
+    "word": "酒吧",
+    "meaning": "bar",
+    "pinyin": "jiu3 ba1"
+  },
+  {
+    "word": "多么",
+    "meaning": "how",
+    "pinyin": "duo1 me5"
+  },
+  {
+    "word": "不如",
+    "meaning": "not equal to; not as good as; inferior to",
+    "pinyin": "bu4 ru2"
+  },
+  {
+    "word": "指",
+    "meaning": "finger",
+    "pinyin": "zhi3"
+  },
+  {
+    "word": "客人",
+    "meaning": "visitor",
+    "pinyin": "ke4 ren2"
+  },
+  {
+    "word": "换",
+    "meaning": "exchange",
+    "pinyin": "huan4"
+  },
+  {
+    "word": "梦想",
+    "meaning": "to dream of",
+    "pinyin": "meng4 xiang3"
+  },
+  {
+    "word": "英雄",
+    "meaning": "hero",
+    "pinyin": "ying1 xiong2"
+  },
+  {
+    "word": "傻",
+    "meaning": "foolish",
+    "pinyin": "sha3"
+  },
+  {
+    "word": "血",
+    "meaning": "see 血[xue4]",
+    "pinyin": "xie3"
+  },
+  {
+    "word": "扔",
+    "meaning": "throw",
+    "pinyin": "reng1"
+  },
+  {
+    "word": "藏",
+    "meaning": "Tibet",
+    "pinyin": "Zang4"
+  },
+  {
+    "word": "杀人",
+    "meaning": "homicide",
+    "pinyin": "sha1 ren2"
+  },
+  {
+    "word": "一会儿",
+    "meaning": "a moment",
+    "pinyin": "yi1 hui4 r5"
+  },
+  {
+    "word": "变",
+    "meaning": "change",
+    "pinyin": "bian4"
+  },
+  {
+    "word": "约",
+    "meaning": "weigh in a balance or on a scale",
+    "pinyin": "yao1"
+  },
+  {
+    "word": "行为",
+    "meaning": "action; conduct; behavior; activity",
+    "pinyin": "xing2 wei2"
+  },
+  {
+    "word": "头发",
+    "meaning": "hair",
+    "pinyin": "tou2 fa5"
+  },
+  {
+    "word": "适合",
+    "meaning": "fit; to suit",
+    "pinyin": "shi4 he2"
+  },
+  {
+    "word": "恭喜",
+    "meaning": "congratulate",
+    "pinyin": "gong1 xi3"
+  },
+  {
+    "word": "上次",
+    "meaning": "last time",
+    "pinyin": "shang4 ci4"
+  },
+  {
+    "word": "地狱",
+    "meaning": "hell; underworld; Naraka",
+    "pinyin": "di4 yu4"
+  },
+  {
+    "word": "不在乎",
+    "meaning": "not to care",
+    "pinyin": "bu4 zai4 hu5"
+  },
+  {
+    "word": "生",
+    "meaning": "grow; to give birth; to produce; to be born",
+    "pinyin": "sheng1"
+  },
+  {
+    "word": "哪个",
+    "meaning": "which",
+    "pinyin": "na3 ge5"
+  },
+  {
+    "word": "实在",
+    "meaning": "really",
+    "pinyin": "shi2 zai4"
+  },
+  {
+    "word": "路上",
+    "meaning": "on the road",
+    "pinyin": "lu4 shang5"
+  },
+  {
+    "word": "接近",
+    "meaning": "approach; to get close to",
+    "pinyin": "jie1 jin4"
+  },
+  {
+    "word": "不准",
+    "meaning": "not to allow",
+    "pinyin": "bu4 zhun3"
+  },
+  {
+    "word": "银行",
+    "meaning": "bank",
+    "pinyin": "yin2 hang2"
+  },
+  {
+    "word": "碰",
+    "meaning": "variant of 碰[peng4]",
+    "pinyin": "peng4"
+  },
+  {
+    "word": "介绍",
+    "meaning": "introduce",
+    "pinyin": "jie4 shao4"
+  },
+  {
+    "word": "一旦",
+    "meaning": "in case",
+    "pinyin": "yi1 dan4"
+  },
+  {
+    "word": "味道",
+    "meaning": "flavor; taste",
+    "pinyin": "wei4 dao5"
+  },
+  {
+    "word": "实际上",
+    "meaning": "in fact",
+    "pinyin": "shi2 ji4 shang4"
+  },
+  {
+    "word": "感受",
+    "meaning": "sense",
+    "pinyin": "gan3 shou4"
+  },
+  {
+    "word": "身份",
+    "meaning": "identity; aspect of one's identity; role; capacity; status; position; rank",
+    "pinyin": "shen1 fen4"
+  },
+  {
+    "word": "意外",
+    "meaning": "unexpected",
+    "pinyin": "yi4 wai4"
+  },
+  {
+    "word": "一般",
+    "meaning": "same",
+    "pinyin": "yi1 ban1"
+  },
+  {
+    "word": "吓",
+    "meaning": "scare",
+    "pinyin": "he4"
+  },
+  {
+    "word": "停下",
+    "meaning": "stop",
+    "pinyin": "ting2 xia4"
+  },
+  {
+    "word": "意义",
+    "meaning": "sense",
+    "pinyin": "yi4 yi4"
+  },
+  {
+    "word": "拜",
+    "meaning": "bow to; to pay one's respects",
+    "pinyin": "bai4"
+  },
+  {
+    "word": "婊子",
+    "meaning": "prostitute",
+    "pinyin": "biao3 zi5"
+  },
+  {
+    "word": "梦",
+    "meaning": "dream",
+    "pinyin": "meng4"
+  },
+  {
+    "word": "学习",
+    "meaning": "learn",
+    "pinyin": "xue2 xi2"
+  },
+  {
+    "word": "同时",
+    "meaning": "at the same time; simultaneously",
+    "pinyin": "tong2 shi2"
+  },
+  {
+    "word": "呼吸",
+    "meaning": "breathe",
+    "pinyin": "hu1 xi1"
+  },
+  {
+    "word": "经历",
+    "meaning": "experience; to go through",
+    "pinyin": "jing1 li4"
+  },
+  {
+    "word": "凶手",
+    "meaning": "murderer",
+    "pinyin": "xiong1 shou3"
+  },
+  {
+    "word": "目前",
+    "meaning": "at the present time",
+    "pinyin": "mu4 qian2"
+  },
+  {
+    "word": "威胁",
+    "meaning": "threaten; to menace",
+    "pinyin": "wei1 xie2"
+  },
+  {
+    "word": "没法",
+    "meaning": "at a loss",
+    "pinyin": "mei2 fa3"
+  },
+  {
+    "word": "有时候",
+    "meaning": "sometimes",
+    "pinyin": "you3 shi2 hou5"
+  },
+  {
+    "word": "英国",
+    "meaning": "United Kingdom; Britain",
+    "pinyin": "Ying1 guo2"
+  },
+  {
+    "word": "男",
+    "meaning": "male",
+    "pinyin": "nan2"
+  },
+  {
+    "word": "什么样",
+    "meaning": "what kind?; what sort?",
+    "pinyin": "shen2 me5 yang4"
+  },
+  {
+    "word": "老大",
+    "meaning": "old age",
+    "pinyin": "lao3 da4"
+  },
+  {
+    "word": "受",
+    "meaning": "receive",
+    "pinyin": "shou4"
+  },
+  {
+    "word": "愚蠢",
+    "meaning": "silly",
+    "pinyin": "yu2 chun3"
+  },
+  {
+    "word": "算了",
+    "meaning": "let it be",
+    "pinyin": "suan4 le5"
+  },
+  {
+    "word": "真实",
+    "meaning": "true; real",
+    "pinyin": "zhen1 shi2"
+  },
+  {
+    "word": "婚礼",
+    "meaning": "wedding ceremony",
+    "pinyin": "hun1 li3"
+  },
+  {
+    "word": "在家",
+    "meaning": "be at home",
+    "pinyin": "zai4 jia1"
+  },
+  {
+    "word": "允许",
+    "meaning": "permit",
+    "pinyin": "yun3 xu3"
+  },
+  {
+    "word": "军队",
+    "meaning": "armed forces; troops",
+    "pinyin": "jun1 dui4"
+  },
+  {
+    "word": "电视",
+    "meaning": "television; TV",
+    "pinyin": "dian4 shi4"
+  },
+  {
+    "word": "一家",
+    "meaning": "the whole family",
+    "pinyin": "yi1 jia1"
+  },
+  {
+    "word": "灵魂",
+    "meaning": "soul",
+    "pinyin": "ling2 hun2"
+  },
+  {
+    "word": "谢",
+    "meaning": "surname Xie",
+    "pinyin": "Xie4"
+  },
+  {
+    "word": "如",
+    "meaning": "as",
+    "pinyin": "ru2"
+  },
+  {
+    "word": "道",
+    "meaning": "road; path",
+    "pinyin": "dao4"
+  },
+  {
+    "word": "究竟",
+    "meaning": "go to the bottom of a matter",
+    "pinyin": "jiu1 jing4"
+  },
+  {
+    "word": "戴",
+    "meaning": "surname Dai",
+    "pinyin": "Dai4"
+  },
+  {
+    "word": "无论",
+    "meaning": "no matter what or how",
+    "pinyin": "wu2 lun4"
+  },
+  {
+    "word": "谋杀",
+    "meaning": "murder",
+    "pinyin": "mou2 sha1"
+  },
+  {
+    "word": "立刻",
+    "meaning": "immediately; at once; right away",
+    "pinyin": "li4 ke4"
+  },
+  {
+    "word": "特",
+    "meaning": "special",
+    "pinyin": "te4"
+  },
+  {
+    "word": "躺",
+    "meaning": "recline",
+    "pinyin": "tang3"
+  },
+  {
+    "word": "试图",
+    "meaning": "attempt",
+    "pinyin": "shi4 tu2"
+  },
+  {
+    "word": "客气",
+    "meaning": "polite",
+    "pinyin": "ke4 qi5"
+  },
+  {
+    "word": "文件",
+    "meaning": "document",
+    "pinyin": "wen2 jian4"
+  },
+  {
+    "word": "敢",
+    "meaning": "dare",
+    "pinyin": "gan3"
+  },
+  {
+    "word": "慢慢",
+    "meaning": "slowly; gradually",
+    "pinyin": "man4 man4"
+  },
+  {
+    "word": "前面",
+    "meaning": "ahead",
+    "pinyin": "qian2 mian4"
+  },
+  {
+    "word": "奶奶",
+    "meaning": "grandma",
+    "pinyin": "nai3 nai5"
+  }
+]

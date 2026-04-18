@@ -48,6 +48,13 @@ dependencies:
   http: ^1.4.0
   flutter_tts: ^4.2.3
   xml: ^6.5.0
+  path_provider: ^2.1.5
+  url_launcher: ^6.3.2
+  file_picker: ^10.1.9
+  flutter_local_notifications: ^18.0.1
+  timezone: ^0.9.4
+  flutter_timezone: ^3.0.1
+  home_widget: ^0.7.0
 
 dev_dependencies:
   flutter_test:
