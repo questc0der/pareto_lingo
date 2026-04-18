@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:pareto_lingo/features/podcast/presentation/screens/podcast_screen.dart';
+import 'package:pareto_lingo/features/music/presentation/screens/music_screen.dart';
 import 'package:pareto_lingo/components/header_card.dart';
 import 'package:pareto_lingo/components/progress.dart';
 import 'package:pareto_lingo/features/auth/presentation/providers/auth_providers.dart';
+import 'package:pareto_lingo/features/engagement/presentation/providers/engagement_providers.dart';
 import 'package:pareto_lingo/features/flashcard/presentation/providers/flashcard_providers.dart';
-import 'package:pareto_lingo/features/news/presentation/screens/news_feed_screen.dart';
+import 'package:pareto_lingo/features/practice/presentation/screens/practice_studio_screen.dart';
 import 'package:pareto_lingo/screen/settings.dart';
 
 class HomeState extends ConsumerStatefulWidget {
@@ -18,12 +19,21 @@ class HomeState extends ConsumerStatefulWidget {
 class Home extends ConsumerState<HomeState> {
   int currentPageIndex = 0;
 
-  static const _labels = ['Home', 'Podcast', 'News', 'Settings'];
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      markDailyEngagement(ref);
+      syncHomeWidgetFromSettings(ref);
+    });
+  }
+
+  static const _labels = ['Home', 'Music', 'Practice', 'Settings'];
 
   static const _icons = [
     Icons.home_rounded,
-    Icons.podcasts_rounded,
-    Icons.newspaper_rounded,
+    Icons.music_note_rounded,
+    Icons.psychology_alt_rounded,
     Icons.settings_rounded,
   ];
 
@@ -42,8 +52,8 @@ class Home extends ConsumerState<HomeState> {
 
     final pages = <Widget>[
       const _HomeTab(),
-      const PodcastScreen(),
-      const NewsFeedScreen(),
+      const MusicScreen(),
+      const PracticeStudioScreen(),
       const SettingsScreen(),
     ];
 
@@ -110,11 +120,62 @@ class Home extends ConsumerState<HomeState> {
   }
 }
 
-class _HomeTab extends StatelessWidget {
+class _HomeTab extends ConsumerWidget {
   const _HomeTab();
 
   @override
-  Widget build(BuildContext context) {
-    return Column(children: const [HeaderCard(), Expanded(child: Progress())]);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final reminder = ref.watch(reminderSettingsProvider).maybeWhen(
+      data: (value) => value,
+      orElse: () => const ReminderSettings(
+        enabled: false,
+        time: TimeOfDay(hour: 20, minute: 0),
+      ),
+    );
+
+    final streak = ref.watch(streakCounterProvider).maybeWhen(
+      data: (value) => value,
+      orElse: () => 0,
+    );
+
+    final label = reminder.time.format(context);
+
+    return Column(
+      children: [
+        const HeaderCard(),
+        Container(
+          margin: const EdgeInsets.fromLTRB(12, 2, 12, 8),
+          padding: const EdgeInsets.all(12),
+          decoration: BoxDecoration(
+            color: const Color(0xFF7DF9FF),
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: Colors.black, width: 2),
+            boxShadow: const [BoxShadow(offset: Offset(3, 3), color: Colors.black)],
+          ),
+          child: Row(
+            children: [
+              const Icon(Icons.notifications_active_rounded, size: 22),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Text(
+                  reminder.enabled
+                      ? 'Daily reminder at $label · Streak $streak day${streak == 1 ? '' : 's'}'
+                      : 'Daily reminder is off. Turn it on in Settings.',
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 13,
+                  ),
+                ),
+              ),
+              TextButton(
+                onPressed: () => setReminderEnabled(ref, !reminder.enabled),
+                child: Text(reminder.enabled ? 'Disable' : 'Enable'),
+              ),
+            ],
+          ),
+        ),
+        const Expanded(child: Progress()),
+      ],
+    );
   }
 }

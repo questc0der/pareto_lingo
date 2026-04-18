@@ -18,6 +18,32 @@ class MyApp extends ConsumerStatefulWidget {
 class _MyAppState extends ConsumerState<MyApp> {
   late final Future<void> _bootstrapFuture;
 
+  ThemeData _buildTheme() {
+    final base = ThemeData(
+      useMaterial3: true,
+      colorSchemeSeed: const Color(0xFF7DF9FF),
+      fontFamily: 'Circular',
+      scaffoldBackgroundColor: const Color(0xFFF5F5F0),
+    );
+
+    return base.copyWith(
+      textTheme: base.textTheme.apply(
+        fontFamily: 'Circular',
+        bodyColor: const Color(0xFF111111),
+        displayColor: const Color(0xFF111111),
+      ),
+      appBarTheme: const AppBarTheme(
+        backgroundColor: Color(0xFFF5F5F0),
+        foregroundColor: Color(0xFF111111),
+        elevation: 0,
+        surfaceTintColor: Colors.transparent,
+      ),
+      snackBarTheme: const SnackBarThemeData(
+        behavior: SnackBarBehavior.floating,
+      ),
+    );
+  }
+
   @override
   void initState() {
     super.initState();
@@ -30,14 +56,18 @@ class _MyAppState extends ConsumerState<MyApp> {
       future: _bootstrapFuture,
       builder: (context, snapshot) {
         if (snapshot.connectionState != ConnectionState.done) {
-          return const MaterialApp(
+          return MaterialApp(
+            theme: _buildTheme(),
             debugShowCheckedModeBanner: false,
-            home: Scaffold(body: Center(child: CircularProgressIndicator())),
+            home: const Scaffold(
+              body: Center(child: CircularProgressIndicator()),
+            ),
           );
         }
 
         if (snapshot.hasError) {
           return MaterialApp(
+            theme: _buildTheme(),
             debugShowCheckedModeBanner: false,
             home: Scaffold(
               body: Center(
@@ -56,6 +86,7 @@ class _MyAppState extends ConsumerState<MyApp> {
         final router = ref.watch(routerProvider);
         return MaterialApp.router(
           routerConfig: router,
+          theme: _buildTheme(),
           debugShowCheckedModeBanner: false,
         );
       },

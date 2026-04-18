@@ -4,6 +4,7 @@ import 'package:speech_to_text/speech_to_text.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:go_router/go_router.dart';
 import 'package:neubrutalism_ui/neubrutalism_ui.dart';
+import 'package:pareto_lingo/core/content/mandarin_pinyin_lookup.dart';
 import 'package:pareto_lingo/features/flashcard/presentation/providers/flashcard_providers.dart';
 import 'package:pareto_lingo/features/auth/presentation/providers/auth_providers.dart';
 
@@ -27,6 +28,7 @@ class _FlashcardReviewScreenState extends ConsumerState<FlashcardReviewScreen>
   bool _isListening = false;
   String _recognizedPhrase = '';
   int? _pronunciationScore;
+  Map<String, String> _pinyinByWord = const {};
   late final AnimationController _flipController;
   late final Animation<double> _flipAnimation;
   late final FlutterTts _tts;
@@ -73,6 +75,12 @@ class _FlashcardReviewScreenState extends ConsumerState<FlashcardReviewScreen>
         .read(userLearningLanguageProvider)
         .maybeWhen(data: (c) => c, orElse: () => 'fr');
     _sessionLanguageCode = languageCode;
+    if (languageCode == 'zh') {
+      MandarinPinyinLookup.load().then((map) {
+        if (!mounted) return;
+        setState(() => _pinyinByWord = map);
+      });
+    }
 
     final prewarmed = ref.read(flashcardPrewarmProvider(languageCode));
     prewarmed.whenData((cards) {
@@ -459,6 +467,22 @@ class _FlashcardReviewScreenState extends ConsumerState<FlashcardReviewScreen>
                               ),
                               textAlign: TextAlign.center,
                             ),
+                            if (!state.showAnswer &&
+                                _sessionLanguageCode == 'zh' &&
+                                (_pinyinByWord[card.word.trim()] ?? '')
+                                    .isNotEmpty) ...[
+                              const SizedBox(height: 8),
+                              Text(
+                                _pinyinByWord[card.word.trim()]!,
+                                style: const TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600,
+                                  fontFamily: 'Circular',
+                                  color: Colors.black54,
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
                             const SizedBox(height: 14),
                             Wrap(
                               spacing: 10,

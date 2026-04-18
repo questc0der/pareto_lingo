@@ -1,5 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive/hive.dart';
+import 'package:pareto_lingo/core/widgets/home_screen_widget_service.dart';
 import 'package:pareto_lingo/core/content/learning_language.dart';
 import 'package:pareto_lingo/features/auth/domain/entities/app_user.dart';
 import 'package:pareto_lingo/features/auth/domain/entities/user_profile.dart';
@@ -30,10 +31,23 @@ final userLearningLanguageProvider = FutureProvider<String>((ref) async {
 
 Future<void> setLearningLanguage(WidgetRef ref, String code) async {
   final resolved = languageOptionByCode(code).code;
-  await ref
-      .read(localAppSettingsBoxProvider)
-      .put(_learningLanguageKey, resolved);
+  final box = ref.read(localAppSettingsBoxProvider);
+  await box.put(_learningLanguageKey, resolved);
   ref.read(selectedLearningLanguageProvider.notifier).state = resolved;
+
+  final streak = int.tryParse(box.get('current_streak') ?? '0') ?? 0;
+  final reminderEnabled = (box.get('daily_reminder_enabled') ?? 'false') == 'true';
+  final hour = int.tryParse(box.get('daily_reminder_hour') ?? '20') ?? 20;
+  final minute = int.tryParse(box.get('daily_reminder_minute') ?? '0') ?? 0;
+
+  await HomeScreenWidgetService.sync(
+    streak: streak,
+    reminderEnabled: reminderEnabled,
+    reminderHour: hour,
+    reminderMinute: minute,
+    languageCode: resolved,
+    languageFlag: languageOptionByCode(resolved).flag,
+  );
 }
 
 final selectedNativeLanguageProvider = StateProvider<String>((ref) {

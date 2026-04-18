@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pareto_lingo/core/content/learning_language.dart';
 import 'package:pareto_lingo/features/auth/presentation/providers/auth_providers.dart';
+import 'package:pareto_lingo/features/engagement/presentation/providers/engagement_providers.dart';
 import 'package:pareto_lingo/features/flashcard/presentation/providers/flashcard_providers.dart';
 import 'package:pareto_lingo/features/learning/presentation/providers/learning_bootstrap_providers.dart';
 import 'package:neubrutalism_ui/neubrutalism_ui.dart';
@@ -60,11 +61,11 @@ class Progress extends ConsumerWidget {
           ],
         ),
         const SizedBox(height: 16),
-        _flashCardSection(context, selectedLanguage.name, topWordsCount),
+        _flashCardSection(context, ref, selectedLanguage.name, topWordsCount),
         const SizedBox(height: 16),
-        _speakingSection(context),
+        _speakingSection(context, ref),
         const SizedBox(height: 16),
-        _listeningSection(context),
+        _listeningSection(context, ref),
         const SizedBox(height: 16),
         _readingSection(context, readingSnippet),
       ],
@@ -170,6 +171,7 @@ class Progress extends ConsumerWidget {
 
   Widget _flashCardSection(
     BuildContext context,
+    WidgetRef ref,
     String languageName,
     int topWordsCount,
   ) {
@@ -177,31 +179,43 @@ class Progress extends ConsumerWidget {
       context,
       mode: 'Flashcards',
       buttonText: 'Start',
-      onPressed: () => context.push('/flashcard'),
+      onPressed: () async {
+        await markDailyEngagement(ref);
+        if (!context.mounted) return;
+        context.push('/flashcard');
+      },
       description:
           'Speak immediately: hear each word, repeat it, then reveal the meaning. Built from the top $topWordsCount most-used $languageName words.',
       height: MediaQuery.of(context).size.height / 5,
     );
   }
 
-  Widget _speakingSection(BuildContext context) {
+  Widget _speakingSection(BuildContext context, WidgetRef ref) {
     return _buildCard(
       context,
       mode: 'Speaking',
       buttonText: 'Speak',
-      onPressed: () => context.push('/speak'),
+      onPressed: () async {
+        await markDailyEngagement(ref);
+        if (!context.mounted) return;
+        context.push('/speak');
+      },
       description:
           'Practice speaking by repeating after the narrator. Tap to play or pause the audio anytime.',
       height: MediaQuery.of(context).size.height / 5,
     );
   }
 
-  Widget _listeningSection(BuildContext context) {
+  Widget _listeningSection(BuildContext context, WidgetRef ref) {
     return _buildCard(
       context,
       mode: 'Listening Match',
       buttonText: 'Play',
-      onPressed: () => context.push('/listening'),
+      onPressed: () async {
+        await markDailyEngagement(ref);
+        if (!context.mounted) return;
+        context.push('/listening');
+      },
       description:
           'Duolingo-style listening practice: hear a word and match it to the right meaning.',
       height: MediaQuery.of(context).size.height / 5,

@@ -19,8 +19,6 @@ class FlashcardStats {
   const FlashcardStats({required this.studied, required this.remaining});
 }
 
-const _nativeLanguageKey = 'native_language_code';
-
 final flashcardBoxProvider = Provider<Box<Flashcard>>((ref) {
   return Hive.box<Flashcard>('flashcards');
 });
@@ -124,10 +122,7 @@ final syncFlashcardDeckProvider = FutureProvider.family<void, String>((
   const targetDeckSize = 1000;
   final flashcardBox = ref.read(flashcardBoxProvider);
   final appSettingsBox = ref.read(appSettingsBoxProvider);
-  final targetMeaningLanguage = _targetMeaningLanguageForDeck(
-    languageCode,
-    appSettingsBox,
-  );
+  final targetMeaningLanguage = _targetMeaningLanguageForDeck();
   final bootstrapContent = await ref.read(
     learningBootstrapContentProvider(languageCode).future,
   );
@@ -151,6 +146,10 @@ final syncFlashcardDeckProvider = FutureProvider.family<void, String>((
   );
 
   await _normalizeExistingDeckMeanings(flashcardBox);
+  await _normalizeDeckMeaningsForLanguage(
+    flashcardBox,
+    languageCode: languageCode,
+  );
 
   if (currentDeckLanguage == null &&
       flashcardBox.isNotEmpty &&
@@ -166,6 +165,7 @@ final syncFlashcardDeckProvider = FutureProvider.family<void, String>((
       backendDeck
           .map((entry) => (word: entry.word, meaning: entry.meaning))
           .toList(growable: false),
+      languageCode: languageCode,
       maxSize: targetDeckSize,
     );
   }
@@ -201,6 +201,7 @@ final syncFlashcardDeckProvider = FutureProvider.family<void, String>((
         backendDeck
             .map((entry) => (word: entry.word, meaning: entry.meaning))
             .toList(growable: false),
+        languageCode: languageCode,
       );
     } else {
       await _reseedFrenchDeckFromAsset(flashcardBox);
@@ -212,6 +213,7 @@ final syncFlashcardDeckProvider = FutureProvider.family<void, String>((
         backendDeck
             .map((entry) => (word: entry.word, meaning: entry.meaning))
             .toList(growable: false),
+        languageCode: languageCode,
       );
     } else {
       await flashcardBox.clear();
@@ -250,6 +252,7 @@ Future<void> _reseedFrenchDeckFromAsset(Box<Flashcard> flashcardBox) async {
 Future<void> _mergeMissingDeckFromPairs(
   Box<Flashcard> flashcardBox,
   List<({String word, String meaning})> pairs, {
+  required String languageCode,
   required int maxSize,
 }) async {
   if (pairs.isEmpty) return;
@@ -273,6 +276,7 @@ Future<void> _mergeMissingDeckFromPairs(
     final meaning = _normalizedMeaningOrFallback(
       word: word,
       meaning: pair.meaning,
+      languageCode: languageCode,
     );
 
     await flashcardBox.add(Flashcard(word: word, meaning: meaning));
@@ -283,6 +287,9 @@ Future<void> _mergeMissingDeckFromPairs(
 Future<void> _seedDeckFromPairs(
   Box<Flashcard> flashcardBox,
   List<({String word, String meaning})> pairs,
+  {
+  required String languageCode,
+}
 ) async {
   await flashcardBox.clear();
   // Batch write — significantly faster than sequential add() for 1000 records
@@ -292,6 +299,7 @@ Future<void> _seedDeckFromPairs(
     final normalizedMeaning = _normalizedMeaningOrFallback(
       word: pair.word,
       meaning: pair.meaning,
+      languageCode: languageCode,
     );
     entries[key++] = Flashcard(word: pair.word, meaning: normalizedMeaning);
   }
@@ -327,6 +335,7 @@ String _fallbackMeaningForWord(String word) {
 String _normalizedMeaningOrFallback({
   required String word,
   required String meaning,
+  required String languageCode,
 }) {
   final normalized = meaning.trim();
   final isPlaceholder =
@@ -337,21 +346,75 @@ String _normalizedMeaningOrFallback({
       normalized == '?' ||
       normalized == '？';
   if (isPlaceholder) {
+    if (languageCode == 'zh') {
+      return _englishMeaningForMandarinWord(word);
+    }
     return _fallbackMeaningForWord(word);
   }
+
+  if (languageCode == 'zh' && _containsCjk(normalized)) {
+    return _englishMeaningForMandarinWord(word);
+  }
+
   return normalized;
 }
 
-String _targetMeaningLanguageForDeck(
-  String languageCode,
-  Box<String> settings,
-) {
-  final native = settings.get(_nativeLanguageKey)?.trim().toLowerCase();
-  if (native != null && (native == 'fr' || native == 'zh' || native == 'en')) {
-    return native;
+String _targetMeaningLanguageForDeck() {
+  // Keep flashcard meanings in English for consistent review across languages.
+  return 'en';
+}
+
+Future<void> _normalizeDeckMeaningsForLanguage(
+  Box<Flashcard> flashcardBox, {
+  required String languageCode,
+}) async {
+  if (languageCode != 'zh') return;
+
+  for (var index = 0; index < flashcardBox.length; index++) {
+    final key = flashcardBox.keyAt(index);
+    final card = flashcardBox.get(key);
+    if (card == null) continue;
+
+    final meaning = card.meaning.trim();
+    if (!_containsCjk(meaning)) continue;
+
+    card.meaning = _englishMeaningForMandarinWord(card.word);
+    await card.save();
+  }
+}
+
+bool _containsCjk(String input) {
+  return RegExp(r'[\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF]').hasMatch(
+    input,
+  );
+}
+
+String _englishMeaningForMandarinWord(String word) {
+  final normalized = word.trim();
+
+  const known = {
+    '你好': 'hello',
+    '谢谢': 'thank you',
+    '家': 'home',
+    '吃': 'eat',
+    '说': 'speak',
+    '朋友': 'friend',
+    '工作': 'work',
+    '学校': 'school',
+    '城市': 'city',
+    '今天': 'today',
+    '明天': 'tomorrow',
+    '音乐': 'music',
+    '学习': 'learn',
+    '阅读': 'read',
+    '旅行': 'travel',
+  };
+
+  if (known.containsKey(normalized)) {
+    return known[normalized]!;
   }
 
-  return 'en';
+  return 'english meaning of $normalized';
 }
 
 // ── FSRS ─────────────────────────────────────────────────────────────────────

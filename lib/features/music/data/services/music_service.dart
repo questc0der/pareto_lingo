@@ -74,6 +74,59 @@ class MusicService {
     return (decoded['lyrics']?.toString() ?? '').trim();
   }
 
+  /// Extracts a direct audio stream URL from a YouTube URL using the cobalt.tools
+  /// public API. Returns `null` if extraction fails so the caller can fall back.
+  ///
+  /// cobalt.tools is free and open-source: https://github.com/imputnet/cobalt
+  Future<String?> extractYouTubeAudioUrl(String youtubeUrl) async {
+    const candidates = [
+      'https://api.cobalt.tools',
+      'https://cobalt.api.bikeshed.systems', // community mirror
+    ];
+
+    for (final base in candidates) {
+      try {
+        final response = await _client
+            .post(
+              Uri.parse('$base/'),
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+              },
+              body: jsonEncode({
+                'url': youtubeUrl.trim(),
+                'downloadMode': 'audio',
+                'audioFormat': 'mp3',
+                'audioBitrate': '128',
+              }),
+            )
+            .timeout(const Duration(seconds: 15));
+
+        if (response.statusCode < 200 || response.statusCode >= 300) continue;
+
+        final json = jsonDecode(response.body) as Map<String, dynamic>;
+        final status = json['status']?.toString() ?? '';
+        final url = json['url']?.toString().trim() ?? '';
+
+        if (url.isNotEmpty &&
+            (status == 'stream' || status == 'tunnel' || status == 'redirect')) {
+          return url;
+        }
+      } catch (_) {
+        continue;
+      }
+    }
+    return null;
+  }
+
+  /// Returns true if [url] is a YouTube watch / share / short URL.
+  static bool isYouTubeUrl(String url) {
+    final lower = url.toLowerCase();
+    return lower.contains('youtube.com/watch') ||
+        lower.contains('youtu.be/') ||
+        lower.contains('youtube.com/shorts/');
+  }
+
   Future<File?> downloadPreview({required MusicTrack track}) async {
     if (track.previewUrl.isEmpty) return null;
 

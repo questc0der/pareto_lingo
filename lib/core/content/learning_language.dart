@@ -83,8 +83,40 @@ const supportedLearningLanguages = <LearningLanguageOption>[
 ];
 
 LearningLanguageOption languageOptionByCode(String? code) {
+  final normalized = normalizeLearningLanguageCode(code);
   return supportedLearningLanguages.firstWhere(
-    (option) => option.code == code,
+    (option) => option.code == normalized,
     orElse: () => supportedLearningLanguages.first,
   );
+}
+
+String normalizeLearningLanguageCode(String? raw) {
+  final value = (raw ?? '').trim().toLowerCase();
+  if (value.isEmpty) return supportedLearningLanguages.first.code;
+
+  switch (value) {
+    case 'fr':
+    case 'fr-fr':
+    case 'french':
+    case 'france':
+      return 'fr';
+    case 'zh':
+    case 'zh-cn':
+    case 'zh_hans':
+    case 'cn':
+    case 'chinese':
+    case 'mandarin':
+    case 'mandarin chinese':
+      return 'zh';
+    case 'en':
+    case 'en-us':
+    case 'en-gb':
+    case 'english':
+      return 'en';
+    default:
+      return supportedLearningLanguages.firstWhere(
+        (option) => option.name.toLowerCase() == value,
+        orElse: () => supportedLearningLanguages.first,
+      ).code;
+  }
 }
